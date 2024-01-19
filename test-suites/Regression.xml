@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+<!--<suite name="Suite">-->
+	<listeners>
+		<listener class-name="automation.AdminTestComponents.Listeners" />
+	</listeners>
+	
+	<test thread-count="5" name="Login Test">
+		<classes>
+			<class name="automation.AdminTest.AllLoginTest" />
+		</classes>
+	</test>
+	<test thread-count="5" name="Parking Area Ceation Test">
+		<classes>
+			<class name="automation.AdminTest.AreaCreationTest" />
+		</classes>
+	</test>
+	<test thread-count="5" name="User Enrollment Test">
+		<classes>
+			<class name="automation.AdminTest.UserEnrollmentTest" />
+		</classes>
+	</test>
+	<test thread-count="5" name="Filter And SearchTest">
+		<classes>
+			<class name="automation.AdminTest.FilterAndSearchTest" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

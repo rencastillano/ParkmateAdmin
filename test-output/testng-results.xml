@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-17T21:03:24 CST" name="Default suite" finished-at="2024-01-17T21:04:33 CST" duration-ms="69192">
+    <groups>
+      <group name="Creation">
+        <method signature="AreaCreationTest.areaCreation()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" name="areaCreation" class="automation.AdminTest.AreaCreationTest"/>
+      </group> <!-- Creation -->
+    </groups>
+    <test started-at="2024-01-17T21:03:24 CST" name="Default test" finished-at="2024-01-17T21:04:33 CST" duration-ms="69192">
+      <class name="automation.AdminTest.AreaCreationTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" started-at="2024-01-17T21:03:24 CST" name="launchApplication" finished-at="2024-01-17T21:03:36 CST" duration-ms="12420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="areaCreation()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" started-at="2024-01-17T21:03:36 CST" name="areaCreation" finished-at="2024-01-17T21:04:13 CST" duration-ms="36709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- areaCreation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" started-at="2024-01-17T21:04:13 CST" name="tearDown" finished-at="2024-01-17T21:04:14 CST" duration-ms="1111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" started-at="2024-01-17T21:04:14 CST" name="launchApplication" finished-at="2024-01-17T21:04:21 CST" duration-ms="6632" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="areaCreationValidation()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" started-at="2024-01-17T21:04:21 CST" name="areaCreationValidation" finished-at="2024-01-17T21:04:32 CST" depends-on-methods="automation.AdminTest.AreaCreationTest.areaCreation" duration-ms="10963" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- areaCreationValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" started-at="2024-01-17T21:04:32 CST" name="tearDown" finished-at="2024-01-17T21:04:33 CST" duration-ms="1284" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- automation.AdminTest.AreaCreationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
