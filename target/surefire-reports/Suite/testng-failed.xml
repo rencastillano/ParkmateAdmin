@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="5" name="User Enrollment Test(failed)" verbose="0">
-    <groups>
-      <run>
-        <include name="ErrorHandling"/>
-      </run>
-    </groups>
+  <listeners>
+    <listener class-name="automation.AdminTestComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Parking Area Ceation Test(failed)" verbose="0">
     <classes>
-      <class name="automation.AdminTest.UserEnrollmentTest">
+      <class name="automation.AdminTest.AreaCreationTest">
         <methods>
-          <include name="userEmailDupValidation"/>
+          <include name="areaCreation"/>
+          <include name="exitCreationAlert"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
+          <include name="areaNameDupValidation" invocation-numbers="0"/>
         </methods>
-      </class> <!-- automation.AdminTest.UserEnrollmentTest -->
+      </class> <!-- automation.AdminTest.AreaCreationTest -->
     </classes>
-  </test> <!-- User Enrollment Test(failed) -->
+  </test> <!-- Parking Area Ceation Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

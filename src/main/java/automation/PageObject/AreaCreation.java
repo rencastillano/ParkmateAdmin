@@ -1,6 +1,7 @@
 package automation.PageObject;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -12,8 +13,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import automation.AbstractComponents.AbstractComponent;
-
-
 
 public class AreaCreation extends AbstractComponent {
 
@@ -38,7 +37,7 @@ public class AreaCreation extends AbstractComponent {
 	@FindBy(linkText = "CREATE")
 	WebElement create;
 
-	@FindBy(xpath = "(//*[@type='text'])[1]")
+	@FindBy(css = "input[placeholder='Enter Parking Area Name']")
 	WebElement enterParkingName;
 
 	@FindBy(css = "img[alt='Dropdown']")
@@ -73,15 +72,21 @@ public class AreaCreation extends AbstractComponent {
 
 	@FindBy(xpath = "//*[text()='SAVE']")
 	WebElement saveBtn;
+	
+	@FindBy(xpath="//*[contains(text(),'CANCEL')]")
+	WebElement cancelBtn;
+	
+	@FindBy(css = ".w-full > .flex > .ml-auto")
+	WebElement cancelMondalButton;
+	
+	@FindBy(css = ".flex > .mr-auto")
+	WebElement proceedModalButton;
 
 	@FindBy(xpath = "//tr/td[1][@class='td-item capitalize pt-4 pb-4 svelte-1bss4kg']")
 	List<WebElement> areaNameList;
 
 	@FindBy(css = ".text-red-500.text-xs.mt-1")
-	WebElement duplicateErrMsgOnUpdate;
-
-	@FindBy(css = ".text-red-500.text-xs.mt-1")
-	WebElement duplicateErrMsgOnCreation;
+	WebElement errMsgText;
 
 	@FindBy(css = "tbody tr:nth-child(5)")
 	WebElement nameToBeEdited;
@@ -89,10 +94,34 @@ public class AreaCreation extends AbstractComponent {
 	@FindBy(css = "tr td:nth-child(1)")
 	List<WebElement> areaNameTable;
 
+	@FindBy(css = "tbody tr:nth-child(1) td:nth-child(1)")
+	WebElement firstRowSearch;
+
+	@FindBy(xpath = "(//button[text()='+'])[1]")
+	WebElement firstPlusBtn;
+
+	@FindBy(xpath = "(//button[text()='+'])[2]")
+	WebElement secondPlusBtn;
+
+	@FindBy(xpath = "(//button[text()='-'])[1]")
+	WebElement firstMinusBtn;
+
+	@FindBy(xpath = "(//button[text()='-'])[2]")
+	WebElement secondMinusBtn;
+
+	@FindBy(css = "input[placeholder='Search']")
+	WebElement search;
+
+	@FindBy(xpath = "//*[@class='flex-grow text-sm self-center w-3/4']")
+	WebElement banner;
+
 	By tableRowBy = By.cssSelector("tbody tr:nth-child(1) td:nth-child(1)");
+	
+	@FindBy(css = "tr td:first-child")
+	WebElement firstRowData;
 
 	public FilterAndSearch goToAreaPage() {
-
+		waitForWebElementToAppear(smLogo);
 		waitForWebElementToBeClickable(parkingAreasModule);
 		parkingAreasModule.click();
 		try {
@@ -107,15 +136,15 @@ public class AreaCreation extends AbstractComponent {
 	}
 
 	public void clickCreate() {
-		waitForWebElementToAppear(smLogo);
 		create.click();
 	}
 
 	public void genInfoParkingName(String areaName) throws InterruptedException {
 		Thread.sleep(5000);
+		enterParkingName.click();
 		enterParkingName.clear();
 		enterParkingName.sendKeys(areaName);
-		// System.out.println(areaName);
+		System.out.println(areaName);
 
 	}
 
@@ -142,8 +171,9 @@ public class AreaCreation extends AbstractComponent {
 		return match;
 	}
 
-	public void areaCode(String areacode) throws InterruptedException {
-		Thread.sleep(3000);
+	public void getAreaCode(String areacode) throws InterruptedException {
+		Thread.sleep(2000);
+		areaCode.click();
 		areaCode.clear();
 		areaCode.sendKeys(areacode);
 	}
@@ -153,9 +183,20 @@ public class AreaCreation extends AbstractComponent {
 		closingTime.sendKeys(closingtime);
 	}
 
-	public void SaveCreation() {
+	public void clickSave() {
+		waitForWebElementToBeClickable(saveBtn);
 		saveBtn.click();
 
+	}
+		
+	public void exitCreationAlert() throws InterruptedException {
+		cancelBtn.click();
+		Thread.sleep(500);
+		cancelMondalButton.click();
+		genInfoSMList();
+		cancelBtn.click();
+		Thread.sleep(500);
+		proceedModalButton.click();
 	}
 
 	public void refresh() throws InterruptedException {
@@ -163,36 +204,34 @@ public class AreaCreation extends AbstractComponent {
 		parkingUsersTab.click();
 	}
 
-	public boolean creationValidation(String areaName) throws InterruptedException {
+	public boolean handlingDupAndValidation(String areacode, String areaName) throws InterruptedException {
 
-		//waitForWebElementToAppear(smLogo);
-		Thread.sleep(3000);
-		List<String> filteredNames = areaNameList.stream().map(WebElement::getText)
-				.filter(name -> name.contains(areaName)).collect(Collectors.toList());
-		String res = filteredNames.isEmpty() ? "" : filteredNames.get(0);
-		System.out.println(res);
-		boolean result = res.equalsIgnoreCase(areaName);
-		return result;
-
-	}
-
-	public boolean dupErrMessage() {
-		boolean errMsg = duplicateErrMsgOnUpdate.isDisplayed();
-		return errMsg;
-	}
-
-	public void dupErrMessageOnCreation(String areacode) throws InterruptedException {
 		try {
-			if (!duplicateErrMsgOnCreation.isDisplayed()) {
-				refresh();
-			} else {
-				areaCode(areacode);
-				SaveCreation();
-			}
+			
+			 while (errMsgText.isDisplayed()){
+					getAreaCode(areacode);
+					clickSave();
+					Thread.sleep(4000);
+					}
+			
+		} catch (NoSuchElementException e) {
+			// Handle NoSuchElementException if duplicateErrMsgOnCreation is not displayed
+			e.printStackTrace();			
 		} catch (Exception e) {
-			// Handle any exceptions or log a message
-			e.printStackTrace();
-		}
+		// Handle any other exceptions or log a message
+		e.printStackTrace();
+	}
+			List<String> filteredNames = areaNameList.stream().map(WebElement::getText)
+					.filter(name -> name.contains(areaName)).collect(Collectors.toList());
+			String res = filteredNames.isEmpty() ? "" : filteredNames.get(0);
+			System.out.println(res);
+			boolean result = res.equalsIgnoreCase(areaName);
+			return result;
+	}
+
+	public String errorMessage() {
+		return errMsgText.getText();
+
 	}
 
 	public void areaNameToBeEdited() throws InterruptedException {
@@ -203,7 +242,7 @@ public class AreaCreation extends AbstractComponent {
 
 	public String getRandomAreaName() throws InterruptedException {
 		waitForElementToAppear(tableRowBy);
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		Random random = new Random();
 
 		// Define the excluded index
@@ -214,9 +253,49 @@ public class AreaCreation extends AbstractComponent {
 			randomIndex = random.nextInt(areaNameTable.size());
 		} while (randomIndex == excludedIndex);
 
-		WebElement station = areaNameTable.get(randomIndex);
-		String text = station.getText();
+		WebElement areaName = areaNameTable.get(randomIndex);
+		String text = areaName.findElement(By.xpath("(//tr/td[1])[" + (randomIndex + 1) + "]")).getText();
+		
 		return text;
 
 	}
+	private void performSearch(String searchData, String searchResult) throws InterruptedException {
+	    search.sendKeys(searchData);
+	    String result;
+	    do {
+	        Thread.sleep(3000);
+	        result = firstRowData.getText();
+	    } while (!result.equalsIgnoreCase(searchResult));
+	}
+	public boolean parkingAreaUpdate() throws InterruptedException {
+		performSearch("0127", "QA_Automation");
+		Thread.sleep(5000);
+		firstRowSearch.click();
+		Thread.sleep(3000);
+
+		performButtonClicks(firstPlusBtn, 5);
+		performButtonClicks(secondPlusBtn, 5);
+		performButtonClicks(firstMinusBtn, 3);
+		performButtonClicks(secondMinusBtn, 3);
+
+		clickSave();
+		return runValidation();
+	}
+	
+	private boolean runValidation() {
+		
+		waitForWebElementToAppear(banner);
+		String bannerText = banner.getText();
+		System.out.println(bannerText);
+		return bannerText.equalsIgnoreCase("QA_Automation is successfully updated!");
+		
+	}
+
+	private void performButtonClicks(WebElement button, int count) throws InterruptedException {
+		for (int i = 0; i < count; i++) {
+			Thread.sleep(200);
+			button.click();
+		}
+	}
+
 }

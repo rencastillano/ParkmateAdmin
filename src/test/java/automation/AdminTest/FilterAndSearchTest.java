@@ -63,6 +63,15 @@ public class FilterAndSearchTest extends BaseTest {
 				
 	}
 	@Test
+	public void parkingAreaCodeSearch() throws InterruptedException {
+		landingPage.loginApplication("renAdmin", "Password1!");
+		AreaCreation parkingCreation = new AreaCreation(driver);
+		FilterAndSearch search =parkingCreation.goToAreaPage();
+		boolean result = search.parkingAreaCodeSearch();
+		Assert.assertTrue(result);
+				
+	}
+	@Test
 	public void filterByEncoderRole() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
 		FilterAndSearch search = new FilterAndSearch(driver);

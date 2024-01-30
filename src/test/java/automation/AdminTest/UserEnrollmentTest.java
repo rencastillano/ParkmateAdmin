@@ -18,31 +18,24 @@ public class UserEnrollmentTest extends BaseTest {
 	String completeEmail = email+"@parkmate.com";
 	
 	@Test(groups= {"Creation"})
-	public void userEnrollment() {
+	public void userEnrollment() throws InterruptedException {
 		
 		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
 		boolean user = userCreation.userPage();
 		Assert.assertTrue(user);
 		
 		userCreation.clickEnroll();
+		String userRole = userCreation.selectAdminRole();
 		userCreation.getPersonalDetails("Sam", "O", "Medina");
 		userCreation.getEmailDetails(completeEmail);
 		userCreation.getMobileDetails("987654321");
 		boolean match = userCreation.getAccountDetails(email);
 		Assert.assertTrue(match);
 		userCreation.getParkingStation();
-		userCreation.saveParkingUser();
+		userCreation.clickSave();
+		boolean successEnrollment = userCreation.enrollmentValidation(userRole);
+		Assert.assertTrue(successEnrollment);
 
-	}
-	@Test(dependsOnMethods= {"userEnrollment"})
-	public void enrollmentValidation() {
-		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
-		boolean user = userCreation.userPage();
-		Assert.assertTrue(user);
-		
-		boolean createUser = userCreation.enrollmentValidation(completeEmail);
-		Assert.assertTrue(createUser);
-		
 	}
 	
 	@Test(dataProvider="getData",groups= {"ErrorHandling"})
@@ -59,7 +52,7 @@ public class UserEnrollmentTest extends BaseTest {
 		Assert.assertTrue(dupUserName);
 	}
 	@Test
-	public void exitEnrollmentAlert() {
+	public void exitEnrollmentAlert() throws InterruptedException {
 		
 		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
 		boolean user = userCreation.userPage();
@@ -69,6 +62,15 @@ public class UserEnrollmentTest extends BaseTest {
 		userCreation.getPersonalDetails("Sam", "O", "Medina");
 		userCreation.exitEnrollmentAlert();
 		
+	}
+	@Test
+	public void editUserAccount() throws InterruptedException {
+		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
+		boolean user = userCreation.userPage();
+		Assert.assertTrue(user);
+		
+		boolean successUpdate = userCreation.userAccountUpdate();
+		Assert.assertTrue(successUpdate);
 	}
 	
 	@Test

@@ -30,7 +30,7 @@ public class AbstractComponent {
 
 	public void waitForElementToAppear(By findBy) {
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 	}
 

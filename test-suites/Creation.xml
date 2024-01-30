@@ -7,7 +7,6 @@
 			<include name="Creation" />
 		</run>
 	</groups>
-
 	<test thread-count="5" name="All Login Test">
 		<classes>
 			<class name="automation.AdminTest.AllLoginTest" />

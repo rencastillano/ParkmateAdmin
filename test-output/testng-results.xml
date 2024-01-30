@@ -1,40 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-17T21:03:24 CST" name="Default suite" finished-at="2024-01-17T21:04:33 CST" duration-ms="69192">
+  <suite started-at="2024-01-30T19:13:21 CST" name="Default suite" finished-at="2024-01-30T19:14:20 CST" duration-ms="58854">
     <groups>
-      <group name="Creation">
-        <method signature="AreaCreationTest.areaCreation()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" name="areaCreation" class="automation.AdminTest.AreaCreationTest"/>
-      </group> <!-- Creation -->
     </groups>
-    <test started-at="2024-01-17T21:03:24 CST" name="Default test" finished-at="2024-01-17T21:04:33 CST" duration-ms="69192">
-      <class name="automation.AdminTest.AreaCreationTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" started-at="2024-01-17T21:03:24 CST" name="launchApplication" finished-at="2024-01-17T21:03:36 CST" duration-ms="12420" status="PASS">
+    <test started-at="2024-01-30T19:13:21 CST" name="Default test" finished-at="2024-01-30T19:14:20 CST" duration-ms="58854">
+      <class name="automation.AdminTest.PermissionTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@397fbdb]" started-at="2024-01-30T19:13:21 CST" name="launchApplication" finished-at="2024-01-30T19:13:38 CST" duration-ms="17226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="areaCreation()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" started-at="2024-01-17T21:03:36 CST" name="areaCreation" finished-at="2024-01-17T21:04:13 CST" duration-ms="36709" status="PASS">
+        <test-method signature="userWithActiveStatus()[pri:0, instance:automation.AdminTest.PermissionTest@397fbdb]" started-at="2024-01-30T19:13:38 CST" name="userWithActiveStatus" finished-at="2024-01-30T19:14:18 CST" duration-ms="40395" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- areaCreation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" started-at="2024-01-17T21:04:13 CST" name="tearDown" finished-at="2024-01-17T21:04:14 CST" duration-ms="1111" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" started-at="2024-01-17T21:04:14 CST" name="launchApplication" finished-at="2024-01-17T21:04:21 CST" duration-ms="6632" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaCreationValidation()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" started-at="2024-01-17T21:04:21 CST" name="areaCreationValidation" finished-at="2024-01-17T21:04:32 CST" depends-on-methods="automation.AdminTest.AreaCreationTest.areaCreation" duration-ms="10963" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaCreationValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaCreationTest@618b19ad]" started-at="2024-01-17T21:04:32 CST" name="tearDown" finished-at="2024-01-17T21:04:33 CST" duration-ms="1284" status="PASS">
+        </test-method> <!-- userWithActiveStatus -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@397fbdb]" started-at="2024-01-30T19:14:18 CST" name="tearDown" finished-at="2024-01-30T19:14:20 CST" duration-ms="1192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.AreaCreationTest -->
+      </class> <!-- automation.AdminTest.PermissionTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
