@@ -2,7 +2,6 @@ package automation.PageObject;
 
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -92,21 +91,21 @@ public class UserEnrollment extends AbstractComponent {
 
 	@FindBy(xpath = "//tr/td[3][@class='td-item pt-4 pb-4 svelte-12oyxwx']")
 	List<WebElement> userEmailList;
-	
-	@FindBy(css="input[placeholder='Search']")
+
+	@FindBy(css = "input[placeholder='Search']")
 	WebElement search;
 
 	@FindBy(css = "tr td:nth-child(3)")
 	List<WebElement> emailAddressTable;
-	
-	@FindBy(css="tbody tr:nth-child(1)")
+
+	@FindBy(css = "tbody tr:nth-child(1)")
 	WebElement firstDataRow;
-	
-	@FindBy(xpath="//*[@class='flex-grow text-sm self-center w-3/4']")
+
+	@FindBy(xpath = "//*[@class='flex-grow text-sm self-center w-3/4']")
 	WebElement banner;
-	
+
 	By firstUserEmail = By.xpath("(//tr/td[3])[1]");
-	
+
 	@FindBy(css = "tr td:first-child")
 	WebElement firstRowData;
 
@@ -165,23 +164,22 @@ public class UserEnrollment extends AbstractComponent {
 	}
 
 	public void getParkingStation() throws InterruptedException {
-	    waitForWebElementToBeClickable(selectArea);
-	    selectArea.click();
+		waitForWebElementToBeClickable(selectArea);
+		selectArea.click();
 
-	    Random random = new Random();
-	    int excludedStart = 0;
-	    int excludedEnd = 5;
+		Random random = new Random();
+		int excludedStart = 0;
+		int excludedEnd = 4;
 
-	    int randomIndex;
-	    do {
-	        randomIndex = random.nextInt(areaStation.size());
-	    } while (randomIndex >= excludedStart && randomIndex <= excludedEnd);
+		int randomIndex;
+		do {
+			randomIndex = random.nextInt(areaStation.size());
+		} while (randomIndex >= excludedStart && randomIndex <= excludedEnd);
 
-	    WebElement station = areaStation.get(randomIndex);
-	    Thread.sleep(3000);
-	    station.click();
+		WebElement station = areaStation.get(randomIndex);
+		Thread.sleep(3000);
+		station.click();
 	}
-
 
 	public void clickSave() {
 		saveBtn.click();
@@ -229,15 +227,16 @@ public class UserEnrollment extends AbstractComponent {
 //		return result;
 //	}
 	private void performSearch(String searchData, String searchResult) throws InterruptedException {
-	    search.sendKeys(searchData);
-	    String result;
-	    do {
-	        Thread.sleep(3000);
-	        result = firstRowData.getText();
-	    } while (!result.equalsIgnoreCase(searchResult));
+		search.sendKeys(searchData);
+		String result;
+		do {
+			Thread.sleep(3000);
+			result = firstRowData.getText();
+		} while (!result.equalsIgnoreCase(searchResult));
 	}
+
 	public boolean userAccountUpdate() throws InterruptedException {
-		
+
 		performSearch("forAutomationEdit@parkmate.com", "Automation EditTesting");
 		firstDataRow.click();
 		Thread.sleep(3000);
@@ -248,12 +247,12 @@ public class UserEnrollment extends AbstractComponent {
 		boolean match = bannerText.equalsIgnoreCase("forAutomationEdit@parkmate.com is successfully updated!");
 		return match;
 	}
-	
+
 	public boolean enrollmentValidation(String email) {
 		waitForWebElementToAppear(banner);
 		String bannerText = banner.getText();
 		System.out.println(bannerText);
-		boolean match = bannerText.equalsIgnoreCase(email+" successfully created!");
+		boolean match = bannerText.equalsIgnoreCase(email + " successfully created!");
 		return match;
 	}
 
