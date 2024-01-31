@@ -169,7 +169,7 @@ public class UserEnrollment extends AbstractComponent {
 
 		Random random = new Random();
 		int excludedStart = 0;
-		int excludedEnd = 4;
+		int excludedEnd = 5;
 
 		int randomIndex;
 		do {
@@ -177,7 +177,7 @@ public class UserEnrollment extends AbstractComponent {
 		} while (randomIndex >= excludedStart && randomIndex <= excludedEnd);
 
 		WebElement station = areaStation.get(randomIndex);
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		station.click();
 	}
 
@@ -239,7 +239,7 @@ public class UserEnrollment extends AbstractComponent {
 
 		performSearch("forAutomationEdit@parkmate.com", "Automation EditTesting");
 		firstDataRow.click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		getParkingStation();
 		saveBtn.click();
 		waitForWebElementToAppear(banner);

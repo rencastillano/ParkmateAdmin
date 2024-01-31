@@ -17,7 +17,7 @@ public class UserEnrollmentTest extends BaseTest {
 	String email = "parkmatehub."+generateRandomNumber(5);
 	String completeEmail = email+"@parkmate.com";
 	
-	@Test(groups= {"Creation"})
+	@Test(priority=1, groups= {"Creation"})
 	public void userEnrollment() throws InterruptedException {
 		
 		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
@@ -62,7 +62,7 @@ public class UserEnrollmentTest extends BaseTest {
 		userCreation.exitEnrollmentAlert();
 		
 	}
-	@Test
+	@Test(priority=2)
 	public void editUserAccount() throws InterruptedException {
 		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
 		boolean user = userCreation.userPage();

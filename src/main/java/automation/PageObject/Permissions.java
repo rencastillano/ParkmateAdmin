@@ -72,7 +72,7 @@ public class Permissions extends AbstractComponent {
 	@FindBy(xpath = "//button[.='Search Vehicle']")
 	WebElement searchVehicleButton;
 
-	@FindBy(xpath = "//div[2]/button/div[2]/div[2]")
+	@FindBy(xpath = "//div/button/div[2]/div[2]")
 	WebElement encoderSearchResult;
 
 	@FindBy(xpath = "//div[2]/section/button")
@@ -154,6 +154,7 @@ public class Permissions extends AbstractComponent {
 			dropdownButton.click();
 			statusChangeBtn.click();
 			if ("Restricted".equalsIgnoreCase(desiredStatus)) {
+				Thread.sleep(1000);
 				proceedBtn.click();
 			}
 			Thread.sleep(5000);

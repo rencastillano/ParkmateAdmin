@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-31T17:32:56 CST" name="Default suite" finished-at="2024-01-31T17:33:27 CST" duration-ms="30298">
+  <suite started-at="2024-01-31T20:02:42 CST" name="Default suite" finished-at="2024-01-31T20:03:35 CST" duration-ms="53365">
     <groups>
     </groups>
-    <test started-at="2024-01-31T17:32:56 CST" name="Default test" finished-at="2024-01-31T17:33:27 CST" duration-ms="30298">
-      <class name="automation.AdminTest.AreaCreationTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaCreationTest@43bc63a3]" started-at="2024-01-31T17:32:56 CST" name="launchApplication" finished-at="2024-01-31T17:33:04 CST" duration-ms="8115" status="PASS">
+    <test started-at="2024-01-31T20:02:42 CST" name="Default test" finished-at="2024-01-31T20:03:35 CST" duration-ms="53365">
+      <class name="automation.AdminTest.UserEnrollmentTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserEnrollmentTest@6a6cb05c]" started-at="2024-01-31T20:02:42 CST" name="launchApplication" finished-at="2024-01-31T20:02:55 CST" duration-ms="13261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="setMotorcycleCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaCreationTest@43bc63a3]" started-at="2024-01-31T17:33:04 CST" name="setMotorcycleCapacityPlusButtonToDisable" finished-at="2024-01-31T17:33:25 CST" duration-ms="20978" status="PASS">
+        <test-method signature="editUserAccount()[pri:2, instance:automation.AdminTest.UserEnrollmentTest@6a6cb05c]" started-at="2024-01-31T20:02:55 CST" name="editUserAccount" finished-at="2024-01-31T20:03:34 CST" duration-ms="38916" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setMotorcycleCapacityPlusButtonToDisable -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaCreationTest@43bc63a3]" started-at="2024-01-31T17:33:25 CST" name="tearDown" finished-at="2024-01-31T17:33:27 CST" duration-ms="1159" status="PASS">
+        </test-method> <!-- editUserAccount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserEnrollmentTest@6a6cb05c]" started-at="2024-01-31T20:03:34 CST" name="tearDown" finished-at="2024-01-31T20:03:35 CST" duration-ms="1127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.AreaCreationTest -->
+      </class> <!-- automation.AdminTest.UserEnrollmentTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

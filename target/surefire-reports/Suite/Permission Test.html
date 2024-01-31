@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Permission Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 31 11:43:30 CST 2024</td>
+<td>Started on:</td><td>Wed Jan 31 19:32:31 CST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>219 seconds (219540 ms)</td>
+<tr><td>Total time:</td><td>214 seconds (214358 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,103 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='automation.AdminTest.PermissionTest.userWithRestrictedStatus()'><b>userWithRestrictedStatus</b><br>Test class: automation.AdminTest.PermissionTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;btn w-[85px] mr-auto text-sm text-white uppercase bg-sm-electric-blue font-henry-sans-semibold&quot;&gt;...&lt;/button&gt; is not clickable at point (816, 495). Other element would receive the click: &lt;div class=&quot;card lg:w-3/12 sm:9/12 px-12 py-[50px] shadow text-center rounded-lg bg-white&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=121.0.6167.86)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [709a36a3a5de6e6e8be8da9d90227264, clickElement {id=2806E651AB327A5AC39F9388C0056971_element_133}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54956/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (709a36a3a5de6e6e8be8da9d90227264)] -&gt; xpath: //*[text()=&apos;Proceed&apos;]]
+Session ID: 709a36a3a5de6e6e8be8da9d90227264
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+	at automation.PageObject.Permissions.setUserStatus(Permissions.java:157)
+	at automation.PageObject.Permissions.setStatusToRestricted(Permissions.java:121)
+	at automation.AdminTest.PermissionTest.userWithRestrictedStatus(PermissionTest.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1317802906", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1317802906'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;btn w-[85px] mr-auto text-sm text-white uppercase bg-sm-electric-blue font-henry-sans-semibold&quot;&gt;...&lt;/button&gt; is not clickable at point (816, 495). Other element would receive the click: &lt;div class=&quot;card lg:w-3/12 sm:9/12 px-12 py-[50px] shadow text-center rounded-lg bg-white&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=121.0.6167.86)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [709a36a3a5de6e6e8be8da9d90227264, clickElement {id=2806E651AB327A5AC39F9388C0056971_element_133}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54956/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (709a36a3a5de6e6e8be8da9d90227264)] -&gt; xpath: //*[text()=&apos;Proceed&apos;]]
+Session ID: 709a36a3a5de6e6e8be8da9d90227264
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+	at automation.PageObject.Permissions.setUserStatus(Permissions.java:157)
+	at automation.PageObject.Permissions.setStatusToRestricted(Permissions.java:121)
+	at automation.AdminTest.PermissionTest.userWithRestrictedStatus(PermissionTest.java:19)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>13</td>
+<td>automation.AdminTest.PermissionTest@508dec2b</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,35 +173,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='automation.AdminTest.PermissionTest.userWithActiveStatus()'><b>userWithActiveStatus</b><br>Test class: automation.AdminTest.PermissionTest</td>
-<td></td>
-<td>23</td>
-<td>automation.AdminTest.PermissionTest@38145825</td></tr>
-<tr>
 <td title='automation.AdminTest.PermissionTest.userWithPaymentAcceptanceSetToFalse()'><b>userWithPaymentAcceptanceSetToFalse</b><br>Test class: automation.AdminTest.PermissionTest</td>
 <td></td>
-<td>25</td>
-<td>automation.AdminTest.PermissionTest@38145825</td></tr>
+<td>21</td>
+<td>automation.AdminTest.PermissionTest@508dec2b</td></tr>
+<tr>
+<td title='automation.AdminTest.PermissionTest.setAllowExitToTrue()'><b>setAllowExitToTrue</b><br>Test class: automation.AdminTest.PermissionTest</td>
+<td></td>
+<td>30</td>
+<td>automation.AdminTest.PermissionTest@508dec2b</td></tr>
+<tr>
+<td title='automation.AdminTest.PermissionTest.setAllowExitToFalse()'><b>setAllowExitToFalse</b><br>Test class: automation.AdminTest.PermissionTest</td>
+<td></td>
+<td>46</td>
+<td>automation.AdminTest.PermissionTest@508dec2b</td></tr>
+<tr>
+<td title='automation.AdminTest.PermissionTest.userWithActiveStatus()'><b>userWithActiveStatus</b><br>Test class: automation.AdminTest.PermissionTest</td>
+<td></td>
+<td>24</td>
+<td>automation.AdminTest.PermissionTest@508dec2b</td></tr>
 <tr>
 <td title='automation.AdminTest.PermissionTest.userWithPaymentAcceptanceSetToTrue()'><b>userWithPaymentAcceptanceSetToTrue</b><br>Test class: automation.AdminTest.PermissionTest</td>
 <td></td>
 <td>27</td>
-<td>automation.AdminTest.PermissionTest@38145825</td></tr>
-<tr>
-<td title='automation.AdminTest.PermissionTest.userWithRestrictedStatus()'><b>userWithRestrictedStatus</b><br>Test class: automation.AdminTest.PermissionTest</td>
-<td></td>
-<td>18</td>
-<td>automation.AdminTest.PermissionTest@38145825</td></tr>
-<tr>
-<td title='automation.AdminTest.PermissionTest.setAllowExitToFalse()'><b>setAllowExitToFalse</b><br>Test class: automation.AdminTest.PermissionTest</td>
-<td></td>
-<td>47</td>
-<td>automation.AdminTest.PermissionTest@38145825</td></tr>
-<tr>
-<td title='automation.AdminTest.PermissionTest.setAllowExitToTrue()'><b>setAllowExitToTrue</b><br>Test class: automation.AdminTest.PermissionTest</td>
-<td></td>
-<td>28</td>
-<td>automation.AdminTest.PermissionTest@38145825</td></tr>
+<td>automation.AdminTest.PermissionTest@508dec2b</td></tr>
 </table><p>
 </body>
 </html>
