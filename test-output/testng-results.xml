@@ -2,30 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-31T10:52:04 CST" name="Default suite" finished-at="2024-01-31T10:52:41 CST" duration-ms="36346">
+  <suite started-at="2024-01-31T17:32:56 CST" name="Default suite" finished-at="2024-01-31T17:33:27 CST" duration-ms="30298">
     <groups>
-      <group name="ErrorHandling">
-        <method signature="AreaCreationTest.areaNameDupValidation(java.util.HashMap)[pri:0, instance:automation.AdminTest.AreaCreationTest@36ebc363]" name="areaNameDupValidation" class="automation.AdminTest.AreaCreationTest"/>
-      </group> <!-- ErrorHandling -->
     </groups>
-    <test started-at="2024-01-31T10:52:04 CST" name="Default test" finished-at="2024-01-31T10:52:41 CST" duration-ms="36346">
+    <test started-at="2024-01-31T17:32:56 CST" name="Default test" finished-at="2024-01-31T17:33:27 CST" duration-ms="30298">
       <class name="automation.AdminTest.AreaCreationTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaCreationTest@36ebc363]" started-at="2024-01-31T10:52:05 CST" name="launchApplication" finished-at="2024-01-31T10:52:12 CST" duration-ms="7418" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaCreationTest@43bc63a3]" started-at="2024-01-31T17:32:56 CST" name="launchApplication" finished-at="2024-01-31T17:33:04 CST" duration-ms="8115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="areaNameDupValidation(java.util.HashMap)[pri:0, instance:automation.AdminTest.AreaCreationTest@36ebc363]" started-at="2024-01-31T10:52:12 CST" name="areaNameDupValidation" data-provider="getData" finished-at="2024-01-31T10:52:39 CST" duration-ms="27395" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Password1!, mobileNumber=987654321, username=renAdmin}]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="setMotorcycleCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaCreationTest@43bc63a3]" started-at="2024-01-31T17:33:04 CST" name="setMotorcycleCapacityPlusButtonToDisable" finished-at="2024-01-31T17:33:25 CST" duration-ms="20978" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- areaNameDupValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaCreationTest@36ebc363]" started-at="2024-01-31T10:52:39 CST" name="tearDown" finished-at="2024-01-31T10:52:41 CST" duration-ms="1222" status="PASS">
+        </test-method> <!-- setMotorcycleCapacityPlusButtonToDisable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaCreationTest@43bc63a3]" started-at="2024-01-31T17:33:25 CST" name="tearDown" finished-at="2024-01-31T17:33:27 CST" duration-ms="1159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

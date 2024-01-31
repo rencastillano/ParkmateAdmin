@@ -15,6 +15,7 @@ public class FilterAndSearchTest extends BaseTest {
 	String email = "renier.jimenez@gmail.com";
 	String name = "Renier";
 	String lastName ="Castillano";
+	String completeName = name+" "+lastName;
 	String areaName = "Wack Wack";
 	
 	@Test
@@ -25,7 +26,7 @@ public class FilterAndSearchTest extends BaseTest {
 		Assert.assertTrue(user);
 
 		FilterAndSearch search = new FilterAndSearch(driver);
-		boolean result = search.emailAddSearch(email);
+		boolean result = search.emailAddSearch(email, completeName);
 		Assert.assertTrue(result);
 	}
 	@Test
@@ -36,7 +37,7 @@ public class FilterAndSearchTest extends BaseTest {
 		Assert.assertTrue(user);
 
 		FilterAndSearch search = new FilterAndSearch(driver);
-		boolean result = search.userFirstNameSearch(name);
+		boolean result = search.userFirstNameSearch(name, completeName);
 		Assert.assertTrue(result);
 	}
 	@Test
@@ -47,7 +48,7 @@ public class FilterAndSearchTest extends BaseTest {
 		Assert.assertTrue(user);
 
 		FilterAndSearch search = new FilterAndSearch(driver);
-		boolean result = search.userLastnameSearch(lastName);
+		boolean result = search.userLastnameSearch(lastName, completeName);
 		Assert.assertTrue(result);
 	}
 	@Test
@@ -64,7 +65,7 @@ public class FilterAndSearchTest extends BaseTest {
 		landingPage.loginApplication("renAdmin", "Password1!");
 		AreaCreation parkingCreation = new AreaCreation(driver);
 		FilterAndSearch search =parkingCreation.goToAreaPage();
-		boolean result = search.parkingAreaCodeSearch();
+		boolean result = search.parkingAreaCodeSearch(areaName);
 		Assert.assertTrue(result);
 				
 	}

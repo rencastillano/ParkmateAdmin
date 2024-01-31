@@ -72,13 +72,13 @@ public class AreaCreation extends AbstractComponent {
 
 	@FindBy(xpath = "//*[text()='SAVE']")
 	WebElement saveBtn;
-	
-	@FindBy(xpath="//*[contains(text(),'CANCEL')]")
+
+	@FindBy(xpath = "//*[contains(text(),'CANCEL')]")
 	WebElement cancelBtn;
-	
+
 	@FindBy(css = ".w-full > .flex > .ml-auto")
 	WebElement cancelMondalButton;
-	
+
 	@FindBy(css = ".flex > .mr-auto")
 	WebElement proceedModalButton;
 
@@ -86,7 +86,7 @@ public class AreaCreation extends AbstractComponent {
 	List<WebElement> areaNameList;
 
 	@FindBy(css = ".text-red-500.text-xs.mt-1")
-	WebElement errMsgText;
+	WebElement errorMessageText;
 
 	@FindBy(css = "tbody tr:nth-child(5)")
 	WebElement nameToBeEdited;
@@ -116,7 +116,7 @@ public class AreaCreation extends AbstractComponent {
 	WebElement banner;
 
 	By tableRowBy = By.cssSelector("tbody tr:nth-child(1) td:nth-child(1)");
-	
+
 	@FindBy(css = "tr td:first-child")
 	WebElement firstRowData;
 
@@ -143,24 +143,35 @@ public class AreaCreation extends AbstractComponent {
 		Thread.sleep(5000);
 		enterParkingName.click();
 		enterParkingName.clear();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		enterParkingName.sendKeys(areaName);
-		performButtonClicks(motorcyclePlusBtn, 2);
-		System.out.println(areaName);
 
 	}
 
 	public void genInfoSMList() {
 		selectBranch.click();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		selectSMFairview.click();
 	}
 
-	public void genInfocarCapacity(String value) {
-		carCapacity.sendKeys(value);
+	public void getCarCapacity(String value) {
+		setVehicleCapacity(carCapacity, value);
 	}
 
-	public void genInfomotorcycleCapacity(String value) {
-		motorcycleCapacity.sendKeys(value);
+	public void getMotorcycleCapacity(String value) {
+		setVehicleCapacity(motorcycleCapacity, value);
+	}
+
+	private void setVehicleCapacity(WebElement capacityElement, String value) {
+
+		capacityElement.clear();
+		capacityElement.sendKeys(value);
+
 	}
 
 	public void fixRate(String value) {
@@ -174,11 +185,12 @@ public class AreaCreation extends AbstractComponent {
 	}
 
 	public void getAreaCode(String areacode) throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		areaCode.click();
 		areaCode.clear();
+		Thread.sleep(2000);
 		areaCode.sendKeys(areacode);
-		performButtonClicks(carPlusBtn, 2);
+
 	}
 
 	public void parkingHours(String opentime, String closingtime) {
@@ -191,7 +203,7 @@ public class AreaCreation extends AbstractComponent {
 		saveBtn.click();
 
 	}
-		
+
 	public void exitCreationAlert() throws InterruptedException {
 		cancelBtn.click();
 		Thread.sleep(500);
@@ -205,26 +217,26 @@ public class AreaCreation extends AbstractComponent {
 	public boolean handlingDupAndValidation(String areacode, String areaName) throws InterruptedException {
 
 		try {
-			
-			 while (errMsgText.isDisplayed()){
-					getAreaCode(areacode);
-					clickSave();
-					Thread.sleep(4000);
-					}
-			
+
+			while (errorMessageText.isDisplayed()) {
+				getAreaCode(areacode);
+				clickSave();
+				Thread.sleep(4000);
+			}
+
 		} catch (NoSuchElementException e) {
 			// Handle NoSuchElementException if duplicateErrMsgOnCreation is not displayed
-			e.printStackTrace();			
+			e.printStackTrace();
 		} catch (Exception e) {
-		// Handle any other exceptions or log a message
-		e.printStackTrace();
-	}
-			List<String> filteredNames = areaNameList.stream().map(WebElement::getText)
-					.filter(name -> name.contains(areaName)).collect(Collectors.toList());
-			String res = filteredNames.isEmpty() ? "" : filteredNames.get(0);
-			System.out.println(res);
-			boolean result = res.equalsIgnoreCase(areaName);
-			return result;
+			// Handle any other exceptions or log a message
+			e.printStackTrace();
+		}
+		List<String> filteredNames = areaNameList.stream().map(WebElement::getText)
+				.filter(name -> name.contains(areaName)).collect(Collectors.toList());
+		String res = filteredNames.isEmpty() ? "" : filteredNames.get(0);
+		System.out.println(res);
+		boolean result = res.equalsIgnoreCase(areaName);
+		return result;
 	}
 
 	public String errorMessage() {
@@ -234,13 +246,14 @@ public class AreaCreation extends AbstractComponent {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return errMsgText.getText();
+		return errorMessageText.getText();
 
 	}
 
 	public void areaNameToBeEdited() throws InterruptedException {
 		Thread.sleep(3000);
 		nameToBeEdited.click();
+		Thread.sleep(5000);
 
 	}
 
@@ -259,40 +272,42 @@ public class AreaCreation extends AbstractComponent {
 
 		WebElement areaName = areaNameTable.get(randomIndex);
 		String text = areaName.findElement(By.xpath("(//tr/td[1])[" + (randomIndex + 1) + "]")).getText();
-		
+
 		return text;
 
 	}
+
 	private void performSearch(String searchData, String searchResult) throws InterruptedException {
-	    search.sendKeys(searchData);
-	    String result;
-	    do {
-	        Thread.sleep(3000);
-	        result = firstRowData.getText();
-	    } while (!result.equalsIgnoreCase(searchResult));
+		search.sendKeys(searchData);
+		String result;
+		do {
+			Thread.sleep(2000);
+			result = firstRowData.getText();
+		} while (!result.equalsIgnoreCase(searchResult));
 	}
+
 	public boolean parkingAreaUpdate() throws InterruptedException {
 		performSearch("0127", "QA_Automation");
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		firstRowSearch.click();
 		Thread.sleep(3000);
 
 		performButtonClicks(carPlusBtn, 5);
-		performButtonClicks(motorcyclePlusBtn, 5);
 		performButtonClicks(carMinusBtn, 3);
+		performButtonClicks(motorcyclePlusBtn, 5);
 		performButtonClicks(motorcycleMinusBtn, 3);
 
 		clickSave();
 		return runValidation();
 	}
-	
+
 	private boolean runValidation() {
-		
+
 		waitForWebElementToAppear(banner);
 		String bannerText = banner.getText();
 		System.out.println(bannerText);
 		return bannerText.equalsIgnoreCase("QA_Automation is successfully updated!");
-		
+
 	}
 
 	private void performButtonClicks(WebElement button, int count) throws InterruptedException {
@@ -300,6 +315,41 @@ public class AreaCreation extends AbstractComponent {
 			Thread.sleep(200);
 			button.click();
 		}
+	}
+
+	private boolean adjustCapacity(WebElement capacityElement, WebElement pushButton,
+			String count) throws InterruptedException {
+
+		getCapacity(capacityElement, count);
+
+		while (pushButton.isEnabled()) {
+			pushButton.click();
+			Thread.sleep(500);
+		} 
+
+		return !pushButton.isEnabled();
+		
+	}
+
+	public boolean increaseCarCapacity(String count) throws InterruptedException {
+		return adjustCapacity(carCapacity, carPlusBtn, count);
+	}
+
+	public boolean decreaseCarCapacity(String count) throws InterruptedException {
+		return adjustCapacity(carCapacity, carMinusBtn, count);
+	}
+
+	public boolean increaseMotorcycleCapacity(String count) throws InterruptedException {
+		return adjustCapacity(motorcycleCapacity, motorcyclePlusBtn, count);
+	}
+
+	public boolean decreaseMotorcycleCapacity(String count) throws InterruptedException {
+		return adjustCapacity(motorcycleCapacity, motorcycleMinusBtn, count);
+	}
+
+	private void getCapacity(WebElement capacityElement, String count) {
+
+		setVehicleCapacity(capacityElement, count);
 	}
 
 }

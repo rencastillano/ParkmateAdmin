@@ -65,16 +65,16 @@ public class FilterAndSearch extends AbstractComponent {
 	    } while (!result.equalsIgnoreCase(searchResult));
 	}
 
-	public boolean emailAddSearch(String email) throws InterruptedException {
+	public boolean emailAddSearch(String email, String searchResult) throws InterruptedException {
 		
-		performSearch(email,"Renier Castillano");
+		performSearch(email,searchResult);
 		boolean result = userEmail.getText().equalsIgnoreCase(email);
 		return result;
 	}
 
-	public boolean userFirstNameSearch(String fname) throws InterruptedException {
+	public boolean userFirstNameSearch(String fname, String searchResult) throws InterruptedException {
 		
-		performSearch(fname, "Renier Castillano");
+		performSearch(fname, searchResult);
 		String uname = firstRowData.getText();
 		String[] sliptname = uname.split(" ");
 		//System.out.println(sliptname[0]);
@@ -82,9 +82,9 @@ public class FilterAndSearch extends AbstractComponent {
 		return result;
 	}
 
-	public boolean userLastnameSearch(String lname) throws InterruptedException {
+	public boolean userLastnameSearch(String lname, String searchResult) throws InterruptedException {
 		
-		performSearch(lname, "Renier Castillano");
+		performSearch(lname, searchResult);
 		String uname = firstRowData.getText();
 		String[] sliptname = uname.split(" ");
 		boolean result = sliptname[1].equalsIgnoreCase(lname);
@@ -93,7 +93,7 @@ public class FilterAndSearch extends AbstractComponent {
 
 	public boolean parkingNameSearch(String areaName) throws InterruptedException {
 
-		performSearch(areaName, "Wack Wack");
+		performSearch(areaName, areaName);
 		Thread.sleep(1000);
 		String aname = firstRowData.getText();
 		//System.out.println(aname);
@@ -102,9 +102,9 @@ public class FilterAndSearch extends AbstractComponent {
 
 	}
 
-	public boolean parkingAreaCodeSearch() throws InterruptedException {
+	public boolean parkingAreaCodeSearch(String searchResult) throws InterruptedException {
 
-		performSearch("0846", "Wack Wack");
+		performSearch("0846", searchResult);
 		Thread.sleep(3000);
 		String areaCode = searchAreaCode.getText();
 		//System.out.println(areaCode);
