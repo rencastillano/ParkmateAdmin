@@ -18,7 +18,6 @@ public class AllLoginTest extends BaseTest {
 		Assert.assertEquals(landingPage.getErrorMsg(), errMsg);
 
 	}
-
 	@Test(groups= {"ErrorHandling"})
 	public void loginWithInvalidPassword() throws InterruptedException, IOException {
 
@@ -26,7 +25,6 @@ public class AllLoginTest extends BaseTest {
 		Assert.assertEquals(landingPage.getErrorMsg(), errMsg);
 
 	}
-
 	@Test(groups= {"ErrorHandling"})
 	public void loginWithoutAccess() throws InterruptedException, IOException {
 
@@ -34,7 +32,6 @@ public class AllLoginTest extends BaseTest {
 		Assert.assertEquals(landingPage.getErrorMsg(), errMsg);
 
 	}
-	
 	@Test
 	public void loginWithAccess() throws InterruptedException, IOException {
 

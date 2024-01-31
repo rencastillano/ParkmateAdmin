@@ -22,7 +22,6 @@ public class PermissionTest extends BaseTest {
 		Assert.assertTrue(permission.loginValidationForStatusChange());
 
 	}
-
 	@Test
 	public void userWithActiveStatus() throws InterruptedException {
 		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
@@ -35,7 +34,6 @@ public class PermissionTest extends BaseTest {
 		permission.loginToEncoderApp("statusChange", "Password@1");
 		Assert.assertFalse(permission.loginValidationForStatusChange());
 	}
-
 	@Test
 	public void userWithPaymentAcceptanceSetToFalse() throws InterruptedException {
 		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
@@ -47,7 +45,6 @@ public class PermissionTest extends BaseTest {
 		permission.loginToEncoderApp("statusChange", "Password@1");
 		Assert.assertTrue(permission.PaymentAcceptanceSetToFalseLoginValidation());
 	}
-
 	@Test
 	public void userWithPaymentAcceptanceSetToTrue() throws InterruptedException {
 		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
@@ -59,7 +56,6 @@ public class PermissionTest extends BaseTest {
 		permission.loginToEncoderApp("statusChange", "Password@1");
 		Assert.assertTrue(permission.PaymentAcceptanceSetToTrueLoginValidation());
 	}
-
 	@Test
 	public void setAllowExitToFalse() throws InterruptedException {
 		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
@@ -71,7 +67,6 @@ public class PermissionTest extends BaseTest {
 		permission.loginToEncoderApp("statusChange", "Password@1");
 		Assert.assertFalse(permission.allowExitValidation());
 	}
-
 	@Test
 	public void setAllowExitToTrue() throws InterruptedException {
 		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");

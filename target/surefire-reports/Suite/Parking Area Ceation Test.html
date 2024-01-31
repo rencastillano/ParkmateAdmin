@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Parking Area Ceation Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jan 30 17:24:48 CST 2024</td>
+<td>Started on:</td><td>Wed Jan 31 08:51:07 CST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>209 seconds (209370 ms)</td>
+<tr><td>Total time:</td><td>286 seconds (286612 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,133 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='automation.AdminTest.AreaCreationTest.areaCodeDupValidation()'><b>areaCodeDupValidation</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome-headless-shell on windows (7d24f8e4618561832c6573827494e963)] -&gt; xpath: //*[text()=&apos;SAVE&apos;]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52799}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52799/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d24f8e4618561832c6573827494e963
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at automation.AbstractComponents.AbstractComponent.waitForWebElementToBeClickable(AbstractComponent.java:53)
+	at automation.PageObject.AreaCreation.clickSave(AreaCreation.java:188)
+	at automation.AdminTest.AreaCreationTest.areaCodeDupValidation(AreaCreationTest.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace695131253", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace695131253'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome-headless-shell on windows (7d24f8e4618561832c6573827494e963)] -&gt; xpath: //*[text()=&apos;SAVE&apos;]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52799}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52799/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d24f8e4618561832c6573827494e963
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at automation.AbstractComponents.AbstractComponent.waitForWebElementToBeClickable(AbstractComponent.java:53)
+	at automation.PageObject.AreaCreation.clickSave(AreaCreation.java:188)
+	at automation.AdminTest.AreaCreationTest.areaCodeDupValidation(AreaCreationTest.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>42</td>
+<td>automation.AdminTest.AreaCreationTest@1807f5a7</td></tr>
+<tr>
+<td title='automation.AdminTest.AreaCreationTest.areaNameDupValidation()'><b>areaNameDupValidation</b><br>Test class: automation.AdminTest.AreaCreationTest<br>Parameters: {password=Password1!, mobileNumber=987654321, username=renAdmin}</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome-headless-shell on windows (c4b87358baa62ff2a99fd34b4668904f)] -&gt; xpath: //*[text()=&apos;SAVE&apos;]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52894}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52894/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4b87358baa62ff2a99fd34b4668904f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at automation.AbstractComponents.AbstractComponent.waitForWebElementToBeClickable(AbstractComponent.java:53)
+	at automation.PageObject.AreaCreation.clickSave(AreaCreation.java:188)
+	at automation.AdminTest.AreaCreationTest.areaNameDupValidation(AreaCreationTest.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace615774072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace615774072'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome-headless-shell on windows (c4b87358baa62ff2a99fd34b4668904f)] -&gt; xpath: //*[text()=&apos;SAVE&apos;]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52894}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52894/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4b87358baa62ff2a99fd34b4668904f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at automation.AbstractComponents.AbstractComponent.waitForWebElementToBeClickable(AbstractComponent.java:53)
+	at automation.PageObject.AreaCreation.clickSave(AreaCreation.java:188)
+	at automation.AdminTest.AreaCreationTest.areaNameDupValidation(AreaCreationTest.java:55)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>44</td>
+<td>automation.AdminTest.AreaCreationTest@1807f5a7</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,44 +203,34 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='automation.AdminTest.AreaCreationTest.areaCodeDupValidation()'><b>areaCodeDupValidation</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
-<td></td>
-<td>17</td>
-<td>automation.AdminTest.AreaCreationTest@1807f5a7</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaCreationTest.editParkingArea()'><b>editParkingArea</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
-<td></td>
-<td>25</td>
-<td>automation.AdminTest.AreaCreationTest@1807f5a7</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaCreationTest.areaNameDupValidation()'><b>areaNameDupValidation</b><br>Test class: automation.AdminTest.AreaCreationTest<br>Parameters: {password=Password1!, mobileNumber=987654321, username=renAdmin}</td>
+<td title='automation.AdminTest.AreaCreationTest.fixedRateMaxLimit()'><b>fixedRateMaxLimit</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
 <td></td>
 <td>22</td>
 <td>automation.AdminTest.AreaCreationTest@1807f5a7</td></tr>
 <tr>
-<td title='automation.AdminTest.AreaCreationTest.exitCreationAlert()'><b>exitCreationAlert</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
+<td title='automation.AdminTest.AreaCreationTest.areaPageSelectRow()'><b>areaPageSelectRow</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
 <td></td>
-<td>14</td>
-<td>automation.AdminTest.AreaCreationTest@1807f5a7</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaCreationTest.fixedRateMaxLimit()'><b>fixedRateMaxLimit</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
-<td></td>
-<td>18</td>
-<td>automation.AdminTest.AreaCreationTest@1807f5a7</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaCreationTest.areaPagePagenation()'><b>areaPagePagenation</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
-<td></td>
-<td>34</td>
+<td>25</td>
 <td>automation.AdminTest.AreaCreationTest@1807f5a7</td></tr>
 <tr>
 <td title='automation.AdminTest.AreaCreationTest.areaCreation()'><b>areaCreation</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
 <td></td>
+<td>28</td>
+<td>automation.AdminTest.AreaCreationTest@1807f5a7</td></tr>
+<tr>
+<td title='automation.AdminTest.AreaCreationTest.editParkingArea()'><b>editParkingArea</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
+<td></td>
 <td>26</td>
 <td>automation.AdminTest.AreaCreationTest@1807f5a7</td></tr>
 <tr>
-<td title='automation.AdminTest.AreaCreationTest.areaPageSelectRow()'><b>areaPageSelectRow</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
+<td title='automation.AdminTest.AreaCreationTest.areaPagePagenation()'><b>areaPagePagenation</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
 <td></td>
-<td>24</td>
+<td>48</td>
+<td>automation.AdminTest.AreaCreationTest@1807f5a7</td></tr>
+<tr>
+<td title='automation.AdminTest.AreaCreationTest.exitCreationAlert()'><b>exitCreationAlert</b><br>Test class: automation.AdminTest.AreaCreationTest</td>
+<td></td>
+<td>16</td>
 <td>automation.AdminTest.AreaCreationTest@1807f5a7</td></tr>
 </table><p>
 </body>

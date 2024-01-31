@@ -98,16 +98,16 @@ public class AreaCreation extends AbstractComponent {
 	WebElement firstRowSearch;
 
 	@FindBy(xpath = "(//button[text()='+'])[1]")
-	WebElement firstPlusBtn;
+	WebElement carPlusBtn;
 
 	@FindBy(xpath = "(//button[text()='+'])[2]")
-	WebElement secondPlusBtn;
+	WebElement motorcyclePlusBtn;
 
 	@FindBy(xpath = "(//button[text()='-'])[1]")
-	WebElement firstMinusBtn;
+	WebElement carMinusBtn;
 
 	@FindBy(xpath = "(//button[text()='-'])[2]")
-	WebElement secondMinusBtn;
+	WebElement motorcycleMinusBtn;
 
 	@FindBy(css = "input[placeholder='Search']")
 	WebElement search;
@@ -143,7 +143,9 @@ public class AreaCreation extends AbstractComponent {
 		Thread.sleep(5000);
 		enterParkingName.click();
 		enterParkingName.clear();
+		Thread.sleep(1000);
 		enterParkingName.sendKeys(areaName);
+		performButtonClicks(motorcyclePlusBtn, 2);
 		System.out.println(areaName);
 
 	}
@@ -176,6 +178,7 @@ public class AreaCreation extends AbstractComponent {
 		areaCode.click();
 		areaCode.clear();
 		areaCode.sendKeys(areacode);
+		performButtonClicks(carPlusBtn, 2);
 	}
 
 	public void parkingHours(String opentime, String closingtime) {
@@ -197,11 +200,6 @@ public class AreaCreation extends AbstractComponent {
 		cancelBtn.click();
 		Thread.sleep(500);
 		proceedModalButton.click();
-	}
-
-	public void refresh() throws InterruptedException {
-		waitForWebElementToAppear(areaTab);
-		parkingUsersTab.click();
 	}
 
 	public boolean handlingDupAndValidation(String areacode, String areaName) throws InterruptedException {
@@ -230,6 +228,12 @@ public class AreaCreation extends AbstractComponent {
 	}
 
 	public String errorMessage() {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return errMsgText.getText();
 
 	}
@@ -273,10 +277,10 @@ public class AreaCreation extends AbstractComponent {
 		firstRowSearch.click();
 		Thread.sleep(3000);
 
-		performButtonClicks(firstPlusBtn, 5);
-		performButtonClicks(secondPlusBtn, 5);
-		performButtonClicks(firstMinusBtn, 3);
-		performButtonClicks(secondMinusBtn, 3);
+		performButtonClicks(carPlusBtn, 5);
+		performButtonClicks(motorcyclePlusBtn, 5);
+		performButtonClicks(carMinusBtn, 3);
+		performButtonClicks(motorcycleMinusBtn, 3);
 
 		clickSave();
 		return runValidation();

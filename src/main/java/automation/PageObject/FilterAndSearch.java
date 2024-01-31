@@ -60,7 +60,7 @@ public class FilterAndSearch extends AbstractComponent {
 	    search.sendKeys(searchData);
 	    String result;
 	    do {
-	        Thread.sleep(3000);
+	        Thread.sleep(2000);
 	        result = firstRowData.getText();
 	    } while (!result.equalsIgnoreCase(searchResult));
 	}
@@ -94,7 +94,7 @@ public class FilterAndSearch extends AbstractComponent {
 	public boolean parkingNameSearch(String areaName) throws InterruptedException {
 
 		performSearch(areaName, "Wack Wack");
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 		String aname = firstRowData.getText();
 		//System.out.println(aname);
 		boolean result = aname.equalsIgnoreCase(areaName);

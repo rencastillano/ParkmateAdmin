@@ -40,8 +40,10 @@ public class LandingPage extends AbstractComponent {
 	WebElement errorMsg;
 	
 	
-	public UserEnrollment loginApplication(String userName, String pword) {
+	public UserEnrollment loginApplication(String userName, String pword) throws InterruptedException {
+		Thread.sleep(1000);
 		username.sendKeys(userName);
+		Thread.sleep(1000);
 		password.sendKeys(pword);
 		login.click();
 		UserEnrollment userCreationPage = new UserEnrollment(driver);

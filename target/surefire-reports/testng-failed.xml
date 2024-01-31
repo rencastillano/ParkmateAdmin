@@ -8,9 +8,8 @@
     <classes>
       <class name="automation.AdminTest.AreaCreationTest">
         <methods>
-          <include name="areaCreation"/>
-          <include name="exitCreationAlert"/>
           <include name="launchApplication"/>
+          <include name="areaCodeDupValidation"/>
           <include name="tearDown"/>
           <include name="areaNameDupValidation" invocation-numbers="0"/>
         </methods>

@@ -21,11 +21,16 @@
 			<class name="automation.AdminTest.UserEnrollmentTest" />
 		</classes>
 	</test>
-	<test thread-count="5" name="Filter And SearchTest">
+	<test thread-count="5" name="Filter And Search Test">
 		<classes>
 			<class name="automation.AdminTest.FilterAndSearchTest" />
 		</classes>
-	</test> <!--
+	</test> 
+	<test thread-count="5" name="Permission Test">
+		<classes>
+			<class name="automation.AdminTest.PermissionTest" />
+		</classes>
+	</test><!--
 	Test -->
 </suite> <!--
 Suite -->

@@ -28,7 +28,6 @@ public class FilterAndSearchTest extends BaseTest {
 		boolean result = search.emailAddSearch(email);
 		Assert.assertTrue(result);
 	}
-
 	@Test
 	public void userNameSearch() throws InterruptedException {
 
@@ -40,7 +39,6 @@ public class FilterAndSearchTest extends BaseTest {
 		boolean result = search.userFirstNameSearch(name);
 		Assert.assertTrue(result);
 	}
-
 	@Test
 	public void userLastNameSearch() throws InterruptedException {
 
@@ -52,8 +50,7 @@ public class FilterAndSearchTest extends BaseTest {
 		boolean result = search.userLastnameSearch(lastName);
 		Assert.assertTrue(result);
 	}
-	
-	@Test(retryAnalyzer=Retry.class)
+	@Test
 	public void parkingNameSearch() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
 		AreaCreation parkingCreation = new AreaCreation(driver);
@@ -62,7 +59,7 @@ public class FilterAndSearchTest extends BaseTest {
 		Assert.assertTrue(result);
 				
 	}
-	@Test
+	@Test(retryAnalyzer=Retry.class)
 	public void parkingAreaCodeSearch() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
 		AreaCreation parkingCreation = new AreaCreation(driver);
@@ -78,7 +75,6 @@ public class FilterAndSearchTest extends BaseTest {
 		boolean result = search.filterByEncoderRole();
 		Assert.assertTrue(result);
 	}
-	
 	@Test
 	public void filterByAdminRole() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");

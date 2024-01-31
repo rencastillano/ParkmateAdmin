@@ -11,7 +11,6 @@
           <include name="launchApplication"/>
           <include name="tearDown"/>
           <include name="areaCodeDupValidation"/>
-          <include name="areaNameDupValidation" invocation-numbers="0"/>
         </methods>
       </class> <!-- automation.AdminTest.AreaCreationTest -->
     </classes>
@@ -20,9 +19,8 @@
     <classes>
       <class name="automation.AdminTest.UserEnrollmentTest">
         <methods>
-          <include name="exitEnrollmentAlert"/>
-          <include name="editUserAccount"/>
           <include name="launchApplication"/>
+          <include name="userPageSelectRow"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- automation.AdminTest.UserEnrollmentTest -->
@@ -32,7 +30,7 @@
     <classes>
       <class name="automation.AdminTest.FilterAndSearchTest">
         <methods>
-          <include name="parkingAreaCodeSearch"/>
+          <include name="parkingNameSearch"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Filter And SearchTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jan 30 15:22:12 CST 2024</td>
+<td>Started on:</td><td>Wed Jan 31 00:07:06 CST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>147 seconds (147943 ms)</td>
+<tr><td>Total time:</td><td>188 seconds (188782 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,16 +77,92 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='automation.AdminTest.FilterAndSearchTest.parkingAreaCodeSearch()'><b>parkingAreaCodeSearch</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at automation.AdminTest.FilterAndSearchTest.parkingAreaCodeSearch(FilterAndSearchTest.java:71)
+<td></td>
+<td>13</td>
+<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
+<tr>
+<td title='automation.AdminTest.FilterAndSearchTest.filterByEncoderRole()'><b>filterByEncoderRole</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
+<td></td>
+<td>10</td>
+<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
+<tr>
+<td title='automation.AdminTest.FilterAndSearchTest.userEmailSearch()'><b>userEmailSearch</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
+<td></td>
+<td>22</td>
+<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
+<tr>
+<td title='automation.AdminTest.FilterAndSearchTest.filterByAdminRole()'><b>filterByAdminRole</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
+<td></td>
+<td>10</td>
+<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
+<tr>
+<td title='automation.AdminTest.FilterAndSearchTest.userNameSearch()'><b>userNameSearch</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
+<td></td>
+<td>10</td>
+<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
+<tr>
+<td title='automation.AdminTest.FilterAndSearchTest.parkingNameSearch()'><b>parkingNameSearch</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
+<td></td>
+<td>15</td>
+<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
+<tr>
+<td title='automation.AdminTest.FilterAndSearchTest.userLastNameSearch()'><b>userLastNameSearch</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
+<td></td>
+<td>10</td>
+<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='automation.AdminTest.FilterAndSearchTest.parkingNameSearch()'><b>parkingNameSearch</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: img[alt=&apos;SM Logo&apos;]&apos; (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:40)
+	at automation.PageObject.AreaCreation.goToAreaPage(AreaCreation.java:124)
+	at automation.AdminTest.FilterAndSearchTest.parkingNameSearch(FilterAndSearchTest.java:60)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1523661796", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1523661796'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at automation.AdminTest.FilterAndSearchTest.parkingAreaCodeSearch(FilterAndSearchTest.java:71)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;img[alt=&apos;SM Logo&apos;]&quot;}
+  (Session info: chrome=120.0.6099.227)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c1d2fb953a46fa398bc08120aa02fc61, findElement {using=css selector, value=img[alt=&apos;SM Logo&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.227, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49796}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49796/devtoo..., se:cdpVersion: 120.0.6099.227, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c1d2fb953a46fa398bc08120aa02fc61
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	... 29 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace736734672", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace736734672'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: img[alt=&apos;SM Logo&apos;]&apos; (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:40)
+	at automation.PageObject.AreaCreation.goToAreaPage(AreaCreation.java:124)
+	at automation.AdminTest.FilterAndSearchTest.parkingNameSearch(FilterAndSearchTest.java:60)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -113,47 +189,39 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;img[alt=&apos;SM Logo&apos;]&quot;}
+  (Session info: chrome=120.0.6099.227)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c1d2fb953a46fa398bc08120aa02fc61, findElement {using=css selector, value=img[alt=&apos;SM Logo&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.227, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49796}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49796/devtoo..., se:cdpVersion: 120.0.6099.227, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c1d2fb953a46fa398bc08120aa02fc61
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	... 29 more
 </pre></div></td>
-<td>15</td>
-<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='automation.AdminTest.FilterAndSearchTest.filterByAdminRole()'><b>filterByAdminRole</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
-<td></td>
-<td>9</td>
-<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
-<tr>
-<td title='automation.AdminTest.FilterAndSearchTest.userEmailSearch()'><b>userEmailSearch</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
-<td></td>
-<td>10</td>
-<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
-<tr>
-<td title='automation.AdminTest.FilterAndSearchTest.userLastNameSearch()'><b>userLastNameSearch</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
-<td></td>
-<td>10</td>
-<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
-<tr>
-<td title='automation.AdminTest.FilterAndSearchTest.parkingNameSearch()'><b>parkingNameSearch</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
-<td></td>
-<td>16</td>
-<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
-<tr>
-<td title='automation.AdminTest.FilterAndSearchTest.userNameSearch()'><b>userNameSearch</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
-<td></td>
-<td>20</td>
-<td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
-<tr>
-<td title='automation.AdminTest.FilterAndSearchTest.filterByEncoderRole()'><b>filterByEncoderRole</b><br>Test class: automation.AdminTest.FilterAndSearchTest</td>
-<td></td>
-<td>9</td>
+<td>31</td>
 <td>automation.AdminTest.FilterAndSearchTest@43015c69</td></tr>
 </table><p>
 </body>

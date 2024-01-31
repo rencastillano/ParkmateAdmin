@@ -37,7 +37,6 @@ public class UserEnrollmentTest extends BaseTest {
 		Assert.assertTrue(successEnrollment);
 
 	}
-	
 	@Test(dataProvider="getData",groups= {"ErrorHandling"})
 	public void userEmailDupValidation(HashMap<String,String> input) throws InterruptedException {
 		UserEnrollment userCreation = landingPage.loginApplication(input.get("username"), input.get("password"));
@@ -72,7 +71,6 @@ public class UserEnrollmentTest extends BaseTest {
 		boolean successUpdate = userCreation.userAccountUpdate();
 		Assert.assertTrue(successUpdate);
 	}
-	
 	@Test
 	public void userPageSelectRow() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");

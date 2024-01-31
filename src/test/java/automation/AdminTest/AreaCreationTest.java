@@ -41,7 +41,6 @@ public class AreaCreationTest extends BaseTest {
 		Assert.assertTrue(bol);
 		
 	}
-	
 	@Test(dataProvider="getData",groups= {"ErrorHandling"})
 	public void areaNameDupValidation(HashMap<String,String> input) throws InterruptedException {
 		
@@ -57,7 +56,6 @@ public class AreaCreationTest extends BaseTest {
 				"Updated Parking name already exists. Kindly use a different name.");
 		
 	}
-	
 	@Test
 	public void editParkingArea() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
@@ -65,7 +63,6 @@ public class AreaCreationTest extends BaseTest {
 		createArea.goToAreaPage();
 		Assert.assertTrue(createArea.parkingAreaUpdate());
 	}
-	
 	@Test(groups= {"ErrorHandling"})
 	public void areaCodeDupValidation() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
@@ -110,7 +107,6 @@ public class AreaCreationTest extends BaseTest {
 		createArea.genInfomotorcycleCapacity("100");
 		createArea.exitCreationAlert();
 	}
-	
 	@Test
 	public void areaPageSelectRow() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
@@ -119,7 +115,6 @@ public class AreaCreationTest extends BaseTest {
 		Assert.assertTrue(tableCount);
 		
 	}
-	
 	@Test
 	public void areaPagePagenation() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
