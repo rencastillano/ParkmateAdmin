@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ren.castillano\AppData\Local\Temp\testng-eclipse--452700797\testng-customsuite.xml</span>
+                    <span>C:\Users\ren.castillano\AppData\Local\Temp\testng-eclipse-1383119057\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="automation.AdminTest.AreaModuleTest" class="method navigator-link" hash-for-method="areaCreation">areaCreation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="automation.AdminTest.AreaModuleTest" class="method navigator-link" hash-for-method="areaNameDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin})">areaNameDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -126,9 +126,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="areaCreation">
-                  </a> <!-- areaCreation -->
-                  <span class="method-name">areaCreation</span>
+                  <a name="areaNameDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin})">
+                  </a> <!-- areaNameDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin}) -->
+                  <span class="method-name">areaNameDupValidation</span>
+                  <span class="parameters">({password=Password1!, mobileNumber=987654321, username=renAdmin})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ren.castillano\AppData\Local\Temp\testng-eclipse--452700797\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ren.castillano\AppData\Local\Temp\testng-eclipse-1383119057\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -147,7 +148,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;automation.AdminTest.AreaModuleTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;areaCreation&quot;/&gt;
+          &lt;include name=&quot;areaNameDupValidation&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- automation.AdminTest.AreaModuleTest --&gt;
     &lt;/classes&gt;
@@ -174,10 +175,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">Creation</span>
+              <span class="test-group-name">ErrorHandling</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">areaCreation</span>
+                <span class="method-in-group-name">areaNameDupValidation</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -199,14 +200,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'areaCreation')
+data.setCell(0, 1, 'areaNameDupValidation')
 data.setCell(0, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(0, 3, 44003);
+data.setCell(0, 3, 32344);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 44 seconds</span>
+              <span class="suite-total-time">Total running time: 32 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -229,6 +230,8 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">setCarCapacityMinusButtonToDisable</span>
                 <br/>
+                <span class="ignored-method-name">areaCreation</span>
+                <br/>
                 <span class="ignored-method-name">areaPagePagenation</span>
                 <br/>
                 <span class="ignored-method-name">areaCodeDupValidation</span>
@@ -240,8 +243,6 @@ return data;
                 <span class="ignored-method-name">editParkingArea</span>
                 <br/>
                 <span class="ignored-method-name">exitCreationAlert</span>
-                <br/>
-                <span class="ignored-method-name">areaNameDupValidation</span>
                 <br/>
                 <span class="ignored-method-name">setCMotorcycleCapacityPlusButtonToDisable</span>
                 <br/>
@@ -269,12 +270,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">areaCreation</span>
-                <span class="method-start">35075 ms</span>
+                <span class="method-name">areaNameDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin})</span>
+                <span class="method-start">64201 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">79085 ms</span>
+                <span class="method-start">96554 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

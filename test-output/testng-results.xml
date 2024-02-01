@@ -2,23 +2,30 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-01T16:37:15 CST" name="Default suite" finished-at="2024-02-01T16:38:36 CST" duration-ms="80264">
+  <suite started-at="2024-02-01T21:57:52 CST" name="Default suite" finished-at="2024-02-01T21:59:30 CST" duration-ms="97953">
     <groups>
-      <group name="Creation">
-        <method signature="AreaModuleTest.areaCreation()[pri:0, instance:automation.AdminTest.AreaModuleTest@43bc63a3]" name="areaCreation" class="automation.AdminTest.AreaModuleTest"/>
-      </group> <!-- Creation -->
+      <group name="ErrorHandling">
+        <method signature="AreaModuleTest.areaNameDupValidation(java.util.HashMap)[pri:0, instance:automation.AdminTest.AreaModuleTest@43bc63a3]" name="areaNameDupValidation" class="automation.AdminTest.AreaModuleTest"/>
+      </group> <!-- ErrorHandling -->
     </groups>
-    <test started-at="2024-02-01T16:37:15 CST" name="Default test" finished-at="2024-02-01T16:38:36 CST" duration-ms="80264">
+    <test started-at="2024-02-01T21:57:52 CST" name="Default test" finished-at="2024-02-01T21:59:30 CST" duration-ms="97953">
       <class name="automation.AdminTest.AreaModuleTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@43bc63a3]" started-at="2024-02-01T16:37:15 CST" name="launchApplication" finished-at="2024-02-01T16:37:51 CST" duration-ms="35073" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@43bc63a3]" started-at="2024-02-01T21:57:52 CST" name="launchApplication" finished-at="2024-02-01T21:58:56 CST" duration-ms="64198" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="areaCreation()[pri:0, instance:automation.AdminTest.AreaModuleTest@43bc63a3]" started-at="2024-02-01T16:37:51 CST" name="areaCreation" finished-at="2024-02-01T16:38:35 CST" duration-ms="44003" status="PASS">
+        <test-method signature="areaNameDupValidation(java.util.HashMap)[pri:0, instance:automation.AdminTest.AreaModuleTest@43bc63a3]" started-at="2024-02-01T21:58:56 CST" name="areaNameDupValidation" data-provider="getData" finished-at="2024-02-01T21:59:29 CST" duration-ms="32344" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Password1!, mobileNumber=987654321, username=renAdmin}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- areaCreation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@43bc63a3]" started-at="2024-02-01T16:38:35 CST" name="tearDown" finished-at="2024-02-01T16:38:36 CST" duration-ms="1136" status="PASS">
+        </test-method> <!-- areaNameDupValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@43bc63a3]" started-at="2024-02-01T21:59:29 CST" name="tearDown" finished-at="2024-02-01T21:59:30 CST" duration-ms="1165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

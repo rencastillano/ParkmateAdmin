@@ -34,7 +34,6 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.getAreaCode(generateRandomNumber(4));
 		parkingArea.parkingHours("10:30AM", "11:00PM");
 		parkingArea.clickSave();
-
 		boolean bol = parkingArea.handlingDupAndValidation(generateRandomNumber(4), areaName);
 		Assert.assertTrue(bol);
 

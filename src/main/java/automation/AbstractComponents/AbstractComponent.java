@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AbstractComponent {
-	
+
 	private final WebDriver driver;
 
 	public AbstractComponent(WebDriver driver) {
@@ -19,6 +19,9 @@ public class AbstractComponent {
 		PageFactory.initElements(driver, this);
 	}
 
+	@FindBy(tagName = "html")
+	protected WebElement html;
+	
 	@FindBy(css = "img[alt='SM Logo']")
 	protected WebElement smLogo;
 
@@ -47,10 +50,14 @@ public class AbstractComponent {
 		wait.until(ExpectedConditions.invisibilityOf(ele));
 	}
 
-	public void waitForWebElementToBeClickable(WebElement findBy1) {
+	public void waitForWebElementToBeClickable(WebElement findBy) {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.elementToBeClickable(findBy1));
+		wait.until(ExpectedConditions.elementToBeClickable(findBy));
 	}
 
+	public void waitForSomeTime(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.not(ExpectedConditions.stalenessOf(element)));
+	}
 }

@@ -25,6 +25,7 @@ public class AreaModule extends AbstractComponent {
 	}
 
 	// PageFactory
+
 	@FindBy(css = "li[class='mb-3'] button:nth-child(1)")
 	WebElement parkingUsersTab;
 
@@ -140,10 +141,9 @@ public class AreaModule extends AbstractComponent {
 	}
 
 	public void genInfoParkingName(String areaName) throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		enterParkingName.click();
 		enterParkingName.clear();
-		Thread.sleep(2000);
 		enterParkingName.sendKeys(areaName);
 
 	}
@@ -234,7 +234,7 @@ public class AreaModule extends AbstractComponent {
 		List<String> filteredNames = areaNameList.stream().map(WebElement::getText)
 				.filter(name -> name.contains(areaName)).collect(Collectors.toList());
 		String res = filteredNames.isEmpty() ? "" : filteredNames.get(0);
-		System.out.println(res);
+		// System.out.println(res);
 		return res.equalsIgnoreCase(areaName);
 	}
 
@@ -250,15 +250,15 @@ public class AreaModule extends AbstractComponent {
 	}
 
 	public void areaNameToBeEdited() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		nameToBeEdited.click();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 
 	}
 
 	public String getRandomAreaName() throws InterruptedException {
 		waitForElementToAppear(tableRowBy);
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		Random random = new Random();
 
 		// Define the excluded index
@@ -314,18 +314,18 @@ public class AreaModule extends AbstractComponent {
 		}
 	}
 
-	private boolean adjustCapacity(WebElement capacityElement, WebElement pushButton,
-			String count) throws InterruptedException {
+	private boolean adjustCapacity(WebElement capacityElement, WebElement pushButton, String count)
+			throws InterruptedException {
 
 		getCapacity(capacityElement, count);
 
 		while (pushButton.isEnabled()) {
 			pushButton.click();
 			Thread.sleep(500);
-		} 
+		}
 
 		return !pushButton.isEnabled();
-		
+
 	}
 
 	public boolean increaseCarCapacity(String count) throws InterruptedException {

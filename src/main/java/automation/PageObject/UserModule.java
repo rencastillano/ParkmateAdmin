@@ -314,4 +314,5 @@ public class UserModule extends AbstractComponent {
 		return userRole.getText().equals(expectedRole) && newEmailAddress.getText().equals(email);
 	}
 
+	
 }
