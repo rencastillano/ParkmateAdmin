@@ -4,25 +4,28 @@
   <listeners>
     <listener class-name="automation.AdminTestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Parking Area Ceation Test(failed)" verbose="0">
+  <test thread-count="5" name="User Module Test(failed)" verbose="0">
     <classes>
-      <class name="automation.AdminTest.AreaCreationTest">
+      <class name="automation.AdminTest.UserModuleTest">
         <methods>
-          <include name="carCapacityInpuValidation"/>
-          <include name="fixedRateMaxLimit"/>
-          <include name="exitCreationAlert"/>
-          <include name="motorcycleCapacityInpuValidation"/>
-          <include name="editParkingArea"/>
-          <include name="areaPageSelectRow"/>
-          <include name="setCarCapacityPlusButtonToDisable"/>
+          <include name="encoderEnrollment"/>
           <include name="launchApplication"/>
-          <include name="setCMotorcycleCapacityPlusButtonToDisable"/>
           <include name="tearDown"/>
-          <include name="setCarCapacityMinusButtonToDisable"/>
-          <include name="setMotorcycleCapacityPlusButtonToDisable"/>
-          <include name="areaNameDupValidation" invocation-numbers="0"/>
         </methods>
-      </class> <!-- automation.AdminTest.AreaCreationTest -->
+      </class> <!-- automation.AdminTest.UserModuleTest -->
     </classes>
-  </test> <!-- Parking Area Ceation Test(failed) -->
+  </test> <!-- User Module Test(failed) -->
+  <test thread-count="5" name="Permission Test(failed)" verbose="0">
+    <classes>
+      <class name="automation.AdminTest.PermissionTest">
+        <methods>
+          <include name="userWithPaymentAcceptanceSetToTrue"/>
+          <include name="setAllowExitToFalse"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="setAllowExitToTrue"/>
+        </methods>
+      </class> <!-- automation.AdminTest.PermissionTest -->
+    </classes>
+  </test> <!-- Permission Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

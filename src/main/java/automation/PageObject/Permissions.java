@@ -72,7 +72,7 @@ public class Permissions extends AbstractComponent {
 	@FindBy(xpath = "//button[.='Search Vehicle']")
 	WebElement searchVehicleButton;
 
-	@FindBy(xpath = "//div/button/div[2]/div[2]")
+	@FindBy(css = "h1")
 	WebElement encoderSearchResult;
 
 	@FindBy(xpath = "//div[2]/section/button")
@@ -191,13 +191,12 @@ public class Permissions extends AbstractComponent {
 	public boolean PaymentAcceptanceSetToTrueLoginValidation() throws InterruptedException {
 		return validateButtonIsDisplayed(receiveParkingPaymentBtn, "SYNCH03");
 	}
-
+	
 	private boolean validateButtonIsDisplayed(WebElement button, String vehicleNumber) throws InterruptedException {
 
 		encoderSearch.sendKeys(vehicleNumber, Keys.ENTER);
 		Thread.sleep(500);
 		waitForWebElementToAppear(encoderSearchResult);
-		encoderSearchResult.click();
 
 		try {
 			boolean isDisplayed = button.isDisplayed();
