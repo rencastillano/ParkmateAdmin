@@ -20,22 +20,22 @@ public class AreaModuleTest extends BaseTest {
 	public void areaCreation() throws InterruptedException {
 
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule createArea = new AreaModule(driver);
-		createArea.goToAreaPage();
+		AreaModule parkingArea = new AreaModule(driver);
+		parkingArea.goToAreaPage();
 
-		createArea.clickCreate();
-		createArea.genInfoParkingName(areaName);
-		createArea.genInfoSMList();
-		createArea.getCarCapacity("100");
-		createArea.getMotorcycleCapacity("100");
-		createArea.fixRate("40");
-		boolean match = createArea.smMallCode("SMCF");
+		parkingArea.clickCreate();
+		parkingArea.genInfoParkingName(areaName);
+		parkingArea.genInfoSMList();
+		parkingArea.getCarCapacity("100");
+		parkingArea.getMotorcycleCapacity("100");
+		parkingArea.fixRate("40");
+		boolean match = parkingArea.smMallCode("SMCF");
 		Assert.assertTrue(match);
-		createArea.getAreaCode(generateRandomNumber(4));
-		createArea.parkingHours("10:30AM", "11:00PM");
-		createArea.clickSave();
+		parkingArea.getAreaCode(generateRandomNumber(4));
+		parkingArea.parkingHours("10:30AM", "11:00PM");
+		parkingArea.clickSave();
 
-		boolean bol = createArea.handlingDupAndValidation(generateRandomNumber(4), areaName);
+		boolean bol = parkingArea.handlingDupAndValidation(generateRandomNumber(4), areaName);
 		Assert.assertTrue(bol);
 
 	}
@@ -44,14 +44,14 @@ public class AreaModuleTest extends BaseTest {
 	public void areaNameDupValidation(HashMap<String, String> input) throws InterruptedException {
 
 		landingPage.loginApplication(input.get("username"), input.get("password"));
-		AreaModule createArea = new AreaModule(driver);
-		createArea.goToAreaPage();
-		String dupAreaName = createArea.getRandomAreaName();
+		AreaModule parkingArea = new AreaModule(driver);
+		parkingArea.goToAreaPage();
+		String dupAreaName = parkingArea.getRandomAreaName();
 
-		createArea.areaNameToBeEdited();
-		createArea.genInfoParkingName(dupAreaName);
-		createArea.clickSave();
-		Assert.assertEquals(createArea.errorMessage(),
+		parkingArea.areaNameToBeEdited();
+		parkingArea.genInfoParkingName(dupAreaName);
+		parkingArea.clickSave();
+		Assert.assertEquals(parkingArea.errorMessage(),
 				"Updated Parking name already exists. Kindly use a different name.");
 
 	}
@@ -59,21 +59,21 @@ public class AreaModuleTest extends BaseTest {
 	@Test
 	public void editParkingArea() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule createArea = new AreaModule(driver);
-		createArea.goToAreaPage();
-		Assert.assertTrue(createArea.parkingAreaUpdate());
+		AreaModule parkingArea = new AreaModule(driver);
+		parkingArea.goToAreaPage();
+		Assert.assertTrue(parkingArea.parkingAreaUpdate());
 	}
 
 	@Test(groups = { "ErrorHandling" })
 	public void areaCodeDupValidation() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule createArea = new AreaModule(driver);
-		createArea.goToAreaPage();
+		AreaModule parkingArea = new AreaModule(driver);
+		parkingArea.goToAreaPage();
 
-		createArea.areaNameToBeEdited();
-		createArea.getAreaCode("0127");
-		createArea.clickSave();
-		Assert.assertEquals(createArea.errorMessage(),
+		parkingArea.areaNameToBeEdited();
+		parkingArea.getAreaCode("0127");
+		parkingArea.clickSave();
+		Assert.assertEquals(parkingArea.errorMessage(),
 				"Updated area code already exists. Kindly use a different area code.");
 
 	}
@@ -81,33 +81,33 @@ public class AreaModuleTest extends BaseTest {
 	@Test(groups = { "ErrorHandling" })
 	public void fixedRateMaxLimit() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule createArea = new AreaModule(driver);
-		createArea.goToAreaPage();
+		AreaModule parkingArea = new AreaModule(driver);
+		parkingArea.goToAreaPage();
 
-		createArea.clickCreate();
-		createArea.genInfoParkingName("Area_FixedRateTest");
-		createArea.genInfoSMList();
-		createArea.getCarCapacity("100");
-		createArea.getMotorcycleCapacity("100");
-		createArea.fixRate("1000");
-		createArea.getAreaCode(generateRandomNumber(4));
-		createArea.parkingHours("10:30AM", "11:00PM");
-		createArea.clickSave();
-		Assert.assertEquals(createArea.errorMessage(), "Fixed rate value must be 1 - 999.99");
+		parkingArea.clickCreate();
+		parkingArea.genInfoParkingName("Area_FixedRateTest");
+		parkingArea.genInfoSMList();
+		parkingArea.getCarCapacity("100");
+		parkingArea.getMotorcycleCapacity("100");
+		parkingArea.fixRate("1000");
+		parkingArea.getAreaCode(generateRandomNumber(4));
+		parkingArea.parkingHours("10:30AM", "11:00PM");
+		parkingArea.clickSave();
+		Assert.assertEquals(parkingArea.errorMessage(), "Fixed rate value must be 1 - 999.99");
 	}
 
 	@Test
 	public void exitCreationAlert() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule createArea = new AreaModule(driver);
-		createArea.goToAreaPage();
+		AreaModule parkingArea = new AreaModule(driver);
+		parkingArea.goToAreaPage();
 
-		createArea.clickCreate();
-		createArea.genInfoParkingName(areaName);
-		createArea.genInfoSMList();
-		createArea.getCarCapacity("100");
-		createArea.getMotorcycleCapacity("100");
-		createArea.exitCreationAlert();
+		parkingArea.clickCreate();
+		parkingArea.genInfoParkingName(areaName);
+		parkingArea.genInfoSMList();
+		parkingArea.getCarCapacity("100");
+		parkingArea.getMotorcycleCapacity("100");
+		parkingArea.exitCreationAlert();
 	}
 
 	@Test
@@ -132,64 +132,64 @@ public class AreaModuleTest extends BaseTest {
 	@Test
 	public void carCapacityInpuValidation() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule createArea = new AreaModule(driver);
-		createArea.goToAreaPage();
+		AreaModule parkingArea = new AreaModule(driver);
+		parkingArea.goToAreaPage();
 
-		createArea.areaNameToBeEdited();
-		createArea.getCarCapacity("1001");
-		createArea.getMotorcycleCapacity("100");
-		createArea.clickSave();
-		Assert.assertEquals(createArea.errorMessage(), "Car Capacity must be 1 to 1,000.");
+		parkingArea.areaNameToBeEdited();
+		parkingArea.getCarCapacity("1001");
+		parkingArea.getMotorcycleCapacity("100");
+		parkingArea.clickSave();
+		Assert.assertEquals(parkingArea.errorMessage(), "Car Capacity must be 1 to 1,000.");
 	}
 
 	@Test
 	public void motorcycleCapacityInpuValidation() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule createArea = new AreaModule(driver);
-		createArea.goToAreaPage();
+		AreaModule parkingArea = new AreaModule(driver);
+		parkingArea.goToAreaPage();
 
-		createArea.areaNameToBeEdited();
-		createArea.getCarCapacity("1000");
-		createArea.getMotorcycleCapacity("1001");
-		createArea.clickSave();
-		Assert.assertEquals(createArea.errorMessage(), "Motorcycle Capacity must be 1 to 1,000.");
+		parkingArea.areaNameToBeEdited();
+		parkingArea.getCarCapacity("1000");
+		parkingArea.getMotorcycleCapacity("1001");
+		parkingArea.clickSave();
+		Assert.assertEquals(parkingArea.errorMessage(), "Motorcycle Capacity must be 1 to 1,000.");
 	}
 
 	@Test
 	public void setCarCapacityPlusButtonToDisable() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule createArea = new AreaModule(driver);
-		createArea.goToAreaPage();
+		AreaModule parkingArea = new AreaModule(driver);
+		parkingArea.goToAreaPage();
 
-		createArea.areaNameToBeEdited();
-		Assert.assertTrue(createArea.increaseCarCapacity("995"));
+		parkingArea.areaNameToBeEdited();
+		Assert.assertTrue(parkingArea.increaseCarCapacity("995"));
 	}
 	@Test
 	public void setCarCapacityMinusButtonToDisable() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule createArea = new AreaModule(driver);
-		createArea.goToAreaPage();
+		AreaModule parkingArea = new AreaModule(driver);
+		parkingArea.goToAreaPage();
 
-		createArea.areaNameToBeEdited();
-		Assert.assertTrue(createArea.decreaseCarCapacity("5"));
+		parkingArea.areaNameToBeEdited();
+		Assert.assertTrue(parkingArea.decreaseCarCapacity("5"));
 	}
 	@Test
 	public void setCMotorcycleCapacityPlusButtonToDisable() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule createArea = new AreaModule(driver);
-		createArea.goToAreaPage();
+		AreaModule parkingArea = new AreaModule(driver);
+		parkingArea.goToAreaPage();
 
-		createArea.areaNameToBeEdited();
-		Assert.assertTrue(createArea.increaseMotorcycleCapacity("995"));
+		parkingArea.areaNameToBeEdited();
+		Assert.assertTrue(parkingArea.increaseMotorcycleCapacity("995"));
 	}
 	@Test
 	public void setMotorcycleCapacityPlusButtonToDisable() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule createArea = new AreaModule(driver);
-		createArea.goToAreaPage();
+		AreaModule parkingArea = new AreaModule(driver);
+		parkingArea.goToAreaPage();
 
-		createArea.areaNameToBeEdited();
-		Assert.assertTrue(createArea.decreaseMotorcycleCapacity("5"));
+		parkingArea.areaNameToBeEdited();
+		Assert.assertTrue(parkingArea.decreaseMotorcycleCapacity("5"));
 	}
 
 	@DataProvider

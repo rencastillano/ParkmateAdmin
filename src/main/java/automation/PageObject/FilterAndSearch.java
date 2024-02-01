@@ -68,8 +68,8 @@ public class FilterAndSearch extends AbstractComponent {
 	public boolean emailAddSearch(String email, String searchResult) throws InterruptedException {
 		
 		performSearch(email,searchResult);
-		boolean result = userEmail.getText().equalsIgnoreCase(email);
-		return result;
+		return userEmail.getText().equalsIgnoreCase(email);
+		
 	}
 
 	public boolean userFirstNameSearch(String fname, String searchResult) throws InterruptedException {
@@ -78,8 +78,8 @@ public class FilterAndSearch extends AbstractComponent {
 		String uname = firstRowData.getText();
 		String[] sliptname = uname.split(" ");
 		//System.out.println(sliptname[0]);
-		boolean result = sliptname[0].equalsIgnoreCase(fname);
-		return result;
+		return sliptname[0].equalsIgnoreCase(fname);
+		
 	}
 
 	public boolean userLastnameSearch(String lname, String searchResult) throws InterruptedException {
@@ -87,8 +87,8 @@ public class FilterAndSearch extends AbstractComponent {
 		performSearch(lname, searchResult);
 		String uname = firstRowData.getText();
 		String[] sliptname = uname.split(" ");
-		boolean result = sliptname[1].equalsIgnoreCase(lname);
-		return result;
+		return sliptname[1].equalsIgnoreCase(lname);
+		
 	}
 
 	public boolean parkingNameSearch(String areaName) throws InterruptedException {
@@ -97,9 +97,8 @@ public class FilterAndSearch extends AbstractComponent {
 		Thread.sleep(1000);
 		String aname = firstRowData.getText();
 		//System.out.println(aname);
-		boolean result = aname.equalsIgnoreCase(areaName);
-		return result;
-
+		return aname.equalsIgnoreCase(areaName);
+		 
 	}
 
 	public boolean parkingAreaCodeSearch(String searchResult) throws InterruptedException {
@@ -108,9 +107,8 @@ public class FilterAndSearch extends AbstractComponent {
 		Thread.sleep(3000);
 		String areaCode = searchAreaCode.getText();
 		//System.out.println(areaCode);
-		boolean result = areaCode.equalsIgnoreCase("0846");
-		return result;
-
+		return areaCode.equalsIgnoreCase("0846");
+		
 	}
 
 	public boolean filterByEncoderRole() throws InterruptedException {

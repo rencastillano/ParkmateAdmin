@@ -1,5 +1,6 @@
 package automation.AdminTest;
 
+import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -16,59 +17,79 @@ public class UserModuleTest extends BaseTest {
 	
 	String email = "parkmatehub."+generateRandomNumber(5);
 	String completeEmail = email+"@parkmate.com";
+	String forDupEmail = "parkmatehub."+generateRandomNumber(4)+"@parkmate.com";
 	
 	@Test(priority=1, groups= {"Creation"})
-	public void userEnrollment() throws InterruptedException {
+	public void adminEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException  {
 		
-		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
-		boolean user = userCreation.userPage();
-		Assert.assertTrue(user);
+		UserModule parkingUser = landingPage.loginApplication("riztest", "Password@1");
+		Assert.assertTrue(parkingUser.userPage());
 		
-		userCreation.clickEnroll();
-		String userRole = userCreation.selectAdminRole();
-		userCreation.getPersonalDetails("Sam", "O", "Medina");
-		userCreation.getEmailDetails(completeEmail);
-		userCreation.getMobileDetails("987654321");
-		boolean match = userCreation.getAccountDetails(email);
-		Assert.assertTrue(match);
-		userCreation.getParkingStation();
-		userCreation.clickSave();
-		boolean successEnrollment = userCreation.enrollmentValidation(userRole);
-		Assert.assertTrue(successEnrollment);
+		parkingUser.clickEnroll();
+		String userRole = parkingUser.selectAdminRole();
+		parkingUser.getPersonalDetails("Sam", "O", "Medina");
+		parkingUser.getEmailDetails(completeEmail);
+		parkingUser.emailDuplicateValidator(forDupEmail);
+		parkingUser.getMobileDetails("987654321");
+		Assert.assertTrue(parkingUser.getUsername(email));
+		Assert.assertTrue(parkingUser.getPassword());
+		parkingUser.getParkingStation();
+		parkingUser.clickSave();
+		Assert.assertTrue(parkingUser.bannerValidation(userRole));
+		Assert.assertTrue(parkingUser.enrollmentValidation(completeEmail, userRole));
+
+	}
+	
+	@Test(priority=2, groups= {"Creation"})
+	public void encoderEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException  {
+		
+		UserModule parkingUser = landingPage.loginApplication("riztest", "Password@1");
+		Assert.assertTrue(parkingUser.userPage());
+		
+		parkingUser.clickEnroll();
+		String userRole = parkingUser.selectEncoderRole();
+		parkingUser.getPersonalDetails("Sam", "O", "Medina");
+		parkingUser.getEmailDetails(completeEmail);
+		parkingUser.emailDuplicateValidator(forDupEmail);
+		parkingUser.getMobileDetails("987654321");
+		Assert.assertTrue(parkingUser.getUsername(email));
+		Assert.assertTrue(parkingUser.getPassword());
+		parkingUser.getParkingStation();
+		parkingUser.clickSave();
+		Assert.assertTrue(parkingUser.bannerValidation(userRole));
+		Assert.assertTrue(parkingUser.enrollmentValidation(completeEmail, userRole));
 
 	}
 	@Test(dataProvider="getData",groups= {"ErrorHandling"})
 	public void userEmailDupValidation(HashMap<String,String> input) throws InterruptedException {
-		UserModule userCreation = landingPage.loginApplication(input.get("username"), input.get("password"));
-		userCreation.userPage();
-		String existingEmail = userCreation.getRandomEmail();
+		UserModule parkingUser = landingPage.loginApplication(input.get("username"), input.get("password"));
+		parkingUser.userPage();
+		String existingEmail = parkingUser.getRandomEmail();
 		
-		userCreation.clickEnroll();
-		userCreation.getEmailDetails(existingEmail);
-		boolean dupEmail = userCreation.dupEmail();
-		Assert.assertTrue(dupEmail);
-		boolean dupUserName = userCreation.dupUserName();
-		Assert.assertTrue(dupUserName);
+		parkingUser.clickEnroll();
+		parkingUser.getEmailDetails(existingEmail);
+		Assert.assertTrue(parkingUser.duplicateEmail());
+		Assert.assertTrue(parkingUser.duplicateUserName());
 	}
 	@Test
 	public void exitEnrollmentAlert() throws InterruptedException {
 		
-		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
-		boolean user = userCreation.userPage();
+		UserModule parkingUser = landingPage.loginApplication("riztest", "Password@1");
+		boolean user = parkingUser.userPage();
 		Assert.assertTrue(user);
 		
-		userCreation.clickEnroll();
-		userCreation.getPersonalDetails("Sam", "O", "Medina");
-		userCreation.exitEnrollmentAlert();
+		parkingUser.clickEnroll();
+		parkingUser.getPersonalDetails("Sam", "O", "Medina");
+		Assert.assertTrue(parkingUser.exitEnrollmentAlert());
 		
 	}
-	@Test(priority=2)
+	@Test(priority=3)
 	public void editUserAccount() throws InterruptedException {
-		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
-		boolean user = userCreation.userPage();
+		UserModule parkingUser = landingPage.loginApplication("riztest", "Password@1");
+		boolean user = parkingUser.userPage();
 		Assert.assertTrue(user);
 		
-		boolean successUpdate = userCreation.userAccountUpdate();
+		boolean successUpdate = parkingUser.userAccountUpdate();
 		Assert.assertTrue(successUpdate);
 	}
 	@Test

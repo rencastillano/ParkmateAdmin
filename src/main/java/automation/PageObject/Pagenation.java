@@ -64,11 +64,7 @@ public class Pagenation extends AbstractComponent {
 
 		for (WebElement option : selectRowCount.getOptions()) {
 			selectRowCount.selectByValue(option.getAttribute("value"));
-
 			Thread.sleep(5000);
-
-//			int tableRowCount = tablerow.size();
-//			System.out.println("Selected option: " + option.getText() + ", Table row count: " + tableRowCount);
 		}
 		int tableRowCount = tablerow.size();
 		System.out.println("Iteration is complete:" + tableRowCount);

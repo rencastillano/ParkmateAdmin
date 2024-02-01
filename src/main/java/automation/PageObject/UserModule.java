@@ -1,5 +1,10 @@
 package automation.PageObject;
 
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 
@@ -32,7 +37,7 @@ public class UserModule extends AbstractComponent {
 	@FindBy(css = "#roleDropdownButton")
 	WebElement roleDropdown;
 
-	@FindBy(css = ".font-henry-sans-light.text-sm.pl-5.pb-2.capitalize")
+	@FindBy(xpath = "//div[1]/button[2]/div")
 	WebElement adminRole;
 
 	@FindBy(name = "firstName")
@@ -62,7 +67,7 @@ public class UserModule extends AbstractComponent {
 	@FindBy(css = "img[alt='Copy']")
 	WebElement copy;
 
-	@FindBy(css = "button[class*='px-4']")
+	@FindBy(css = "div:nth-child(4) > div > div > button")
 	WebElement selectArea;
 
 	@FindBy(css = "//li/button")
@@ -74,13 +79,13 @@ public class UserModule extends AbstractComponent {
 	@FindBy(xpath = "//div/div/button[.='SAVE']")
 	WebElement saveBtn;
 
-	@FindBy(xpath = "//*[text()='Email already exists.']")
+	@FindBy(css = "div:nth-child(2) > p.mt-1.font-henry-sans-light.text-xs.text-sm-error")
 	WebElement duplicateEmail;
 
-	@FindBy(xpath = "//*[text()='Username already exists.']")
+	@FindBy(css = "div:nth-child(1) > p.mt-1.font-henry-sans-light.text-xs.text-sm-error")
 	WebElement duplicateUserName;
 
-	@FindBy(xpath = "//div/button[@class='flex items-center space-x-2 text-blue-500 hover:underline']")
+	@FindBy(xpath = "//div[2]/div[3]/button")
 	WebElement backButton;
 
 	@FindBy(css = ".w-full > .flex > .ml-auto")
@@ -108,6 +113,16 @@ public class UserModule extends AbstractComponent {
 
 	@FindBy(css = "tr td:first-child")
 	WebElement firstRowData;
+	
+	@FindBy(name = "password")
+	WebElement password;
+	
+	@FindBy(css = "tr:nth-child(1) > td:nth-child(2)")
+	WebElement userRole;
+
+	@FindBy(css = "tr:nth-child(1) > td:nth-child(3)")
+	WebElement newEmailAddress;
+
 
 	public boolean userPage() {
 		waitForWebElementToAppear(smLogo);
@@ -122,11 +137,20 @@ public class UserModule extends AbstractComponent {
 	}
 
 	public String selectAdminRole() {
+		return selectRole("admin");
+	}
 
+	public String selectEncoderRole() {
+		return selectRole("encoder");
+	}
+
+	private String selectRole(String role) {
 		roleDropdown.click();
-		adminRole.click();
-		return roleDropdown.getText();
+		// Click on the specified role
+		WebElement selectedRole = driver.findElement(By.xpath("//*[text()='" + role + "']"));
+		selectedRole.click();
 
+		return roleDropdown.getText();
 	}
 
 	public void clickEnroll() {
@@ -142,10 +166,24 @@ public class UserModule extends AbstractComponent {
 
 	}
 
-	public void getEmailDetails(String emailAddress) {
-		waitForWebElementToAppear(email);
+	public void getEmailDetails(String emailAddress) throws InterruptedException {
+		Thread.sleep(3000);
 		email.clear();
 		email.sendKeys(emailAddress);
+
+	}
+
+	public void emailDuplicateValidator(String emailAddress) throws InterruptedException {
+		try {
+			while (duplicateEmail.isDisplayed()) {
+				email.clear();
+				email.sendKeys(emailAddress);
+				Thread.sleep(3000);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
 
 	}
 
@@ -155,16 +193,29 @@ public class UserModule extends AbstractComponent {
 
 	}
 
-	public boolean getAccountDetails(String email) {
+	public boolean getUsername(String email) {
 		String value = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].value;", userName);
-		boolean match = value.equalsIgnoreCase(email);
+		return value.equalsIgnoreCase(email);
+
+	}
+
+	public boolean getPassword() throws UnsupportedFlavorException, IOException {
 		generate.click();
+		String value = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].value;", password);
 		copy.click();
-		return match;
+		//System.out.println("Copied Text: " + getTextFromClipboard());
+		//System.out.println(value);
+		return value.equals(getTextFromClipboard());
+	}
+
+	// Helper method to retrieve text from clipboard
+	private static String getTextFromClipboard() throws UnsupportedFlavorException, IOException {
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+		return (String) clipboard.getData(DataFlavor.stringFlavor);
 	}
 
 	public void getParkingStation() throws InterruptedException {
-		waitForWebElementToBeClickable(selectArea);
+		//waitForWebElementToBeClickable(selectArea);
 		selectArea.click();
 
 		Random random = new Random();
@@ -186,46 +237,30 @@ public class UserModule extends AbstractComponent {
 		waitForWebElementToAppear(usersTab);
 	}
 
-	public boolean dupEmail() {
+	public boolean duplicateEmail() {
 		waitForWebElementToAppear(duplicateEmail);
-		String de = duplicateEmail.getText();
-		boolean dupEmail = de.equalsIgnoreCase("Email already exists.");
-		return dupEmail;
+		String dup = duplicateEmail.getText();
+		return dup.equalsIgnoreCase("Email already exists.");
 
 	}
 
-	public boolean dupUserName() {
+	public boolean duplicateUserName() {
 		waitForWebElementToAppear(duplicateUserName);
-		String du = duplicateUserName.getText();
-		boolean dupUsername = du.equalsIgnoreCase("Username already exists.");
-		return dupUsername;
+		String dup = duplicateUserName.getText();
+		return dup.equalsIgnoreCase("Username already exists.");
 
 	}
 
-	public void exitEnrollmentAlert() throws InterruptedException {
+	public boolean exitEnrollmentAlert() throws InterruptedException {
 		backButton.click();
 		cancelMondalButton.click();
 		getParkingStation();
 		backButton.click();
 		proceedModalButton.click();
+		waitForWebElementToAppear(enroll);
+		return enroll.isDisplayed();
 	}
 
-//	public boolean enrollmentValidation(String email) {
-//
-//		waitForElementToAppear(firstUserEmail);
-//		try {
-//			Thread.sleep(2000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		List<String> filteredEmails = userEmailList.stream().map(WebElement::getText).filter(name -> name.equals(email))
-//				.collect(Collectors.toList());
-//		String res = filteredEmails.isEmpty() ? "empty" : filteredEmails.get(0);
-//		System.out.println(res);
-//		boolean result = res.equalsIgnoreCase(email);
-//		return result;
-//	}
 	private void performSearch(String searchData, String searchResult) throws InterruptedException {
 		search.sendKeys(searchData);
 		String result;
@@ -244,16 +279,15 @@ public class UserModule extends AbstractComponent {
 		saveBtn.click();
 		waitForWebElementToAppear(banner);
 		String bannerText = banner.getText();
-		boolean match = bannerText.equalsIgnoreCase("forAutomationEdit@parkmate.com is successfully updated!");
-		return match;
+		return bannerText.equalsIgnoreCase("forAutomationEdit@parkmate.com is successfully updated!");
+
 	}
 
-	public boolean enrollmentValidation(String email) {
+	public boolean bannerValidation(String userRole) {
 		waitForWebElementToAppear(banner);
 		String bannerText = banner.getText();
-		System.out.println(bannerText);
-		boolean match = bannerText.equalsIgnoreCase(email + " successfully created!");
-		return match;
+		// System.out.println(bannerText);
+		return bannerText.equalsIgnoreCase(userRole + " successfully created!");
 	}
 
 	public String getRandomEmail() throws InterruptedException {
@@ -270,8 +304,14 @@ public class UserModule extends AbstractComponent {
 		} while (randomIndex == excludedIndex);
 
 		WebElement station = emailAddressTable.get(randomIndex);
-		String text = station.getText();
-		return text;
+		return station.getText();
 
 	}
+
+	public boolean enrollmentValidation(String email, String expectedRole) {
+		//System.out.println(userRole.getText());
+		//System.out.println(newEmailAddress.getText());
+		return userRole.getText().equals(expectedRole) && newEmailAddress.getText().equals(email);
+	}
+
 }

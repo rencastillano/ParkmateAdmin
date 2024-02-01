@@ -235,8 +235,7 @@ public class AreaModule extends AbstractComponent {
 				.filter(name -> name.contains(areaName)).collect(Collectors.toList());
 		String res = filteredNames.isEmpty() ? "" : filteredNames.get(0);
 		System.out.println(res);
-		boolean result = res.equalsIgnoreCase(areaName);
-		return result;
+		return res.equalsIgnoreCase(areaName);
 	}
 
 	public String errorMessage() {
@@ -271,9 +270,7 @@ public class AreaModule extends AbstractComponent {
 		} while (randomIndex == excludedIndex);
 
 		WebElement areaName = areaNameTable.get(randomIndex);
-		String text = areaName.findElement(By.xpath("(//tr/td[1])[" + (randomIndex + 1) + "]")).getText();
-
-		return text;
+		return areaName.findElement(By.xpath("(//tr/td[1])[" + (randomIndex + 1) + "]")).getText();
 
 	}
 
