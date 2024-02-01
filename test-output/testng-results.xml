@@ -2,24 +2,34 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-31T20:02:42 CST" name="Default suite" finished-at="2024-01-31T20:03:35 CST" duration-ms="53365">
+  <suite started-at="2024-01-31T23:08:34 CST" name="Default suite" finished-at="2024-01-31T23:09:33 CST" duration-ms="59017">
     <groups>
+      <group name="ErrorHandling">
+        <method signature="AreaCreationTest.areaNameDupValidation(java.util.HashMap)[pri:0, instance:automation.AdminTest.AreaCreationTest@43bc63a3]" name="areaNameDupValidation" class="automation.AdminTest.AreaCreationTest"/>
+      </group> <!-- ErrorHandling -->
     </groups>
-    <test started-at="2024-01-31T20:02:42 CST" name="Default test" finished-at="2024-01-31T20:03:35 CST" duration-ms="53365">
-      <class name="automation.AdminTest.UserEnrollmentTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserEnrollmentTest@6a6cb05c]" started-at="2024-01-31T20:02:42 CST" name="launchApplication" finished-at="2024-01-31T20:02:55 CST" duration-ms="13261" status="PASS">
+    <test started-at="2024-01-31T23:08:34 CST" name="Default test" finished-at="2024-01-31T23:09:33 CST" duration-ms="59017">
+      <class name="automation.AdminTest.AreaCreationTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaCreationTest@43bc63a3]" started-at="2024-01-31T23:08:35 CST" name="launchApplication" finished-at="2024-01-31T23:08:49 CST" duration-ms="14361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="editUserAccount()[pri:2, instance:automation.AdminTest.UserEnrollmentTest@6a6cb05c]" started-at="2024-01-31T20:02:55 CST" name="editUserAccount" finished-at="2024-01-31T20:03:34 CST" duration-ms="38916" status="PASS">
+        <test-method signature="areaNameDupValidation(java.util.HashMap)[pri:0, instance:automation.AdminTest.AreaCreationTest@43bc63a3]" started-at="2024-01-31T23:08:49 CST" name="areaNameDupValidation" data-provider="getData" finished-at="2024-01-31T23:09:32 CST" duration-ms="43094" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Password1!, mobileNumber=987654321, username=renAdmin}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editUserAccount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserEnrollmentTest@6a6cb05c]" started-at="2024-01-31T20:03:34 CST" name="tearDown" finished-at="2024-01-31T20:03:35 CST" duration-ms="1127" status="PASS">
+        </test-method> <!-- areaNameDupValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaCreationTest@43bc63a3]" started-at="2024-01-31T23:09:32 CST" name="tearDown" finished-at="2024-01-31T23:09:33 CST" duration-ms="1213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.UserEnrollmentTest -->
+      </class> <!-- automation.AdminTest.AreaCreationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="1139.127" tests="37" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="1003.18" tests="37" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="webdriver.chrome.driver" value="C:\Users\ren.castillano\.cache\selenium\chromedriver\win64\121.0.6167.85\chromedriver.exe"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\ren.castillano\AppData\Local\Temp\surefire16869015068555203648\surefirebooter-20240131191705724_3.jar C:\Users\ren.castillano\AppData\Local\Temp\surefire16869015068555203648 2024-01-31T19-17-05_324-jvmRun1 surefire-20240131191705724_1tmp surefire_0-20240131191705724_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\ren.castillano\AppData\Local\Temp\surefire3114769588775450336\surefirebooter-20240131231121883_3.jar C:\Users\ren.castillano\AppData\Local\Temp\surefire3114769588775450336 2024-01-31T23-11-21_402-jvmRun1 surefire-20240131231121883_1tmp surefire_0-20240131231121883_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\ren.castillano\GitStuffs\ParkmateAdmin\target\test-classes;C:\Users\ren.castillano\GitStuffs\ParkmateAdmin\target\classes;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-java\4.16.1\selenium-java-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-api\4.16.1\selenium-api-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.16.1\selenium-chrome-driver-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.16.1\selenium-chromium-driver-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-json\4.16.1\selenium-json-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.16.1\selenium-manager-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v118\4.16.1\selenium-devtools-v118-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v119\4.16.1\selenium-devtools-v119-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.16.1\selenium-devtools-v120-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.16.1\selenium-devtools-v85-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.16.1\selenium-edge-driver-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.16.1\selenium-firefox-driver-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-http\4.16.1\selenium-http-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.16.1\selenium-ie-driver-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.16.1\selenium-remote-driver-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\com\google\guava\guava\32.1.2-jre\guava-32.1.2-jre.jar;C:\Users\ren.castillano\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\ren.castillano\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ren.castillano\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ren.castillano\.m2\repository\org\checkerframework\checker-qual\3.33.0\checker-qual-3.33.0.jar;C:\Users\ren.castillano\.m2\repository\com\google\errorprone\error_prone_annotations\2.18.0\error_prone_annotations-2.18.0.jar;C:\Users\ren.castillano\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-api\1.28.0\opentelemetry-api-1.28.0.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-context\1.28.0\opentelemetry-context-1.28.0.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.28.0\opentelemetry-exporter-logging-1.28.0.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.28.0\opentelemetry-sdk-metrics-1.28.0.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.28.0-alpha\opentelemetry-extension-incubator-1.28.0-alpha.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.28.0\opentelemetry-sdk-logs-1.28.0.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.28.0\opentelemetry-sdk-common-1.28.0.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.28.0\opentelemetry-sdk-extension-autoconfigure-spi-1.28.0.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.28.0\opentelemetry-sdk-extension-autoconfigure-1.28.0.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.28.0-alpha\opentelemetry-api-events-1.28.0-alpha.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.28.0\opentelemetry-sdk-trace-1.28.0.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.28.0\opentelemetry-sdk-1.28.0.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.28.0-alpha\opentelemetry-semconv-1.28.0-alpha.jar;C:\Users\ren.castillano\.m2\repository\net\bytebuddy\byte-buddy\1.14.5\byte-buddy-1.14.5.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-os\4.16.1\selenium-os-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.16.1\selenium-safari-driver-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-support\4.16.1\selenium-support-4.16.1.jar;C:\Users\ren.castillano\.m2\repository\org\testng\testng\7.9.0\testng-7.9.0.jar;C:\Users\ren.castillano\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\ren.castillano\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\ren.castillano\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\ren.castillano\.m2\repository\io\github\bonigarcia\webdrivermanager\5.6.2\webdrivermanager-5.6.2.jar;C:\Users\ren.castillano\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\ren.castillano\.m2\repository\com\github\docker-java\docker-java\3.3.4\docker-java-3.3.4.jar;C:\Users\ren.castillano\.m2\repository\com\github\docker-java\docker-java-core\3.3.4\docker-java-core-3.3.4.jar;C:\Users\ren.castillano\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\ren.castillano\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\ren.castillano\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\ren.castillano\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\ren.castillano\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\ren.castillano\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.4\docker-java-transport-httpclient5-3.3.4.jar;C:\Users\ren.castillano\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\ren.castillano\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\ren.castillano\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\ren.castillano\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\ren.castillano\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\ren.castillano\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\ren.castillano\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\ren.castillano\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\ren.castillano\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\ren.castillano\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\ren.castillano\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\ren.castillano\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\ren.castillano\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\ren.castillano\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\ren.castillano\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.16.1\jackson-databind-2.16.1.jar;C:\Users\ren.castillano\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.16.1\jackson-annotations-2.16.1.jar;C:\Users\ren.castillano\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.16.1\jackson-core-2.16.1.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-java\7.15.0\cucumber-java-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-core\7.15.0\cucumber-core-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-gherkin\7.15.0\cucumber-gherkin-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.15.0\cucumber-gherkin-messages-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\tag-expressions\6.0.0\tag-expressions-6.0.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-expressions\17.0.1\cucumber-expressions-17.0.1.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\datatable\7.15.0\datatable-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-plugin\7.15.0\cucumber-plugin-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\docstring\7.15.0\docstring-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\ci-environment\10.0.0\ci-environment-10.0.0.jar;C:\Users\ren.castillano\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-testng\7.15.0\cucumber-testng-7.15.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\ren.castillano\AppData\Local\Temp\surefire16869015068555203648\surefirebooter-20240131191705724_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ren.castillano\AppData\Local\Temp\surefire3114769588775450336\surefirebooter-20240131231121883_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.1+12-LTS-29"/>
@@ -41,7 +41,7 @@
     <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="browser" value="chrome"/>
+    <property name="browser" value="chromeheadless"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\ren.castillano\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
@@ -60,50 +60,50 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="loginWithAccess" classname="automation.AdminTest.AllLoginTest" time="21.617">
+  <testcase name="loginWithAccess" classname="automation.AdminTest.AllLoginTest" time="12.575">
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Jan 31, 2024 7:17:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jan 31, 2024 11:11:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="loginWithInvalidPassword" classname="automation.AdminTest.AllLoginTest" time="4.822">
-    <system-err><![CDATA[Jan 31, 2024 7:17:58 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="loginWithInvalidPassword" classname="automation.AdminTest.AllLoginTest" time="4.851">
+    <system-err><![CDATA[Jan 31, 2024 11:11:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="loginWithInvalidUserName" classname="automation.AdminTest.AllLoginTest" time="2.901">
-    <system-err><![CDATA[Jan 31, 2024 7:18:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="loginWithInvalidUserName" classname="automation.AdminTest.AllLoginTest" time="2.719">
+    <system-err><![CDATA[Jan 31, 2024 11:11:53 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="loginWithoutAccess" classname="automation.AdminTest.AllLoginTest" time="2.828">
-    <system-err><![CDATA[Jan 31, 2024 7:18:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="loginWithoutAccess" classname="automation.AdminTest.AllLoginTest" time="3.0">
+    <system-err><![CDATA[Jan 31, 2024 11:11:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="areaCodeDupValidation" classname="automation.AdminTest.AreaCreationTest" time="29.757">
+  <testcase name="areaCodeDupValidation" classname="automation.AdminTest.AreaCreationTest" time="25.793">
     <system-out><![CDATA[Test Execution Ended
 ]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:18:32 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jan 31, 2024 11:12:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="areaCreation" classname="automation.AdminTest.AreaCreationTest" time="34.178">
-    <system-out><![CDATA[Area_PHMX011
+  <testcase name="areaCreation" classname="automation.AdminTest.AreaCreationTest" time="35.329">
+    <system-out><![CDATA[Area_PATI039
 ]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:19:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jan 31, 2024 11:12:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".text-red-500.text-xs.mt-1"}
-  (Session info: chrome=121.0.6167.86)
+  (Session info: chrome-headless-shell=121.0.6167.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [174c60a2253e97b83d4711807e49e854, findElement {using=css selector, value=.text-red-500.text-xs.mt-1}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52277}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52277/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 174c60a2253e97b83d4711807e49e854
+Command: [c4364eb75f8fa22926847f6e52489205, findElement {using=css selector, value=.text-red-500.text-xs.mt-1}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58201}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58201/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4364eb75f8fa22926847f6e52489205
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -155,330 +155,200 @@ Session ID: 174c60a2253e97b83d4711807e49e854
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></system-err>
   </testcase>
-  <testcase name="areaNameDupValidation[{password=Password1!, mobileNumber=987654321, username=renAdmin}](1)" classname="automation.AdminTest.AreaCreationTest" time="31.792">
-    <system-err><![CDATA[Jan 31, 2024 7:19:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="areaNameDupValidation[{password=Password1!, mobileNumber=987654321, username=renAdmin}](1)" classname="automation.AdminTest.AreaCreationTest" time="31.462">
+    <system-err><![CDATA[Jan 31, 2024 11:13:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="areaPagePagenation" classname="automation.AdminTest.AreaCreationTest" time="48.839">
-    <system-err><![CDATA[Jan 31, 2024 7:20:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="areaPagePagenation" classname="automation.AdminTest.AreaCreationTest" time="69.047">
+    <system-err><![CDATA[Jan 31, 2024 11:13:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="areaPageSelectRow" classname="automation.AdminTest.AreaCreationTest" time="26.424">
+  <testcase name="areaPageSelectRow" classname="automation.AdminTest.AreaCreationTest" time="26.899">
     <system-out><![CDATA[Iteration is complete:50
 ]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:21:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jan 31, 2024 11:15:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="carCapacityInpuValidation" classname="automation.AdminTest.AreaCreationTest" time="19.142">
-    <system-err><![CDATA[Jan 31, 2024 7:22:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="carCapacityInpuValidation" classname="automation.AdminTest.AreaCreationTest" time="21.171">
+    <system-err><![CDATA[Jan 31, 2024 11:15:38 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="editParkingArea" classname="automation.AdminTest.AreaCreationTest" time="28.657">
+  <testcase name="editParkingArea" classname="automation.AdminTest.AreaCreationTest" time="28.465">
     <system-out><![CDATA[QA_Automation is successfully updated!
 ]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:22:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jan 31, 2024 11:16:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="exitCreationAlert" classname="automation.AdminTest.AreaCreationTest" time="28.688">
-    <system-err><![CDATA[Jan 31, 2024 7:23:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="exitCreationAlert" classname="automation.AdminTest.AreaCreationTest" time="21.082">
+    <system-err><![CDATA[Jan 31, 2024 11:16:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="fixedRateMaxLimit" classname="automation.AdminTest.AreaCreationTest" time="27.23">
-    <system-err><![CDATA[Jan 31, 2024 7:23:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="fixedRateMaxLimit" classname="automation.AdminTest.AreaCreationTest" time="27.333">
+    <system-err><![CDATA[Jan 31, 2024 11:16:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="motorcycleCapacityInpuValidation" classname="automation.AdminTest.AreaCreationTest" time="19.965">
-    <system-err><![CDATA[Jan 31, 2024 7:24:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="motorcycleCapacityInpuValidation" classname="automation.AdminTest.AreaCreationTest" time="20.55">
+    <system-err><![CDATA[Jan 31, 2024 11:17:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="setCMotorcycleCapacityPlusButtonToDisable" classname="automation.AdminTest.AreaCreationTest" time="21.066">
-    <system-err><![CDATA[Jan 31, 2024 7:24:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="setCMotorcycleCapacityPlusButtonToDisable" classname="automation.AdminTest.AreaCreationTest" time="21.391">
+    <system-err><![CDATA[Jan 31, 2024 11:17:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="setCarCapacityMinusButtonToDisable" classname="automation.AdminTest.AreaCreationTest" time="20.387">
-    <system-err><![CDATA[Jan 31, 2024 7:25:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="setCarCapacityMinusButtonToDisable" classname="automation.AdminTest.AreaCreationTest" time="21.15">
+    <system-err><![CDATA[Jan 31, 2024 11:18:20 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="setCarCapacityPlusButtonToDisable" classname="automation.AdminTest.AreaCreationTest" time="20.677">
-    <system-err><![CDATA[Jan 31, 2024 7:25:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="setCarCapacityPlusButtonToDisable" classname="automation.AdminTest.AreaCreationTest" time="21.108">
+    <system-err><![CDATA[Jan 31, 2024 11:18:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="setMotorcycleCapacityPlusButtonToDisable" classname="automation.AdminTest.AreaCreationTest" time="20.922">
-    <system-err><![CDATA[Jan 31, 2024 7:26:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="setMotorcycleCapacityPlusButtonToDisable" classname="automation.AdminTest.AreaCreationTest" time="30.96">
+    <system-err><![CDATA[Jan 31, 2024 11:19:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="editUserAccount" classname="automation.AdminTest.UserEnrollmentTest" time="55.715">
-    <failure message="Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[@class=&apos;flex-grow text-sm self-center w-3/4&apos;]&apos; (tried for 20 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@class='flex-grow text-sm self-center w-3/4']' (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:40)
-	at automation.PageObject.UserEnrollment.userAccountUpdate(UserEnrollment.java:245)
-	at automation.AdminTest.UserEnrollmentTest.editUserAccount(UserEnrollmentTest.java:71)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='flex-grow text-sm self-center w-3/4']"}
-  (Session info: chrome=121.0.6167.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [68f84661d83c5c7e2d2549c0b1683243, findElement {using=xpath, value=//*[@class='flex-grow text-sm self-center w-3/4']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53435}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53435/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 68f84661d83c5c7e2d2549c0b1683243
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
-	... 33 more
-]]></failure>
+  <testcase name="exitEnrollmentAlert" classname="automation.AdminTest.UserEnrollmentTest" time="23.234">
     <system-out><![CDATA[Test Execution Ended
 ]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:26:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jan 31, 2024 11:19:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="exitEnrollmentAlert" classname="automation.AdminTest.UserEnrollmentTest" time="17.875">
-    <system-err><![CDATA[Jan 31, 2024 7:27:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="userEmailDupValidation[{password=Password1!, mobileNumber=987654321, username=renAdmin}](1)" classname="automation.AdminTest.UserEnrollmentTest" time="16.516">
+    <system-err><![CDATA[Jan 31, 2024 11:20:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="userEmailDupValidation[{password=Password1!, mobileNumber=987654321, username=renAdmin}](1)" classname="automation.AdminTest.UserEnrollmentTest" time="20.803">
-    <system-err><![CDATA[Jan 31, 2024 7:28:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="userPagePagenation" classname="automation.AdminTest.UserEnrollmentTest" time="25.035">
+    <system-err><![CDATA[Jan 31, 2024 11:20:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="userEnrollment" classname="automation.AdminTest.UserEnrollmentTest" time="17.249">
-    <system-out><![CDATA[Admin successfully created!
-]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:28:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
-]]></system-err>
-  </testcase>
-  <testcase name="userPagePagenation" classname="automation.AdminTest.UserEnrollmentTest" time="23.795">
-    <system-err><![CDATA[Jan 31, 2024 7:29:10 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
-]]></system-err>
-  </testcase>
-  <testcase name="userPageSelectRow" classname="automation.AdminTest.UserEnrollmentTest" time="26.413">
+  <testcase name="userPageSelectRow" classname="automation.AdminTest.UserEnrollmentTest" time="26.63">
     <system-out><![CDATA[Iteration is complete:50
 ]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:29:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jan 31, 2024 11:21:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="filterByAdminRole" classname="automation.AdminTest.FilterAndSearchTest" time="11.963">
+  <testcase name="userEnrollment" classname="automation.AdminTest.UserEnrollmentTest" time="18.669">
+    <system-out><![CDATA[Admin successfully created!
+]]></system-out>
+    <system-err><![CDATA[Jan 31, 2024 11:21:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
+]]></system-err>
+  </testcase>
+  <testcase name="editUserAccount" classname="automation.AdminTest.UserEnrollmentTest" time="22.617">
+    <system-err><![CDATA[Jan 31, 2024 11:21:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
+]]></system-err>
+  </testcase>
+  <testcase name="filterByAdminRole" classname="automation.AdminTest.FilterAndSearchTest" time="12.644">
     <system-out><![CDATA[Test Execution Ended
 ]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:30:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jan 31, 2024 11:22:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="filterByEncoderRole" classname="automation.AdminTest.FilterAndSearchTest" time="11.868">
-    <system-err><![CDATA[Jan 31, 2024 7:30:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="filterByEncoderRole" classname="automation.AdminTest.FilterAndSearchTest" time="12.137">
+    <system-err><![CDATA[Jan 31, 2024 11:22:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="parkingAreaCodeSearch" classname="automation.AdminTest.FilterAndSearchTest" time="14.461">
-    <system-err><![CDATA[Jan 31, 2024 7:30:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="parkingAreaCodeSearch" classname="automation.AdminTest.FilterAndSearchTest" time="14.566">
+    <system-err><![CDATA[Jan 31, 2024 11:22:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="parkingNameSearch" classname="automation.AdminTest.FilterAndSearchTest" time="12.323">
-    <system-err><![CDATA[Jan 31, 2024 7:31:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="parkingNameSearch" classname="automation.AdminTest.FilterAndSearchTest" time="14.459">
+    <system-err><![CDATA[Jan 31, 2024 11:23:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="userEmailSearch" classname="automation.AdminTest.FilterAndSearchTest" time="10.902">
-    <system-err><![CDATA[Jan 31, 2024 7:31:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="userEmailSearch" classname="automation.AdminTest.FilterAndSearchTest" time="11.267">
+    <system-err><![CDATA[Jan 31, 2024 11:23:34 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="userLastNameSearch" classname="automation.AdminTest.FilterAndSearchTest" time="11.079">
-    <system-err><![CDATA[Jan 31, 2024 7:31:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="userLastNameSearch" classname="automation.AdminTest.FilterAndSearchTest" time="11.188">
+    <system-err><![CDATA[Jan 31, 2024 11:23:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="userNameSearch" classname="automation.AdminTest.FilterAndSearchTest" time="11.399">
-    <system-err><![CDATA[Jan 31, 2024 7:32:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="userNameSearch" classname="automation.AdminTest.FilterAndSearchTest" time="11.344">
+    <system-err><![CDATA[Jan 31, 2024 11:24:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="setAllowExitToFalse" classname="automation.AdminTest.PermissionTest" time="46.339">
+  <testcase name="setAllowExitToFalse" classname="automation.AdminTest.PermissionTest" time="67.794">
     <system-out><![CDATA[Test Execution Ended
-Active
 true
-false
 ]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:32:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jan 31, 2024 11:24:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 Button is not displayed: no such element: Unable to locate element: {"method":"xpath","selector":"//div[2]/section/button"}
-  (Session info: chrome=121.0.6167.86)
+  (Session info: chrome-headless-shell=121.0.6167.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [04e1e42de06fa6344d5806d3a0b560c1, findElement {using=xpath, value=//div[2]/section/button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54437}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54437/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 04e1e42de06fa6344d5806d3a0b560c1
+Command: [c323a521fadeb5a0405bcbfa9b439d2d, findElement {using=xpath, value=//div[2]/section/button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59599}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59599/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c323a521fadeb5a0405bcbfa9b439d2d
 ]]></system-err>
   </testcase>
-  <testcase name="setAllowExitToTrue" classname="automation.AdminTest.PermissionTest" time="30.906">
+  <testcase name="setAllowExitToTrue" classname="automation.AdminTest.PermissionTest" time="27.811">
     <system-out><![CDATA[Active
 true
 ]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:33:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jan 31, 2024 11:25:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="userWithActiveStatus" classname="automation.AdminTest.PermissionTest" time="24.193">
+  <testcase name="userWithActiveStatus" classname="automation.AdminTest.PermissionTest" time="24.696">
     <system-out><![CDATA[Active
 ]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:34:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jan 31, 2024 11:26:12 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 Button is not displayed: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='text-base mb-6 text-sm-error']"}
-  (Session info: chrome=121.0.6167.86)
+  (Session info: chrome-headless-shell=121.0.6167.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2b0b0d7d5cb6e63ac0b1d395a9e3ad7a, findElement {using=xpath, value=//*[@class='text-base mb-6 text-sm-error']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54735}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54735/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2b0b0d7d5cb6e63ac0b1d395a9e3ad7a
+Command: [62742a145c2735d58d78828c22453675, findElement {using=xpath, value=//*[@class='text-base mb-6 text-sm-error']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59832}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59832/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 62742a145c2735d58d78828c22453675
 ]]></system-err>
   </testcase>
-  <testcase name="userWithPaymentAcceptanceSetToFalse" classname="automation.AdminTest.PermissionTest" time="21.979">
+  <testcase name="userWithPaymentAcceptanceSetToFalse" classname="automation.AdminTest.PermissionTest" time="23.102">
     <system-out><![CDATA[Active
 ]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:34:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jan 31, 2024 11:26:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="userWithPaymentAcceptanceSetToTrue" classname="automation.AdminTest.PermissionTest" time="27.356">
+  <testcase name="userWithPaymentAcceptanceSetToTrue" classname="automation.AdminTest.PermissionTest" time="28.967">
     <system-out><![CDATA[Active
 ]]></system-out>
-    <system-err><![CDATA[Jan 31, 2024 7:35:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jan 31, 2024 11:27:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>
-  <testcase name="userWithRestrictedStatus" classname="automation.AdminTest.PermissionTest" time="14.129">
-    <failure message="element click intercepted: Element &lt;button class=&quot;btn w-[85px] mr-auto text-sm text-white uppercase bg-sm-electric-blue font-henry-sans-semibold&quot;&gt;...&lt;/button&gt; is not clickable at point (816, 495). Other element would receive the click: &lt;div class=&quot;card lg:w-3/12 sm:9/12 px-12 py-[50px] shadow text-center rounded-lg bg-white&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=121.0.6167.86)&#10;Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;&#10;System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [709a36a3a5de6e6e8be8da9d90227264, clickElement {id=2806E651AB327A5AC39F9388C0056971_element_133}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54956/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (709a36a3a5de6e6e8be8da9d90227264)] -&gt; xpath: //*[text()=&apos;Proceed&apos;]]&#10;Session ID: 709a36a3a5de6e6e8be8da9d90227264" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[org.openqa.selenium.ElementClickInterceptedException: 
-element click intercepted: Element <button class="btn w-[85px] mr-auto text-sm text-white uppercase bg-sm-electric-blue font-henry-sans-semibold">...</button> is not clickable at point (816, 495). Other element would receive the click: <div class="card lg:w-3/12 sm:9/12 px-12 py-[50px] shadow text-center rounded-lg bg-white">...</div>
-  (Session info: chrome=121.0.6167.86)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [709a36a3a5de6e6e8be8da9d90227264, clickElement {id=2806E651AB327A5AC39F9388C0056971_element_133}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54956}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54956/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (709a36a3a5de6e6e8be8da9d90227264)] -> xpath: //*[text()='Proceed']]
-Session ID: 709a36a3a5de6e6e8be8da9d90227264
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-	at automation.PageObject.Permissions.setUserStatus(Permissions.java:157)
-	at automation.PageObject.Permissions.setStatusToRestricted(Permissions.java:121)
-	at automation.AdminTest.PermissionTest.userWithRestrictedStatus(PermissionTest.java:19)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></failure>
-    <system-err><![CDATA[Jan 31, 2024 7:35:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="userWithRestrictedStatus" classname="automation.AdminTest.PermissionTest" time="20.917">
+    <system-err><![CDATA[Jan 31, 2024 11:27:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 121, returning the closest version; found: 120; Please update to a Selenium version that supports CDP version 121
 ]]></system-err>
   </testcase>

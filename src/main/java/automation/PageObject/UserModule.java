@@ -12,11 +12,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import automation.AbstractComponents.AbstractComponent;
 
-public class UserEnrollment extends AbstractComponent {
+public class UserModule extends AbstractComponent {
 
 	WebDriver driver;
 
-	public UserEnrollment(WebDriver driver) {
+	public UserModule(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);

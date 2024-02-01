@@ -9,10 +9,10 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import automation.AdminTestComponents.BaseTest;
-import automation.PageObject.AreaCreation;
+import automation.PageObject.AreaModule;
 import automation.PageObject.Pagenation;
 
-public class AreaCreationTest extends BaseTest {
+public class AreaModuleTest extends BaseTest {
 
 	String areaName = "Area_" + generateRandomString();
 
@@ -20,7 +20,7 @@ public class AreaCreationTest extends BaseTest {
 	public void areaCreation() throws InterruptedException {
 
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation createArea = new AreaCreation(driver);
+		AreaModule createArea = new AreaModule(driver);
 		createArea.goToAreaPage();
 
 		createArea.clickCreate();
@@ -44,7 +44,7 @@ public class AreaCreationTest extends BaseTest {
 	public void areaNameDupValidation(HashMap<String, String> input) throws InterruptedException {
 
 		landingPage.loginApplication(input.get("username"), input.get("password"));
-		AreaCreation createArea = new AreaCreation(driver);
+		AreaModule createArea = new AreaModule(driver);
 		createArea.goToAreaPage();
 		String dupAreaName = createArea.getRandomAreaName();
 
@@ -59,7 +59,7 @@ public class AreaCreationTest extends BaseTest {
 	@Test
 	public void editParkingArea() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation createArea = new AreaCreation(driver);
+		AreaModule createArea = new AreaModule(driver);
 		createArea.goToAreaPage();
 		Assert.assertTrue(createArea.parkingAreaUpdate());
 	}
@@ -67,7 +67,7 @@ public class AreaCreationTest extends BaseTest {
 	@Test(groups = { "ErrorHandling" })
 	public void areaCodeDupValidation() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation createArea = new AreaCreation(driver);
+		AreaModule createArea = new AreaModule(driver);
 		createArea.goToAreaPage();
 
 		createArea.areaNameToBeEdited();
@@ -81,7 +81,7 @@ public class AreaCreationTest extends BaseTest {
 	@Test(groups = { "ErrorHandling" })
 	public void fixedRateMaxLimit() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation createArea = new AreaCreation(driver);
+		AreaModule createArea = new AreaModule(driver);
 		createArea.goToAreaPage();
 
 		createArea.clickCreate();
@@ -99,7 +99,7 @@ public class AreaCreationTest extends BaseTest {
 	@Test
 	public void exitCreationAlert() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation createArea = new AreaCreation(driver);
+		AreaModule createArea = new AreaModule(driver);
 		createArea.goToAreaPage();
 
 		createArea.clickCreate();
@@ -132,7 +132,7 @@ public class AreaCreationTest extends BaseTest {
 	@Test
 	public void carCapacityInpuValidation() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation createArea = new AreaCreation(driver);
+		AreaModule createArea = new AreaModule(driver);
 		createArea.goToAreaPage();
 
 		createArea.areaNameToBeEdited();
@@ -145,7 +145,7 @@ public class AreaCreationTest extends BaseTest {
 	@Test
 	public void motorcycleCapacityInpuValidation() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation createArea = new AreaCreation(driver);
+		AreaModule createArea = new AreaModule(driver);
 		createArea.goToAreaPage();
 
 		createArea.areaNameToBeEdited();
@@ -158,7 +158,7 @@ public class AreaCreationTest extends BaseTest {
 	@Test
 	public void setCarCapacityPlusButtonToDisable() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation createArea = new AreaCreation(driver);
+		AreaModule createArea = new AreaModule(driver);
 		createArea.goToAreaPage();
 
 		createArea.areaNameToBeEdited();
@@ -167,7 +167,7 @@ public class AreaCreationTest extends BaseTest {
 	@Test
 	public void setCarCapacityMinusButtonToDisable() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation createArea = new AreaCreation(driver);
+		AreaModule createArea = new AreaModule(driver);
 		createArea.goToAreaPage();
 
 		createArea.areaNameToBeEdited();
@@ -176,7 +176,7 @@ public class AreaCreationTest extends BaseTest {
 	@Test
 	public void setCMotorcycleCapacityPlusButtonToDisable() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation createArea = new AreaCreation(driver);
+		AreaModule createArea = new AreaModule(driver);
 		createArea.goToAreaPage();
 
 		createArea.areaNameToBeEdited();
@@ -185,7 +185,7 @@ public class AreaCreationTest extends BaseTest {
 	@Test
 	public void setMotorcycleCapacityPlusButtonToDisable() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation createArea = new AreaCreation(driver);
+		AreaModule createArea = new AreaModule(driver);
 		createArea.goToAreaPage();
 
 		createArea.areaNameToBeEdited();

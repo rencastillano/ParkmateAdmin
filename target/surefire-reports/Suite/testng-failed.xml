@@ -4,26 +4,25 @@
   <listeners>
     <listener class-name="automation.AdminTestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="User Enrollment Test(failed)" verbose="0">
+  <test thread-count="5" name="Parking Area Ceation Test(failed)" verbose="0">
     <classes>
-      <class name="automation.AdminTest.UserEnrollmentTest">
+      <class name="automation.AdminTest.AreaCreationTest">
         <methods>
-          <include name="editUserAccount"/>
+          <include name="carCapacityInpuValidation"/>
+          <include name="fixedRateMaxLimit"/>
+          <include name="exitCreationAlert"/>
+          <include name="motorcycleCapacityInpuValidation"/>
+          <include name="editParkingArea"/>
+          <include name="areaPageSelectRow"/>
+          <include name="setCarCapacityPlusButtonToDisable"/>
           <include name="launchApplication"/>
+          <include name="setCMotorcycleCapacityPlusButtonToDisable"/>
           <include name="tearDown"/>
+          <include name="setCarCapacityMinusButtonToDisable"/>
+          <include name="setMotorcycleCapacityPlusButtonToDisable"/>
+          <include name="areaNameDupValidation" invocation-numbers="0"/>
         </methods>
-      </class> <!-- automation.AdminTest.UserEnrollmentTest -->
+      </class> <!-- automation.AdminTest.AreaCreationTest -->
     </classes>
-  </test> <!-- User Enrollment Test(failed) -->
-  <test thread-count="5" name="Permission Test(failed)" verbose="0">
-    <classes>
-      <class name="automation.AdminTest.PermissionTest">
-        <methods>
-          <include name="launchApplication"/>
-          <include name="userWithRestrictedStatus"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- automation.AdminTest.PermissionTest -->
-    </classes>
-  </test> <!-- Permission Test(failed) -->
+  </test> <!-- Parking Area Ceation Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

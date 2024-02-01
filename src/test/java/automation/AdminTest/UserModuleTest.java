@@ -10,9 +10,9 @@ import org.testng.annotations.Test;
 
 import automation.AdminTestComponents.BaseTest;
 import automation.PageObject.Pagenation;
-import automation.PageObject.UserEnrollment;
+import automation.PageObject.UserModule;
 
-public class UserEnrollmentTest extends BaseTest {
+public class UserModuleTest extends BaseTest {
 	
 	String email = "parkmatehub."+generateRandomNumber(5);
 	String completeEmail = email+"@parkmate.com";
@@ -20,7 +20,7 @@ public class UserEnrollmentTest extends BaseTest {
 	@Test(priority=1, groups= {"Creation"})
 	public void userEnrollment() throws InterruptedException {
 		
-		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
+		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
 		boolean user = userCreation.userPage();
 		Assert.assertTrue(user);
 		
@@ -39,7 +39,7 @@ public class UserEnrollmentTest extends BaseTest {
 	}
 	@Test(dataProvider="getData",groups= {"ErrorHandling"})
 	public void userEmailDupValidation(HashMap<String,String> input) throws InterruptedException {
-		UserEnrollment userCreation = landingPage.loginApplication(input.get("username"), input.get("password"));
+		UserModule userCreation = landingPage.loginApplication(input.get("username"), input.get("password"));
 		userCreation.userPage();
 		String existingEmail = userCreation.getRandomEmail();
 		
@@ -53,7 +53,7 @@ public class UserEnrollmentTest extends BaseTest {
 	@Test
 	public void exitEnrollmentAlert() throws InterruptedException {
 		
-		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
+		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
 		boolean user = userCreation.userPage();
 		Assert.assertTrue(user);
 		
@@ -64,7 +64,7 @@ public class UserEnrollmentTest extends BaseTest {
 	}
 	@Test(priority=2)
 	public void editUserAccount() throws InterruptedException {
-		UserEnrollment userCreation = landingPage.loginApplication("riztest", "Password@1");
+		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
 		boolean user = userCreation.userPage();
 		Assert.assertTrue(user);
 		

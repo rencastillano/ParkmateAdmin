@@ -14,11 +14,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import automation.AbstractComponents.AbstractComponent;
 
-public class AreaCreation extends AbstractComponent {
+public class AreaModule extends AbstractComponent {
 
 	WebDriver driver;
 
-	public AreaCreation(WebDriver driver) {
+	public AreaModule(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);

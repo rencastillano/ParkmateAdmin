@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 
 import automation.AdminTestComponents.BaseTest;
 import automation.AdminTestComponents.Retry;
-import automation.PageObject.AreaCreation;
+import automation.PageObject.AreaModule;
 import automation.PageObject.FilterAndSearch;
-import automation.PageObject.UserEnrollment;
+import automation.PageObject.UserModule;
 
 
 public class FilterAndSearchTest extends BaseTest {
@@ -21,7 +21,7 @@ public class FilterAndSearchTest extends BaseTest {
 	@Test
 	public void userEmailSearch() throws InterruptedException {
 
-		UserEnrollment userCreationPage = landingPage.loginApplication("renAdmin", "Password1!");
+		UserModule userCreationPage = landingPage.loginApplication("renAdmin", "Password1!");
 		boolean user = userCreationPage.userPage();
 		Assert.assertTrue(user);
 
@@ -32,7 +32,7 @@ public class FilterAndSearchTest extends BaseTest {
 	@Test
 	public void userNameSearch() throws InterruptedException {
 
-		UserEnrollment userCreationPage = landingPage.loginApplication("renAdmin", "Password1!");
+		UserModule userCreationPage = landingPage.loginApplication("renAdmin", "Password1!");
 		boolean user = userCreationPage.userPage();
 		Assert.assertTrue(user);
 
@@ -43,7 +43,7 @@ public class FilterAndSearchTest extends BaseTest {
 	@Test
 	public void userLastNameSearch() throws InterruptedException {
 
-		UserEnrollment userCreationPage = landingPage.loginApplication("renAdmin", "Password1!");
+		UserModule userCreationPage = landingPage.loginApplication("renAdmin", "Password1!");
 		boolean user = userCreationPage.userPage();
 		Assert.assertTrue(user);
 
@@ -54,7 +54,7 @@ public class FilterAndSearchTest extends BaseTest {
 	@Test
 	public void parkingNameSearch() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation parkingCreation = new AreaCreation(driver);
+		AreaModule parkingCreation = new AreaModule(driver);
 		FilterAndSearch search =parkingCreation.goToAreaPage();
 		boolean result = search.parkingNameSearch(areaName);
 		Assert.assertTrue(result);
@@ -63,7 +63,7 @@ public class FilterAndSearchTest extends BaseTest {
 	@Test(retryAnalyzer=Retry.class)
 	public void parkingAreaCodeSearch() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaCreation parkingCreation = new AreaCreation(driver);
+		AreaModule parkingCreation = new AreaModule(driver);
 		FilterAndSearch search =parkingCreation.goToAreaPage();
 		boolean result = search.parkingAreaCodeSearch(areaName);
 		Assert.assertTrue(result);
