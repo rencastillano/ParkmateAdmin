@@ -11,14 +11,14 @@
 			<class name="automation.AdminTest.AllLoginTest" />
 		</classes>
 	</test>
-	<test thread-count="5" name="Parking Area Ceation Test">
+	<test thread-count="5" name="Parking Area Module Test">
 		<classes>
-			<class name="automation.AdminTest.AreaCreationTest" />
+			<class name="automation.AdminTest.AreaModuleTest" />
 		</classes>
 	</test>
-	<test thread-count="5" name="User Enrollment Test">
+	<test thread-count="5" name="User Module Test">
 		<classes>
-			<class name="automation.AdminTest.UserEnrollmentTest" />
+			<class name="automation.AdminTest.UserModuleTest" />
 		</classes>
 	</test>
 	<test thread-count="5" name="Filter And SearchTest">

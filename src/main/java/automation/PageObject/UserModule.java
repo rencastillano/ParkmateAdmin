@@ -10,6 +10,7 @@ import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -65,7 +66,10 @@ public class UserModule extends AbstractComponent {
 	WebElement generate;
 
 	@FindBy(css = "img[alt='Copy']")
-	WebElement copy;
+	WebElement copyPassword;
+	
+	@FindBy(xpath="//div[3]/div/div/div[1]/div/div/button")
+	WebElement copyUserNameBtn;
 
 	@FindBy(css = "div:nth-child(4) > div > div > button")
 	WebElement selectArea;
@@ -113,16 +117,18 @@ public class UserModule extends AbstractComponent {
 
 	@FindBy(css = "tr td:first-child")
 	WebElement firstRowData;
-	
+
 	@FindBy(name = "password")
 	WebElement password;
-	
+
 	@FindBy(css = "tr:nth-child(1) > td:nth-child(2)")
 	WebElement userRole;
 
 	@FindBy(css = "tr:nth-child(1) > td:nth-child(3)")
 	WebElement newEmailAddress;
 
+	@FindBy(xpath = "//div[4]/div/div/ul")
+	WebElement stationDataList;
 
 	public boolean userPage() {
 		waitForWebElementToAppear(smLogo);
@@ -154,7 +160,6 @@ public class UserModule extends AbstractComponent {
 	}
 
 	public void clickEnroll() {
-		waitForWebElementToAppear(smLogo);
 		enroll.click();
 	}
 
@@ -168,17 +173,19 @@ public class UserModule extends AbstractComponent {
 
 	public void getEmailDetails(String emailAddress) throws InterruptedException {
 		Thread.sleep(3000);
-		email.clear();
-		email.sendKeys(emailAddress);
+		email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, emailAddress);
+		//email.sendKeys(emailAddress);
+		//System.out.println(emailAddress);
 
 	}
 
 	public void emailDuplicateValidator(String emailAddress) throws InterruptedException {
 		try {
 			while (duplicateEmail.isDisplayed()) {
-				email.clear();
-				email.sendKeys(emailAddress);
+				email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, emailAddress);
+				//email.sendKeys(emailAddress);
 				Thread.sleep(3000);
+				System.out.println("dup email" + emailAddress);
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -187,9 +194,9 @@ public class UserModule extends AbstractComponent {
 
 	}
 
-	public void getMobileDetails(String mobileNum) {
+	public void getMobileDetails() {
 		mobile.click();
-		mobile.sendKeys(mobileNum);
+		mobile.sendKeys("987654321");
 
 	}
 
@@ -199,24 +206,39 @@ public class UserModule extends AbstractComponent {
 
 	}
 
-	public boolean getPassword() throws UnsupportedFlavorException, IOException {
+	public void generatePassword() throws UnsupportedFlavorException, IOException {
+		
 		generate.click();
-		String value = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].value;", password);
-		copy.click();
-		//System.out.println("Copied Text: " + getTextFromClipboard());
-		//System.out.println(value);
-		return value.equals(getTextFromClipboard());
+	}
+	
+	public boolean getCopyUserName() throws UnsupportedFlavorException, IOException, InterruptedException {
+	    return getCopyValueAndCompare(userName, copyUserNameBtn);
+	}
+
+	public boolean getCopyPassword() throws UnsupportedFlavorException, IOException, InterruptedException {
+	    return getCopyValueAndCompare(password, copyPassword);
+	}
+	
+	private boolean getCopyValueAndCompare(WebElement element, WebElement copyButton) throws UnsupportedFlavorException, IOException, InterruptedException {
+	    Thread.sleep(5000);
+	    String value = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].value;", element);
+	    copyButton.click();
+	    return value.equals(getTextFromClipboard());
 	}
 
 	// Helper method to retrieve text from clipboard
 	private static String getTextFromClipboard() throws UnsupportedFlavorException, IOException {
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		return (String) clipboard.getData(DataFlavor.stringFlavor);
+	    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+	    return (String) clipboard.getData(DataFlavor.stringFlavor);
 	}
 
+
 	public void getParkingStation() throws InterruptedException {
-		//waitForWebElementToBeClickable(selectArea);
-		selectArea.click();
+
+		do {
+			Thread.sleep(1000);
+			selectArea.click();
+		} while (!stationDataList.isDisplayed());
 
 		Random random = new Random();
 		int excludedStart = 0;
@@ -228,13 +250,13 @@ public class UserModule extends AbstractComponent {
 		} while (randomIndex >= excludedStart && randomIndex <= excludedEnd);
 
 		WebElement station = areaStation.get(randomIndex);
-		Thread.sleep(4000);
+		Thread.sleep(1000);
 		station.click();
 	}
 
 	public void clickSave() {
 		saveBtn.click();
-		waitForWebElementToAppear(usersTab);
+
 	}
 
 	public boolean duplicateEmail() {
@@ -261,19 +283,20 @@ public class UserModule extends AbstractComponent {
 		return enroll.isDisplayed();
 	}
 
-	private void performSearch(String searchData, String searchResult) throws InterruptedException {
+	public void performSearch(String searchData, String searchResult) throws InterruptedException {
 		search.sendKeys(searchData);
 		String result;
 		do {
 			Thread.sleep(3000);
 			result = firstRowData.getText();
 		} while (!result.equalsIgnoreCase(searchResult));
+		
+		firstDataRow.click();
 	}
 
 	public boolean userAccountUpdate() throws InterruptedException {
 
 		performSearch("forAutomationEdit@parkmate.com", "Automation EditTesting");
-		firstDataRow.click();
 		Thread.sleep(5000);
 		getParkingStation();
 		saveBtn.click();
@@ -309,10 +332,9 @@ public class UserModule extends AbstractComponent {
 	}
 
 	public boolean enrollmentValidation(String email, String expectedRole) {
-		//System.out.println(userRole.getText());
-		//System.out.println(newEmailAddress.getText());
+		// System.out.println(userRole.getText());
+		// System.out.println(newEmailAddress.getText());
 		return userRole.getText().equals(expectedRole) && newEmailAddress.getText().equals(email);
 	}
 
-	
 }

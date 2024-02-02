@@ -141,6 +141,10 @@ public class AreaModule extends AbstractComponent {
 	}
 
 	public void genInfoParkingName(String areaName) throws InterruptedException {
+		
+		do {
+			Thread.sleep(500);
+		} while (enterParkingName.getAttribute("value").isEmpty());
 		Thread.sleep(3000);
 		enterParkingName.click();
 		enterParkingName.clear();
@@ -250,7 +254,7 @@ public class AreaModule extends AbstractComponent {
 	}
 
 	public void areaNameToBeEdited() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		nameToBeEdited.click();
 		Thread.sleep(3000);
 
