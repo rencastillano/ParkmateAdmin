@@ -4,28 +4,15 @@
   <listeners>
     <listener class-name="automation.AdminTestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="User Module Test(failed)" verbose="0">
+  <test thread-count="5" name="Parking Area Module Test(failed)" verbose="0">
     <classes>
-      <class name="automation.AdminTest.UserModuleTest">
+      <class name="automation.AdminTest.AreaModuleTest">
         <methods>
-          <include name="getCopyUserPassword"/>
-          <include name="launchApplication"/>
-          <include name="userEmailDupValidation" invocation-numbers="0"/>
-          <include name="tearDown"/>
-          <include name="getCopyUserName"/>
-        </methods>
-      </class> <!-- automation.AdminTest.UserModuleTest -->
-    </classes>
-  </test> <!-- User Module Test(failed) -->
-  <test thread-count="5" name="Permission Test(failed)" verbose="0">
-    <classes>
-      <class name="automation.AdminTest.PermissionTest">
-        <methods>
-          <include name="setAllowExitToFalse"/>
+          <include name="areaCodeDupValidation"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- automation.AdminTest.PermissionTest -->
+      </class> <!-- automation.AdminTest.AreaModuleTest -->
     </classes>
-  </test> <!-- Permission Test(failed) -->
+  </test> <!-- Parking Area Module Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

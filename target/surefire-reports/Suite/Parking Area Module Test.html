@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Parking Area Module Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 02 22:35:34 CST 2024</td>
+<td>Started on:</td><td>Sat Feb 03 01:15:25 CST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>380 seconds (380564 ms)</td>
+<tr><td>Total time:</td><td>443 seconds (443259 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,74 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='automation.AdminTest.AreaModuleTest.areaCodeDupValidation()'><b>areaCodeDupValidation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (3e4793120f93296e17c624afa8e92632)] -&gt; css selector: img[alt=&apos;SM Logo&apos;]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50098}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50098/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3e4793120f93296e17c624afa8e92632
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:44)
+	at automation.PageObject.AreaModule.goToAreaPage(AreaModule.java:125)
+	at automation.AdminTest.AreaModuleTest.areaCodeDupValidation(AreaModuleTest.java:70)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace475157807", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace475157807'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (3e4793120f93296e17c624afa8e92632)] -&gt; css selector: img[alt=&apos;SM Logo&apos;]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50098}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50098/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3e4793120f93296e17c624afa8e92632
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:44)
+	at automation.PageObject.AreaModule.goToAreaPage(AreaModule.java:125)
+	at automation.AdminTest.AreaModuleTest.areaCodeDupValidation(AreaModuleTest.java:70)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>22</td>
+<td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,29 +144,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='automation.AdminTest.AreaModuleTest.areaNameDupValidation()'><b>areaNameDupValidation</b><br>Test class: automation.AdminTest.AreaModuleTest<br>Parameters: {password=Password1!, mobileNumber=987654321, username=renAdmin}</td>
+<td title='automation.AdminTest.AreaModuleTest.setMotorcycleCapacityPlusButtonToDisable()'><b>setMotorcycleCapacityPlusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
-<td>28</td>
+<td>18</td>
 <td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
 <tr>
-<td title='automation.AdminTest.AreaModuleTest.areaCreation()'><b>areaCreation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td title='automation.AdminTest.AreaModuleTest.fixedRateMaxLimit()'><b>fixedRateMaxLimit</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
-<td>32</td>
+<td>24</td>
 <td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
 <tr>
-<td title='automation.AdminTest.AreaModuleTest.setCMotorcycleCapacityPlusButtonToDisable()'><b>setCMotorcycleCapacityPlusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td title='automation.AdminTest.AreaModuleTest.areaPagePagenation()'><b>areaPagePagenation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
-<td>17</td>
+<td>27</td>
 <td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
 <tr>
-<td title='automation.AdminTest.AreaModuleTest.setCarCapacityMinusButtonToDisable()'><b>setCarCapacityMinusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td title='automation.AdminTest.AreaModuleTest.motorcycleCapacityInpuValidation()'><b>motorcycleCapacityInpuValidation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
-<td>17</td>
-<td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaModuleTest.setCarCapacityPlusButtonToDisable()'><b>setCarCapacityPlusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
-<td></td>
-<td>17</td>
+<td>25</td>
 <td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
 <tr>
 <td title='automation.AdminTest.AreaModuleTest.areaPageSelectRow()'><b>areaPageSelectRow</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
@@ -106,7 +169,17 @@ function toggleAllBoxes() {
 <td>26</td>
 <td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
 <tr>
-<td title='automation.AdminTest.AreaModuleTest.setMotorcycleCapacityPlusButtonToDisable()'><b>setMotorcycleCapacityPlusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td title='automation.AdminTest.AreaModuleTest.carCapacityInpuValidation()'><b>carCapacityInpuValidation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td></td>
+<td>17</td>
+<td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
+<tr>
+<td title='automation.AdminTest.AreaModuleTest.areaNameDupValidation()'><b>areaNameDupValidation</b><br>Test class: automation.AdminTest.AreaModuleTest<br>Parameters: {password=Password1!, mobileNumber=987654321, username=renAdmin}</td>
+<td></td>
+<td>25</td>
+<td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
+<tr>
+<td title='automation.AdminTest.AreaModuleTest.setCarCapacityMinusButtonToDisable()'><b>setCarCapacityMinusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
 <td>17</td>
 <td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
@@ -116,19 +189,14 @@ function toggleAllBoxes() {
 <td>18</td>
 <td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
 <tr>
-<td title='automation.AdminTest.AreaModuleTest.motorcycleCapacityInpuValidation()'><b>motorcycleCapacityInpuValidation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td title='automation.AdminTest.AreaModuleTest.setCMotorcycleCapacityPlusButtonToDisable()'><b>setCMotorcycleCapacityPlusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
-<td>25</td>
+<td>18</td>
 <td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
 <tr>
-<td title='automation.AdminTest.AreaModuleTest.areaCodeDupValidation()'><b>areaCodeDupValidation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td title='automation.AdminTest.AreaModuleTest.areaCreation()'><b>areaCreation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
-<td>23</td>
-<td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaModuleTest.fixedRateMaxLimit()'><b>fixedRateMaxLimit</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
-<td></td>
-<td>23</td>
+<td>32</td>
 <td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
 <tr>
 <td title='automation.AdminTest.AreaModuleTest.editParkingArea()'><b>editParkingArea</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
@@ -136,14 +204,9 @@ function toggleAllBoxes() {
 <td>24</td>
 <td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
 <tr>
-<td title='automation.AdminTest.AreaModuleTest.carCapacityInpuValidation()'><b>carCapacityInpuValidation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td title='automation.AdminTest.AreaModuleTest.setCarCapacityPlusButtonToDisable()'><b>setCarCapacityPlusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
-<td>16</td>
-<td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaModuleTest.areaPagePagenation()'><b>areaPagePagenation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
-<td></td>
-<td>24</td>
+<td>17</td>
 <td>automation.AdminTest.AreaModuleTest@2584b82d</td></tr>
 </table><p>
 </body>

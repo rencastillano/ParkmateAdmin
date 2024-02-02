@@ -138,8 +138,7 @@ public class UserModule extends AbstractComponent {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		boolean utab = usersTab.isDisplayed();
-		return utab;
+		return usersTab.isDisplayed();
 	}
 
 	public String selectAdminRole() {
@@ -207,9 +206,6 @@ public class UserModule extends AbstractComponent {
 	    return email.getAttribute("value");
 	}
 
-
-
-
 	public void getMobileDetails() {
 		mobile.click();
 		mobile.sendKeys("987654321");
@@ -239,7 +235,9 @@ public class UserModule extends AbstractComponent {
 	}
 	
 	private boolean getCopyValueAndCompare(WebElement element, WebElement copyButton) throws UnsupportedFlavorException, IOException, InterruptedException {
-	    Thread.sleep(5000);
+	    do {
+			Thread.sleep(1000);
+		} while (!email.getAttribute("value").equalsIgnoreCase("forAutomationEdit@parkmate.com"));
 	    String value = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].value;", element);
 	    copyButton.click();
 	    Thread.sleep(1000);
@@ -317,7 +315,7 @@ public class UserModule extends AbstractComponent {
 	public boolean userAccountUpdate() throws InterruptedException {
 
 		performSearch("forAutomationEdit@parkmate.com", "Automation EditTesting");
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 		getParkingStation();
 		saveBtn.click();
 		waitForWebElementToAppear(banner);

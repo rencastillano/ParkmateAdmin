@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-02T23:06:47 CST" name="Default suite" finished-at="2024-02-02T23:07:17 CST" duration-ms="30138">
+  <suite started-at="2024-02-03T01:09:22 CST" name="Default suite" finished-at="2024-02-03T01:10:02 CST" duration-ms="39873">
     <groups>
     </groups>
-    <test started-at="2024-02-02T23:06:47 CST" name="Default test" finished-at="2024-02-02T23:07:17 CST" duration-ms="30138">
+    <test started-at="2024-02-03T01:09:22 CST" name="Default test" finished-at="2024-02-03T01:10:02 CST" duration-ms="39873">
       <class name="automation.AdminTest.UserModuleTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@22ff4249]" started-at="2024-02-02T23:06:47 CST" name="launchApplication" finished-at="2024-02-02T23:06:56 CST" duration-ms="8505" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@22ff4249]" started-at="2024-02-03T01:09:22 CST" name="launchApplication" finished-at="2024-02-03T01:09:36 CST" duration-ms="14517" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="getCopyUserName()[pri:0, instance:automation.AdminTest.UserModuleTest@22ff4249]" started-at="2024-02-02T23:06:56 CST" name="getCopyUserName" finished-at="2024-02-02T23:07:16 CST" duration-ms="20240" status="PASS">
+        <test-method signature="exitEnrollmentAlert()[pri:0, instance:automation.AdminTest.UserModuleTest@22ff4249]" started-at="2024-02-03T01:09:36 CST" name="exitEnrollmentAlert" finished-at="2024-02-03T01:10:00 CST" duration-ms="23971" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getCopyUserName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@22ff4249]" started-at="2024-02-02T23:07:16 CST" name="tearDown" finished-at="2024-02-02T23:07:17 CST" duration-ms="1350" status="PASS">
+        </test-method> <!-- exitEnrollmentAlert -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@22ff4249]" started-at="2024-02-03T01:10:00 CST" name="tearDown" finished-at="2024-02-03T01:10:02 CST" duration-ms="1333" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

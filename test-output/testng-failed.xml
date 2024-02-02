@@ -7,7 +7,7 @@
         <methods>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="userEmailDupValidation" invocation-numbers="0"/>
+          <include name="getCopyUserName"/>
         </methods>
       </class> <!-- automation.AdminTest.UserModuleTest -->
     </classes>
