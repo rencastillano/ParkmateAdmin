@@ -15,10 +15,8 @@ import automation.PageObject.UserModule;
 
 public class UserModuleTest extends BaseTest {
 
-	String baseEmail = "parkmatehub." + generateRandomNumber(5);
-	String completeEmail = baseEmail + "@parkmate.com";
-	String forDupEmail = "parkmatehub." + generateRandomNumber(4) + "@parkmate.com";
-
+	String emailAddress = "parkmatehub." + generateRandomNumber(5)+ "@parkmate.com";
+	
 	@Test(priority = 1, groups = { "Creation" })
 	public void adminEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException {
 
@@ -28,15 +26,14 @@ public class UserModuleTest extends BaseTest {
 		parkingUser.clickEnroll();
 		String userRole = parkingUser.selectAdminRole();
 		parkingUser.getPersonalDetails("Sam", "O", "Medina");
-		parkingUser.getEmailDetails(completeEmail);
-		parkingUser.emailDuplicateValidator(forDupEmail);
+		String email = parkingUser.getEmailDetails(emailAddress);
 		parkingUser.getMobileDetails();
-		Assert.assertTrue(parkingUser.getUsername(baseEmail));
+		Assert.assertTrue(parkingUser.getUsername(email));
 		parkingUser.generatePassword();
 		parkingUser.getParkingStation();
 		parkingUser.clickSave();
 		Assert.assertTrue(parkingUser.bannerValidation(userRole));
-		Assert.assertTrue(parkingUser.enrollmentValidation(completeEmail, userRole));
+		Assert.assertTrue(parkingUser.enrollmentValidation(email, userRole));
 
 	}
 
@@ -49,15 +46,14 @@ public class UserModuleTest extends BaseTest {
 		parkingUser.clickEnroll();
 		String userRole = parkingUser.selectEncoderRole();
 		parkingUser.getPersonalDetails("Sam", "O", "Medina");
-		parkingUser.getEmailDetails(completeEmail);
-		parkingUser.emailDuplicateValidator(forDupEmail);
+		String email = parkingUser.getEmailDetails(emailAddress);
 		parkingUser.getMobileDetails();
-		Assert.assertTrue(parkingUser.getUsername(baseEmail));
+		Assert.assertTrue(parkingUser.getUsername(email));
 		parkingUser.generatePassword();
 		parkingUser.getParkingStation();
 		parkingUser.clickSave();
 		Assert.assertTrue(parkingUser.bannerValidation(userRole));
-		Assert.assertTrue(parkingUser.enrollmentValidation(completeEmail, userRole));
+		Assert.assertTrue(parkingUser.enrollmentValidation(email, userRole));
 
 	}
 

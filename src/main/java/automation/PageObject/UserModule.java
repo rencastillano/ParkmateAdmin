@@ -171,28 +171,38 @@ public class UserModule extends AbstractComponent {
 
 	}
 
-	public void getEmailDetails(String emailAddress) throws InterruptedException {
-		Thread.sleep(3000);
-		email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, emailAddress);
-		//email.sendKeys(emailAddress);
-		//System.out.println(emailAddress);
+	public String getEmailDetails(String emailAddress) throws InterruptedException {
+	    Thread.sleep(3000);
+	    email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, emailAddress);
 
+	    try {
+	        if (duplicateEmail.isDisplayed()) {
+	            return emailDuplicateValidator();
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace(); // Log the exception or handle it appropriately
+	    }
+
+	    return email.getAttribute("value");
 	}
 
-	public void emailDuplicateValidator(String emailAddress) throws InterruptedException {
-		try {
-			while (duplicateEmail.isDisplayed()) {
-				email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, emailAddress);
-				//email.sendKeys(emailAddress);
-				Thread.sleep(3000);
-				System.out.println("dup email" + emailAddress);
-			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
+	private String emailDuplicateValidator() throws InterruptedException {
+	    String forDupEmail = "parkmatehub." + generateRandomNumber(5) + "@parkmate.com";
+	    try {
+	        while (duplicateEmail.isDisplayed()) {
+	            email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, forDupEmail);
+	            Thread.sleep(3000);
+	            System.out.println("dup email: " + forDupEmail);
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace(); // Log the exception or handle it appropriately
+	    }
 
+	    return email.getAttribute("value");
 	}
+
+
+
 
 	public void getMobileDetails() {
 		mobile.click();
@@ -202,7 +212,8 @@ public class UserModule extends AbstractComponent {
 
 	public boolean getUsername(String email) {
 		String value = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].value;", userName);
-		return value.equalsIgnoreCase(email);
+		String[] sliptname = email.split("@");
+		return value.equalsIgnoreCase(sliptname[0]);
 
 	}
 
@@ -223,6 +234,7 @@ public class UserModule extends AbstractComponent {
 	    Thread.sleep(5000);
 	    String value = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].value;", element);
 	    copyButton.click();
+	    Thread.sleep(2000);
 	    return value.equals(getTextFromClipboard());
 	}
 

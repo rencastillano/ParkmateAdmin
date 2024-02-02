@@ -1,6 +1,7 @@
 package automation.AbstractComponents;
 
 import java.time.Duration;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -59,5 +60,11 @@ public class AbstractComponent {
 	public void waitForSomeTime(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.not(ExpectedConditions.stalenessOf(element)));
+	}
+	
+	public String generateRandomNumber(int length) {
+		Random random = new Random();
+		int randomNumber = random.nextInt((int) Math.pow(10, length));
+		return String.format("%0" + length + "d", randomNumber);
 	}
 }
