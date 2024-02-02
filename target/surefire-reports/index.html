@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">40 methods, 3 failed,   37 passed</span>
+                    <span class="method-stats">40 methods, 4 failed,   36 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,17 +103,22 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="automation.AdminTest.UserModuleTest" class="method navigator-link" hash-for-method="editUserAccount">editUserAccount</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="automation.AdminTest.UserModuleTest" class="method navigator-link" hash-for-method="encoderEnrollment">encoderEnrollment</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="automation.AdminTest.UserModuleTest" class="method navigator-link" hash-for-method="getCopyUserName">getCopyUserName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="automation.AdminTest.UserModuleTest" class="method navigator-link" hash-for-method="getCopyUserPassword">getCopyUserPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="automation.AdminTest.PermissionTest" class="method navigator-link" hash-for-method="setAllowExitToFalse">setAllowExitToFalse</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="automation.AdminTest.UserModuleTest" class="method navigator-link" hash-for-method="userEmailDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin})">userEmailDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -167,6 +172,16 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="automation.AdminTest.UserModuleTest" class="method navigator-link" hash-for-method="editUserAccount">editUserAccount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="automation.AdminTest.UserModuleTest" class="method navigator-link" hash-for-method="encoderEnrollment">encoderEnrollment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="automation.AdminTest.AreaModuleTest" class="method navigator-link" hash-for-method="exitCreationAlert">exitCreationAlert</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -188,11 +203,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="automation.AdminTest.AreaModuleTest" class="method navigator-link" hash-for-method="fixedRateMaxLimit">fixedRateMaxLimit</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="automation.AdminTest.UserModuleTest" class="method navigator-link" hash-for-method="getCopyUserName">getCopyUserName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -232,11 +242,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="automation.AdminTest.PermissionTest" class="method navigator-link" hash-for-method="setAllowExitToFalse">setAllowExitToFalse</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="automation.AdminTest.PermissionTest" class="method navigator-link" hash-for-method="setAllowExitToTrue">setAllowExitToTrue</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -258,11 +263,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="automation.AdminTest.AreaModuleTest" class="method navigator-link" hash-for-method="setMotorcycleCapacityPlusButtonToDisable">setMotorcycleCapacityPlusButtonToDisable</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="automation.AdminTest.UserModuleTest" class="method navigator-link" hash-for-method="userEmailDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin})">userEmailDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -330,25 +330,50 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="editUserAccount">
-                  </a> <!-- editUserAccount -->
-                  <span class="method-name">editUserAccount</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[@class=&apos;flex-grow text-sm self-center w-3/4&apos;]&apos; (tried for 20 second(s) with 500 milliseconds interval)
+                  <a name="getCopyUserName">
+                  </a> <!-- getCopyUserName -->
+                  <span class="method-name">getCopyUserName</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at automation.AdminTest.UserModuleTest.getCopyUserName(UserModuleTest.java:120)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getCopyUserPassword">
+                  </a> <!-- getCopyUserPassword -->
+                  <span class="method-name">getCopyUserPassword</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at automation.AdminTest.UserModuleTest.getCopyUserPassword(UserModuleTest.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="userEmailDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin})">
+                  </a> <!-- userEmailDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin}) -->
+                  <span class="method-name">userEmailDupValidation</span>
+                  <span class="parameters">({password=Password1!, mobileNumber=987654321, username=renAdmin})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: div:nth-child(2) &gt; p.mt-1.font-henry-sans-light.text-xs.text-sm-error&apos; (tried for 20 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:43)
-	at automation.PageObject.UserModule.userAccountUpdate(UserModule.java:303)
-	at automation.AdminTest.UserModuleTest.editUserAccount(UserModuleTest.java:95)
+	at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:44)
+	at automation.PageObject.UserModule.duplicateEmail(UserModule.java:275)
+	at automation.AdminTest.UserModuleTest.userEmailDupValidation(UserModuleTest.java:68)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;flex-grow text-sm self-center w-3/4&apos;]&quot;}
-  (Session info: chrome=121.0.6167.86)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div:nth-child(2) &gt; p.mt-1.font-henry-sans-light.text-xs.text-sm-error&quot;}
+  (Session info: chrome-headless-shell=121.0.6167.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [34fdc7273778143c63f194e86caf3a99, findElement {value=//*[@class=&apos;flex-grow text-sm self-center w-3/4&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64792}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64792/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 34fdc7273778143c63f194e86caf3a99
+Command: [b6aefd3d2e26db56cd8debcbc93a6d95, findElement {using=css selector, value=div:nth-child(2) &gt; p.mt-1.font-henry-sans-light.text-xs.text-sm-error}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54647}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54647/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b6aefd3d2e26db56cd8debcbc93a6d95
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -372,27 +397,56 @@ Session ID: 34fdc7273778143c63f194e86caf3a99
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">automation.AdminTest.PermissionTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="encoderEnrollment">
-                  </a> <!-- encoderEnrollment -->
-                  <span class="method-name">encoderEnrollment</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at automation.AdminTest.UserModuleTest.encoderEnrollment(UserModuleTest.java:55)
+                  <a name="setAllowExitToFalse">
+                  </a> <!-- setAllowExitToFalse -->
+                  <span class="method-name">setAllowExitToFalse</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: h1&apos; (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:44)
+	at automation.PageObject.Permissions.validateButtonIsDisplayed(Permissions.java:199)
+	at automation.PageObject.Permissions.allowExitValidation(Permissions.java:188)
+	at automation.AdminTest.PermissionTest.setAllowExitToFalse(PermissionTest.java:68)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getCopyUserPassword">
-                  </a> <!-- getCopyUserPassword -->
-                  <span class="method-name">getCopyUserPassword</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at automation.AdminTest.UserModuleTest.getCopyUserPassword(UserModuleTest.java:135)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 33 stack frames
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;h1&quot;}
+  (Session info: chrome-headless-shell=121.0.6167.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1250b30cad462ff52068a15c97c08cab, findElement {using=css selector, value=h1}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55164}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55164/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1250b30cad462ff52068a15c97c08cab
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 34 more
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -520,24 +574,23 @@ Session ID: 34fdc7273778143c63f194e86caf3a99
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="editUserAccount">
+                  </a> <!-- editUserAccount -->
+                  <span class="method-name">editUserAccount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="encoderEnrollment">
+                  </a> <!-- encoderEnrollment -->
+                  <span class="method-name">encoderEnrollment</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="exitEnrollmentAlert">
                   </a> <!-- exitEnrollmentAlert -->
                   <span class="method-name">exitEnrollmentAlert</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="getCopyUserName">
-                  </a> <!-- getCopyUserName -->
-                  <span class="method-name">getCopyUserName</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="userEmailDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin})">
-                  </a> <!-- userEmailDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin}) -->
-                  <span class="method-name">userEmailDupValidation</span>
-                  <span class="parameters">({password=Password1!, mobileNumber=987654321, username=renAdmin})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -619,13 +672,6 @@ Session ID: 34fdc7273778143c63f194e86caf3a99
               <span class="class-name">automation.AdminTest.PermissionTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="setAllowExitToFalse">
-                  </a> <!-- setAllowExitToFalse -->
-                  <span class="method-name">setAllowExitToFalse</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="setAllowExitToTrue">
@@ -838,163 +884,163 @@ data.addRows(40);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'setAllowExitToFalse')
 data.setCell(0, 2, 'automation.AdminTest.PermissionTest')
-data.setCell(0, 3, 67262);
+data.setCell(0, 3, 73889);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'editUserAccount')
+data.setCell(1, 1, 'userEmailDupValidation')
 data.setCell(1, 2, 'automation.AdminTest.UserModuleTest')
-data.setCell(1, 3, 50483);
+data.setCell(1, 3, 60686);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'adminEnrollment')
 data.setCell(2, 2, 'automation.AdminTest.UserModuleTest')
-data.setCell(2, 3, 41500);
+data.setCell(2, 3, 40829);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'areaCreation')
-data.setCell(3, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(3, 3, 32359);
+data.setCell(3, 1, 'setAllowExitToTrue')
+data.setCell(3, 2, 'automation.AdminTest.PermissionTest')
+data.setCell(3, 3, 37153);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'areaCodeDupValidation')
-data.setCell(4, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(4, 3, 30505);
+data.setCell(4, 1, 'encoderEnrollment')
+data.setCell(4, 2, 'automation.AdminTest.UserModuleTest')
+data.setCell(4, 3, 33301);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'userWithPaymentAcceptanceSetToTrue')
-data.setCell(5, 2, 'automation.AdminTest.PermissionTest')
-data.setCell(5, 3, 29028);
+data.setCell(5, 1, 'areaCreation')
+data.setCell(5, 2, 'automation.AdminTest.AreaModuleTest')
+data.setCell(5, 3, 32328);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'encoderEnrollment')
-data.setCell(6, 2, 'automation.AdminTest.UserModuleTest')
-data.setCell(6, 3, 28287);
+data.setCell(6, 1, 'areaNameDupValidation')
+data.setCell(6, 2, 'automation.AdminTest.AreaModuleTest')
+data.setCell(6, 3, 28751);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'userPageSelectRow')
-data.setCell(7, 2, 'automation.AdminTest.UserModuleTest')
-data.setCell(7, 3, 26401);
+data.setCell(7, 1, 'userWithPaymentAcceptanceSetToTrue')
+data.setCell(7, 2, 'automation.AdminTest.PermissionTest')
+data.setCell(7, 3, 27535);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'areaPageSelectRow')
-data.setCell(8, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(8, 3, 26377);
+data.setCell(8, 1, 'userPageSelectRow')
+data.setCell(8, 2, 'automation.AdminTest.UserModuleTest')
+data.setCell(8, 3, 26125);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'motorcycleCapacityInpuValidation')
+data.setCell(9, 1, 'areaPageSelectRow')
 data.setCell(9, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(9, 3, 25155);
+data.setCell(9, 3, 26005);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'areaNameDupValidation')
+data.setCell(10, 1, 'motorcycleCapacityInpuValidation')
 data.setCell(10, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(10, 3, 25018);
+data.setCell(10, 3, 25928);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'editParkingArea')
+data.setCell(11, 1, 'areaPagePagenation')
 data.setCell(11, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(11, 3, 24946);
+data.setCell(11, 3, 24923);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'areaPagePagenation')
+data.setCell(12, 1, 'editParkingArea')
 data.setCell(12, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(12, 3, 24324);
+data.setCell(12, 3, 24273);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'fixedRateMaxLimit')
-data.setCell(13, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(13, 3, 24160);
+data.setCell(13, 1, 'userPagePagenation')
+data.setCell(13, 2, 'automation.AdminTest.UserModuleTest')
+data.setCell(13, 3, 24175);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'userPagePagenation')
-data.setCell(14, 2, 'automation.AdminTest.UserModuleTest')
-data.setCell(14, 3, 24107);
+data.setCell(14, 1, 'fixedRateMaxLimit')
+data.setCell(14, 2, 'automation.AdminTest.AreaModuleTest')
+data.setCell(14, 3, 23745);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'userWithActiveStatus')
-data.setCell(15, 2, 'automation.AdminTest.PermissionTest')
-data.setCell(15, 3, 23656);
+data.setCell(15, 1, 'areaCodeDupValidation')
+data.setCell(15, 2, 'automation.AdminTest.AreaModuleTest')
+data.setCell(15, 3, 23737);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'setAllowExitToTrue')
-data.setCell(16, 2, 'automation.AdminTest.PermissionTest')
-data.setCell(16, 3, 23183);
+data.setCell(16, 1, 'editUserAccount')
+data.setCell(16, 2, 'automation.AdminTest.UserModuleTest')
+data.setCell(16, 3, 23130);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'userWithPaymentAcceptanceSetToFalse')
+data.setCell(17, 1, 'userWithActiveStatus')
 data.setCell(17, 2, 'automation.AdminTest.PermissionTest')
-data.setCell(17, 3, 22782);
+data.setCell(17, 3, 23072);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'userWithRestrictedStatus')
+data.setCell(18, 1, 'userWithPaymentAcceptanceSetToFalse')
 data.setCell(18, 2, 'automation.AdminTest.PermissionTest')
-data.setCell(18, 3, 20493);
+data.setCell(18, 3, 21567);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'exitCreationAlert')
-data.setCell(19, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(19, 3, 18911);
+data.setCell(19, 1, 'loginWithAccess')
+data.setCell(19, 2, 'automation.AdminTest.AllLoginTest')
+data.setCell(19, 3, 20392);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'setMotorcycleCapacityPlusButtonToDisable')
-data.setCell(20, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(20, 3, 18655);
+data.setCell(20, 1, 'userWithRestrictedStatus')
+data.setCell(20, 2, 'automation.AdminTest.PermissionTest')
+data.setCell(20, 3, 19728);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'setCarCapacityPlusButtonToDisable')
-data.setCell(21, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(21, 3, 18525);
+data.setCell(21, 1, 'getCopyUserPassword')
+data.setCell(21, 2, 'automation.AdminTest.UserModuleTest')
+data.setCell(21, 3, 19477);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'getCopyUserPassword')
+data.setCell(22, 1, 'getCopyUserName')
 data.setCell(22, 2, 'automation.AdminTest.UserModuleTest')
-data.setCell(22, 3, 18066);
+data.setCell(22, 3, 19348);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'getCopyUserName')
-data.setCell(23, 2, 'automation.AdminTest.UserModuleTest')
-data.setCell(23, 3, 18048);
+data.setCell(23, 1, 'exitCreationAlert')
+data.setCell(23, 2, 'automation.AdminTest.AreaModuleTest')
+data.setCell(23, 3, 18637);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'setCarCapacityMinusButtonToDisable')
+data.setCell(24, 1, 'setCMotorcycleCapacityPlusButtonToDisable')
 data.setCell(24, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(24, 3, 17963);
+data.setCell(24, 3, 17431);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'userEmailDupValidation')
-data.setCell(25, 2, 'automation.AdminTest.UserModuleTest')
-data.setCell(25, 3, 17833);
+data.setCell(25, 1, 'setCarCapacityMinusButtonToDisable')
+data.setCell(25, 2, 'automation.AdminTest.AreaModuleTest')
+data.setCell(25, 3, 17430);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'setCMotorcycleCapacityPlusButtonToDisable')
+data.setCell(26, 1, 'setCarCapacityPlusButtonToDisable')
 data.setCell(26, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(26, 3, 17808);
+data.setCell(26, 3, 17386);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'parkingAreaCodeSearch')
-data.setCell(27, 2, 'automation.AdminTest.FilterAndSearchTest')
-data.setCell(27, 3, 16728);
+data.setCell(27, 1, 'setMotorcycleCapacityPlusButtonToDisable')
+data.setCell(27, 2, 'automation.AdminTest.AreaModuleTest')
+data.setCell(27, 3, 17363);
 data.setCell(28, 0, 28)
 data.setCell(28, 1, 'carCapacityInpuValidation')
 data.setCell(28, 2, 'automation.AdminTest.AreaModuleTest')
-data.setCell(28, 3, 16531);
+data.setCell(28, 3, 16737);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'parkingNameSearch')
-data.setCell(29, 2, 'automation.AdminTest.FilterAndSearchTest')
-data.setCell(29, 3, 14751);
+data.setCell(29, 1, 'exitEnrollmentAlert')
+data.setCell(29, 2, 'automation.AdminTest.UserModuleTest')
+data.setCell(29, 3, 15527);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'exitEnrollmentAlert')
-data.setCell(30, 2, 'automation.AdminTest.UserModuleTest')
-data.setCell(30, 3, 14669);
+data.setCell(30, 1, 'parkingAreaCodeSearch')
+data.setCell(30, 2, 'automation.AdminTest.FilterAndSearchTest')
+data.setCell(30, 3, 13960);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'userNameSearch')
+data.setCell(31, 1, 'parkingNameSearch')
 data.setCell(31, 2, 'automation.AdminTest.FilterAndSearchTest')
-data.setCell(31, 3, 13394);
+data.setCell(31, 3, 11995);
 data.setCell(32, 0, 32)
-data.setCell(32, 1, 'filterByAdminRole')
+data.setCell(32, 1, 'filterByEncoderRole')
 data.setCell(32, 2, 'automation.AdminTest.FilterAndSearchTest')
-data.setCell(32, 3, 12953);
+data.setCell(32, 3, 11428);
 data.setCell(33, 0, 33)
-data.setCell(33, 1, 'filterByEncoderRole')
+data.setCell(33, 1, 'userLastNameSearch')
 data.setCell(33, 2, 'automation.AdminTest.FilterAndSearchTest')
-data.setCell(33, 3, 11841);
+data.setCell(33, 3, 11424);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'userLastNameSearch')
+data.setCell(34, 1, 'filterByAdminRole')
 data.setCell(34, 2, 'automation.AdminTest.FilterAndSearchTest')
-data.setCell(34, 3, 11404);
+data.setCell(34, 3, 11424);
 data.setCell(35, 0, 35)
-data.setCell(35, 1, 'userEmailSearch')
+data.setCell(35, 1, 'userNameSearch')
 data.setCell(35, 2, 'automation.AdminTest.FilterAndSearchTest')
-data.setCell(35, 3, 11222);
+data.setCell(35, 3, 10857);
 data.setCell(36, 0, 36)
-data.setCell(36, 1, 'loginWithAccess')
-data.setCell(36, 2, 'automation.AdminTest.AllLoginTest')
-data.setCell(36, 3, 7050);
+data.setCell(36, 1, 'userEmailSearch')
+data.setCell(36, 2, 'automation.AdminTest.FilterAndSearchTest')
+data.setCell(36, 3, 10830);
 data.setCell(37, 0, 37)
-data.setCell(37, 1, 'loginWithoutAccess')
+data.setCell(37, 1, 'loginWithInvalidPassword')
 data.setCell(37, 2, 'automation.AdminTest.AllLoginTest')
-data.setCell(37, 3, 5483);
+data.setCell(37, 3, 4784);
 data.setCell(38, 0, 38)
-data.setCell(38, 1, 'loginWithInvalidPassword')
+data.setCell(38, 1, 'loginWithoutAccess')
 data.setCell(38, 2, 'automation.AdminTest.AllLoginTest')
-data.setCell(38, 3, 4771);
+data.setCell(38, 3, 2986);
 data.setCell(39, 0, 39)
 data.setCell(39, 1, 'loginWithInvalidUserName')
 data.setCell(39, 2, 'automation.AdminTest.AllLoginTest')
-data.setCell(39, 3, 2904);
+data.setCell(39, 3, 2783);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -1032,497 +1078,499 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithAccess</span>
-                <span class="method-start">8353 ms</span>
+                <span class="method-start">22911 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15417 ms</span>
+                <span class="method-start">43311 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">16657 ms</span>
+                <span class="method-start">44141 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithInvalidPassword</span>
-                <span class="method-start">24023 ms</span>
+                <span class="method-start">49065 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">28797 ms</span>
+                <span class="method-start">53850 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">30031 ms</span>
+                <span class="method-start">54720 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithInvalidUserName</span>
-                <span class="method-start">37558 ms</span>
+                <span class="method-start">58318 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">40462 ms</span>
+                <span class="method-start">61102 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">41624 ms</span>
+                <span class="method-start">61922 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithoutAccess</span>
-                <span class="method-start">54161 ms</span>
+                <span class="method-start">65082 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">59646 ms</span>
+                <span class="method-start">68068 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">automation.AdminTest.AreaModuleTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">61783 ms</span>
+                <span class="method-start">69218 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">areaCodeDupValidation</span>
-                <span class="method-start">69050 ms</span>
+                <span class="method-start">72371 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">99557 ms</span>
+                <span class="method-start">96109 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">100740 ms</span>
+                <span class="method-start">97156 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">areaCreation</span>
-                <span class="method-start">108246 ms</span>
+                <span class="method-start">100426 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">140607 ms</span>
+                <span class="method-start">132755 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">142323 ms</span>
+                <span class="method-start">133865 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">areaNameDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin})</span>
-                <span class="method-start">149782 ms</span>
+                <span class="method-start">136999 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">174801 ms</span>
+                <span class="method-start">165751 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">175997 ms</span>
+                <span class="method-start">166600 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">areaPagePagenation</span>
-                <span class="method-start">183333 ms</span>
+                <span class="method-start">169920 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">207658 ms</span>
+                <span class="method-start">194844 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">208792 ms</span>
+                <span class="method-start">195712 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">areaPageSelectRow</span>
-                <span class="method-start">216303 ms</span>
+                <span class="method-start">199110 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">242681 ms</span>
+                <span class="method-start">225116 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">243907 ms</span>
+                <span class="method-start">226115 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">carCapacityInpuValidation</span>
-                <span class="method-start">251051 ms</span>
+                <span class="method-start">229296 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">267582 ms</span>
+                <span class="method-start">246034 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">268736 ms</span>
+                <span class="method-start">246993 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">editParkingArea</span>
-                <span class="method-start">276112 ms</span>
+                <span class="method-start">250319 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">301060 ms</span>
+                <span class="method-start">274592 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">302234 ms</span>
+                <span class="method-start">275459 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">exitCreationAlert</span>
-                <span class="method-start">309644 ms</span>
+                <span class="method-start">279767 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">328556 ms</span>
+                <span class="method-start">298405 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">329795 ms</span>
+                <span class="method-start">299221 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">fixedRateMaxLimit</span>
-                <span class="method-start">337215 ms</span>
+                <span class="method-start">302388 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">361377 ms</span>
+                <span class="method-start">326133 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">362558 ms</span>
+                <span class="method-start">326975 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">motorcycleCapacityInpuValidation</span>
-                <span class="method-start">374865 ms</span>
+                <span class="method-start">334255 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">400022 ms</span>
+                <span class="method-start">360183 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">401198 ms</span>
+                <span class="method-start">361093 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">setCMotorcycleCapacityPlusButtonToDisable</span>
-                <span class="method-start">408665 ms</span>
+                <span class="method-start">366989 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">426474 ms</span>
+                <span class="method-start">384420 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">427597 ms</span>
+                <span class="method-start">385279 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">setCarCapacityMinusButtonToDisable</span>
-                <span class="method-start">435233 ms</span>
+                <span class="method-start">388595 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">453197 ms</span>
+                <span class="method-start">406026 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">454400 ms</span>
+                <span class="method-start">407054 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">setCarCapacityPlusButtonToDisable</span>
-                <span class="method-start">461669 ms</span>
+                <span class="method-start">410138 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">480195 ms</span>
+                <span class="method-start">427525 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">481381 ms</span>
+                <span class="method-start">428367 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">setMotorcycleCapacityPlusButtonToDisable</span>
-                <span class="method-start">488717 ms</span>
+                <span class="method-start">431554 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">507373 ms</span>
+                <span class="method-start">448918 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">automation.AdminTest.UserModuleTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">508689 ms</span>
+                <span class="method-start">449942 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">exitEnrollmentAlert</span>
-                <span class="method-start">516093 ms</span>
+                <span class="method-start">453606 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">530762 ms</span>
+                <span class="method-start">469133 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">531973 ms</span>
+                <span class="method-start">470023 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">getCopyUserName</span>
-                <span class="method-start">539424 ms</span>
+                <span class="method-start">473329 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">557473 ms</span>
+                <span class="method-start">492796 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">558669 ms</span>
+                <span class="method-start">493762 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">getCopyUserPassword</span>
-                <span class="method-start">566013 ms</span>
+                <span class="method-start">497222 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">584521 ms</span>
+                <span class="method-start">516805 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">585700 ms</span>
+                <span class="method-start">517680 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">userEmailDupValidation({password=Password1!, mobileNumber=987654321, username=renAdmin})</span>
-                <span class="method-start">592922 ms</span>
+                <span class="method-start">520891 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">610756 ms</span>
+                <span class="method-start">581697 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">611981 ms</span>
+                <span class="method-start">582527 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userPagePagenation</span>
-                <span class="method-start">619328 ms</span>
+                <span class="method-start">585668 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">643436 ms</span>
+                <span class="method-start">609844 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">644579 ms</span>
+                <span class="method-start">610732 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userPageSelectRow</span>
-                <span class="method-start">652411 ms</span>
+                <span class="method-start">613934 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">678813 ms</span>
+                <span class="method-start">640060 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">679931 ms</span>
+                <span class="method-start">640903 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">adminEnrollment</span>
-                <span class="method-start">693136 ms</span>
+                <span class="method-start">648218 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">734636 ms</span>
+                <span class="method-start">689047 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">735764 ms</span>
+                <span class="method-start">689949 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">encoderEnrollment</span>
-                <span class="method-start">743384 ms</span>
+                <span class="method-start">694978 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">771974 ms</span>
+                <span class="method-start">728280 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">773155 ms</span>
+                <span class="method-start">729094 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">editUserAccount</span>
-                <span class="method-start">780454 ms</span>
+                <span class="method-start">732614 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">831329 ms</span>
+                <span class="method-start">755744 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">automation.AdminTest.FilterAndSearchTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">832663 ms</span>
+                <span class="method-start">756843 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">filterByAdminRole</span>
-                <span class="method-start">840036 ms</span>
+                <span class="method-start">760250 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">852990 ms</span>
+                <span class="method-start">771674 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">854206 ms</span>
+                <span class="method-start">772467 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">filterByEncoderRole</span>
-                <span class="method-start">861241 ms</span>
+                <span class="method-start">775643 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">873082 ms</span>
+                <span class="method-start">787071 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">874273 ms</span>
+                <span class="method-start">787953 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">parkingAreaCodeSearch</span>
-                <span class="method-start">881707 ms</span>
+                <span class="method-start">791082 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">898436 ms</span>
+                <span class="method-start">805042 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">899556 ms</span>
+                <span class="method-start">805836 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">parkingNameSearch</span>
-                <span class="method-start">906985 ms</span>
+                <span class="method-start">809026 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">921737 ms</span>
+                <span class="method-start">821021 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">922988 ms</span>
+                <span class="method-start">821895 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userEmailSearch</span>
-                <span class="method-start">930324 ms</span>
+                <span class="method-start">825189 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">941546 ms</span>
+                <span class="method-start">836019 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">942727 ms</span>
+                <span class="method-start">836874 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userLastNameSearch</span>
-                <span class="method-start">950276 ms</span>
+                <span class="method-start">840006 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">961681 ms</span>
+                <span class="method-start">851430 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">962789 ms</span>
+                <span class="method-start">852184 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userNameSearch</span>
-                <span class="method-start">970180 ms</span>
+                <span class="method-start">855342 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">983574 ms</span>
+                <span class="method-start">866199 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">automation.AdminTest.PermissionTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">984991 ms</span>
+                <span class="method-start">867164 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setAllowExitToFalse</span>
-                <span class="method-start">998071 ms</span>
+                <span class="method-start">870296 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1065333 ms</span>
+                <span class="method-start">944299 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">1066559 ms</span>
+                <span class="method-start">945434 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">setAllowExitToTrue</span>
-                <span class="method-start">1073998 ms</span>
+                <span class="method-start">952341 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1097181 ms</span>
+                <span class="method-start">989495 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">1098361 ms</span>
+                <span class="method-start">990612 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userWithActiveStatus</span>
-                <span class="method-start">1106114 ms</span>
+                <span class="method-start">993721 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1129771 ms</span>
+                <span class="method-start">1016793 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">1130908 ms</span>
+                <span class="method-start">1017889 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userWithPaymentAcceptanceSetToFalse</span>
-                <span class="method-start">1138501 ms</span>
+                <span class="method-start">1022674 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1161284 ms</span>
+                <span class="method-start">1044241 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">1162466 ms</span>
+                <span class="method-start">1045352 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userWithPaymentAcceptanceSetToTrue</span>
-                <span class="method-start">1169851 ms</span>
+                <span class="method-start">1048555 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1198879 ms</span>
+                <span class="method-start">1076090 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">1200057 ms</span>
+                <span class="method-start">1077205 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">userWithRestrictedStatus</span>
-                <span class="method-start">1207496 ms</span>
+                <span class="method-start">1080321 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1227989 ms</span>
+                <span class="method-start">1100050 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

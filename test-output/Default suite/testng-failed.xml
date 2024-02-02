@@ -5,9 +5,9 @@
     <classes>
       <class name="automation.AdminTest.UserModuleTest">
         <methods>
-          <include name="adminEnrollment"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
+          <include name="userEmailDupValidation" invocation-numbers="0"/>
         </methods>
       </class> <!-- automation.AdminTest.UserModuleTest -->
     </classes>

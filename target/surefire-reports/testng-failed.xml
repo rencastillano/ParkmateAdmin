@@ -8,13 +8,24 @@
     <classes>
       <class name="automation.AdminTest.UserModuleTest">
         <methods>
-          <include name="editUserAccount"/>
-          <include name="encoderEnrollment"/>
           <include name="getCopyUserPassword"/>
           <include name="launchApplication"/>
+          <include name="userEmailDupValidation" invocation-numbers="0"/>
           <include name="tearDown"/>
+          <include name="getCopyUserName"/>
         </methods>
       </class> <!-- automation.AdminTest.UserModuleTest -->
     </classes>
   </test> <!-- User Module Test(failed) -->
+  <test thread-count="5" name="Permission Test(failed)" verbose="0">
+    <classes>
+      <class name="automation.AdminTest.PermissionTest">
+        <methods>
+          <include name="setAllowExitToFalse"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- automation.AdminTest.PermissionTest -->
+    </classes>
+  </test> <!-- Permission Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -64,7 +64,7 @@ public class UserModuleTest extends BaseTest {
 		String existingEmail = parkingUser.getRandomEmail();
 
 		parkingUser.clickEnroll();
-		parkingUser.getEmailDetails(existingEmail);
+		parkingUser.getEmailDuplicate(existingEmail);
 		Assert.assertTrue(parkingUser.duplicateEmail());
 		Assert.assertTrue(parkingUser.duplicateUserName());
 	}

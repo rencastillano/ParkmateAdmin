@@ -170,6 +170,12 @@ public class UserModule extends AbstractComponent {
 		lname.sendKeys(LastName);
 
 	}
+	public void getEmailDuplicate(String emailAddress) throws InterruptedException {
+		
+		Thread.sleep(3000);
+		email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, emailAddress);
+
+	}
 
 	public String getEmailDetails(String emailAddress) throws InterruptedException {
 	    Thread.sleep(3000);
@@ -191,7 +197,7 @@ public class UserModule extends AbstractComponent {
 	    try {
 	        while (duplicateEmail.isDisplayed()) {
 	            email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, forDupEmail);
-	            Thread.sleep(3000);
+	            Thread.sleep(4000);
 	            System.out.println("dup email: " + forDupEmail);
 	        }
 	    } catch (Exception e) {
@@ -218,15 +224,17 @@ public class UserModule extends AbstractComponent {
 	}
 
 	public void generatePassword() throws UnsupportedFlavorException, IOException {
-		
+		waitForWebElementToBeClickable(generate);
 		generate.click();
 	}
 	
 	public boolean getCopyUserName() throws UnsupportedFlavorException, IOException, InterruptedException {
+		Thread.sleep(1000);
 	    return getCopyValueAndCompare(userName, copyUserNameBtn);
 	}
 
 	public boolean getCopyPassword() throws UnsupportedFlavorException, IOException, InterruptedException {
+		Thread.sleep(1000);
 	    return getCopyValueAndCompare(password, copyPassword);
 	}
 	
@@ -234,7 +242,7 @@ public class UserModule extends AbstractComponent {
 	    Thread.sleep(5000);
 	    String value = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].value;", element);
 	    copyButton.click();
-	    Thread.sleep(2000);
+	    Thread.sleep(1000);
 	    return value.equals(getTextFromClipboard());
 	}
 
