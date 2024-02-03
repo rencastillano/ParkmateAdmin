@@ -250,7 +250,7 @@ public class AreaModule extends AbstractComponent {
 
 	}
 
-	public void areaNameToBeEdited() throws InterruptedException {
+	public void selectAreaToBeEdited() throws InterruptedException {
 		Thread.sleep(2000);
 		nameToBeEdited.click();
 		Thread.sleep(3000);

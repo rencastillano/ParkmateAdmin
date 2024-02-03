@@ -47,6 +47,9 @@ public class Permissions extends AbstractComponent {
 
 	@FindBy(css = "[class*='text-base']")
 	WebElement errorMsg;
+	
+	@FindBy(xpath="//div/div/form/div[2]/button")
+	WebElement searchBtn;
 
 	@FindBy(css = "tr td:first-child")
 	WebElement searchResult;
@@ -81,7 +84,7 @@ public class Permissions extends AbstractComponent {
 	@FindBy(xpath = "//div[2]/section/div[4]/button")
 	WebElement receiveParkingPaymentBtn;
 
-	public void navigateTo() {
+	public void navigateToEncoder() {
 
 //		Actions actions = new Actions(driver);
 //		actions.keyDown(Keys.CONTROL).sendKeys("t").keyUp(Keys.CONTROL).perform();
@@ -194,8 +197,9 @@ public class Permissions extends AbstractComponent {
 	
 	private boolean validateButtonIsDisplayed(WebElement button, String vehicleNumber) throws InterruptedException {
 
-		encoderSearch.sendKeys(vehicleNumber, Keys.ENTER);
+		encoderSearch.sendKeys(vehicleNumber);
 		Thread.sleep(500);
+		searchBtn.click();
 		waitForWebElementToAppear(encoderSearchResult);
 
 		try {

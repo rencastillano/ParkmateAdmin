@@ -5,9 +5,9 @@
     <classes>
       <class name="automation.AdminTest.UserModuleTest">
         <methods>
+          <include name="editUserAccount"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="getCopyUserName"/>
         </methods>
       </class> <!-- automation.AdminTest.UserModuleTest -->
     </classes>

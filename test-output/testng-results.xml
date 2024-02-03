@@ -2,20 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-03T01:09:22 CST" name="Default suite" finished-at="2024-02-03T01:10:02 CST" duration-ms="39873">
+  <suite started-at="2024-02-03T20:42:35 CST" name="Default suite" finished-at="2024-02-03T20:43:15 CST" duration-ms="40190">
     <groups>
+      <group name="Creation">
+        <method signature="UserModuleTest.encoderEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@776aec5c]" name="encoderEnrollment" class="automation.AdminTest.UserModuleTest"/>
+      </group> <!-- Creation -->
     </groups>
-    <test started-at="2024-02-03T01:09:22 CST" name="Default test" finished-at="2024-02-03T01:10:02 CST" duration-ms="39873">
+    <test started-at="2024-02-03T20:42:35 CST" name="Default test" finished-at="2024-02-03T20:43:15 CST" duration-ms="40190">
       <class name="automation.AdminTest.UserModuleTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@22ff4249]" started-at="2024-02-03T01:09:22 CST" name="launchApplication" finished-at="2024-02-03T01:09:36 CST" duration-ms="14517" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@776aec5c]" started-at="2024-02-03T20:42:35 CST" name="launchApplication" finished-at="2024-02-03T20:42:43 CST" duration-ms="7759" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="exitEnrollmentAlert()[pri:0, instance:automation.AdminTest.UserModuleTest@22ff4249]" started-at="2024-02-03T01:09:36 CST" name="exitEnrollmentAlert" finished-at="2024-02-03T01:10:00 CST" duration-ms="23971" status="PASS">
+        <test-method signature="encoderEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@776aec5c]" started-at="2024-02-03T20:42:43 CST" name="encoderEnrollment" finished-at="2024-02-03T20:43:14 CST" duration-ms="31244" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- exitEnrollmentAlert -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@22ff4249]" started-at="2024-02-03T01:10:00 CST" name="tearDown" finished-at="2024-02-03T01:10:02 CST" duration-ms="1333" status="PASS">
+        </test-method> <!-- encoderEnrollment -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@776aec5c]" started-at="2024-02-03T20:43:14 CST" name="tearDown" finished-at="2024-02-03T20:43:15 CST" duration-ms="1139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -11,71 +11,65 @@ public class PermissionTest extends BaseTest {
 
 	@Test
 	public void userWithRestrictedStatus() throws InterruptedException {
-		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
-		boolean user = userCreation.userPage();
-		Assert.assertTrue(user);
 
-		Permissions permission = new Permissions(driver);
+		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setStatusToRestricted());
-		permission.navigateTo();
-		permission.loginToEncoderApp("statusChange", "Password@1");
+		permission.navigateToEncoder();
+		permission.loginToEncoderApp("statusChange", "r@lgn5pIl<Fu");
 		Assert.assertTrue(permission.loginValidationForStatusChange());
 
 	}
 	@Test
 	public void userWithActiveStatus() throws InterruptedException {
-		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
-		boolean user = userCreation.userPage();
-		Assert.assertTrue(user);
 
-		Permissions permission = new Permissions(driver);
+		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setStatusToActive());
-		permission.navigateTo();
-		permission.loginToEncoderApp("statusChange", "Password@1");
+		permission.navigateToEncoder();
+		permission.loginToEncoderApp("statusChange", "r@lgn5pIl<Fu");
 		Assert.assertFalse(permission.loginValidationForStatusChange());
 	}
 	@Test
 	public void userWithPaymentAcceptanceSetToFalse() throws InterruptedException {
-		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
-		boolean user = userCreation.userPage();
-		Assert.assertTrue(user);
-		Permissions permission = new Permissions(driver);
+
+		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setPaymentAcceptanceToFalse());
-		permission.navigateTo();
-		permission.loginToEncoderApp("statusChange", "Password@1");
+		permission.navigateToEncoder();
+		permission.loginToEncoderApp("statusChange", "r@lgn5pIl<Fu");
 		Assert.assertTrue(permission.PaymentAcceptanceSetToFalseLoginValidation());
 	}
 	@Test
 	public void userWithPaymentAcceptanceSetToTrue() throws InterruptedException {
-		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
-		boolean user = userCreation.userPage();
-		Assert.assertTrue(user);
-		Permissions permission = new Permissions(driver);
+
+		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setPaymentAcceptanceToTrue());
-		permission.navigateTo();
-		permission.loginToEncoderApp("statusChange", "Password@1");
+		permission.navigateToEncoder();
+		permission.loginToEncoderApp("statusChange", "r@lgn5pIl<Fu");
 		Assert.assertTrue(permission.PaymentAcceptanceSetToTrueLoginValidation());
 	}
 	@Test
 	public void setAllowExitToFalse() throws InterruptedException {
-		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
-		boolean user = userCreation.userPage();
-		Assert.assertTrue(user);
-		Permissions permission = new Permissions(driver);
+
+		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setAllowExitToFalse());
-		permission.navigateTo();
-		permission.loginToEncoderApp("statusChange", "Password@1");
+		permission.navigateToEncoder();
+		permission.loginToEncoderApp("statusChange", "r@lgn5pIl<Fu");
 		Assert.assertFalse(permission.allowExitValidation());
 	}
 	@Test
 	public void setAllowExitToTrue() throws InterruptedException {
-		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
-		boolean user = userCreation.userPage();
-		Assert.assertTrue(user);
-		Permissions permission = new Permissions(driver);
+
+		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setAllowExitToTrue());
-		permission.navigateTo();
-		permission.loginToEncoderApp("statusChange", "Password@1");
+		permission.navigateToEncoder();
+		permission.loginToEncoderApp("statusChange", "r@lgn5pIl<Fu");
 		Assert.assertTrue(permission.allowExitValidation());
 	}
+	
+	// handle the login and navigation steps
+		private Permissions loginToApplication() throws InterruptedException {
+			UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
+			Permissions permission = userCreation.userPage();
+			
+			return permission;
+		}
 }

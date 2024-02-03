@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="40" passed="39" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-03T01:14:02 CST" name="Suite" finished-at="2024-02-03T01:34:04 CST" duration-ms="1202176">
+  <suite started-at="2024-02-03T19:28:48 CST" name="Suite" finished-at="2024-02-03T19:46:47 CST" duration-ms="1078542">
     <groups>
       <group name="ErrorHandling">
         <method signature="AllLoginTest.loginWithInvalidPassword()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" name="loginWithInvalidPassword" class="automation.AdminTest.AllLoginTest"/>
@@ -19,86 +19,358 @@
         <method signature="UserModuleTest.encoderEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@14dd7b39]" name="encoderEnrollment" class="automation.AdminTest.UserModuleTest"/>
       </group> <!-- Creation -->
     </groups>
-    <test started-at="2024-02-03T01:14:02 CST" name="Login Test" finished-at="2024-02-03T01:15:24 CST" duration-ms="82728">
+    <test started-at="2024-02-03T19:28:48 CST" name="Login Test" finished-at="2024-02-03T19:30:31 CST" duration-ms="103060">
       <class name="automation.AdminTest.AllLoginTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T01:14:02 CST" name="launchApplication" finished-at="2024-02-03T01:14:11 CST" duration-ms="8997" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T19:28:48 CST" name="launchApplication" finished-at="2024-02-03T19:29:45 CST" duration-ms="57106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="loginWithAccess()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T01:14:11 CST" name="loginWithAccess" finished-at="2024-02-03T01:14:17 CST" duration-ms="6530" status="PASS">
+        <test-method signature="loginWithAccess()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T19:29:45 CST" name="loginWithAccess" finished-at="2024-02-03T19:29:59 CST" duration-ms="13840" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithAccess -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T01:14:17 CST" name="tearDown" finished-at="2024-02-03T01:14:18 CST" duration-ms="1162" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T19:29:59 CST" name="tearDown" finished-at="2024-02-03T19:30:00 CST" duration-ms="811" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T01:14:18 CST" name="launchApplication" finished-at="2024-02-03T01:14:26 CST" duration-ms="7693" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T19:30:00 CST" name="launchApplication" finished-at="2024-02-03T19:30:10 CST" duration-ms="9629" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="loginWithInvalidPassword()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T01:14:26 CST" name="loginWithInvalidPassword" finished-at="2024-02-03T01:14:31 CST" duration-ms="4825" status="PASS">
+        <test-method signature="loginWithInvalidPassword()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T19:30:10 CST" name="loginWithInvalidPassword" finished-at="2024-02-03T19:30:17 CST" duration-ms="7545" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T01:14:31 CST" name="tearDown" finished-at="2024-02-03T01:14:32 CST" duration-ms="1173" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T19:30:17 CST" name="tearDown" finished-at="2024-02-03T19:30:18 CST" duration-ms="614" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T01:14:32 CST" name="launchApplication" finished-at="2024-02-03T01:15:06 CST" duration-ms="33660" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T19:30:18 CST" name="launchApplication" finished-at="2024-02-03T19:30:21 CST" duration-ms="3044" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="loginWithInvalidUserName()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T01:15:06 CST" name="loginWithInvalidUserName" finished-at="2024-02-03T01:15:12 CST" duration-ms="5863" status="PASS">
+        <test-method signature="loginWithInvalidUserName()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T19:30:21 CST" name="loginWithInvalidUserName" finished-at="2024-02-03T19:30:24 CST" duration-ms="2849" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidUserName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T01:15:12 CST" name="tearDown" finished-at="2024-02-03T01:15:13 CST" duration-ms="1147" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T19:30:24 CST" name="tearDown" finished-at="2024-02-03T19:30:25 CST" duration-ms="756" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T01:15:13 CST" name="launchApplication" finished-at="2024-02-03T01:15:20 CST" duration-ms="7347" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T19:30:25 CST" name="launchApplication" finished-at="2024-02-03T19:30:28 CST" duration-ms="3060" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="loginWithoutAccess()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T01:15:20 CST" name="loginWithoutAccess" finished-at="2024-02-03T01:15:23 CST" duration-ms="3050" status="PASS">
+        <test-method signature="loginWithoutAccess()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T19:30:28 CST" name="loginWithoutAccess" finished-at="2024-02-03T19:30:30 CST" duration-ms="2876" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithoutAccess -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T01:15:23 CST" name="tearDown" finished-at="2024-02-03T01:15:24 CST" duration-ms="1193" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@76494737]" started-at="2024-02-03T19:30:30 CST" name="tearDown" finished-at="2024-02-03T19:30:31 CST" duration-ms="775" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- automation.AdminTest.AllLoginTest -->
     </test> <!-- Login Test -->
-    <test started-at="2024-02-03T01:15:25 CST" name="Parking Area Module Test" finished-at="2024-02-03T01:22:49 CST" duration-ms="443259">
+    <test started-at="2024-02-03T19:30:32 CST" name="Parking Area Module Test" finished-at="2024-02-03T19:37:05 CST" duration-ms="393000">
       <class name="automation.AdminTest.AreaModuleTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:15:25 CST" name="launchApplication" finished-at="2024-02-03T01:15:33 CST" duration-ms="7263" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:30:32 CST" name="launchApplication" finished-at="2024-02-03T19:30:35 CST" duration-ms="3163" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="areaCodeDupValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:15:33 CST" name="areaCodeDupValidation" finished-at="2024-02-03T01:15:55 CST" duration-ms="22940" status="FAIL">
+        <test-method signature="areaCodeDupValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:30:35 CST" name="areaCodeDupValidation" finished-at="2024-02-03T19:31:05 CST" duration-ms="29881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- areaCodeDupValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:31:05 CST" name="tearDown" finished-at="2024-02-03T19:31:06 CST" duration-ms="953" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:31:06 CST" name="launchApplication" finished-at="2024-02-03T19:31:09 CST" duration-ms="2885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="areaCreation()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:31:09 CST" name="areaCreation" finished-at="2024-02-03T19:31:42 CST" duration-ms="32894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- areaCreation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:31:42 CST" name="tearDown" finished-at="2024-02-03T19:31:43 CST" duration-ms="854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:31:43 CST" name="launchApplication" finished-at="2024-02-03T19:31:46 CST" duration-ms="3050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="areaNameDupValidation(java.util.HashMap)[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:31:46 CST" name="areaNameDupValidation" data-provider="getData" finished-at="2024-02-03T19:32:11 CST" duration-ms="25185" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Password1!, mobileNumber=987654321, username=renAdmin}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- areaNameDupValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:32:11 CST" name="tearDown" finished-at="2024-02-03T19:32:12 CST" duration-ms="940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:32:12 CST" name="launchApplication" finished-at="2024-02-03T19:32:15 CST" duration-ms="3138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="areaPagePagenation()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:32:15 CST" name="areaPagePagenation" finished-at="2024-02-03T19:32:40 CST" duration-ms="24318" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- areaPagePagenation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:32:40 CST" name="tearDown" finished-at="2024-02-03T19:32:41 CST" duration-ms="854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:32:41 CST" name="launchApplication" finished-at="2024-02-03T19:32:44 CST" duration-ms="3125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="areaPageSelectRow()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:32:44 CST" name="areaPageSelectRow" finished-at="2024-02-03T19:33:10 CST" duration-ms="26423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- areaPageSelectRow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:33:10 CST" name="tearDown" finished-at="2024-02-03T19:33:11 CST" duration-ms="866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:33:11 CST" name="launchApplication" finished-at="2024-02-03T19:33:14 CST" duration-ms="3084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="carCapacityInputValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:33:14 CST" name="carCapacityInputValidation" finished-at="2024-02-03T19:33:31 CST" duration-ms="16370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- carCapacityInputValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:33:31 CST" name="tearDown" finished-at="2024-02-03T19:33:31 CST" duration-ms="919" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:33:31 CST" name="launchApplication" finished-at="2024-02-03T19:33:35 CST" duration-ms="3198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="editParkingArea()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:33:35 CST" name="editParkingArea" finished-at="2024-02-03T19:34:00 CST" duration-ms="25236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editParkingArea -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:34:00 CST" name="tearDown" finished-at="2024-02-03T19:34:01 CST" duration-ms="898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:34:01 CST" name="launchApplication" finished-at="2024-02-03T19:34:04 CST" duration-ms="3236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="exitCreationAlert()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:34:04 CST" name="exitCreationAlert" finished-at="2024-02-03T19:34:23 CST" duration-ms="18609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exitCreationAlert -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:34:23 CST" name="tearDown" finished-at="2024-02-03T19:34:23 CST" duration-ms="876" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:34:23 CST" name="launchApplication" finished-at="2024-02-03T19:34:27 CST" duration-ms="3147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="fixedRateMaxLimit()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:34:27 CST" name="fixedRateMaxLimit" finished-at="2024-02-03T19:34:56 CST" duration-ms="28912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fixedRateMaxLimit -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:34:56 CST" name="tearDown" finished-at="2024-02-03T19:34:56 CST" duration-ms="890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:34:56 CST" name="launchApplication" finished-at="2024-02-03T19:35:00 CST" duration-ms="3197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="motorcycleCapacityInputValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:35:00 CST" name="motorcycleCapacityInputValidation" finished-at="2024-02-03T19:35:16 CST" duration-ms="16219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- motorcycleCapacityInputValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:35:16 CST" name="tearDown" finished-at="2024-02-03T19:35:17 CST" duration-ms="892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:35:17 CST" name="launchApplication" finished-at="2024-02-03T19:35:24 CST" duration-ms="7369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="setCMotorcycleCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:35:24 CST" name="setCMotorcycleCapacityPlusButtonToDisable" finished-at="2024-02-03T19:35:44 CST" duration-ms="19789" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setCMotorcycleCapacityPlusButtonToDisable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:35:44 CST" name="tearDown" finished-at="2024-02-03T19:35:45 CST" duration-ms="823" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:35:45 CST" name="launchApplication" finished-at="2024-02-03T19:35:48 CST" duration-ms="2988" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="setCarCapacityMinusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:35:48 CST" name="setCarCapacityMinusButtonToDisable" finished-at="2024-02-03T19:36:20 CST" duration-ms="32509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setCarCapacityMinusButtonToDisable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:36:20 CST" name="tearDown" finished-at="2024-02-03T19:36:21 CST" duration-ms="855" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:36:21 CST" name="launchApplication" finished-at="2024-02-03T19:36:24 CST" duration-ms="3197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="setCarCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:36:24 CST" name="setCarCapacityPlusButtonToDisable" finished-at="2024-02-03T19:36:42 CST" duration-ms="17864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setCarCapacityPlusButtonToDisable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:36:42 CST" name="tearDown" finished-at="2024-02-03T19:36:43 CST" duration-ms="879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:36:43 CST" name="launchApplication" finished-at="2024-02-03T19:36:46 CST" duration-ms="3152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="setMotorcycleCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:36:46 CST" name="setMotorcycleCapacityPlusButtonToDisable" finished-at="2024-02-03T19:37:04 CST" duration-ms="17894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setMotorcycleCapacityPlusButtonToDisable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T19:37:04 CST" name="tearDown" finished-at="2024-02-03T19:37:05 CST" duration-ms="920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- automation.AdminTest.AreaModuleTest -->
+    </test> <!-- Parking Area Module Test -->
+    <test started-at="2024-02-03T19:37:05 CST" name="User Module Test" finished-at="2024-02-03T19:41:33 CST" duration-ms="267440">
+      <class name="automation.AdminTest.UserModuleTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:37:05 CST" name="launchApplication" finished-at="2024-02-03T19:37:08 CST" duration-ms="3082" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="exitEnrollmentAlert()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:37:08 CST" name="exitEnrollmentAlert" finished-at="2024-02-03T19:37:24 CST" duration-ms="15467" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exitEnrollmentAlert -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:37:24 CST" name="tearDown" finished-at="2024-02-03T19:37:25 CST" duration-ms="868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:37:25 CST" name="launchApplication" finished-at="2024-02-03T19:37:28 CST" duration-ms="3265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="getCopyUserName()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:37:28 CST" name="getCopyUserName" finished-at="2024-02-03T19:37:45 CST" duration-ms="16700" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCopyUserName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:37:45 CST" name="tearDown" finished-at="2024-02-03T19:37:45 CST" duration-ms="881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:37:45 CST" name="launchApplication" finished-at="2024-02-03T19:37:48 CST" duration-ms="3020" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="getCopyUserPassword()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:37:48 CST" name="getCopyUserPassword" finished-at="2024-02-03T19:38:04 CST" duration-ms="15608" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCopyUserPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:38:04 CST" name="tearDown" finished-at="2024-02-03T19:38:05 CST" duration-ms="878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:38:05 CST" name="launchApplication" finished-at="2024-02-03T19:38:08 CST" duration-ms="3130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="userEmailDupValidation(java.util.HashMap)[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:38:08 CST" name="userEmailDupValidation" data-provider="getData" finished-at="2024-02-03T19:38:24 CST" duration-ms="16375" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Password1!, mobileNumber=987654321, username=renAdmin}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userEmailDupValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:38:24 CST" name="tearDown" finished-at="2024-02-03T19:38:25 CST" duration-ms="854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:38:25 CST" name="launchApplication" finished-at="2024-02-03T19:38:29 CST" duration-ms="3248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="userPagePagenation()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:38:29 CST" name="userPagePagenation" finished-at="2024-02-03T19:38:52 CST" duration-ms="23898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userPagePagenation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:38:52 CST" name="tearDown" finished-at="2024-02-03T19:38:53 CST" duration-ms="858" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:38:53 CST" name="launchApplication" finished-at="2024-02-03T19:38:56 CST" duration-ms="3122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="userPageSelectRow()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:38:56 CST" name="userPageSelectRow" finished-at="2024-02-03T19:39:23 CST" duration-ms="26179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userPageSelectRow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:39:23 CST" name="tearDown" finished-at="2024-02-03T19:39:23 CST" duration-ms="911" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:39:23 CST" name="launchApplication" finished-at="2024-02-03T19:39:27 CST" duration-ms="3076" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="adminEnrollment()[pri:1, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:39:27 CST" name="adminEnrollment" finished-at="2024-02-03T19:39:56 CST" duration-ms="29073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adminEnrollment -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:39:56 CST" name="tearDown" finished-at="2024-02-03T19:39:56 CST" duration-ms="845" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:39:56 CST" name="launchApplication" finished-at="2024-02-03T19:40:00 CST" duration-ms="3079" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="encoderEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:40:00 CST" name="encoderEnrollment" finished-at="2024-02-03T19:40:34 CST" duration-ms="34414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- encoderEnrollment -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:40:34 CST" name="tearDown" finished-at="2024-02-03T19:40:35 CST" duration-ms="901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:40:35 CST" name="launchApplication" finished-at="2024-02-03T19:40:43 CST" duration-ms="8000" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="editUserAccount()[pri:3, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:40:43 CST" name="editUserAccount" finished-at="2024-02-03T19:41:31 CST" duration-ms="48599" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (3e4793120f93296e17c624afa8e92632)] -> css selector: img[alt='SM Logo']] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50098}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50098/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e4793120f93296e17c624afa8e92632]]>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@class='flex-grow text-sm self-center w-3/4']' (tried for 20 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (3e4793120f93296e17c624afa8e92632)] -> css selector: img[alt='SM Logo']] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50098}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50098/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e4793120f93296e17c624afa8e92632
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@class='flex-grow text-sm self-center w-3/4']' (tried for 20 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:44)
-at automation.PageObject.AreaModule.goToAreaPage(AreaModule.java:125)
-at automation.AdminTest.AreaModuleTest.areaCodeDupValidation(AreaModuleTest.java:70)
+at automation.PageObject.UserModule.userAccountUpdate(UserModule.java:328)
+at automation.AdminTest.UserModuleTest.editUserAccount(UserModuleTest.java:82)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -129,459 +401,208 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='flex-grow text-sm self-center w-3/4']"}
+  (Session info: chrome-headless-shell=121.0.6167.86)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [51597c45de931004dd350d1206718f70, findElement {using=xpath, value=//*[@class='flex-grow text-sm self-center w-3/4']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.86, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61730}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61730/devtoo..., se:cdpVersion: 121.0.6167.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 51597c45de931004dd350d1206718f70
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- areaCodeDupValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:15:56 CST" name="tearDown" finished-at="2024-02-03T01:15:57 CST" duration-ms="1179" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:15:57 CST" name="launchApplication" finished-at="2024-02-03T01:16:04 CST" duration-ms="7197" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaCreation()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:16:04 CST" name="areaCreation" finished-at="2024-02-03T01:16:37 CST" duration-ms="32756" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaCreation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:16:37 CST" name="tearDown" finished-at="2024-02-03T01:16:38 CST" duration-ms="1094" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:16:38 CST" name="launchApplication" finished-at="2024-02-03T01:16:46 CST" duration-ms="7353" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaNameDupValidation(java.util.HashMap)[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:16:46 CST" name="areaNameDupValidation" data-provider="getData" finished-at="2024-02-03T01:17:11 CST" duration-ms="25428" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Password1!, mobileNumber=987654321, username=renAdmin}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaNameDupValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:17:11 CST" name="tearDown" finished-at="2024-02-03T01:17:12 CST" duration-ms="1123" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:17:12 CST" name="launchApplication" finished-at="2024-02-03T01:17:20 CST" duration-ms="7339" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaPagePagenation()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:17:20 CST" name="areaPagePagenation" finished-at="2024-02-03T01:17:47 CST" duration-ms="27851" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaPagePagenation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:17:48 CST" name="tearDown" finished-at="2024-02-03T01:17:49 CST" duration-ms="1190" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:17:49 CST" name="launchApplication" finished-at="2024-02-03T01:17:56 CST" duration-ms="7265" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaPageSelectRow()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:17:56 CST" name="areaPageSelectRow" finished-at="2024-02-03T01:18:23 CST" duration-ms="26782" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaPageSelectRow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:18:23 CST" name="tearDown" finished-at="2024-02-03T01:18:24 CST" duration-ms="1140" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:18:24 CST" name="launchApplication" finished-at="2024-02-03T01:18:31 CST" duration-ms="7393" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="carCapacityInpuValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:18:31 CST" name="carCapacityInpuValidation" finished-at="2024-02-03T01:18:49 CST" duration-ms="17302" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- carCapacityInpuValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:18:49 CST" name="tearDown" finished-at="2024-02-03T01:18:50 CST" duration-ms="1119" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:18:50 CST" name="launchApplication" finished-at="2024-02-03T01:18:57 CST" duration-ms="7170" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="editParkingArea()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:18:57 CST" name="editParkingArea" finished-at="2024-02-03T01:19:21 CST" duration-ms="24234" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editParkingArea -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:19:21 CST" name="tearDown" finished-at="2024-02-03T01:19:22 CST" duration-ms="1163" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:19:22 CST" name="launchApplication" finished-at="2024-02-03T01:19:30 CST" duration-ms="7249" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="exitCreationAlert()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:19:30 CST" name="exitCreationAlert" finished-at="2024-02-03T01:19:48 CST" duration-ms="18350" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exitCreationAlert -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:19:48 CST" name="tearDown" finished-at="2024-02-03T01:19:49 CST" duration-ms="1335" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:19:49 CST" name="launchApplication" finished-at="2024-02-03T01:19:58 CST" duration-ms="8874" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="fixedRateMaxLimit()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:19:58 CST" name="fixedRateMaxLimit" finished-at="2024-02-03T01:20:22 CST" duration-ms="24419" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fixedRateMaxLimit -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:20:22 CST" name="tearDown" finished-at="2024-02-03T01:20:24 CST" duration-ms="1184" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:20:24 CST" name="launchApplication" finished-at="2024-02-03T01:20:35 CST" duration-ms="11185" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="motorcycleCapacityInpuValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:20:35 CST" name="motorcycleCapacityInpuValidation" finished-at="2024-02-03T01:21:01 CST" duration-ms="25760" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- motorcycleCapacityInpuValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:21:01 CST" name="tearDown" finished-at="2024-02-03T01:21:02 CST" duration-ms="1116" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:21:02 CST" name="launchApplication" finished-at="2024-02-03T01:21:09 CST" duration-ms="7489" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setCMotorcycleCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:21:09 CST" name="setCMotorcycleCapacityPlusButtonToDisable" finished-at="2024-02-03T01:21:28 CST" duration-ms="18464" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setCMotorcycleCapacityPlusButtonToDisable -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:21:28 CST" name="tearDown" finished-at="2024-02-03T01:21:29 CST" duration-ms="1139" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:21:29 CST" name="launchApplication" finished-at="2024-02-03T01:21:37 CST" duration-ms="8357" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setCarCapacityMinusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:21:37 CST" name="setCarCapacityMinusButtonToDisable" finished-at="2024-02-03T01:21:55 CST" duration-ms="17627" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setCarCapacityMinusButtonToDisable -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:21:55 CST" name="tearDown" finished-at="2024-02-03T01:21:56 CST" duration-ms="1236" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:21:56 CST" name="launchApplication" finished-at="2024-02-03T01:22:03 CST" duration-ms="7113" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setCarCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:22:03 CST" name="setCarCapacityPlusButtonToDisable" finished-at="2024-02-03T01:22:21 CST" duration-ms="17586" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setCarCapacityPlusButtonToDisable -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:22:21 CST" name="tearDown" finished-at="2024-02-03T01:22:22 CST" duration-ms="1235" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:22:22 CST" name="launchApplication" finished-at="2024-02-03T01:22:29 CST" duration-ms="7164" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setMotorcycleCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:22:29 CST" name="setMotorcycleCapacityPlusButtonToDisable" finished-at="2024-02-03T01:22:47 CST" duration-ms="18220" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setMotorcycleCapacityPlusButtonToDisable -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@2584b82d]" started-at="2024-02-03T01:22:47 CST" name="tearDown" finished-at="2024-02-03T01:22:49 CST" duration-ms="1139" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.AreaModuleTest -->
-    </test> <!-- Parking Area Module Test -->
-    <test started-at="2024-02-03T01:22:49 CST" name="User Module Test" finished-at="2024-02-03T01:27:37 CST" duration-ms="288579">
-      <class name="automation.AdminTest.UserModuleTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:22:49 CST" name="launchApplication" finished-at="2024-02-03T01:22:56 CST" duration-ms="7325" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="exitEnrollmentAlert()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:22:56 CST" name="exitEnrollmentAlert" finished-at="2024-02-03T01:23:10 CST" duration-ms="14071" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exitEnrollmentAlert -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:23:10 CST" name="tearDown" finished-at="2024-02-03T01:23:11 CST" duration-ms="1234" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:23:11 CST" name="launchApplication" finished-at="2024-02-03T01:23:18 CST" duration-ms="7179" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="getCopyUserName()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:23:18 CST" name="getCopyUserName" finished-at="2024-02-03T01:23:36 CST" duration-ms="17856" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getCopyUserName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:23:36 CST" name="tearDown" finished-at="2024-02-03T01:23:37 CST" duration-ms="1186" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:23:37 CST" name="launchApplication" finished-at="2024-02-03T01:23:45 CST" duration-ms="7320" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="getCopyUserPassword()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:23:45 CST" name="getCopyUserPassword" finished-at="2024-02-03T01:24:00 CST" duration-ms="15623" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getCopyUserPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:24:00 CST" name="tearDown" finished-at="2024-02-03T01:24:02 CST" duration-ms="1099" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:24:02 CST" name="launchApplication" finished-at="2024-02-03T01:24:09 CST" duration-ms="7286" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="userEmailDupValidation(java.util.HashMap)[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:24:09 CST" name="userEmailDupValidation" data-provider="getData" finished-at="2024-02-03T01:24:26 CST" duration-ms="17157" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Password1!, mobileNumber=987654321, username=renAdmin}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userEmailDupValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:24:26 CST" name="tearDown" finished-at="2024-02-03T01:24:27 CST" duration-ms="1105" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:24:27 CST" name="launchApplication" finished-at="2024-02-03T01:24:34 CST" duration-ms="7141" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="userPagePagenation()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:24:34 CST" name="userPagePagenation" finished-at="2024-02-03T01:25:02 CST" duration-ms="27745" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userPagePagenation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:25:02 CST" name="tearDown" finished-at="2024-02-03T01:25:03 CST" duration-ms="1153" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:25:03 CST" name="launchApplication" finished-at="2024-02-03T01:25:12 CST" duration-ms="9047" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="userPageSelectRow()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:25:12 CST" name="userPageSelectRow" finished-at="2024-02-03T01:25:38 CST" duration-ms="26275" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userPageSelectRow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:25:38 CST" name="tearDown" finished-at="2024-02-03T01:25:40 CST" duration-ms="1221" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:25:40 CST" name="launchApplication" finished-at="2024-02-03T01:25:50 CST" duration-ms="10397" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="adminEnrollment()[pri:1, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:25:50 CST" name="adminEnrollment" finished-at="2024-02-03T01:26:29 CST" duration-ms="38786" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adminEnrollment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:26:29 CST" name="tearDown" finished-at="2024-02-03T01:26:30 CST" duration-ms="1122" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:26:30 CST" name="launchApplication" finished-at="2024-02-03T01:26:37 CST" duration-ms="7317" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="encoderEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:26:37 CST" name="encoderEnrollment" finished-at="2024-02-03T01:27:11 CST" duration-ms="34173" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- encoderEnrollment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:27:11 CST" name="tearDown" finished-at="2024-02-03T01:27:13 CST" duration-ms="1178" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:27:13 CST" name="launchApplication" finished-at="2024-02-03T01:27:20 CST" duration-ms="7241" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="editUserAccount()[pri:3, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:27:20 CST" name="editUserAccount" finished-at="2024-02-03T01:27:36 CST" duration-ms="16148" status="PASS">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- editUserAccount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T01:27:36 CST" name="tearDown" finished-at="2024-02-03T01:27:37 CST" duration-ms="1165" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@14dd7b39]" started-at="2024-02-03T19:41:32 CST" name="tearDown" finished-at="2024-02-03T19:41:33 CST" duration-ms="886" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- automation.AdminTest.UserModuleTest -->
     </test> <!-- User Module Test -->
-    <test started-at="2024-02-03T01:27:37 CST" name="Filter And Search Test" finished-at="2024-02-03T01:30:01 CST" duration-ms="143440">
+    <test started-at="2024-02-03T19:41:33 CST" name="Filter And Search Test" finished-at="2024-02-03T19:43:25 CST" duration-ms="111939">
       <class name="automation.AdminTest.FilterAndSearchTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:27:37 CST" name="launchApplication" finished-at="2024-02-03T01:27:45 CST" duration-ms="7255" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:41:33 CST" name="launchApplication" finished-at="2024-02-03T19:41:36 CST" duration-ms="3077" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="filterByAdminRole()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:27:45 CST" name="filterByAdminRole" finished-at="2024-02-03T01:27:57 CST" duration-ms="11951" status="PASS">
+        <test-method signature="filterByAdminRole()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:41:36 CST" name="filterByAdminRole" finished-at="2024-02-03T19:41:55 CST" duration-ms="19001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filterByAdminRole -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:27:57 CST" name="tearDown" finished-at="2024-02-03T01:27:58 CST" duration-ms="1198" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:41:55 CST" name="tearDown" finished-at="2024-02-03T19:41:56 CST" duration-ms="823" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:27:58 CST" name="launchApplication" finished-at="2024-02-03T01:28:05 CST" duration-ms="7084" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:41:56 CST" name="launchApplication" finished-at="2024-02-03T19:41:59 CST" duration-ms="3014" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="filterByEncoderRole()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:28:05 CST" name="filterByEncoderRole" finished-at="2024-02-03T01:28:17 CST" duration-ms="11796" status="PASS">
+        <test-method signature="filterByEncoderRole()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:41:59 CST" name="filterByEncoderRole" finished-at="2024-02-03T19:42:11 CST" duration-ms="12471" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filterByEncoderRole -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:28:17 CST" name="tearDown" finished-at="2024-02-03T01:28:18 CST" duration-ms="1206" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:42:11 CST" name="tearDown" finished-at="2024-02-03T19:42:12 CST" duration-ms="820" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:28:18 CST" name="launchApplication" finished-at="2024-02-03T01:28:25 CST" duration-ms="7145" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:42:12 CST" name="launchApplication" finished-at="2024-02-03T19:42:15 CST" duration-ms="3001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="parkingAreaCodeSearch()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:28:25 CST" name="parkingAreaCodeSearch" finished-at="2024-02-03T01:28:39 CST" duration-ms="14250" status="PASS">
+        <test-method signature="parkingAreaCodeSearch()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:42:15 CST" name="parkingAreaCodeSearch" finished-at="2024-02-03T19:42:31 CST" duration-ms="16259" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- parkingAreaCodeSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:28:39 CST" name="tearDown" finished-at="2024-02-03T01:28:40 CST" duration-ms="1224" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:42:31 CST" name="tearDown" finished-at="2024-02-03T19:42:32 CST" duration-ms="843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:28:40 CST" name="launchApplication" finished-at="2024-02-03T01:28:48 CST" duration-ms="7309" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:42:32 CST" name="launchApplication" finished-at="2024-02-03T19:42:35 CST" duration-ms="2912" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="parkingNameSearch()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:28:48 CST" name="parkingNameSearch" finished-at="2024-02-03T01:29:00 CST" duration-ms="12721" status="PASS">
+        <test-method signature="parkingNameSearch()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:42:35 CST" name="parkingNameSearch" finished-at="2024-02-03T19:42:47 CST" duration-ms="11772" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- parkingNameSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:29:00 CST" name="tearDown" finished-at="2024-02-03T01:29:02 CST" duration-ms="1195" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:42:47 CST" name="tearDown" finished-at="2024-02-03T19:42:48 CST" duration-ms="880" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:29:02 CST" name="launchApplication" finished-at="2024-02-03T01:29:09 CST" duration-ms="7228" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:42:48 CST" name="launchApplication" finished-at="2024-02-03T19:42:51 CST" duration-ms="2943" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="userEmailSearch()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:29:09 CST" name="userEmailSearch" finished-at="2024-02-03T01:29:20 CST" duration-ms="11237" status="PASS">
+        <test-method signature="userEmailSearch()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:42:51 CST" name="userEmailSearch" finished-at="2024-02-03T19:43:00 CST" duration-ms="9533" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userEmailSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:29:20 CST" name="tearDown" finished-at="2024-02-03T01:29:21 CST" duration-ms="1191" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:43:00 CST" name="tearDown" finished-at="2024-02-03T19:43:01 CST" duration-ms="855" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:29:21 CST" name="launchApplication" finished-at="2024-02-03T01:29:29 CST" duration-ms="7289" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:43:01 CST" name="launchApplication" finished-at="2024-02-03T19:43:04 CST" duration-ms="2959" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="userLastNameSearch()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:29:29 CST" name="userLastNameSearch" finished-at="2024-02-03T01:29:40 CST" duration-ms="11079" status="PASS">
+        <test-method signature="userLastNameSearch()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:43:04 CST" name="userLastNameSearch" finished-at="2024-02-03T19:43:12 CST" duration-ms="7942" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userLastNameSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:29:40 CST" name="tearDown" finished-at="2024-02-03T01:29:41 CST" duration-ms="1260" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:43:12 CST" name="tearDown" finished-at="2024-02-03T19:43:13 CST" duration-ms="809" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:29:41 CST" name="launchApplication" finished-at="2024-02-03T01:29:48 CST" duration-ms="7374" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:43:13 CST" name="launchApplication" finished-at="2024-02-03T19:43:16 CST" duration-ms="3277" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="userNameSearch()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:29:48 CST" name="userNameSearch" finished-at="2024-02-03T01:29:59 CST" duration-ms="11127" status="PASS">
+        <test-method signature="userNameSearch()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:43:16 CST" name="userNameSearch" finished-at="2024-02-03T19:43:24 CST" duration-ms="7862" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userNameSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T01:29:59 CST" name="tearDown" finished-at="2024-02-03T01:30:01 CST" duration-ms="1311" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5a7fe64f]" started-at="2024-02-03T19:43:24 CST" name="tearDown" finished-at="2024-02-03T19:43:25 CST" duration-ms="874" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- automation.AdminTest.FilterAndSearchTest -->
     </test> <!-- Filter And Search Test -->
-    <test started-at="2024-02-03T01:30:01 CST" name="Permission Test" finished-at="2024-02-03T01:34:04 CST" duration-ms="242970">
+    <test started-at="2024-02-03T19:43:25 CST" name="Permission Test" finished-at="2024-02-03T19:46:47 CST" duration-ms="201982">
       <class name="automation.AdminTest.PermissionTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:30:01 CST" name="launchApplication" finished-at="2024-02-03T01:30:08 CST" duration-ms="7383" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:43:25 CST" name="launchApplication" finished-at="2024-02-03T19:43:28 CST" duration-ms="2957" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="setAllowExitToFalse()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:30:08 CST" name="setAllowExitToFalse" finished-at="2024-02-03T01:31:10 CST" duration-ms="61851" status="PASS">
+        <test-method signature="setAllowExitToFalse()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:43:28 CST" name="setAllowExitToFalse" finished-at="2024-02-03T19:44:18 CST" duration-ms="50733" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setAllowExitToFalse -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:31:10 CST" name="tearDown" finished-at="2024-02-03T01:31:11 CST" duration-ms="1165" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:44:18 CST" name="tearDown" finished-at="2024-02-03T19:44:20 CST" duration-ms="1085" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:31:11 CST" name="launchApplication" finished-at="2024-02-03T01:31:24 CST" duration-ms="12285" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:44:20 CST" name="launchApplication" finished-at="2024-02-03T19:44:23 CST" duration-ms="3040" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="setAllowExitToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:31:24 CST" name="setAllowExitToTrue" finished-at="2024-02-03T01:31:54 CST" duration-ms="29968" status="PASS">
+        <test-method signature="setAllowExitToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:44:23 CST" name="setAllowExitToTrue" finished-at="2024-02-03T19:44:52 CST" duration-ms="29168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setAllowExitToTrue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:31:54 CST" name="tearDown" finished-at="2024-02-03T01:31:55 CST" duration-ms="1116" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:44:52 CST" name="tearDown" finished-at="2024-02-03T19:44:53 CST" duration-ms="1067" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:31:55 CST" name="launchApplication" finished-at="2024-02-03T01:32:02 CST" duration-ms="7764" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:44:53 CST" name="launchApplication" finished-at="2024-02-03T19:44:56 CST" duration-ms="2986" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="userWithActiveStatus()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:32:02 CST" name="userWithActiveStatus" finished-at="2024-02-03T01:32:26 CST" duration-ms="23904" status="PASS">
+        <test-method signature="userWithActiveStatus()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:44:56 CST" name="userWithActiveStatus" finished-at="2024-02-03T19:45:19 CST" duration-ms="23109" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userWithActiveStatus -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:32:26 CST" name="tearDown" finished-at="2024-02-03T01:32:28 CST" duration-ms="1205" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:45:19 CST" name="tearDown" finished-at="2024-02-03T19:45:20 CST" duration-ms="1076" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:32:28 CST" name="launchApplication" finished-at="2024-02-03T01:32:35 CST" duration-ms="7832" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:45:20 CST" name="launchApplication" finished-at="2024-02-03T19:45:23 CST" duration-ms="2981" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="userWithPaymentAcceptanceSetToFalse()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:32:35 CST" name="userWithPaymentAcceptanceSetToFalse" finished-at="2024-02-03T01:32:57 CST" duration-ms="21910" status="PASS">
+        <test-method signature="userWithPaymentAcceptanceSetToFalse()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:45:23 CST" name="userWithPaymentAcceptanceSetToFalse" finished-at="2024-02-03T19:45:44 CST" duration-ms="20765" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userWithPaymentAcceptanceSetToFalse -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:32:57 CST" name="tearDown" finished-at="2024-02-03T01:32:58 CST" duration-ms="1187" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:45:44 CST" name="tearDown" finished-at="2024-02-03T19:45:45 CST" duration-ms="1080" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:32:58 CST" name="launchApplication" finished-at="2024-02-03T01:33:06 CST" duration-ms="7317" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:45:45 CST" name="launchApplication" finished-at="2024-02-03T19:45:52 CST" duration-ms="7496" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="userWithPaymentAcceptanceSetToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:33:06 CST" name="userWithPaymentAcceptanceSetToTrue" finished-at="2024-02-03T01:33:34 CST" duration-ms="28058" status="PASS">
+        <test-method signature="userWithPaymentAcceptanceSetToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:45:52 CST" name="userWithPaymentAcceptanceSetToTrue" finished-at="2024-02-03T19:46:22 CST" duration-ms="29516" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userWithPaymentAcceptanceSetToTrue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:33:34 CST" name="tearDown" finished-at="2024-02-03T01:33:35 CST" duration-ms="1181" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:46:22 CST" name="tearDown" finished-at="2024-02-03T19:46:23 CST" duration-ms="1068" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:33:35 CST" name="launchApplication" finished-at="2024-02-03T01:33:42 CST" duration-ms="7450" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:46:23 CST" name="launchApplication" finished-at="2024-02-03T19:46:26 CST" duration-ms="3106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="userWithRestrictedStatus()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:33:42 CST" name="userWithRestrictedStatus" finished-at="2024-02-03T01:34:03 CST" duration-ms="20119" status="PASS">
+        <test-method signature="userWithRestrictedStatus()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:46:26 CST" name="userWithRestrictedStatus" finished-at="2024-02-03T19:46:46 CST" duration-ms="19656" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userWithRestrictedStatus -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T01:34:03 CST" name="tearDown" finished-at="2024-02-03T01:34:04 CST" duration-ms="1267" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@465232e9]" started-at="2024-02-03T19:46:46 CST" name="tearDown" finished-at="2024-02-03T19:46:47 CST" duration-ms="1082" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

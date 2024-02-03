@@ -66,14 +66,14 @@ public class FilterAndSearch extends AbstractComponent {
 	}
 
 	public boolean emailAddSearch(String email, String searchResult) throws InterruptedException {
-		
+		waitForWebElementToAppear(smLogo);
 		performSearch(email,searchResult);
 		return userEmail.getText().equalsIgnoreCase(email);
 		
 	}
 
 	public boolean userFirstNameSearch(String fname, String searchResult) throws InterruptedException {
-		
+		waitForWebElementToAppear(smLogo);
 		performSearch(fname, searchResult);
 		String uname = firstRowData.getText();
 		String[] sliptname = uname.split(" ");
@@ -83,7 +83,7 @@ public class FilterAndSearch extends AbstractComponent {
 	}
 
 	public boolean userLastnameSearch(String lname, String searchResult) throws InterruptedException {
-		
+		waitForWebElementToAppear(smLogo);
 		performSearch(lname, searchResult);
 		String uname = firstRowData.getText();
 		String[] sliptname = uname.split(" ");

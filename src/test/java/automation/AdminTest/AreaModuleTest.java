@@ -19,10 +19,7 @@ public class AreaModuleTest extends BaseTest {
 	@Test(groups = { "Creation" })
 	public void areaCreation() throws InterruptedException {
 
-		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule parkingArea = new AreaModule(driver);
-		parkingArea.goToAreaPage();
-
+		AreaModule parkingArea = loginToApplication();
 		parkingArea.clickCreate();
 		parkingArea.genInfoParkingName(areaName);
 		parkingArea.genInfoSMList();
@@ -42,12 +39,9 @@ public class AreaModuleTest extends BaseTest {
 	@Test(dataProvider = "getData", groups = { "ErrorHandling" })
 	public void areaNameDupValidation(HashMap<String, String> input) throws InterruptedException {
 
-		landingPage.loginApplication(input.get("username"), input.get("password"));
-		AreaModule parkingArea = new AreaModule(driver);
-		parkingArea.goToAreaPage();
+		AreaModule parkingArea = loginToApplication();
 		String dupAreaName = parkingArea.getRandomAreaName();
-
-		parkingArea.areaNameToBeEdited();
+		parkingArea.selectAreaToBeEdited();
 		parkingArea.genInfoParkingName(dupAreaName);
 		parkingArea.clickSave();
 		Assert.assertEquals(parkingArea.errorMessage(),
@@ -57,19 +51,16 @@ public class AreaModuleTest extends BaseTest {
 
 	@Test
 	public void editParkingArea() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule parkingArea = new AreaModule(driver);
-		parkingArea.goToAreaPage();
+
+		AreaModule parkingArea = loginToApplication();
 		Assert.assertTrue(parkingArea.parkingAreaUpdate());
 	}
 
 	@Test(groups = { "ErrorHandling" })
 	public void areaCodeDupValidation() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule parkingArea = new AreaModule(driver);
-		parkingArea.goToAreaPage();
 
-		parkingArea.areaNameToBeEdited();
+		AreaModule parkingArea = loginToApplication();
+		parkingArea.selectAreaToBeEdited();
 		parkingArea.getAreaCode("0127");
 		parkingArea.clickSave();
 		Assert.assertEquals(parkingArea.errorMessage(),
@@ -79,10 +70,8 @@ public class AreaModuleTest extends BaseTest {
 
 	@Test(groups = { "ErrorHandling" })
 	public void fixedRateMaxLimit() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule parkingArea = new AreaModule(driver);
-		parkingArea.goToAreaPage();
 
+		AreaModule parkingArea = loginToApplication();
 		parkingArea.clickCreate();
 		parkingArea.genInfoParkingName("Area_FixedRateTest");
 		parkingArea.genInfoSMList();
@@ -97,10 +86,8 @@ public class AreaModuleTest extends BaseTest {
 
 	@Test
 	public void exitCreationAlert() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule parkingArea = new AreaModule(driver);
-		parkingArea.goToAreaPage();
 
+		AreaModule parkingArea = loginToApplication();
 		parkingArea.clickCreate();
 		parkingArea.genInfoParkingName(areaName);
 		parkingArea.genInfoSMList();
@@ -129,12 +116,10 @@ public class AreaModuleTest extends BaseTest {
 	}
 
 	@Test
-	public void carCapacityInpuValidation() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule parkingArea = new AreaModule(driver);
-		parkingArea.goToAreaPage();
+	public void carCapacityInputValidation() throws InterruptedException {
 
-		parkingArea.areaNameToBeEdited();
+		AreaModule parkingArea = loginToApplication();
+		parkingArea.selectAreaToBeEdited();
 		parkingArea.getCarCapacity("1001");
 		parkingArea.getMotorcycleCapacity("100");
 		parkingArea.clickSave();
@@ -142,12 +127,10 @@ public class AreaModuleTest extends BaseTest {
 	}
 
 	@Test
-	public void motorcycleCapacityInpuValidation() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule parkingArea = new AreaModule(driver);
-		parkingArea.goToAreaPage();
+	public void motorcycleCapacityInputValidation() throws InterruptedException {
 
-		parkingArea.areaNameToBeEdited();
+		AreaModule parkingArea = loginToApplication();
+		parkingArea.selectAreaToBeEdited();
 		parkingArea.getCarCapacity("1000");
 		parkingArea.getMotorcycleCapacity("1001");
 		parkingArea.clickSave();
@@ -156,39 +139,43 @@ public class AreaModuleTest extends BaseTest {
 
 	@Test
 	public void setCarCapacityPlusButtonToDisable() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule parkingArea = new AreaModule(driver);
-		parkingArea.goToAreaPage();
 
-		parkingArea.areaNameToBeEdited();
+		AreaModule parkingArea = loginToApplication();
+		parkingArea.selectAreaToBeEdited();
 		Assert.assertTrue(parkingArea.increaseCarCapacity("995"));
 	}
+
 	@Test
 	public void setCarCapacityMinusButtonToDisable() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule parkingArea = new AreaModule(driver);
-		parkingArea.goToAreaPage();
 
-		parkingArea.areaNameToBeEdited();
+		AreaModule parkingArea = loginToApplication();
+		parkingArea.selectAreaToBeEdited();
 		Assert.assertTrue(parkingArea.decreaseCarCapacity("5"));
 	}
+
 	@Test
 	public void setCMotorcycleCapacityPlusButtonToDisable() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
-		AreaModule parkingArea = new AreaModule(driver);
-		parkingArea.goToAreaPage();
 
-		parkingArea.areaNameToBeEdited();
+		AreaModule parkingArea = loginToApplication();
+		parkingArea.selectAreaToBeEdited();
 		Assert.assertTrue(parkingArea.increaseMotorcycleCapacity("995"));
 	}
+
 	@Test
 	public void setMotorcycleCapacityPlusButtonToDisable() throws InterruptedException {
+
+		AreaModule parkingArea = loginToApplication();
+		parkingArea.selectAreaToBeEdited();
+		Assert.assertTrue(parkingArea.decreaseMotorcycleCapacity("5"));
+	}
+
+	// handle the login and area navigation steps
+	private AreaModule loginToApplication() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
 		AreaModule parkingArea = new AreaModule(driver);
 		parkingArea.goToAreaPage();
 
-		parkingArea.areaNameToBeEdited();
-		Assert.assertTrue(parkingArea.decreaseMotorcycleCapacity("5"));
+		return parkingArea;
 	}
 
 	@DataProvider

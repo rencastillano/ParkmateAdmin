@@ -1,8 +1,8 @@
 package automation.PageObject;
 
 import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.StringSelection;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.util.List;
@@ -130,7 +130,7 @@ public class UserModule extends AbstractComponent {
 	@FindBy(xpath = "//div[4]/div/div/ul")
 	WebElement stationDataList;
 
-	public boolean userPage() {
+	public Permissions userPage() {
 		waitForWebElementToAppear(smLogo);
 		try {
 			Thread.sleep(3000);
@@ -138,7 +138,9 @@ public class UserModule extends AbstractComponent {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return usersTab.isDisplayed();
+		Permissions permission = new Permissions(driver);
+		
+		return permission;
 	}
 
 	public String selectAdminRole() {
@@ -206,9 +208,9 @@ public class UserModule extends AbstractComponent {
 	    return email.getAttribute("value");
 	}
 
-	public void getMobileDetails() {
-		mobile.click();
-		mobile.sendKeys("987654321");
+	public void getMobileDetails(String mobileNumber) {
+		mobile.clear();
+		mobile.sendKeys(mobileNumber);
 
 	}
 
@@ -235,19 +237,24 @@ public class UserModule extends AbstractComponent {
 	}
 	
 	private boolean getCopyValueAndCompare(WebElement element, WebElement copyButton) throws UnsupportedFlavorException, IOException, InterruptedException {
-	    do {
-			Thread.sleep(1000);
-		} while (!email.getAttribute("value").equalsIgnoreCase("forAutomationEdit@parkmate.com"));
+		do {
+	        Thread.sleep(1000);
+	    } while (!email.getAttribute("value").equalsIgnoreCase("forAutomationEdit@parkmate.com"));
+
 	    String value = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].value;", element);
+
+	    // Copy value using Toolkit
+	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(value), null);
+	    
 	    copyButton.click();
 	    Thread.sleep(1000);
+
 	    return value.equals(getTextFromClipboard());
 	}
 
 	// Helper method to retrieve text from clipboard
 	private static String getTextFromClipboard() throws UnsupportedFlavorException, IOException {
-	    Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-	    return (String) clipboard.getData(DataFlavor.stringFlavor);
+		return (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
 	}
 
 
@@ -315,8 +322,10 @@ public class UserModule extends AbstractComponent {
 	public boolean userAccountUpdate() throws InterruptedException {
 
 		performSearch("forAutomationEdit@parkmate.com", "Automation EditTesting");
-		Thread.sleep(1000);
-		getParkingStation();
+		do {
+	        Thread.sleep(1000);
+	    } while (!email.getAttribute("value").equalsIgnoreCase("forAutomationEdit@parkmate.com"));
+		getMobileDetails("+6399"+generateRandomNumber(8));
 		saveBtn.click();
 		waitForWebElementToAppear(banner);
 		String bannerText = banner.getText();
