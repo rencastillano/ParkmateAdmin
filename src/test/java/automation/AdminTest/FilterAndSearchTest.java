@@ -20,26 +20,27 @@ public class FilterAndSearchTest extends BaseTest {
 	String lastName = "Castillano";
 	String completeName = name + " " + lastName;
 	String areaName = "Wack Wack";
+	String areaCode = "0846";
 
 	@Test
 	public void userEmailSearch() throws InterruptedException {
 
 		FilterAndSearch search = loginToApplicationForSearching();
-		Assert.assertTrue(search.emailAddSearch(email, completeName));
+		Assert.assertTrue(search.emailAddSearch(email));
 	}
 
 	@Test
-	public void userNameSearch() throws InterruptedException {
+	public void userFirstNameSearch() throws InterruptedException {
 
 		FilterAndSearch search = loginToApplicationForSearching();
-		Assert.assertTrue(search.userFirstNameSearch(name, completeName));
+		Assert.assertTrue(search.userSearch(name, completeName, "firstname"));
 	}
 
 	@Test
 	public void userLastNameSearch() throws InterruptedException {
 
 		FilterAndSearch search = loginToApplicationForSearching();
-		Assert.assertTrue(search.userLastnameSearch(lastName, completeName));
+		Assert.assertTrue(search.userSearch(lastName, completeName, "lastname"));
 	}
 
 	@Test(dataProvider = "getData")
@@ -48,8 +49,8 @@ public class FilterAndSearchTest extends BaseTest {
 		landingPage.loginApplication(input.get("username"), input.get("password"));
 		AreaModule parkingCreation = new AreaModule(driver);
 		FilterAndSearch search = parkingCreation.goToAreaPage();
-		boolean result = search.parkingNameSearch(areaName);
-		Assert.assertTrue(result);
+		Assert.assertTrue(search.parkingAreaNameSearch(areaName));
+		
 
 	}
 
@@ -59,7 +60,7 @@ public class FilterAndSearchTest extends BaseTest {
 		landingPage.loginApplication(input.get("username"), input.get("password"));
 		AreaModule parkingCreation = new AreaModule(driver);
 		FilterAndSearch search = parkingCreation.goToAreaPage();
-		Assert.assertTrue(search.parkingAreaCodeSearch(areaName));
+		Assert.assertTrue(search.parkingAreaCodeSearch(areaCode));
 
 	}
 
@@ -68,7 +69,6 @@ public class FilterAndSearchTest extends BaseTest {
 		
 		FilterAndSearch search = loginToApplicationForSearching();
 		Assert.assertTrue(search.filterByEncoderRole());
-		
 	}
 
 	@Test

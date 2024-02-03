@@ -2,27 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-03T20:42:35 CST" name="Default suite" finished-at="2024-02-03T20:43:15 CST" duration-ms="40190">
+  <suite started-at="2024-02-04T00:13:38 CST" name="Default suite" finished-at="2024-02-04T00:13:59 CST" duration-ms="21035">
     <groups>
-      <group name="Creation">
-        <method signature="UserModuleTest.encoderEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@776aec5c]" name="encoderEnrollment" class="automation.AdminTest.UserModuleTest"/>
-      </group> <!-- Creation -->
     </groups>
-    <test started-at="2024-02-03T20:42:35 CST" name="Default test" finished-at="2024-02-03T20:43:15 CST" duration-ms="40190">
-      <class name="automation.AdminTest.UserModuleTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@776aec5c]" started-at="2024-02-03T20:42:35 CST" name="launchApplication" finished-at="2024-02-03T20:42:43 CST" duration-ms="7759" status="PASS">
+    <test started-at="2024-02-04T00:13:38 CST" name="Default test" finished-at="2024-02-04T00:13:59 CST" duration-ms="21035">
+      <class name="automation.AdminTest.FilterAndSearchTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5bf0d49]" started-at="2024-02-04T00:13:38 CST" name="launchApplication" finished-at="2024-02-04T00:13:46 CST" duration-ms="8164" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="encoderEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@776aec5c]" started-at="2024-02-03T20:42:43 CST" name="encoderEnrollment" finished-at="2024-02-03T20:43:14 CST" duration-ms="31244" status="PASS">
+        <test-method signature="filterByEncoderRole()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5bf0d49]" started-at="2024-02-04T00:13:46 CST" name="filterByEncoderRole" finished-at="2024-02-04T00:13:57 CST" duration-ms="11609" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- encoderEnrollment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@776aec5c]" started-at="2024-02-03T20:43:14 CST" name="tearDown" finished-at="2024-02-03T20:43:15 CST" duration-ms="1139" status="PASS">
+        </test-method> <!-- filterByEncoderRole -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5bf0d49]" started-at="2024-02-04T00:13:57 CST" name="tearDown" finished-at="2024-02-04T00:13:59 CST" duration-ms="1215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.UserModuleTest -->
+      </class> <!-- automation.AdminTest.FilterAndSearchTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

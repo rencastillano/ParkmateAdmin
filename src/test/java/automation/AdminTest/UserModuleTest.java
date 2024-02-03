@@ -2,16 +2,11 @@ package automation.AdminTest;
 
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
 
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import automation.AdminTestComponents.BaseTest;
-import automation.AdminTestComponents.Retry;
-import automation.PageObject.AreaModule;
 import automation.PageObject.Pagenation;
 import automation.PageObject.UserModule;
 

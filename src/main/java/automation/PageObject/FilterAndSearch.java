@@ -28,8 +28,8 @@ public class FilterAndSearch extends AbstractComponent {
 
 	@FindBy(xpath = "(//tr/td)[3]")
 	WebElement userEmail;
-	
-	@FindBy(xpath="//tr/td[4]")
+
+	@FindBy(xpath = "//tr/td[4]")
 	WebElement searchAreaCode;
 
 	@FindBy(css = "tr td:first-child")
@@ -45,98 +45,99 @@ public class FilterAndSearch extends AbstractComponent {
 	WebElement roleDropdown;
 
 	@FindBy(xpath = "//*/ul/li[contains(.,'Encoder')]")
-	WebElement selEncoderRole;
+	WebElement selectEncoderRole;
 
 	@FindBy(xpath = "//*/ul/li[contains(.,'Mall Admin')]")
-	WebElement selAdminRole;
+	WebElement selectAdminRole;
 
 	@FindBy(xpath = "//*/div/button[.='Apply']")
 	WebElement clickApply;
 
 	@FindBy(xpath = "//tr/td[2]")
 	List<WebElement> roleColumn;
-	
-	private void performSearch(String searchData, String searchResult) throws InterruptedException {
-	    search.sendKeys(searchData);
-	    String result;
-	    do {
-	        Thread.sleep(2000);
-	        result = firstRowData.getText();
-	    } while (!result.equalsIgnoreCase(searchResult));
+
+	private void performSearch(WebElement element, String searchData, String searchResult) throws InterruptedException {
+		search.sendKeys(searchData);
+		String result;
+		do {
+			Thread.sleep(2000);
+			//result = firstRowData.getText();
+			result = element.getText();
+		} while (!result.equalsIgnoreCase(searchResult));
 	}
 
-	public boolean emailAddSearch(String email, String searchResult) throws InterruptedException {
+	public boolean emailAddSearch(String email) throws InterruptedException {
 		waitForWebElementToAppear(smLogo);
-		performSearch(email,searchResult);
+		performSearch(userEmail, email, email);
 		return userEmail.getText().equalsIgnoreCase(email);
-		
+
 	}
 
-	public boolean userFirstNameSearch(String fname, String searchResult) throws InterruptedException {
-		waitForWebElementToAppear(smLogo);
-		performSearch(fname, searchResult);
-		String uname = firstRowData.getText();
-		String[] sliptname = uname.split(" ");
-		//System.out.println(sliptname[0]);
-		return sliptname[0].equalsIgnoreCase(fname);
-		
+	public boolean userSearch(String value, String searchResult, String expectedNamePart) throws InterruptedException {
+	    waitForWebElementToAppear(smLogo);
+	    performSearch(firstRowData, value, searchResult);
+	    String name = firstRowData.getText();
+	    String[] splitName = name.split(" ");
+	    
+	    // Use a switch statement to determine which part of the name to compare
+	    switch (expectedNamePart.toLowerCase()) {
+	        case "firstname":
+	            return splitName[0].equalsIgnoreCase(value);
+	        case "lastname":
+	            return splitName[1].equalsIgnoreCase(value);
+	        default:
+	            throw new IllegalArgumentException("Invalid expectedNamePart value: " + expectedNamePart);
+	    }
 	}
 
-	public boolean userLastnameSearch(String lname, String searchResult) throws InterruptedException {
-		waitForWebElementToAppear(smLogo);
-		performSearch(lname, searchResult);
-		String uname = firstRowData.getText();
-		String[] sliptname = uname.split(" ");
-		return sliptname[1].equalsIgnoreCase(lname);
-		
-	}
 
-	public boolean parkingNameSearch(String areaName) throws InterruptedException {
+	private boolean parkingAreaSearch(WebElement element, String searchValue) throws InterruptedException {
 
-		performSearch(areaName, areaName);
-		Thread.sleep(1000);
-		String aname = firstRowData.getText();
-		//System.out.println(aname);
-		return aname.equalsIgnoreCase(areaName);
-		 
-	}
-
-	public boolean parkingAreaCodeSearch(String searchResult) throws InterruptedException {
-
-		performSearch("0846", searchResult);
+		performSearch(element, searchValue, searchValue);
 		Thread.sleep(3000);
-		String areaCode = searchAreaCode.getText();
-		//System.out.println(areaCode);
-		return areaCode.equalsIgnoreCase("0846");
+		String data = element.getText();
+		// System.out.println(data);
+		return data.equalsIgnoreCase(searchValue);
+
+	}
+
+	public boolean parkingAreaNameSearch(String searchValue) throws InterruptedException {
+
+		return parkingAreaSearch(firstRowData, searchValue);
+	}
+	
+	public boolean parkingAreaCodeSearch(String searchValue) throws InterruptedException {
+
+		return parkingAreaSearch(searchAreaCode, searchValue);
+	}
+	
+	private boolean setFilterRole(WebElement selectRole, String role) throws InterruptedException {
 		
+		waitForWebElementToAppear(smLogo);
+		Thread.sleep(2000);
+		filterBtn.click();
+		roleCheckbox.click();
+		roleDropdown.click();
+		selectRole.click();
+		Thread.sleep(500);
+		clickApply.click();
+		
+		boolean allRole;
+		do {
+			 allRole = roleColumn.stream().map(WebElement::getText)
+					.allMatch(text -> text.trim().equalsIgnoreCase(role));
+			Thread.sleep(500);
+		} while (!allRole);
+		return allRole;
 	}
 
 	public boolean filterByEncoderRole() throws InterruptedException {
-		waitForWebElementToAppear(smLogo);
-		filterBtn.click();
-		roleCheckbox.click();
-		roleDropdown.click();
-		selEncoderRole.click();
-		clickApply.click();
-		Thread.sleep(5000);
-		boolean allEncoder = roleColumn.stream().map(WebElement::getText)
-				.allMatch(text -> text.trim().equalsIgnoreCase("encoder"));
-		return allEncoder;
-
+		return setFilterRole(selectEncoderRole, "Encoder");
+		
 	}
-
+	
 	public boolean filterByAdminRole() throws InterruptedException {
-		waitForWebElementToAppear(smLogo);
-		filterBtn.click();
-		roleCheckbox.click();
-		roleDropdown.click();
-		selAdminRole.click();
-		clickApply.click();
-		Thread.sleep(5000);
-		boolean allAdmin = roleColumn.stream().map(WebElement::getText)
-				.allMatch(text -> text.trim().equalsIgnoreCase("admin"));
-		return allAdmin;
-
+		return setFilterRole(selectAdminRole, "Admin");
+		
 	}
-
 }
