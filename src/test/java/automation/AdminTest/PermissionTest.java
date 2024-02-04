@@ -38,7 +38,7 @@ public class PermissionTest extends BaseTest {
 		Assert.assertTrue(permission.PaymentAcceptanceSetToFalseLoginValidation());
 	}
 
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	public void userWithPaymentAcceptanceSetToTrue() throws InterruptedException {
 
 		Permissions permission = loginToApplication();
