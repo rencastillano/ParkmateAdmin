@@ -205,7 +205,7 @@ public class AreaModule extends AbstractComponent {
 
 	}
 
-	public void exitCreationAlert() throws InterruptedException {
+	public boolean exitCreationAlert() throws InterruptedException {
 		cancelBtn.click();
 		Thread.sleep(500);
 		cancelMondalButton.click();
@@ -213,6 +213,7 @@ public class AreaModule extends AbstractComponent {
 		cancelBtn.click();
 		Thread.sleep(500);
 		proceedModalButton.click();
+		return create.isDisplayed();
 	}
 
 	public boolean handlingDupAndValidation(String areacode, String areaName) throws InterruptedException {
@@ -234,9 +235,9 @@ public class AreaModule extends AbstractComponent {
 		}
 		List<String> filteredNames = areaNameList.stream().map(WebElement::getText)
 				.filter(name -> name.contains(areaName)).collect(Collectors.toList());
-		String res = filteredNames.isEmpty() ? "" : filteredNames.get(0);
+		String createResult = filteredNames.isEmpty() ? "" : filteredNames.get(0);
 		// System.out.println(res);
-		return res.equalsIgnoreCase(areaName);
+		return createResult.equalsIgnoreCase(areaName);
 	}
 
 	public String errorMessage() {
@@ -275,19 +276,18 @@ public class AreaModule extends AbstractComponent {
 
 	}
 
-	private void performSearch(String searchData, String searchResult) throws InterruptedException {
+	private void performSearch(WebElement element, String searchData) throws InterruptedException {
 		search.sendKeys(searchData);
 		String result;
 		do {
 			Thread.sleep(2000);
-			result = firstRowData.getText();
-		} while (!result.equalsIgnoreCase(searchResult));
+			result = element.getText();
+		} while (!result.equalsIgnoreCase(searchData));
+		firstRowSearch.click();
 	}
 
-	public boolean parkingAreaUpdate() throws InterruptedException {
-		performSearch("0127", "QA_Automation");
-		Thread.sleep(3000);
-		firstRowSearch.click();
+	public boolean parkingAreaUpdate(String areaNameToSearch) throws InterruptedException {
+		performSearch(firstRowData, areaNameToSearch);
 		Thread.sleep(3000);
 
 		performButtonClicks(carPlusBtn, 5);
@@ -296,15 +296,15 @@ public class AreaModule extends AbstractComponent {
 		performButtonClicks(motorcycleMinusBtn, 3);
 
 		clickSave();
-		return runValidation();
+		return runValidation(areaNameToSearch);
 	}
 
-	private boolean runValidation() {
+	private boolean runValidation(String areaNameUpdated) {
 
 		waitForWebElementToAppear(banner);
 		String bannerText = banner.getText();
-		System.out.println(bannerText);
-		return bannerText.equalsIgnoreCase("QA_Automation is successfully updated!");
+		//System.out.println(bannerText);
+		return bannerText.equalsIgnoreCase(areaNameUpdated+" is successfully updated!");
 
 	}
 

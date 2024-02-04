@@ -14,6 +14,7 @@ public class UserModuleTest extends BaseTest {
 
 	String emailAddress = "parkmatehub." + generateRandomNumber(5)+ "@parkmate.com";
 	String mobileNumber = "+6399"+generateRandomNumber(8);
+	String emailToSearch = "forAutomationEdit@parkmate.com";
 	
 	@Test(priority = 1, groups = { "Creation" })
 	public void adminEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException {
@@ -28,7 +29,7 @@ public class UserModuleTest extends BaseTest {
 		parkingUser.generatePassword();
 		parkingUser.getParkingStation();
 		parkingUser.clickSave();
-		Assert.assertTrue(parkingUser.bannerValidation(userRole));
+		Assert.assertTrue(parkingUser.validateBanner(userRole));
 		Assert.assertTrue(parkingUser.enrollmentValidation(email, userRole));
 
 	}
@@ -46,7 +47,7 @@ public class UserModuleTest extends BaseTest {
 		parkingUser.generatePassword();
 		parkingUser.getParkingStation();
 		parkingUser.clickSave();
-		Assert.assertTrue(parkingUser.bannerValidation(userRole));
+		Assert.assertTrue(parkingUser.validateBanner(userRole));
 		Assert.assertTrue(parkingUser.enrollmentValidation(email, userRole));
 
 	}
@@ -58,8 +59,8 @@ public class UserModuleTest extends BaseTest {
 		String existingEmail = parkingUser.getRandomEmail();
 		parkingUser.clickEnroll();
 		parkingUser.getEmailDuplicate(existingEmail);
-		Assert.assertTrue(parkingUser.duplicateEmail());
-		Assert.assertTrue(parkingUser.duplicateUserName());
+		Assert.assertTrue(parkingUser.isDuplicateEmail());
+		Assert.assertTrue(parkingUser.isDuplicateUserName());
 	}
 
 	@Test
@@ -76,7 +77,7 @@ public class UserModuleTest extends BaseTest {
 	public void editUserAccount() throws InterruptedException {
 		
 		UserModule parkingUser = loginToApplication();
-		Assert.assertTrue(parkingUser.userAccountUpdate());
+		Assert.assertTrue(parkingUser.updateUserAccount(emailToSearch));
 		
 	}
 
@@ -102,7 +103,7 @@ public class UserModuleTest extends BaseTest {
 	public void getCopyUserName() throws InterruptedException, UnsupportedFlavorException, IOException {
 		
 		UserModule parkingUser = loginToApplication();
-		parkingUser.performSearch("forAutomationEdit@parkmate.com", "Automation EditTesting");
+		parkingUser.performSearch("forAutomationEdit@parkmate.com");
 		Assert.assertTrue(parkingUser.getCopyUserName());
 
 	}
@@ -110,7 +111,7 @@ public class UserModuleTest extends BaseTest {
 	public void getCopyUserPassword() throws InterruptedException, UnsupportedFlavorException, IOException {
 		
 		UserModule parkingUser = loginToApplication();
-		parkingUser.performSearch("forAutomationEdit@parkmate.com", "Automation EditTesting");
+		parkingUser.performSearch("forAutomationEdit@parkmate.com");
 		parkingUser.generatePassword();
 		Assert.assertTrue(parkingUser.getCopyPassword());
 

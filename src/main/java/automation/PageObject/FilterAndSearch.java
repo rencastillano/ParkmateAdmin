@@ -27,7 +27,7 @@ public class FilterAndSearch extends AbstractComponent {
 	WebElement clearBtn;
 
 	@FindBy(xpath = "(//tr/td)[3]")
-	WebElement userEmail;
+	WebElement userEmailSearched;
 
 	@FindBy(xpath = "//tr/td[4]")
 	WebElement searchAreaCode;
@@ -56,26 +56,25 @@ public class FilterAndSearch extends AbstractComponent {
 	@FindBy(xpath = "//tr/td[2]")
 	List<WebElement> roleColumn;
 
-	private void performSearch(WebElement element, String searchData, String searchResult) throws InterruptedException {
+	private void performSearch(WebElement element, String searchData) throws InterruptedException {
 		search.sendKeys(searchData);
 		String result;
 		do {
-			Thread.sleep(2000);
-			//result = firstRowData.getText();
+			Thread.sleep(1000);
 			result = element.getText();
-		} while (!result.equalsIgnoreCase(searchResult));
+		} while (!result.contains(searchData));
 	}
 
 	public boolean emailAddSearch(String email) throws InterruptedException {
 		waitForWebElementToAppear(smLogo);
-		performSearch(userEmail, email, email);
-		return userEmail.getText().equalsIgnoreCase(email);
+		performSearch(userEmailSearched, email);//, email
+		return userEmailSearched.getText().equalsIgnoreCase(email);
 
 	}
 
-	public boolean userSearch(String value, String searchResult, String expectedNamePart) throws InterruptedException {
+	public boolean userSearch(String value, String expectedNamePart) throws InterruptedException {
 	    waitForWebElementToAppear(smLogo);
-	    performSearch(firstRowData, value, searchResult);
+	    performSearch(firstRowData, value);
 	    String name = firstRowData.getText();
 	    String[] splitName = name.split(" ");
 	    
@@ -93,7 +92,7 @@ public class FilterAndSearch extends AbstractComponent {
 
 	private boolean parkingAreaSearch(WebElement element, String searchValue) throws InterruptedException {
 
-		performSearch(element, searchValue, searchValue);
+		performSearch(element, searchValue);
 		Thread.sleep(3000);
 		String data = element.getText();
 		// System.out.println(data);

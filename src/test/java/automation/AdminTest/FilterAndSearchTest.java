@@ -18,7 +18,6 @@ public class FilterAndSearchTest extends BaseTest {
 	String email = "renier.jimenez@gmail.com";
 	String name = "Renier";
 	String lastName = "Castillano";
-	String completeName = name + " " + lastName;
 	String areaName = "Wack Wack";
 	String areaCode = "0846";
 
@@ -33,14 +32,14 @@ public class FilterAndSearchTest extends BaseTest {
 	public void userFirstNameSearch() throws InterruptedException {
 
 		FilterAndSearch search = loginToApplicationForSearching();
-		Assert.assertTrue(search.userSearch(name, completeName, "firstname"));
+		Assert.assertTrue(search.userSearch(name,  "firstname"));
 	}
 
 	@Test
 	public void userLastNameSearch() throws InterruptedException {
 
 		FilterAndSearch search = loginToApplicationForSearching();
-		Assert.assertTrue(search.userSearch(lastName, completeName, "lastname"));
+		Assert.assertTrue(search.userSearch(lastName,  "lastname"));
 	}
 
 	@Test(dataProvider = "getData")
@@ -82,7 +81,7 @@ public class FilterAndSearchTest extends BaseTest {
 	private FilterAndSearch loginToApplicationForSearching() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
 		FilterAndSearch search = new FilterAndSearch(driver);
-
+		
 		return search;
 	}
 

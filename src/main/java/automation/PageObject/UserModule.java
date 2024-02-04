@@ -115,8 +115,8 @@ public class UserModule extends AbstractComponent {
 
 	By firstUserEmail = By.xpath("(//tr/td[3])[1]");
 
-	@FindBy(css = "tr td:first-child")
-	WebElement firstRowData;
+	@FindBy(xpath = "(//tr/td)[3]")
+	WebElement userEmailSearched;
 
 	@FindBy(name = "password")
 	WebElement password;
@@ -253,7 +253,7 @@ public class UserModule extends AbstractComponent {
 	}
 
 	// Helper method to retrieve text from clipboard
-	private static String getTextFromClipboard() throws UnsupportedFlavorException, IOException {
+	private String getTextFromClipboard() throws UnsupportedFlavorException, IOException {
 		return (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
 	}
 
@@ -284,19 +284,20 @@ public class UserModule extends AbstractComponent {
 
 	}
 
-	public boolean duplicateEmail() {
-		waitForWebElementToAppear(duplicateEmail);
-		String dup = duplicateEmail.getText();
-		return dup.equalsIgnoreCase("Email already exists.");
-
+	public boolean isDuplicateEmail() {
+	    return isDuplicateMessageShown(duplicateEmail, "Email already exists.");
 	}
 
-	public boolean duplicateUserName() {
-		waitForWebElementToAppear(duplicateUserName);
-		String dup = duplicateUserName.getText();
-		return dup.equalsIgnoreCase("Username already exists.");
-
+	public boolean isDuplicateUserName() {
+	    return isDuplicateMessageShown(duplicateUserName, "Username already exists.");
 	}
+
+	private boolean isDuplicateMessageShown(WebElement element, String expectedMessage) {
+	    waitForWebElementToAppear(element);
+	    String message = element.getText();
+	    return message.equalsIgnoreCase(expectedMessage);
+	}
+
 
 	public boolean exitEnrollmentAlert() throws InterruptedException {
 		backButton.click();
@@ -307,37 +308,34 @@ public class UserModule extends AbstractComponent {
 		waitForWebElementToAppear(enroll);
 		return enroll.isDisplayed();
 	}
-
-	public void performSearch(String searchData, String searchResult) throws InterruptedException {
+	
+	public void performSearch(String searchData) throws InterruptedException {
 		search.sendKeys(searchData);
 		String result;
 		do {
 			Thread.sleep(3000);
-			result = firstRowData.getText();
-		} while (!result.equalsIgnoreCase(searchResult));
+			result = userEmailSearched.getText();
+		} while (!result.equalsIgnoreCase(searchData));
 		
 		firstDataRow.click();
 	}
 
-	public boolean userAccountUpdate() throws InterruptedException {
+	public boolean updateUserAccount(String emailToSearch) throws InterruptedException {
 
-		performSearch("forAutomationEdit@parkmate.com", "Automation EditTesting");
+		performSearch(emailToSearch);
 		do {
 	        Thread.sleep(1000);
-	    } while (!email.getAttribute("value").equalsIgnoreCase("forAutomationEdit@parkmate.com"));
+	    } while (!email.getAttribute("value").equalsIgnoreCase(emailToSearch));
 		getMobileDetails("+6399"+generateRandomNumber(8));
 		saveBtn.click();
 		waitForWebElementToAppear(banner);
-		String bannerText = banner.getText();
-		return bannerText.equalsIgnoreCase("forAutomationEdit@parkmate.com is successfully updated!");
+		return banner.getText().equalsIgnoreCase(emailToSearch+ " is successfully updated!");
 
 	}
 
-	public boolean bannerValidation(String userRole) {
+	public boolean validateBanner(String userRole) {
 		waitForWebElementToAppear(banner);
-		String bannerText = banner.getText();
-		// System.out.println(bannerText);
-		return bannerText.equalsIgnoreCase(userRole + " successfully created!");
+		return banner.getText().equalsIgnoreCase(userRole + " successfully created!");
 	}
 
 	public String getRandomEmail() throws InterruptedException {

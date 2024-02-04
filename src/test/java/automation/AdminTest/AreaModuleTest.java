@@ -15,6 +15,7 @@ import automation.PageObject.Pagenation;
 public class AreaModuleTest extends BaseTest {
 
 	String areaName = "Area_" + generateRandomString();
+	String areaNameToSearch = "QA_Automation";
 
 	@Test(groups = { "Creation" })
 	public void areaCreation() throws InterruptedException {
@@ -31,8 +32,7 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.getAreaCode(generateRandomNumber(4));
 		parkingArea.parkingHours("10:30AM", "11:00PM");
 		parkingArea.clickSave();
-		boolean bol = parkingArea.handlingDupAndValidation(generateRandomNumber(4), areaName);
-		Assert.assertTrue(bol);
+		Assert.assertTrue( parkingArea.handlingDupAndValidation(generateRandomNumber(4), areaName));
 
 	}
 
@@ -50,10 +50,10 @@ public class AreaModuleTest extends BaseTest {
 	}
 
 	@Test
-	public void editParkingArea() throws InterruptedException {
+	public void validateEditParkingArea() throws InterruptedException {
 
 		AreaModule parkingArea = loginToApplication();
-		Assert.assertTrue(parkingArea.parkingAreaUpdate());
+		Assert.assertTrue(parkingArea.parkingAreaUpdate(areaNameToSearch));
 	}
 
 	@Test(groups = { "ErrorHandling" })
@@ -93,7 +93,7 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.genInfoSMList();
 		parkingArea.getCarCapacity("100");
 		parkingArea.getMotorcycleCapacity("100");
-		parkingArea.exitCreationAlert();
+		Assert.assertTrue(parkingArea.exitCreationAlert());
 	}
 
 	@Test
