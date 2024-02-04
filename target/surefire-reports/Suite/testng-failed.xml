@@ -8,8 +8,14 @@
     <classes>
       <class name="automation.AdminTest.FilterAndSearchTest">
         <methods>
+          <include name="parkingAreaCodeSearch"/>
+          <include name="userEmailSearch"/>
           <include name="filterByEncoderRole"/>
+          <include name="parkingNameSearch"/>
+          <include name="filterByAdminRole"/>
+          <include name="userLastNameSearch"/>
           <include name="launchApplication"/>
+          <include name="userFirstNameSearch"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- automation.AdminTest.FilterAndSearchTest -->
