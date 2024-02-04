@@ -4,21 +4,27 @@
   <listeners>
     <listener class-name="automation.AdminTestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Filter And Search Test(failed)" verbose="0">
+  <test thread-count="5" name="Login Test(failed)" verbose="0">
     <classes>
-      <class name="automation.AdminTest.FilterAndSearchTest">
+      <class name="automation.AdminTest.AllLoginTest">
         <methods>
-          <include name="parkingAreaCodeSearch"/>
-          <include name="userEmailSearch"/>
-          <include name="filterByEncoderRole"/>
-          <include name="parkingNameSearch"/>
-          <include name="filterByAdminRole"/>
-          <include name="userLastNameSearch"/>
+          <include name="loginWithInvalidPassword"/>
           <include name="launchApplication"/>
-          <include name="userFirstNameSearch"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- automation.AdminTest.FilterAndSearchTest -->
+      </class> <!-- automation.AdminTest.AllLoginTest -->
     </classes>
-  </test> <!-- Filter And Search Test(failed) -->
+  </test> <!-- Login Test(failed) -->
+  <test thread-count="5" name="Permission Test(failed)" verbose="0">
+    <classes>
+      <class name="automation.AdminTest.PermissionTest">
+        <methods>
+          <include name="userWithPaymentAcceptanceSetToTrue"/>
+          <include name="setAllowExitToFalse"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- automation.AdminTest.PermissionTest -->
+    </classes>
+  </test> <!-- Permission Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

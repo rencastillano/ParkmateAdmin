@@ -53,7 +53,7 @@ public class FilterAndSearchTest extends BaseTest {
 
 	}
 
-	@Test(dataProvider = "getData", retryAnalyzer = Retry.class)
+	@Test(dataProvider = "getData")
 	public void parkingAreaCodeSearch(HashMap<String,String> input) throws InterruptedException {
 		
 		landingPage.loginApplication(input.get("username"), input.get("password"));

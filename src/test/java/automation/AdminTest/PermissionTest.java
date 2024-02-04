@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automation.AdminTestComponents.BaseTest;
+import automation.AdminTestComponents.Retry;
 import automation.PageObject.Permissions;
 import automation.PageObject.UserModule;
 
@@ -46,7 +47,7 @@ public class PermissionTest extends BaseTest {
 		Assert.assertTrue(permission.PaymentAcceptanceSetToTrueLoginValidation());
 	}
 
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	public void setAllowExitToFalse() throws InterruptedException {
 
 		Permissions permission = loginToApplication();

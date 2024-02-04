@@ -19,18 +19,15 @@ public class AbstractComponent {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
-	@FindBy(tagName = "html")
-	protected WebElement html;
 	
 	@FindBy(css = "img[alt='SM Logo']")
 	protected WebElement smLogo;
 
 	@FindBy(xpath = "//li[@class='mb-3']")
-	WebElement parkingUsersHeader;
+	WebElement parkingUsersModule;
 
 	@FindBy(xpath = "//li[2]//button[1]")
-	WebElement parkingAreasHeader;
+	WebElement parkingAreasMosule;
 
 	public void waitForElementToAppear(By findBy) {
 
@@ -44,24 +41,12 @@ public class AbstractComponent {
 		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
 
-	public void waitForElementToDisappear(WebElement ele) throws InterruptedException {
-
-		// Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.invisibilityOf(ele));
-	}
-
 	public void waitForWebElementToBeClickable(WebElement findBy) {
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.elementToBeClickable(findBy));
 	}
 
-	public void waitForSomeTime(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.not(ExpectedConditions.stalenessOf(element)));
-	}
-	
 	public String generateRandomNumber(int length) {
 		Random random = new Random();
 		int randomNumber = random.nextInt((int) Math.pow(10, length));

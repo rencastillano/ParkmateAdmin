@@ -46,8 +46,8 @@ public class Permissions extends AbstractComponent {
 
 	@FindBy(css = "[class*='text-base']")
 	WebElement errorMsg;
-	
-	@FindBy(xpath="//div/div/form/div[2]/button")
+
+	@FindBy(xpath = "//div/div/form/div[2]/button")
 	WebElement searchBtn;
 
 	@FindBy(css = "tr td:first-child")
@@ -193,14 +193,14 @@ public class Permissions extends AbstractComponent {
 	public boolean PaymentAcceptanceSetToTrueLoginValidation() throws InterruptedException {
 		return validateButtonIsDisplayed(receiveParkingPaymentBtn, "SYNCH03");
 	}
-	
+
 	private boolean validateButtonIsDisplayed(WebElement button, String vehicleNumber) throws InterruptedException {
 
 		encoderSearch.sendKeys(vehicleNumber);
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		searchBtn.click();
 		waitForWebElementToAppear(encoderSearchResult);
-
+		
 		try {
 			boolean isDisplayed = button.isDisplayed();
 			Thread.sleep(500);
@@ -225,8 +225,8 @@ public class Permissions extends AbstractComponent {
 
 	private boolean loginValidation(String expectedErrorMessage) {
 		try {
-		String actualErrorMessage = errorMessage.getText();
-		return actualErrorMessage.equalsIgnoreCase(expectedErrorMessage);
+			String actualErrorMessage = errorMessage.getText();
+			return actualErrorMessage.equalsIgnoreCase(expectedErrorMessage);
 		} catch (NoSuchElementException e) {
 			System.err.println("Button is not displayed: " + e.getMessage());
 			return false;

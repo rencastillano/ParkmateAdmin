@@ -36,8 +36,7 @@ public class AllLoginTest extends BaseTest {
 	public void loginWithAccess() throws InterruptedException, IOException {
 
 		landingPage.loginApplication("riztest", "Password@1");
-		Boolean smLogo = landingPage.successLogin();
-		Assert.assertTrue(smLogo);
+		Assert.assertTrue(landingPage.successLogin());
 		
 		String confirmLogout = landingPage.logout();
 		Assert.assertEquals(confirmLogout, "Welcome Back!");
