@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="1209.43" tests="40" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="937.424" tests="40" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="webdriver.chrome.driver" value="C:\Users\ren.castillano\.cache\selenium\chromedriver\win64\121.0.6167.85\chromedriver.exe"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\ren.castillano\AppData\Local\Temp\surefire4321631840627703505\surefirebooter-20240204125526885_3.jar C:\Users\ren.castillano\AppData\Local\Temp\surefire4321631840627703505 2024-02-04T12-55-26_366-jvmRun1 surefire-20240204125526885_1tmp surefire_0-20240204125526885_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\ren.castillano\AppData\Local\Temp\surefire11678045681538579415\surefirebooter-20240205003449493_3.jar C:\Users\ren.castillano\AppData\Local\Temp\surefire11678045681538579415 2024-02-05T00-34-49_247-jvmRun1 surefire-20240205003449493_1tmp surefire_0-20240205003449493_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\ren.castillano\GitStuffs\ParkmateAdmin\target\test-classes;C:\Users\ren.castillano\GitStuffs\ParkmateAdmin\target\classes;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-java\4.17.0\selenium-java-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-api\4.17.0\selenium-api-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.17.0\selenium-chrome-driver-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.17.0\selenium-chromium-driver-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-json\4.17.0\selenium-json-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.17.0\selenium-manager-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v119\4.17.0\selenium-devtools-v119-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.17.0\selenium-devtools-v120-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.17.0\selenium-devtools-v121-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.17.0\selenium-devtools-v85-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.17.0\selenium-edge-driver-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.17.0\selenium-firefox-driver-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-http\4.17.0\selenium-http-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.17.0\selenium-ie-driver-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.17.0\selenium-remote-driver-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;C:\Users\ren.castillano\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\ren.castillano\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ren.castillano\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ren.castillano\.m2\repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;C:\Users\ren.castillano\.m2\repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;C:\Users\ren.castillano\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.23.1-alpha\opentelemetry-semconv-1.23.1-alpha.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-api\1.34.1\opentelemetry-api-1.34.1.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-context\1.34.1\opentelemetry-context-1.34.1.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.34.1\opentelemetry-exporter-logging-1.34.1.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.34.1\opentelemetry-sdk-common-1.34.1.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.34.1\opentelemetry-sdk-extension-autoconfigure-spi-1.34.1.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.34.1\opentelemetry-sdk-extension-autoconfigure-1.34.1.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.34.1-alpha\opentelemetry-api-events-1.34.1-alpha.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.34.1\opentelemetry-sdk-trace-1.34.1.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.34.1\opentelemetry-sdk-1.34.1.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.34.1\opentelemetry-sdk-metrics-1.34.1.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.34.1-alpha\opentelemetry-extension-incubator-1.34.1-alpha.jar;C:\Users\ren.castillano\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.34.1\opentelemetry-sdk-logs-1.34.1.jar;C:\Users\ren.castillano\.m2\repository\net\bytebuddy\byte-buddy\1.14.11\byte-buddy-1.14.11.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-os\4.17.0\selenium-os-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.17.0\selenium-safari-driver-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\seleniumhq\selenium\selenium-support\4.17.0\selenium-support-4.17.0.jar;C:\Users\ren.castillano\.m2\repository\org\testng\testng\7.9.0\testng-7.9.0.jar;C:\Users\ren.castillano\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\ren.castillano\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\ren.castillano\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\ren.castillano\.m2\repository\io\github\bonigarcia\webdrivermanager\5.6.2\webdrivermanager-5.6.2.jar;C:\Users\ren.castillano\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\ren.castillano\.m2\repository\com\github\docker-java\docker-java\3.3.4\docker-java-3.3.4.jar;C:\Users\ren.castillano\.m2\repository\com\github\docker-java\docker-java-core\3.3.4\docker-java-core-3.3.4.jar;C:\Users\ren.castillano\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\ren.castillano\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\ren.castillano\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\ren.castillano\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\ren.castillano\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\ren.castillano\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.4\docker-java-transport-httpclient5-3.3.4.jar;C:\Users\ren.castillano\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\ren.castillano\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\ren.castillano\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\ren.castillano\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\ren.castillano\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\ren.castillano\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\ren.castillano\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\ren.castillano\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\ren.castillano\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;C:\Users\ren.castillano\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\ren.castillano\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\ren.castillano\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\ren.castillano\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\ren.castillano\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\ren.castillano\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.16.1\jackson-databind-2.16.1.jar;C:\Users\ren.castillano\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.16.1\jackson-annotations-2.16.1.jar;C:\Users\ren.castillano\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.16.1\jackson-core-2.16.1.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-java\7.15.0\cucumber-java-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-core\7.15.0\cucumber-core-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-gherkin\7.15.0\cucumber-gherkin-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.15.0\cucumber-gherkin-messages-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\tag-expressions\6.0.0\tag-expressions-6.0.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-expressions\17.0.1\cucumber-expressions-17.0.1.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\datatable\7.15.0\datatable-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-plugin\7.15.0\cucumber-plugin-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\docstring\7.15.0\docstring-7.15.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\ci-environment\10.0.0\ci-environment-10.0.0.jar;C:\Users\ren.castillano\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ren.castillano\.m2\repository\io\cucumber\cucumber-testng\7.15.0\cucumber-testng-7.15.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\ren.castillano\AppData\Local\Temp\surefire4321631840627703505\surefirebooter-20240204125526885_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ren.castillano\AppData\Local\Temp\surefire11678045681538579415\surefirebooter-20240205003449493_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.1+12-LTS-29"/>
@@ -42,7 +42,7 @@
     <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="browser" value="chrome"/>
+    <property name="browser" value="chromeheadless"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\ren.castillano\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
@@ -53,7 +53,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Apache-maven-3.9.5/bin;C:\Program Files\Java\jdk-21/bin;C:\Program Files\Java\jdk-21/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk-21\bin;C:\Apache-maven-3.9.5\bin;C:\Users\ren.castillano\AppData\Local\Microsoft\WindowsApps;C:\Users\ren.castillano\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ren.castillano\AppData\Local\GitHubDesktop\bin;C:\Users\ren.castillano\AppData\Local\Programs\Git\cmd;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk-21\bin;C:\Apache-maven-3.9.5\bin;C:\Users\ren.castillano\AppData\Local\Microsoft\WindowsApps;C:\Users\ren.castillano\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ren.castillano\AppData\Local\GitHubDesktop\bin;C:\Users\ren.castillano\AppData\Local\Programs\Git\cmd;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -61,29 +61,29 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="loginWithAccess" classname="automation.AdminTest.AllLoginTest" time="19.097">
+  <testcase name="loginWithAccess" classname="automation.AdminTest.AllLoginTest" time="20.804">
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="loginWithInvalidPassword" classname="automation.AdminTest.AllLoginTest" time="5.019"/>
-  <testcase name="loginWithInvalidUserName" classname="automation.AdminTest.AllLoginTest" time="3.141"/>
-  <testcase name="loginWithoutAccess" classname="automation.AdminTest.AllLoginTest" time="3.143"/>
-  <testcase name="areaCodeDupValidation" classname="automation.AdminTest.AreaModuleTest" time="23.868">
+  <testcase name="loginWithInvalidPassword" classname="automation.AdminTest.AllLoginTest" time="4.684"/>
+  <testcase name="loginWithInvalidUserName" classname="automation.AdminTest.AllLoginTest" time="2.646"/>
+  <testcase name="loginWithoutAccess" classname="automation.AdminTest.AllLoginTest" time="2.718"/>
+  <testcase name="areaCodeDupValidation" classname="automation.AdminTest.AreaModuleTest" time="23.079">
     <system-out><![CDATA[Test Execution Ended
 ]]></system-out>
   </testcase>
-  <testcase name="areaCreation" classname="automation.AdminTest.AreaModuleTest" time="33.66">
-    <system-err><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".text-red-500.text-xs.mt-1"}
-  (Session info: chrome=121.0.6167.140)
+  <testcase name="areaCreation" classname="automation.AdminTest.AreaModuleTest" time="41.644">
+    <system-err><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[3]/div[2]/div/div[2]/div[2]/p"}
+  (Session info: chrome-headless-shell=121.0.6167.140)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2f687bc3d9c62a422d8aa7efdadd84e4, findElement {value=.text-red-500.text-xs.mt-1, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61202}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61202/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2f687bc3d9c62a422d8aa7efdadd84e4
+Command: [6cff7b72a20eb0a689b546854ba65695, findElement {value=//div[3]/div[2]/div/div[2]/div[2]/p, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64517}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64517/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6cff7b72a20eb0a689b546854ba65695
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -101,8 +101,66 @@ Session ID: 2f687bc3d9c62a422d8aa7efdadd84e4
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
-	at automation.PageObject.AreaModule.handlingDupAndValidation(AreaModule.java:223)
-	at automation.AdminTest.AreaModuleTest.areaCreation(AreaModuleTest.java:35)
+	at automation.PageObject.AreaModule.handlingAreaCodeDup(AreaModule.java:258)
+	at automation.AdminTest.AreaModuleTest.areaCreation(AreaModuleTest.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[2]/div/div[1]/div[2]/div/p"}
+  (Session info: chrome-headless-shell=121.0.6167.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.17.0', revision: 'e52b1be057*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6cff7b72a20eb0a689b546854ba65695, findElement {value=//div[2]/div/div[1]/div[2]/div/p, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64517}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64517/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6cff7b72a20eb0a689b546854ba65695
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at automation.PageObject.AreaModule.handlingAreaNameDup(AreaModule.java:240)
+	at automation.AdminTest.AreaModuleTest.areaCreation(AreaModuleTest.java:37)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -135,43 +193,46 @@ Session ID: 2f687bc3d9c62a422d8aa7efdadd84e4
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></system-err>
   </testcase>
-  <testcase name="areaNameDupValidation[{password=Password1!, mobileNumber=987654321, username=renAdmin}](1)" classname="automation.AdminTest.AreaModuleTest" time="26.381"/>
-  <testcase name="areaPagePagenation" classname="automation.AdminTest.AreaModuleTest" time="30.288"/>
-  <testcase name="areaPageSelectRow" classname="automation.AdminTest.AreaModuleTest" time="26.898">
+  <testcase name="areaNameDupValidation[{password=Password1!, mobileNumber=987654321, username=renAdmin}](1)" classname="automation.AdminTest.AreaModuleTest" time="25.278"/>
+  <testcase name="areaPagePagenation" classname="automation.AdminTest.AreaModuleTest" time="23.381"/>
+  <testcase name="areaPageSelectRow" classname="automation.AdminTest.AreaModuleTest" time="25.946">
     <system-out><![CDATA[Iteration is complete:50
 ]]></system-out>
   </testcase>
-  <testcase name="carCapacityInputValidation" classname="automation.AdminTest.AreaModuleTest" time="18.066"/>
-  <testcase name="exitCreationAlert" classname="automation.AdminTest.AreaModuleTest" time="20.094"/>
-  <testcase name="fixedRateMaxLimit" classname="automation.AdminTest.AreaModuleTest" time="38.291"/>
-  <testcase name="motorcycleCapacityInputValidation" classname="automation.AdminTest.AreaModuleTest" time="17.292"/>
-  <testcase name="setCMotorcycleCapacityPlusButtonToDisable" classname="automation.AdminTest.AreaModuleTest" time="18.246"/>
-  <testcase name="setCarCapacityMinusButtonToDisable" classname="automation.AdminTest.AreaModuleTest" time="18.251"/>
-  <testcase name="setCarCapacityPlusButtonToDisable" classname="automation.AdminTest.AreaModuleTest" time="18.16"/>
-  <testcase name="setMotorcycleCapacityPlusButtonToDisable" classname="automation.AdminTest.AreaModuleTest" time="18.114"/>
-  <testcase name="validateEditParkingArea" classname="automation.AdminTest.AreaModuleTest" time="25.996"/>
-  <testcase name="exitEnrollmentAlert" classname="automation.AdminTest.UserModuleTest" time="15.39">
+  <testcase name="carCapacityInputValidation" classname="automation.AdminTest.AreaModuleTest" time="16.966">
+    <system-out><![CDATA[[[ChromeDriver: chrome-headless-shell on windows (832cbd45470ad02fed6577685e73251e)] -> xpath: //div[1]/div[4]/div/div[1]/div[2]/p]
+]]></system-out>
+  </testcase>
+  <testcase name="exitCreationAlert" classname="automation.AdminTest.AreaModuleTest" time="18.481"/>
+  <testcase name="fixedRateMaxLimit" classname="automation.AdminTest.AreaModuleTest" time="24.428"/>
+  <testcase name="motorcycleCapacityInputValidation" classname="automation.AdminTest.AreaModuleTest" time="16.742"/>
+  <testcase name="setCMotorcycleCapacityPlusButtonToDisable" classname="automation.AdminTest.AreaModuleTest" time="17.331"/>
+  <testcase name="setCarCapacityMinusButtonToDisable" classname="automation.AdminTest.AreaModuleTest" time="27.967"/>
+  <testcase name="setCarCapacityPlusButtonToDisable" classname="automation.AdminTest.AreaModuleTest" time="17.547"/>
+  <testcase name="setMotorcycleCapacityPlusButtonToDisable" classname="automation.AdminTest.AreaModuleTest" time="17.255"/>
+  <testcase name="validateUpdateParkingArea" classname="automation.AdminTest.AreaModuleTest" time="21.415"/>
+  <testcase name="exitEnrollmentAlert" classname="automation.AdminTest.UserModuleTest" time="13.925">
     <system-out><![CDATA[Test Execution Ended
 ]]></system-out>
   </testcase>
-  <testcase name="getCopyUserName" classname="automation.AdminTest.UserModuleTest" time="18.212"/>
-  <testcase name="getCopyUserPassword" classname="automation.AdminTest.UserModuleTest" time="16.556"/>
-  <testcase name="userEmailDupValidation" classname="automation.AdminTest.UserModuleTest" time="18.475"/>
-  <testcase name="userPagePagenation" classname="automation.AdminTest.UserModuleTest" time="36.406"/>
-  <testcase name="userPageSelectRow" classname="automation.AdminTest.UserModuleTest" time="26.89">
+  <testcase name="getCopyUserName" classname="automation.AdminTest.UserModuleTest" time="17.251"/>
+  <testcase name="getCopyUserPassword" classname="automation.AdminTest.UserModuleTest" time="15.917"/>
+  <testcase name="userEmailDupValidation" classname="automation.AdminTest.UserModuleTest" time="17.03"/>
+  <testcase name="userPagePagenation" classname="automation.AdminTest.UserModuleTest" time="23.277"/>
+  <testcase name="userPageSelectRow" classname="automation.AdminTest.UserModuleTest" time="25.808">
     <system-out><![CDATA[Iteration is complete:50
 ]]></system-out>
   </testcase>
-  <testcase name="adminEnrollment" classname="automation.AdminTest.UserModuleTest" time="30.289">
+  <testcase name="adminEnrollment" classname="automation.AdminTest.UserModuleTest" time="28.796">
     <system-err><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div:nth-child(2) > p.mt-1.font-henry-sans-light.text-xs.text-sm-error"}
-  (Session info: chrome=121.0.6167.140)
+  (Session info: chrome-headless-shell=121.0.6167.140)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [31653402f844a04799d4d43b16d1da39, findElement {value=div:nth-child(2) > p.mt-1.font-henry-sans-light.text-xs.text-sm-error, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62480}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62480/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 31653402f844a04799d4d43b16d1da39
+Command: [774f6825b1157f645eface6c2262829d, findElement {value=div:nth-child(2) > p.mt-1.font-henry-sans-light.text-xs.text-sm-error, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65238}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65238/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 774f6825b1157f645eface6c2262829d
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -223,18 +284,18 @@ Session ID: 31653402f844a04799d4d43b16d1da39
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></system-err>
   </testcase>
-  <testcase name="encoderEnrollment" classname="automation.AdminTest.UserModuleTest" time="36.408">
-    <system-out><![CDATA[dup email: parkmatehub.85274@parkmate.com
+  <testcase name="encoderEnrollment" classname="automation.AdminTest.UserModuleTest" time="34.012">
+    <system-out><![CDATA[dup email: parkmatehub.38807@parkmate.com
 ]]></system-out>
     <system-err><![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div:nth-child(2) > p.mt-1.font-henry-sans-light.text-xs.text-sm-error"}
-  (Session info: chrome=121.0.6167.140)
+  (Session info: chrome-headless-shell=121.0.6167.140)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [eebc48d4218a0c7cdb50b79a3f657488, findElement {value=div:nth-child(2) > p.mt-1.font-henry-sans-light.text-xs.text-sm-error, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62547}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62547/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: eebc48d4218a0c7cdb50b79a3f657488
+Command: [7d4f88b374032c9f66a6fd003cc22633, findElement {value=div:nth-child(2) > p.mt-1.font-henry-sans-light.text-xs.text-sm-error, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65270}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65270/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d4f88b374032c9f66a6fd003cc22633
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -287,58 +348,58 @@ Session ID: eebc48d4218a0c7cdb50b79a3f657488
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></system-err>
   </testcase>
-  <testcase name="editUserAccount" classname="automation.AdminTest.UserModuleTest" time="16.072"/>
-  <testcase name="filterByAdminRole" classname="automation.AdminTest.FilterAndSearchTest" time="11.558">
+  <testcase name="editUserAccount" classname="automation.AdminTest.UserModuleTest" time="15.87"/>
+  <testcase name="filterByAdminRole" classname="automation.AdminTest.FilterAndSearchTest" time="21.146">
     <system-out><![CDATA[Test Execution Ended
 ]]></system-out>
   </testcase>
-  <testcase name="filterByEncoderRole" classname="automation.AdminTest.FilterAndSearchTest" time="11.648"/>
-  <testcase name="parkingAreaCodeSearch[{password=Password1!, mobileNumber=987654321, username=renAdmin}](1)" classname="automation.AdminTest.FilterAndSearchTest" time="14.847"/>
-  <testcase name="parkingNameSearch[{password=Password1!, mobileNumber=987654321, username=renAdmin}](1)" classname="automation.AdminTest.FilterAndSearchTest" time="15.854"/>
-  <testcase name="userEmailSearch" classname="automation.AdminTest.FilterAndSearchTest" time="8.636"/>
-  <testcase name="userFirstNameSearch" classname="automation.AdminTest.FilterAndSearchTest" time="9.738"/>
-  <testcase name="userLastNameSearch" classname="automation.AdminTest.FilterAndSearchTest" time="19.922"/>
-  <testcase name="setAllowExitToFalse" classname="automation.AdminTest.PermissionTest" time="60.693">
+  <testcase name="filterByEncoderRole" classname="automation.AdminTest.FilterAndSearchTest" time="11.223"/>
+  <testcase name="parkingAreaCodeSearch[{password=Password1!, mobileNumber=987654321, username=renAdmin}](1)" classname="automation.AdminTest.FilterAndSearchTest" time="14.348"/>
+  <testcase name="parkingNameSearch[{password=Password1!, mobileNumber=987654321, username=renAdmin}](1)" classname="automation.AdminTest.FilterAndSearchTest" time="14.35"/>
+  <testcase name="userEmailSearch" classname="automation.AdminTest.FilterAndSearchTest" time="8.012"/>
+  <testcase name="userFirstNameSearch" classname="automation.AdminTest.FilterAndSearchTest" time="8.024"/>
+  <testcase name="userLastNameSearch" classname="automation.AdminTest.FilterAndSearchTest" time="7.778"/>
+  <testcase name="setAllowExitToFalse" classname="automation.AdminTest.PermissionTest" time="55.18">
     <system-out><![CDATA[Test Execution Ended
 true
 ]]></system-out>
     <system-err><![CDATA[Button is not displayed: no such element: Unable to locate element: {"method":"xpath","selector":"//div[2]/section/button"}
-  (Session info: chrome=121.0.6167.140)
+  (Session info: chrome-headless-shell=121.0.6167.140)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [96122b63d941cbecc9b16670ba549af1, findElement {value=//div[2]/section/button, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63070}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63070/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 96122b63d941cbecc9b16670ba549af1
+Command: [8dc835a97bcd74bc5008e67705ba2101, findElement {value=//div[2]/section/button, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49202}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49202/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8dc835a97bcd74bc5008e67705ba2101
 ]]></system-err>
   </testcase>
-  <testcase name="setAllowExitToTrue" classname="automation.AdminTest.PermissionTest" time="25.004">
+  <testcase name="setAllowExitToTrue" classname="automation.AdminTest.PermissionTest" time="22.983">
     <system-out><![CDATA[Active
 true
 ]]></system-out>
   </testcase>
-  <testcase name="userWithActiveStatus" classname="automation.AdminTest.PermissionTest" time="24.298">
+  <testcase name="userWithActiveStatus" classname="automation.AdminTest.PermissionTest" time="23.095">
     <system-out><![CDATA[Active
 ]]></system-out>
     <system-err><![CDATA[Button is not displayed: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='text-base mb-6 text-sm-error']"}
-  (Session info: chrome=121.0.6167.140)
+  (Session info: chrome-headless-shell=121.0.6167.140)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.17.0', revision: 'e52b1be057*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a70d60214cbd73005dacbeaa160d324f, findElement {value=//*[@class='text-base mb-6 text-sm-error'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63284}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63284/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a70d60214cbd73005dacbeaa160d324f
+Command: [bf9638542ea0bac858e54b5d996067f7, findElement {value=//*[@class='text-base mb-6 text-sm-error'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49357}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49357/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bf9638542ea0bac858e54b5d996067f7
 ]]></system-err>
   </testcase>
-  <testcase name="userWithPaymentAcceptanceSetToFalse" classname="automation.AdminTest.PermissionTest" time="22.902">
+  <testcase name="userWithPaymentAcceptanceSetToFalse" classname="automation.AdminTest.PermissionTest" time="20.491">
     <system-out><![CDATA[Active
 ]]></system-out>
   </testcase>
-  <testcase name="userWithPaymentAcceptanceSetToTrue" classname="automation.AdminTest.PermissionTest" time="30.225">
+  <testcase name="userWithPaymentAcceptanceSetToTrue" classname="automation.AdminTest.PermissionTest" time="27.051">
     <system-out><![CDATA[Active
 ]]></system-out>
   </testcase>
-  <testcase name="userWithRestrictedStatus" classname="automation.AdminTest.PermissionTest" time="20.95"/>
+  <testcase name="userWithRestrictedStatus" classname="automation.AdminTest.PermissionTest" time="19.239"/>
 </testsuite>

@@ -71,6 +71,8 @@ extends BaseTest implements ITestListener {
 
 	@Override
 	public void onFinish(ITestContext context) {
+		// Add elapsed time info to the report
+		ExtentReporter.addElapsedTimeInfo(extent);
 		System.out.println("Test Execution Ended");
 		extent.flush();
 	}

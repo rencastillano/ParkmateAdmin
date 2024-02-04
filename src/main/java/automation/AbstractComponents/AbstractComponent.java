@@ -2,6 +2,8 @@ package automation.AbstractComponents;
 
 import java.time.Duration;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -51,5 +53,16 @@ public class AbstractComponent {
 		Random random = new Random();
 		int randomNumber = random.nextInt((int) Math.pow(10, length));
 		return String.format("%0" + length + "d", randomNumber);
+	}
+	
+	public String generateRandomString() {
+		String randomLetters = generateRandomChars(4, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+		String randomNumbers = generateRandomChars(3, "0123456789");
+		return randomLetters + randomNumbers;
+	}
+	
+	private String generateRandomChars(int length, String source) {
+		return ThreadLocalRandom.current().ints(length, 0, source.length()).mapToObj(source::charAt)
+				.map(Object::toString).collect(Collectors.joining());
 	}
 }

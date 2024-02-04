@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-04T11:47:42 CST" name="Default suite" finished-at="2024-02-04T11:50:32 CST" duration-ms="169781">
+  <suite started-at="2024-02-04T23:52:26 CST" name="Default suite" finished-at="2024-02-04T23:52:52 CST" duration-ms="26387">
     <groups>
     </groups>
-    <test started-at="2024-02-04T11:47:42 CST" name="Default test" finished-at="2024-02-04T11:50:32 CST" duration-ms="169781">
-      <class name="automation.AdminTest.PermissionTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@397fbdb]" started-at="2024-02-04T11:47:42 CST" name="launchApplication" finished-at="2024-02-04T11:49:18 CST" duration-ms="95836" status="PASS">
+    <test started-at="2024-02-04T23:52:26 CST" name="Default test" finished-at="2024-02-04T23:52:52 CST" duration-ms="26387">
+      <class name="automation.AdminTest.AreaModuleTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@1f2586d6]" started-at="2024-02-04T23:52:26 CST" name="launchApplication" finished-at="2024-02-04T23:52:33 CST" duration-ms="6997" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="setAllowExitToFalse()[pri:0, instance:automation.AdminTest.PermissionTest@397fbdb]" started-at="2024-02-04T11:49:18 CST" name="setAllowExitToFalse" finished-at="2024-02-04T11:50:30 CST" duration-ms="72585" status="PASS">
+        <test-method signature="carCapacityInputValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@1f2586d6]" started-at="2024-02-04T23:52:33 CST" name="carCapacityInputValidation" finished-at="2024-02-04T23:52:51 CST" duration-ms="18115" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setAllowExitToFalse -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@397fbdb]" started-at="2024-02-04T11:50:30 CST" name="tearDown" finished-at="2024-02-04T11:50:32 CST" duration-ms="1313" status="PASS">
+        </test-method> <!-- carCapacityInputValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@1f2586d6]" started-at="2024-02-04T23:52:51 CST" name="tearDown" finished-at="2024-02-04T23:52:52 CST" duration-ms="1234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.PermissionTest -->
+      </class> <!-- automation.AdminTest.AreaModuleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
