@@ -76,5 +76,6 @@ public class PermissionTest extends BaseTest {
 	private void navigateAndLoginToEncoder(Permissions permission) {
 		permission.navigateToEncoder();
 		permission.loginToEncoderApp("statusChange", "r@lgn5pIl<Fu");
+		
 	}
 }

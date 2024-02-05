@@ -4,23 +4,15 @@
   <listeners>
     <listener class-name="automation.AdminTestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="User Module Test(failed)" verbose="0">
+  <test thread-count="5" name="Permission Test(failed)" verbose="0">
     <classes>
-      <class name="automation.AdminTest.UserModuleTest">
+      <class name="automation.AdminTest.PermissionTest">
         <methods>
-<<<<<<< HEAD
-          <include name="exitEnrollmentAlert"/>
-=======
-          <include name="loginWithAccess"/>
->>>>>>> develop
+          <include name="userWithActiveStatus"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- automation.AdminTest.UserModuleTest -->
+      </class> <!-- automation.AdminTest.PermissionTest -->
     </classes>
-<<<<<<< HEAD
-  </test> <!-- User Module Test(failed) -->
-=======
-  </test> <!-- Login Test(failed) -->
->>>>>>> develop
+  </test> <!-- Permission Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

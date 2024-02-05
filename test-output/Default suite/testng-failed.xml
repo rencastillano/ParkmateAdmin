@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.AdminTest.AreaModuleTest">
+      <class name="automation.AdminTest.PermissionTest">
         <methods>
-          <include name="carCapacityInputValidation"/>
+          <include name="setAllowExitToFalse"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- automation.AdminTest.AreaModuleTest -->
+      </class> <!-- automation.AdminTest.PermissionTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

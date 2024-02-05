@@ -195,7 +195,7 @@ public class Permissions extends AbstractComponent {
 	}
 
 	private boolean validateButtonIsDisplayed(WebElement button, String vehicleNumber) throws InterruptedException {
-
+		Thread.sleep(3000);
 		encoderSearch.sendKeys(vehicleNumber);
 		Thread.sleep(1000);
 		searchBtn.click();
