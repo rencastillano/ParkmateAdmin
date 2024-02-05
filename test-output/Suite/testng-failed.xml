@@ -4,37 +4,15 @@
   <listeners>
     <listener class-name="automation.AdminTestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Parking Area Ceation Test(failed)">
+  <test thread-count="5" name="Permission Test(failed)">
     <classes>
-      <class name="automation.AdminTest.AreaCreationTest">
+      <class name="automation.AdminTest.PermissionTest">
         <methods>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="areaCodeDupValidation"/>
+          <include name="setAllowExitToTrue"/>
         </methods>
-      </class> <!-- automation.AdminTest.AreaCreationTest -->
+      </class> <!-- automation.AdminTest.PermissionTest -->
     </classes>
-  </test> <!-- Parking Area Ceation Test(failed) -->
-  <test thread-count="5" name="User Enrollment Test(failed)">
-    <classes>
-      <class name="automation.AdminTest.UserEnrollmentTest">
-        <methods>
-          <include name="launchApplication"/>
-          <include name="userPageSelectRow"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- automation.AdminTest.UserEnrollmentTest -->
-    </classes>
-  </test> <!-- User Enrollment Test(failed) -->
-  <test thread-count="5" name="Filter And SearchTest(failed)">
-    <classes>
-      <class name="automation.AdminTest.FilterAndSearchTest">
-        <methods>
-          <include name="parkingNameSearch"/>
-          <include name="launchApplication"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- automation.AdminTest.FilterAndSearchTest -->
-    </classes>
-  </test> <!-- Filter And SearchTest(failed) -->
+  </test> <!-- Permission Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

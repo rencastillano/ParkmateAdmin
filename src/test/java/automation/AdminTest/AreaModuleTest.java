@@ -16,6 +16,7 @@ public class AreaModuleTest extends BaseTest {
 
 	String areaName = "Area_" + generateRandomString();
 	String areaNameToSearch = "QA_Automation";
+	String areaCode = generateRandomNumber(4);
 
 	@Test(groups = { "Creation" })
 	public void areaCreation() throws InterruptedException {
@@ -29,11 +30,12 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.fixRate("40");
 		boolean match = parkingArea.smMallCode("SMCF");
 		Assert.assertTrue(match);
-		parkingArea.getAreaCode(generateRandomNumber(4));
+		parkingArea.getAreaCode(areaCode);
 		parkingArea.parkingHours("10:30AM", "11:00PM");
 		parkingArea.clickSave();
-		Assert.assertTrue( parkingArea.handlingDupAndValidation(generateRandomNumber(4), areaName));
-
+		String createdAreaCode = parkingArea.handlingAreaCodeDup(areaCode);
+		String createdAreaName = parkingArea.handlingAreaNameDup(areaName);
+		Assert.assertTrue(parkingArea.areaCreationValidation(createdAreaName, createdAreaCode));
 	}
 
 	@Test(dataProvider = "getData", groups = { "ErrorHandling" })
@@ -44,16 +46,9 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.selectAreaToBeEdited();
 		parkingArea.genInfoParkingName(dupAreaName);
 		parkingArea.clickSave();
-		Assert.assertEquals(parkingArea.errorMessage(),
+		Assert.assertEquals(parkingArea.areaNameErrorMessage(),
 				"Updated Parking name already exists. Kindly use a different name.");
 
-	}
-
-	@Test
-	public void validateEditParkingArea() throws InterruptedException {
-
-		AreaModule parkingArea = loginToApplication();
-		Assert.assertTrue(parkingArea.parkingAreaUpdate(areaNameToSearch));
 	}
 
 	@Test(groups = { "ErrorHandling" })
@@ -63,9 +58,16 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.selectAreaToBeEdited();
 		parkingArea.getAreaCode("0127");
 		parkingArea.clickSave();
-		Assert.assertEquals(parkingArea.errorMessage(),
+		Assert.assertEquals(parkingArea.areaCodeErrorMessage(),
 				"Updated area code already exists. Kindly use a different area code.");
 
+	}
+	
+	@Test
+	public void validateUpdateParkingArea() throws InterruptedException {
+
+		AreaModule parkingArea = loginToApplication();
+		Assert.assertTrue(parkingArea.parkingAreaUpdate(areaNameToSearch));
 	}
 
 	@Test(groups = { "ErrorHandling" })
@@ -81,7 +83,8 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.getAreaCode(generateRandomNumber(4));
 		parkingArea.parkingHours("10:30AM", "11:00PM");
 		parkingArea.clickSave();
-		Assert.assertEquals(parkingArea.errorMessage(), "Fixed rate value must be 1 - 999.99");
+		Assert.assertEquals(parkingArea.fixedRateErrorMessage(),
+				"Fixed rate value must be 1 - 999.99");
 	}
 
 	@Test
@@ -123,7 +126,8 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.getCarCapacity("1001");
 		parkingArea.getMotorcycleCapacity("100");
 		parkingArea.clickSave();
-		Assert.assertEquals(parkingArea.errorMessage(), "Car Capacity must be 1 to 1,000.");
+		Assert.assertEquals(parkingArea.carCapacityErrorMessage(),
+				"Car Capacity must be 1 to 1,000.");
 	}
 
 	@Test
@@ -134,7 +138,8 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.getCarCapacity("1000");
 		parkingArea.getMotorcycleCapacity("1001");
 		parkingArea.clickSave();
-		Assert.assertEquals(parkingArea.errorMessage(), "Motorcycle Capacity must be 1 to 1,000.");
+		Assert.assertEquals(parkingArea.motorcycleCapacityErrorMessage(),
+				"Motorcycle Capacity must be 1 to 1,000.");
 	}
 
 	@Test

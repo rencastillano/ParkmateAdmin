@@ -8,11 +8,19 @@
     <classes>
       <class name="automation.AdminTest.UserModuleTest">
         <methods>
+<<<<<<< HEAD
           <include name="exitEnrollmentAlert"/>
+=======
+          <include name="loginWithAccess"/>
+>>>>>>> develop
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- automation.AdminTest.UserModuleTest -->
     </classes>
+<<<<<<< HEAD
   </test> <!-- User Module Test(failed) -->
+=======
+  </test> <!-- Login Test(failed) -->
+>>>>>>> develop
 </suite> <!-- Failed suite [Suite] -->

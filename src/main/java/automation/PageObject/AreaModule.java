@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,7 +40,7 @@ public class AreaModule extends AbstractComponent {
 	WebElement create;
 
 	@FindBy(css = "input[placeholder='Enter Parking Area Name']")
-	WebElement enterParkingName;
+	WebElement parkingNameInput;
 
 	@FindBy(css = "img[alt='Dropdown']")
 	WebElement selectBranch;
@@ -63,7 +64,7 @@ public class AreaModule extends AbstractComponent {
 	WebElement mallCode;
 
 	@FindBy(css = "[placeholder$='Enter Area Code']")
-	WebElement areaCode;
+	WebElement areaCodeInput;
 
 	@FindBy(xpath = "(//input[@type='time'])[1]")
 	WebElement openingTime;
@@ -86,17 +87,11 @@ public class AreaModule extends AbstractComponent {
 	@FindBy(xpath = "//tr/td[1][@class='td-item capitalize pt-4 pb-4 svelte-1bss4kg']")
 	List<WebElement> areaNameList;
 
-	@FindBy(css = ".text-red-500.text-xs.mt-1")
-	WebElement errorMessageText;
-
 	@FindBy(css = "tbody tr:nth-child(5)")
 	WebElement nameToBeEdited;
 
 	@FindBy(css = "tr td:nth-child(1)")
 	List<WebElement> areaNameTable;
-
-	@FindBy(css = "tbody tr:nth-child(1) td:nth-child(1)")
-	WebElement firstRowSearch;
 
 	@FindBy(xpath = "(//button[text()='+'])[1]")
 	WebElement carPlusBtn;
@@ -121,6 +116,28 @@ public class AreaModule extends AbstractComponent {
 	@FindBy(css = "tr td:first-child")
 	WebElement firstRowData;
 
+	@FindBy(css = "tr:nth-child(1) > td:nth-child(4)")
+	WebElement firstAreaCodeData;
+
+	@FindBy(css = "tbody td:nth-child(4)")
+	List<WebElement> areaCodeList;
+	
+	@FindBy(xpath = "//div[2]/div/div[1]/div[2]/div/p")
+	WebElement areaNameDupMsg;
+
+	@FindBy(xpath = "//div[3]/div[2]/div/div[2]/div[2]/p")
+	WebElement areaCodeDupMsg;
+
+	@FindBy(xpath = "//div[2]/div[1]/div[1]/div[3]/p")
+	WebElement fixedRateErrorMsg;
+
+	@FindBy(xpath = "//div[1]/div[4]/div/div[1]/div[2]/p")
+	WebElement carCapacityErrorMsg;
+
+	@FindBy(xpath = "//div[1]/div[4]/div/div[2]/div[2]/p")
+	WebElement motorcycleCapacityErrorMsg;
+
+	
 	public FilterAndSearch goToAreaPage() {
 		waitForWebElementToAppear(smLogo);
 		waitForWebElementToBeClickable(parkingAreasModule);
@@ -141,11 +158,11 @@ public class AreaModule extends AbstractComponent {
 	}
 
 	public void genInfoParkingName(String areaName) throws InterruptedException {
-		
+
 		Thread.sleep(5000);
-		enterParkingName.click();
-		enterParkingName.clear();
-		enterParkingName.sendKeys(areaName);
+		parkingNameInput.click();
+		parkingNameInput.clear();
+		parkingNameInput.sendKeys(areaName);
 
 	}
 
@@ -187,10 +204,10 @@ public class AreaModule extends AbstractComponent {
 
 	public void getAreaCode(String areacode) throws InterruptedException {
 		Thread.sleep(3000);
-		areaCode.click();
-		areaCode.clear();
+		areaCodeInput.click();
+		areaCodeInput.clear();
 		Thread.sleep(2000);
-		areaCode.sendKeys(areacode);
+		areaCodeInput.sendKeys(areacode);
 
 	}
 
@@ -215,41 +232,66 @@ public class AreaModule extends AbstractComponent {
 		proceedModalButton.click();
 		return create.isDisplayed();
 	}
-
-	public boolean handlingDupAndValidation(String areacode, String areaName) throws InterruptedException {
-
+	
+	public String handlingAreaNameDup(String areaName) throws InterruptedException {
+		String initialAreaName = areaName;
+		String reTryAreaName = "Area_" + generateRandomString();
 		try {
-
-			while (errorMessageText.isDisplayed()) {
-				getAreaCode(areacode);
+			while (areaNameDupMsg.isDisplayed()) {
+				parkingNameInput.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, reTryAreaName);
 				clickSave();
 				Thread.sleep(4000);
+				System.out.println("dup email: " + reTryAreaName);
+			}
+		} catch (Exception e) {
+			e.printStackTrace(); // Log the exception or handle it appropriately
+			return initialAreaName;
+		}
+		return reTryAreaName;
+	}
+
+	public String handlingAreaCodeDup(String areaCode) throws InterruptedException {
+		String initialAreaCode = areaCode;
+		String reTryAreaCode = generateRandomNumber(4);
+		try {
+
+			while (areaCodeDupMsg.isDisplayed()) {
+				getAreaCode(reTryAreaCode);
+				clickSave();
+				Thread.sleep(4000);
+				System.out.println("dup email: " + reTryAreaCode);
 			}
 
 		} catch (NoSuchElementException e) {
 			// Handle NoSuchElementException if duplicateErrMsgOnCreation is not displayed
 			e.printStackTrace();
+			return initialAreaCode;
 		} catch (Exception e) {
 			// Handle any other exceptions or log a message
 			e.printStackTrace();
+			return initialAreaCode;
 		}
-		List<String> filteredNames = areaNameList.stream().map(WebElement::getText)
-				.filter(name -> name.contains(areaName)).collect(Collectors.toList());
-		String createResult = filteredNames.isEmpty() ? "" : filteredNames.get(0);
-		// System.out.println(res);
-		return createResult.equalsIgnoreCase(areaName);
+		return reTryAreaCode;
 	}
 
-	public String errorMessage() {
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return errorMessageText.getText();
+	public boolean areaCreationValidation(String areaName, String areaCode) {
+		String nameResult = areaNameList.stream().map(WebElement::getText).filter(name -> name.contains(areaName))
+				.findFirst().orElse("");
 
+		String codeResult = areaCodeList.stream().map(WebElement::getText).filter(code -> code.contains(areaCode))
+				.findFirst().orElse("");
+
+		return nameResult.equalsIgnoreCase(areaName) && codeResult.equalsIgnoreCase(areaCode);
 	}
+
+//	public String validateBanner(String areaName) {
+//		try {
+//			return banner.getText();
+//		} catch (Exception e) {
+//			e.printStackTrace(); // Log the exception or handle it appropriately
+//			return areaName; // Return an empty string or another appropriate default value
+//		}
+//	}
 
 	public void selectAreaToBeEdited() throws InterruptedException {
 		Thread.sleep(2000);
@@ -283,7 +325,7 @@ public class AreaModule extends AbstractComponent {
 			Thread.sleep(2000);
 			result = element.getText();
 		} while (!result.equalsIgnoreCase(searchData));
-		firstRowSearch.click();
+		firstRowData.click();
 	}
 
 	public boolean parkingAreaUpdate(String areaNameToSearch) throws InterruptedException {
@@ -303,8 +345,8 @@ public class AreaModule extends AbstractComponent {
 
 		waitForWebElementToAppear(banner);
 		String bannerText = banner.getText();
-		//System.out.println(bannerText);
-		return bannerText.equalsIgnoreCase(areaNameUpdated+" is successfully updated!");
+		// System.out.println(bannerText);
+		return bannerText.equalsIgnoreCase(areaNameUpdated + " is successfully updated!");
 
 	}
 
@@ -349,5 +391,34 @@ public class AreaModule extends AbstractComponent {
 
 		setVehicleCapacity(capacityElement, count);
 	}
+
+	private String getErrorMessage(WebElement element) throws InterruptedException {
+		Thread.sleep(1000);
+		return element.getText();
+	}
+
+	public String areaNameErrorMessage() throws InterruptedException {
+
+		return getErrorMessage(areaNameDupMsg);
+	}
+
+	public String areaCodeErrorMessage() throws InterruptedException {
+		return getErrorMessage(areaCodeDupMsg);
+	}
+	
+	public String fixedRateErrorMessage() throws InterruptedException {
+		return getErrorMessage(fixedRateErrorMsg);
+	}
+
+	public String carCapacityErrorMessage() throws InterruptedException {
+		System.out.println(carCapacityErrorMsg);
+		return getErrorMessage(carCapacityErrorMsg);
+	}
+
+	public String motorcycleCapacityErrorMessage() throws InterruptedException {
+		return getErrorMessage(motorcycleCapacityErrorMsg);
+	}
+
+	
 
 }
