@@ -1,8 +1,11 @@
 package automation.AdminTestComponents;
 
 import java.io.IOException;
+import java.util.Date;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.ISuite;
+import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -13,20 +16,24 @@ import com.aventstack.extentreports.Status;
 
 import automation.Resources.ExtentReporter;
 
-
-
-public class Listeners 
-extends BaseTest implements ITestListener {
-
+public class Listeners extends BaseTest implements ITestListener, ISuiteListener {
 	ExtentTest test;
 	ExtentReports extent = ExtentReporter.getReportObject();
-	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
-	
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+	ThreadLocal<String> testName = new ThreadLocal<>();
+	Date suiteStartTime;
+
+	@Override
+	public void onStart(ISuite suite) {
+		suiteStartTime = new Date(); // Record suite start time
+	}
+
 	@Override
 	public void onTestStart(ITestResult result) {
-		// TODO Auto-generated method stub
-		test = extent.createTest(result.getMethod().getMethodName());
-		extentTest.set(test);//unique thread id(ErrorValidationTest)->test
+		testName.set(result.getMethod().getMethodName());
+		test = extent.createTest(testName.get());
+		extentTest.set(test);
+		// ExtentReporter.addElapsedTimeInfo(); // Record start time for individual test
 	}
 
 	@Override
@@ -36,45 +43,59 @@ extends BaseTest implements ITestListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		// TODO Auto-generated method stub
 		extentTest.get().fail(result.getThrowable());
-		
+
 		try {
-			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver")
-					.get(result.getInstance());
-			
+			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		
+
 		String filePath = null;
 		try {
-			
-			filePath = takeScreenshot(result.getMethod().getMethodName(),driver);
+			filePath = takeScreenshot(result.getMethod().getMethodName(), driver);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		extentTest.get().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
-		
-		
-		//Screenshot, Attach to report
-		
-		
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		extentTest.get().log(Status.SKIP, "Test Skipped");
+		// extentTest.get().log(Status.SKIP, "Test Skipped");
+		extentTest.get().skip(result.getThrowable());
+		try {
+			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+
+		String filePath = null;
+		try {
+			filePath = takeScreenshot(result.getMethod().getMethodName(), driver);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		extentTest.get().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		// Add elapsed time info to the report
-		ExtentReporter.addElapsedTimeInfo(extent);
 		System.out.println("Test Execution Ended");
-		extent.flush();
 	}
 
+	@Override
+	public void onFinish(ISuite suite) {
+		// Calculate total suite elapsed time
+		Date suiteEndTime = new Date();
+		long suiteElapsedTimeInMillis = suiteEndTime.getTime() - suiteStartTime.getTime();
+		long suiteElapsedTimeInSeconds = suiteElapsedTimeInMillis / 1000;
+
+		// Add total suite elapsed time to the extent report
+		ExtentReporter.addSuiteElapsedTimeInfo(extent, suiteElapsedTimeInSeconds);
+
+		System.out.println("Total Elapsed Time: " + suiteElapsedTimeInSeconds + " seconds");
+
+		extent.flush();
+	}
 }

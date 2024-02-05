@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<groups>
-		<run>
-			<include name="ErrorHandling" />
-		</run>
-	</groups>
+	<listeners>
+		<listener class-name="automation.AdminTestComponents.Listeners" />
+	</listeners>
+	
+	
 	<test thread-count="5" name="Login Test">
 		<classes>
 			<class name="automation.AdminTest.AllLoginTest" />
 		</classes>
 	</test>
-	<test thread-count="5" name="Parking Area Module Test">
+	
+	<test thread-count="5" name="Permission Test">
 		<classes>
-			<class name="automation.AdminTest.AreaModuleTest" />
+			<class name="automation.AdminTest.PermissionTest" />
 		</classes>
 	</test>
-	<test thread-count="5" name="User Module Test">
-		<classes>
-			<class name="automation.AdminTest.UserModuleTest" />
-		</classes>
-	</test>
+	
 	<test thread-count="5" name="Filter And SearchTest">
 		<classes>
 			<class name="automation.AdminTest.FilterAndSearchTest" />

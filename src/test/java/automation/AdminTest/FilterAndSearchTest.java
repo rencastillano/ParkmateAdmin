@@ -63,7 +63,7 @@ public class FilterAndSearchTest extends BaseTest {
 
 	}
 
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	public void filterByEncoderRole() throws InterruptedException {
 		
 		FilterAndSearch search = loginToApplicationForSearching();
