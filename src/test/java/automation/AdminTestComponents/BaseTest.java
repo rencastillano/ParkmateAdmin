@@ -21,7 +21,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.ISuiteListener;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -31,13 +30,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import automation.PageObject.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseTest implements ISuiteListener{
+public class BaseTest {
 	
 	public WebDriver driver;
 	public LandingPage landingPage;
 
 	public WebDriver initializeDriver() throws IOException {
-//		//properties class		
 		
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(

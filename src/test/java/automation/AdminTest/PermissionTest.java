@@ -16,7 +16,7 @@ public class PermissionTest extends BaseTest {
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setStatusToRestricted());
 		navigateAndLoginToEncoder(permission);
-		Assert.assertTrue(permission.loginValidationForStatusChange());
+		Assert.assertTrue(permission.loginValidationForRestrictedUser());
 
 	}
 
@@ -26,7 +26,7 @@ public class PermissionTest extends BaseTest {
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setStatusToActive());
 		navigateAndLoginToEncoder(permission);
-		Assert.assertFalse(permission.loginValidationForStatusChange());
+		Assert.assertFalse(permission.loginValidationForRestrictedUser());
 	}
 
 	@Test

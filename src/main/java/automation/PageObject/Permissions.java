@@ -211,7 +211,7 @@ public class Permissions extends AbstractComponent {
 		}
 	}
 
-	public boolean loginValidationForStatusChange() {
+	public boolean loginValidationForRestrictedUser() {
 
 		return loginValidation(
 				"Oops! You are blocked from accessing this page. To gain access, contact your admin for support.");
