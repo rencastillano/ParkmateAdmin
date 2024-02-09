@@ -1,5 +1,6 @@
 package automation.PageObject;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -50,7 +51,7 @@ public class Permissions extends AbstractComponent {
 	@FindBy(xpath = "//div/div/form/div[2]/button")
 	WebElement searchBtn;
 
-	@FindBy(css = "tr td:first-child")
+	@FindBy(xpath = "(//tr/td)[3]")
 	WebElement searchResult;
 
 	@FindBy(xpath = "//*[@class='text-base mb-6 text-sm-error']")
@@ -77,30 +78,66 @@ public class Permissions extends AbstractComponent {
 	@FindBy(css = "h1")
 	WebElement encoderSearchResult;
 
-	@FindBy(xpath = "//div[2]/section/button")
+	@FindBy(xpath = "//*[@id=\"page-content\"]/section/button")
 	WebElement markCompleteBtn;
 
 	@FindBy(xpath = "//div[2]/section/div[4]/button")
 	WebElement receiveParkingPaymentBtn;
+	
+	@FindBy(name="username")
+	WebElement uname;
+	
+	@FindBy(name="password")
+	WebElement pword;
+	
+	@FindBy(css=".btn")
+	WebElement loginBtn;
+	
+	@FindBy(xpath="//div[3]/button/img")
+	WebElement logout;
+	
+	
+	public void loginToParkingAdmin(String userName, String password) throws InterruptedException {
+		logout.click();
+		waitForWebElementToAppear(loginBtn);
+		uname.clear();
+		uname.sendKeys(userName);
+		Thread.sleep(500);
+		pword.clear();
+		pword.sendKeys(password);
+		loginBtn.click();
+		
+	}
 
-	public void navigateToEncoder() {
+	public void navigateToEncoderDesktop() {
 
-//		Actions actions = new Actions(driver);
-//		actions.keyDown(Keys.CONTROL).sendKeys("t").keyUp(Keys.CONTROL).perform();
-//
-//		// Switch to the newly opened tab
-//		String newTabHandle = driver.getWindowHandles().toArray()[1].toString();
-//		driver.switchTo().window(newTabHandle);
-//
-		// Introduce a small delay (you can adjust this as needed)
-//		try {
-//			Thread.sleep(2000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
+		try {
 
-		driver.get("https://encoder.parking-stg.smop.asia/login/");
+			openNewTabAndSwitch();
+			driver.get("https://encoder.parking-stg.smop.asia/login/");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
+	}
+
+	public void navigateToEncoderMobileApp() {
+
+		try {
+
+			openNewTabAndSwitch();
+			mobileAppSettings();
+			driver.get("https://encoder.parking-stg.smop.asia/login/");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	private void openNewTabAndSwitch() {
+		((JavascriptExecutor) driver).executeScript("window.open();");
+		// Switch to the newly opened tab
+		driver.switchTo().window(driver.getWindowHandles().toArray()[1].toString());
 	}
 
 	public void loginToEncoderApp(String userName, String pword) {
@@ -110,47 +147,66 @@ public class Permissions extends AbstractComponent {
 		login.click();
 	}
 
-	private void setEmailAddressAndSearch(String emailAddress) throws InterruptedException {
+	private void getEmailAddressAndSearch(String emailAddress) throws InterruptedException {
 		search.sendKeys(emailAddress);
 		String result;
 		do {
-			Thread.sleep(3000);
+			Thread.sleep(1000);
 			result = searchResult.getText();
-		} while (!result.equalsIgnoreCase("Status Change"));
+		} while (!result.equalsIgnoreCase(emailAddress));
+	}
+	
+	public boolean setAdminStatusToRestricted(String emailToSearch) throws InterruptedException {
+		return setUserStatus("Restricted", emailToSearch);
 	}
 
-	public boolean setStatusToRestricted() throws InterruptedException {
-		return setUserStatus("Restricted");
+	public boolean setStatusToRestricted(String emailToSearch) throws InterruptedException {
+		boolean setAcountStatus = setUserStatus("Restricted", emailToSearch);
+		performToggleAction("true", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
+		return setAcountStatus;
 	}
 
-	public boolean setStatusToActive() throws InterruptedException {
-		return setUserStatus("Active");
+	public boolean setStatusToActiveForMobile(String emailToSearch) throws InterruptedException {
+		boolean setAcountStatus = setUserStatus("Active", emailToSearch);
+		performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
+		return setAcountStatus;
 	}
 
-	public boolean setPaymentAcceptanceToFalse() throws InterruptedException {
-		setUserStatus("Active");
+	public boolean setStatusToActiveForDestop(String emailToSearch) throws InterruptedException {
+		boolean setAcountStatus = setUserStatus("Active", emailToSearch);
+		performToggleAction("true", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
+		return setAcountStatus;
+	}
+
+	public boolean setPaymentAcceptanceToFalse(String emailToSearch) throws InterruptedException {
+		setUserStatus("Active", emailToSearch);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
 		return performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
 	}
 
-	public boolean setPaymentAcceptanceToTrue() throws InterruptedException {
-		setUserStatus("Active");
+	public boolean setPaymentAcceptanceToTrue(String emailToSearch) throws InterruptedException {
+		setUserStatus("Active", emailToSearch);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
 		return performToggleAction("true", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
 	}
 
-	public boolean setAllowExitToFalse() throws InterruptedException {
-		setUserStatus("Active");
-		performToggleAction("true", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+	public boolean setAllowExitToFalse(String emailToSearch) throws InterruptedException {
+		setUserStatus("Active", emailToSearch);
+		performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
 		return performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
 	}
 
-	public boolean setAllowExitToTrue() throws InterruptedException {
-		setUserStatus("Active");
-		performToggleAction("true", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+	public boolean setAllowExitToTrue(String emailToSearch) throws InterruptedException {
+		setUserStatus("Active", emailToSearch);
+		performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
 		return performToggleAction("true", allowExitToggleStatus, allowExitToggleSwitch, null);
 	}
 
-	private boolean setUserStatus(String desiredStatus) throws InterruptedException {
-		setEmailAddressAndSearch("statusChange@parkmate.com");
+	public boolean setUserStatus(String desiredStatus, String emailToSearch) throws InterruptedException {
+		getEmailAddressAndSearch(emailToSearch);
 
 		if (!desiredStatus.equalsIgnoreCase(userStatus.getText())) {
 			dropdownButton.click();
@@ -200,7 +256,7 @@ public class Permissions extends AbstractComponent {
 		Thread.sleep(1000);
 		searchBtn.click();
 		waitForWebElementToAppear(encoderSearchResult);
-		
+
 		try {
 			boolean isDisplayed = button.isDisplayed();
 			Thread.sleep(500);
@@ -211,7 +267,7 @@ public class Permissions extends AbstractComponent {
 		}
 	}
 
-	public boolean loginValidationForRestrictedUser() {
+	public boolean loginValidationForStatusChange() {
 
 		return loginValidation(
 				"Oops! You are blocked from accessing this page. To gain access, contact your admin for support.");
@@ -231,6 +287,7 @@ public class Permissions extends AbstractComponent {
 			System.err.println("Button is not displayed: " + e.getMessage());
 			return false;
 		}
+
 	}
 
 }

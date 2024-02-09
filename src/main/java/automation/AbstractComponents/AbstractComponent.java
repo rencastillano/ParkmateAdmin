@@ -1,6 +1,9 @@
 package automation.AbstractComponents;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
@@ -8,6 +11,9 @@ import java.util.stream.Collectors;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v120.emulation.Emulation;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,7 +27,7 @@ public class AbstractComponent {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	@FindBy(css = "img[alt='SM Logo']")
 	protected WebElement smLogo;
 
@@ -54,15 +60,28 @@ public class AbstractComponent {
 		int randomNumber = random.nextInt((int) Math.pow(10, length));
 		return String.format("%0" + length + "d", randomNumber);
 	}
-	
+
 	public String generateRandomString() {
 		String randomLetters = generateRandomChars(4, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 		String randomNumbers = generateRandomChars(3, "0123456789");
 		return randomLetters + randomNumbers;
 	}
-	
+
 	private String generateRandomChars(int length, String source) {
 		return ThreadLocalRandom.current().ints(length, 0, source.length()).mapToObj(source::charAt)
 				.map(Object::toString).collect(Collectors.joining());
+	}
+
+	public void mobileAppSettings() {
+		// Cast WebDriver to ChromeDriver to access DevTools
+		ChromeDriver chromeDriver = (ChromeDriver) driver;
+		DevTools devTools = chromeDriver.getDevTools();
+
+		// Create DevTools session
+		devTools.createSession();
+
+		devTools.send(Emulation.setDeviceMetricsOverride(360, 760, 2.625, true, Optional.empty(), Optional.empty(),
+				Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),
+				Optional.empty(), Optional.empty()));
 	}
 }

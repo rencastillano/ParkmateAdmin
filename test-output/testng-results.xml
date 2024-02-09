@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="1" ignored="1" total="8" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-05T20:12:02 CST" name="Default suite" finished-at="2024-02-05T20:19:16 CST" duration-ms="434354">
+  <suite started-at="2024-02-09T23:45:45 CST" name="Default suite" finished-at="2024-02-09T23:46:08 CST" duration-ms="22341">
     <groups>
     </groups>
-    <test started-at="2024-02-05T20:12:02 CST" name="Default test" finished-at="2024-02-05T20:19:16 CST" duration-ms="434354">
+    <test started-at="2024-02-09T23:45:45 CST" name="Default test" finished-at="2024-02-09T23:46:08 CST" duration-ms="22341">
       <class name="automation.AdminTest.PermissionTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:12:02 CST" name="launchApplication" finished-at="2024-02-05T20:13:59 CST" duration-ms="117247" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@33d512c1]" started-at="2024-02-09T23:45:45 CST" name="launchApplication" finished-at="2024-02-09T23:45:53 CST" duration-ms="7758" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method retried="true" signature="setAllowExitToFalse()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:13:59 CST" name="setAllowExitToFalse" finished-at="2024-02-05T20:15:46 CST" duration-ms="107120" status="SKIP">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="adminWithRestrictedStatus()[pri:0, instance:automation.AdminTest.PermissionTest@33d512c1]" started-at="2024-02-09T23:45:53 CST" name="adminWithRestrictedStatus" finished-at="2024-02-09T23:46:08 CST" duration-ms="14538" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: h1' (tried for 20 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: h1' (tried for 20 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:43)
-at automation.PageObject.Permissions.validateButtonIsDisplayed(Permissions.java:202)
-at automation.PageObject.Permissions.allowExitValidation(Permissions.java:190)
-at automation.AdminTest.PermissionTest.setAllowExitToFalse(PermissionTest.java:56)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at automation.AdminTest.PermissionTest.adminWithRestrictedStatus(PermissionTest.java:19)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -50,119 +49,12 @@ at org.testng.TestNG.run(TestNG.java:1101)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"h1"}
-  (Session info: chrome=121.0.6167.140)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [16901ee04040b38202514a568817da83, findElement {using=css selector, value=h1}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59334}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59334/devtoo..., se:cdpVersion: 121.0.6167.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 16901ee04040b38202514a568817da83
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 30 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setAllowExitToFalse -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:15:46 CST" name="tearDown" finished-at="2024-02-05T20:15:47 CST" duration-ms="1268" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:15:47 CST" name="launchApplication" finished-at="2024-02-05T20:15:54 CST" duration-ms="6430" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setAllowExitToFalse()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:15:54 CST" name="setAllowExitToFalse" finished-at="2024-02-05T20:16:30 CST" duration-ms="36485" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setAllowExitToFalse -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:16:30 CST" name="tearDown" finished-at="2024-02-05T20:16:32 CST" duration-ms="1215" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:16:32 CST" name="launchApplication" finished-at="2024-02-05T20:16:38 CST" duration-ms="6435" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setAllowExitToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:16:38 CST" name="setAllowExitToTrue" finished-at="2024-02-05T20:17:02 CST" duration-ms="24400" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setAllowExitToTrue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:17:02 CST" name="tearDown" finished-at="2024-02-05T20:17:03 CST" duration-ms="375" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:17:03 CST" name="launchApplication" finished-at="2024-02-05T20:17:09 CST" duration-ms="6536" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="userWithActiveStatus()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:17:09 CST" name="userWithActiveStatus" finished-at="2024-02-05T20:17:33 CST" duration-ms="23497" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userWithActiveStatus -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:17:33 CST" name="tearDown" finished-at="2024-02-05T20:17:34 CST" duration-ms="1183" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:17:34 CST" name="launchApplication" finished-at="2024-02-05T20:17:42 CST" duration-ms="7969" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="userWithPaymentAcceptanceSetToFalse()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:17:42 CST" name="userWithPaymentAcceptanceSetToFalse" finished-at="2024-02-05T20:18:04 CST" duration-ms="21906" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userWithPaymentAcceptanceSetToFalse -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:18:04 CST" name="tearDown" finished-at="2024-02-05T20:18:05 CST" duration-ms="1335" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:18:05 CST" name="launchApplication" finished-at="2024-02-05T20:18:14 CST" duration-ms="9105" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="userWithPaymentAcceptanceSetToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:18:14 CST" name="userWithPaymentAcceptanceSetToTrue" finished-at="2024-02-05T20:18:44 CST" duration-ms="29441" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userWithPaymentAcceptanceSetToTrue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:18:44 CST" name="tearDown" finished-at="2024-02-05T20:18:45 CST" duration-ms="1193" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:18:45 CST" name="launchApplication" finished-at="2024-02-05T20:18:54 CST" duration-ms="9266" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="userWithRestrictedStatus()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:18:54 CST" name="userWithRestrictedStatus" finished-at="2024-02-05T20:19:15 CST" duration-ms="20586" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userWithRestrictedStatus -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@41d477ed]" started-at="2024-02-05T20:19:15 CST" name="tearDown" finished-at="2024-02-05T20:19:16 CST" duration-ms="1253" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- adminWithRestrictedStatus -->
       </class> <!-- automation.AdminTest.PermissionTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

@@ -5,9 +5,8 @@
     <classes>
       <class name="automation.AdminTest.PermissionTest">
         <methods>
-          <include name="setAllowExitToFalse"/>
           <include name="launchApplication"/>
-          <include name="tearDown"/>
+          <include name="adminWithRestrictedStatus"/>
         </methods>
       </class> <!-- automation.AdminTest.PermissionTest -->
     </classes>
