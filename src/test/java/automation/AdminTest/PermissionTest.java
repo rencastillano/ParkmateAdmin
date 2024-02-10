@@ -103,7 +103,7 @@ public class PermissionTest extends BaseTest {
 	}
 
 	private void navigateAndLoginToEncoderDesktop(Permissions permission) {
-		permission.navigateToEncoderMobileApp();
+		permission.navigateToEncoderDesktop();
 		permission.loginToEncoderApp("statusChange", "Password@1");
 
 	}

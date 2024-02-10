@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-09T23:45:45 CST" name="Default suite" finished-at="2024-02-09T23:46:08 CST" duration-ms="22341">
+  <suite started-at="2024-02-10T11:34:54 CST" name="Default suite" finished-at="2024-02-10T11:35:31 CST" duration-ms="37308">
     <groups>
     </groups>
-    <test started-at="2024-02-09T23:45:45 CST" name="Default test" finished-at="2024-02-09T23:46:08 CST" duration-ms="22341">
+    <test started-at="2024-02-10T11:34:54 CST" name="Default test" finished-at="2024-02-10T11:35:31 CST" duration-ms="37308">
       <class name="automation.AdminTest.PermissionTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@33d512c1]" started-at="2024-02-09T23:45:45 CST" name="launchApplication" finished-at="2024-02-09T23:45:53 CST" duration-ms="7758" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@33d512c1]" started-at="2024-02-10T11:34:54 CST" name="launchApplication" finished-at="2024-02-10T11:35:08 CST" duration-ms="14452" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="adminWithRestrictedStatus()[pri:0, instance:automation.AdminTest.PermissionTest@33d512c1]" started-at="2024-02-09T23:45:53 CST" name="adminWithRestrictedStatus" finished-at="2024-02-09T23:46:08 CST" duration-ms="14538" status="FAIL">
+        <test-method signature="adminWithRestrictedStatus()[pri:0, instance:automation.AdminTest.PermissionTest@33d512c1]" started-at="2024-02-10T11:35:08 CST" name="adminWithRestrictedStatus" finished-at="2024-02-10T11:35:31 CST" duration-ms="22762" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>

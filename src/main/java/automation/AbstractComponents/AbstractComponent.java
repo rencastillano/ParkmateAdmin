@@ -79,9 +79,17 @@ public class AbstractComponent {
 
 		// Create DevTools session
 		devTools.createSession();
-
-		devTools.send(Emulation.setDeviceMetricsOverride(360, 760, 2.625, true, Optional.empty(), Optional.empty(),
-				Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),
-				Optional.empty(), Optional.empty()));
+		
+		Map<String, Object> deviceMetrics = new HashMap<String, Object>();
+		
+		deviceMetrics.put("width", 360);
+		deviceMetrics.put("height", 760);
+		deviceMetrics.put("deviceScaleFactor", 2.625);
+		deviceMetrics.put("mobile", true);
+		
+		chromeDriver.executeCdpCommand("Emulation.setDeviceMetricsOverride", deviceMetrics);
+//		devTools.send(Emulation.setDeviceMetricsOverride(360, 760, 2.625, true, Optional.empty(), Optional.empty(),
+//				Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),
+//				Optional.empty(), Optional.empty()));
 	}
 }

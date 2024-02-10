@@ -1,6 +1,7 @@
 package automation.PageObject;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -52,7 +53,10 @@ public class Permissions extends AbstractComponent {
 	WebElement searchBtn;
 
 	@FindBy(xpath = "(//tr/td)[3]")
-	WebElement searchResult;
+	WebElement accountSearchResult;
+	
+	@FindBy(xpath="//div[1]/button/div[2]/div[2]")
+	WebElement ticketSearchResult;
 
 	@FindBy(xpath = "//*[@class='text-base mb-6 text-sm-error']")
 	WebElement errorMessage;
@@ -69,19 +73,25 @@ public class Permissions extends AbstractComponent {
 	@FindBy(xpath = "//tr/td[8]/div/label/div/div")
 	WebElement allowExitToggleSwitch;
 
-	@FindBy(xpath = "//input[@name='search']")
+	@FindBy(name = "search")
 	WebElement encoderSearch;
+	
+	@FindBy(xpath="//section/div[1]/button[2]")
+	WebElement viewParkedVehiclesTab;
 
 	@FindBy(xpath = "//button[.='Search Vehicle']")
 	WebElement searchVehicleButton;
+	
+	@FindBy(css="div.bg-white.mb-2.text-center.rounded-t-2xl.py-5 > div")
+	WebElement ticketTagStatus;
 
 	@FindBy(css = "h1")
 	WebElement encoderSearchResult;
 
-	@FindBy(xpath = "//*[@id=\"page-content\"]/section/button")
+	@FindBy(xpath = "//section/div[2]/div[2]/section/button")
 	WebElement markCompleteBtn;
 
-	@FindBy(xpath = "//div[2]/section/div[4]/button")
+	@FindBy(xpath = "//*[text()='Receive Parking Payment']")
 	WebElement receiveParkingPaymentBtn;
 	
 	@FindBy(name="username")
@@ -152,7 +162,7 @@ public class Permissions extends AbstractComponent {
 		String result;
 		do {
 			Thread.sleep(1000);
-			result = searchResult.getText();
+			result = accountSearchResult.getText();
 		} while (!result.equalsIgnoreCase(emailAddress));
 	}
 	
@@ -243,21 +253,30 @@ public class Permissions extends AbstractComponent {
 	}
 
 	public boolean allowExitValidation() throws InterruptedException {
-		return validateButtonIsDisplayed(markCompleteBtn, "SYNCH02");
+		return validateButtonIsDisplayed(markCompleteBtn, viewParkedVehiclesTab, ticketSearchResult, "SYNCH02");
 	}
 
 	public boolean PaymentAcceptanceSetToTrueLoginValidation() throws InterruptedException {
-		return validateButtonIsDisplayed(receiveParkingPaymentBtn, "SYNCH03");
+		return validateButtonIsDisplayed(receiveParkingPaymentBtn, null, null, "SYNCH03");
 	}
 
-	private boolean validateButtonIsDisplayed(WebElement button, String vehicleNumber) throws InterruptedException {
+	private boolean validateButtonIsDisplayed(WebElement button, WebElement viewParkedVehicles, WebElement searchResult, String vehicleNumber) throws InterruptedException {
 		Thread.sleep(3000);
-		encoderSearch.sendKeys(vehicleNumber);
-		Thread.sleep(1000);
-		searchBtn.click();
-		waitForWebElementToAppear(encoderSearchResult);
-
+		if(viewParkedVehicles != null) {
+			viewParkedVehicles.click();
+			Thread.sleep(2000);
+		}
+		encoderSearch.sendKeys(vehicleNumber, Keys.ENTER);
+		Thread.sleep(3000);
+		//waitForWebElementToAppear(encoderSearchResult);
+		
+		if(searchResult != null) {
+			searchResult.click();
+			
+		}
+		
 		try {
+			waitForWebElementToAppear(ticketTagStatus);
 			boolean isDisplayed = button.isDisplayed();
 			Thread.sleep(500);
 			return isDisplayed;
