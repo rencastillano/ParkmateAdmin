@@ -15,7 +15,7 @@ public class PermissionTest extends BaseTest {
 
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setAdminStatusToRestricted("henry.salazar@parkmate.com"));
-		permission.loginToParkingAdmin("henry.salazar", "!(s^yij5b_6I");
+		permission.loginToParkingAdmin("henry.salazar", "Password@1");
 		Assert.assertTrue(permission.loginValidationForStatusChange());
 
 	}

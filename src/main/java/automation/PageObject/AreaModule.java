@@ -45,7 +45,7 @@ public class AreaModule extends AbstractComponent {
 	@FindBy(css = "img[alt='Dropdown']")
 	WebElement selectBranch;
 
-	@FindBy(xpath = "//li[@class='px-4 py-2 hover:border'][4]")
+	@FindBy(xpath = "//li[@class='px-4 py-2 hover:border'][6]")
 	WebElement selectSMFairview;
 
 	@FindBy(xpath = "//li[@class='px-4 py-2 hover:border']")
@@ -121,7 +121,7 @@ public class AreaModule extends AbstractComponent {
 
 	@FindBy(css = "tbody td:nth-child(4)")
 	List<WebElement> areaCodeList;
-	
+
 	@FindBy(xpath = "//div[2]/div/div[1]/div[2]/div/p")
 	WebElement areaNameDupMsg;
 
@@ -137,7 +137,6 @@ public class AreaModule extends AbstractComponent {
 	@FindBy(xpath = "//div[1]/div[4]/div/div[2]/div[2]/p")
 	WebElement motorcycleCapacityErrorMsg;
 
-	
 	public FilterAndSearch goToAreaPage() {
 		waitForWebElementToAppear(smLogo);
 		waitForWebElementToBeClickable(parkingAreasModule);
@@ -166,7 +165,10 @@ public class AreaModule extends AbstractComponent {
 
 	}
 
-	public void genInfoSMList() {
+	@FindBy(xpath = "//ul/li[@class='px-4 py-2 hover:border']")
+	List<WebElement> smList;
+
+	public void genInfoSMList(String name) {
 		selectBranch.click();
 		try {
 			Thread.sleep(1000);
@@ -174,7 +176,22 @@ public class AreaModule extends AbstractComponent {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		selectSMFairview.click();
+		List<WebElement> filteredElements = smList.stream().filter(element -> element.getText().contains(name))
+				.collect(Collectors.toList());
+
+		if (!filteredElements.isEmpty()) {
+			WebElement elementToClick = filteredElements.get(0);
+			if (elementToClick.isDisplayed()) {
+				elementToClick.click();
+				System.out.println("Clicked on the element containing 'SM Fairview'.");
+			} else {
+				System.out.println("Element containing 'SM Fairview' is not visible.");
+			}
+		} else {
+			System.out.println("No element containing 'SM Fairview' found.");
+		}
+
+		// selectSMFairview.click();
 	}
 
 	public void getCarCapacity(String value) {
@@ -226,13 +243,13 @@ public class AreaModule extends AbstractComponent {
 		cancelBtn.click();
 		Thread.sleep(500);
 		cancelMondalButton.click();
-		genInfoSMList();
+		genInfoSMList("SM City Fairview");
 		cancelBtn.click();
 		Thread.sleep(500);
 		proceedModalButton.click();
 		return create.isDisplayed();
 	}
-	
+
 	public String handlingAreaNameDup(String areaName) throws InterruptedException {
 		String initialAreaName = areaName;
 		String reTryAreaName = "Area_" + generateRandomString();
@@ -405,7 +422,7 @@ public class AreaModule extends AbstractComponent {
 	public String areaCodeErrorMessage() throws InterruptedException {
 		return getErrorMessage(areaCodeDupMsg);
 	}
-	
+
 	public String fixedRateErrorMessage() throws InterruptedException {
 		return getErrorMessage(fixedRateErrorMsg);
 	}
@@ -418,7 +435,5 @@ public class AreaModule extends AbstractComponent {
 	public String motorcycleCapacityErrorMessage() throws InterruptedException {
 		return getErrorMessage(motorcycleCapacityErrorMsg);
 	}
-
-	
 
 }

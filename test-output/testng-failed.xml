@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.AdminTest.PermissionTest">
+      <class name="automation.AdminTest.AreaModuleTest">
         <methods>
+          <include name="areaCreation"/>
           <include name="launchApplication"/>
-          <include name="adminWithRestrictedStatus"/>
         </methods>
-      </class> <!-- automation.AdminTest.PermissionTest -->
+      </class> <!-- automation.AdminTest.AreaModuleTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

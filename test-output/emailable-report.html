@@ -9,42 +9,23 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">37,308</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">14</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">418,472</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">automation.AdminTest.PermissionTest</td><td><a href="#m0">adminWithRestrictedStatus</a></td><td rowspan="1">1707536108782</td><td rowspan="1">22762</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="14">automation.AdminTest.AreaModuleTest</td><td><a href="#m0">areaCodeDupValidation</a></td><td rowspan="1">1707740314285</td><td rowspan="1">25586</td></tr><tr class="passedeven"><td><a href="#m1">areaCreation</a></td><td rowspan="1">1707740346133</td><td rowspan="1">44368</td></tr><tr class="passedeven"><td><a href="#m2">areaNameDupValidation</a></td><td rowspan="1">1707740397219</td><td rowspan="1">27899</td></tr><tr class="passedeven"><td><a href="#m3">areaPagePagenation</a></td><td rowspan="1">1707740431778</td><td rowspan="1">23282</td></tr><tr class="passedeven"><td><a href="#m4">areaPageSelectRow</a></td><td rowspan="1">1707740462610</td><td rowspan="1">26667</td></tr><tr class="passedeven"><td><a href="#m5">carCapacityInputValidation</a></td><td rowspan="1">1707740495470</td><td rowspan="1">17326</td></tr><tr class="passedeven"><td><a href="#m6">exitCreationAlert</a></td><td rowspan="1">1707740519046</td><td rowspan="1">18808</td></tr><tr class="passedeven"><td><a href="#m7">fixedRateMaxLimit</a></td><td rowspan="1">1707740544044</td><td rowspan="1">24428</td></tr><tr class="passedeven"><td><a href="#m8">motorcycleCapacityInputValidation</a></td><td rowspan="1">1707740579108</td><td rowspan="1">18951</td></tr><tr class="passedeven"><td><a href="#m9">setCMotorcycleCapacityPlusButtonToDisable</a></td><td rowspan="1">1707740604873</td><td rowspan="1">17896</td></tr><tr class="passedeven"><td><a href="#m10">setCarCapacityMinusButtonToDisable</a></td><td rowspan="1">1707740629043</td><td rowspan="1">22515</td></tr><tr class="passedeven"><td><a href="#m11">setCarCapacityPlusButtonToDisable</a></td><td rowspan="1">1707740657864</td><td rowspan="1">17222</td></tr><tr class="passedeven"><td><a href="#m12">setMotorcycleCapacityPlusButtonToDisable</a></td><td rowspan="1">1707740681519</td><td rowspan="1">17284</td></tr><tr class="passedeven"><td><a href="#m13">validateUpdateParkingArea</a></td><td rowspan="1">1707740705045</td><td rowspan="1">21299</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">automation.AdminTest.PermissionTest#adminWithRestrictedStatus</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at automation.AdminTest.PermissionTest.adminWithRestrictedStatus(PermissionTest.java:19)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">automation.AdminTest.AreaModuleTest#areaCodeDupValidation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">automation.AdminTest.AreaModuleTest#areaCreation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">automation.AdminTest.AreaModuleTest#areaNameDupValidation</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=Password1!, mobileNumber=987654321, username=renAdmin}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">automation.AdminTest.AreaModuleTest#areaPagePagenation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">automation.AdminTest.AreaModuleTest#areaPageSelectRow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">automation.AdminTest.AreaModuleTest#carCapacityInputValidation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">automation.AdminTest.AreaModuleTest#exitCreationAlert</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">automation.AdminTest.AreaModuleTest#fixedRateMaxLimit</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">automation.AdminTest.AreaModuleTest#motorcycleCapacityInputValidation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">automation.AdminTest.AreaModuleTest#setCMotorcycleCapacityPlusButtonToDisable</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">automation.AdminTest.AreaModuleTest#setCarCapacityMinusButtonToDisable</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">automation.AdminTest.AreaModuleTest#setCarCapacityPlusButtonToDisable</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">automation.AdminTest.AreaModuleTest#setMotorcycleCapacityPlusButtonToDisable</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">automation.AdminTest.AreaModuleTest#validateUpdateParkingArea</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

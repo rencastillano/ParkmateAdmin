@@ -4,15 +4,15 @@
   <listeners>
     <listener class-name="automation.AdminTestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Permission Test(failed)">
+  <test thread-count="5" name="Parking Area Module Test(failed)">
     <classes>
-      <class name="automation.AdminTest.PermissionTest">
+      <class name="automation.AdminTest.AreaModuleTest">
         <methods>
+          <include name="areaCreation"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="setAllowExitToTrue"/>
         </methods>
-      </class> <!-- automation.AdminTest.PermissionTest -->
+      </class> <!-- automation.AdminTest.AreaModuleTest -->
     </classes>
-  </test> <!-- Permission Test(failed) -->
+  </test> <!-- Parking Area Module Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

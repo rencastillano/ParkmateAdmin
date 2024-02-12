@@ -24,7 +24,7 @@ public class AreaModuleTest extends BaseTest {
 		AreaModule parkingArea = loginToApplication();
 		parkingArea.clickCreate();
 		parkingArea.genInfoParkingName(areaName);
-		parkingArea.genInfoSMList();
+		parkingArea.genInfoSMList("SM City Fairview");
 		parkingArea.getCarCapacity("100");
 		parkingArea.getMotorcycleCapacity("100");
 		parkingArea.fixRate("40");
@@ -76,7 +76,7 @@ public class AreaModuleTest extends BaseTest {
 		AreaModule parkingArea = loginToApplication();
 		parkingArea.clickCreate();
 		parkingArea.genInfoParkingName("Area_FixedRateTest");
-		parkingArea.genInfoSMList();
+		parkingArea.genInfoSMList("SM City Fairview");
 		parkingArea.getCarCapacity("100");
 		parkingArea.getMotorcycleCapacity("100");
 		parkingArea.fixRate("1000");
@@ -93,7 +93,7 @@ public class AreaModuleTest extends BaseTest {
 		AreaModule parkingArea = loginToApplication();
 		parkingArea.clickCreate();
 		parkingArea.genInfoParkingName(areaName);
-		parkingArea.genInfoSMList();
+		parkingArea.genInfoSMList("SM City Fairview");
 		parkingArea.getCarCapacity("100");
 		parkingArea.getMotorcycleCapacity("100");
 		Assert.assertTrue(parkingArea.exitCreationAlert());
