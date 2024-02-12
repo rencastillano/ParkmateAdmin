@@ -113,12 +113,12 @@ public class FilterAndSearch extends AbstractComponent {
 	private boolean setFilterRole(WebElement selectRole, String role) throws InterruptedException {
 		
 		waitForWebElementToAppear(smLogo);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		filterBtn.click();
 		roleCheckbox.click();
 		roleDropdown.click();
 		selectRole.click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		clickApply.click();
 		
 		boolean allRole;

@@ -301,9 +301,13 @@ public class UserModule extends AbstractComponent {
 
 	public boolean exitEnrollmentAlert() throws InterruptedException {
 		backButton.click();
+		Thread.sleep(500);
 		cancelMondalButton.click();
+		Thread.sleep(500);
 		getParkingStation();
+		Thread.sleep(500);
 		backButton.click();
+		Thread.sleep(500);
 		proceedModalButton.click();
 		waitForWebElementToAppear(enroll);
 		return enroll.isDisplayed();

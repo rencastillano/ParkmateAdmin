@@ -1,140 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-12T20:18:27 CST" name="Default suite" finished-at="2024-02-12T20:25:26 CST" duration-ms="418472">
+  <suite started-at="2024-02-12T21:43:36 CST" name="Default suite" finished-at="2024-02-12T21:43:56 CST" duration-ms="19887">
     <groups>
-      <group name="ErrorHandling">
-        <method signature="AreaModuleTest.areaCodeDupValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" name="areaCodeDupValidation" class="automation.AdminTest.AreaModuleTest"/>
-        <method signature="AreaModuleTest.areaNameDupValidation(java.util.HashMap)[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" name="areaNameDupValidation" class="automation.AdminTest.AreaModuleTest"/>
-        <method signature="AreaModuleTest.fixedRateMaxLimit()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" name="fixedRateMaxLimit" class="automation.AdminTest.AreaModuleTest"/>
-      </group> <!-- ErrorHandling -->
-      <group name="Creation">
-        <method signature="AreaModuleTest.areaCreation()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" name="areaCreation" class="automation.AdminTest.AreaModuleTest"/>
-      </group> <!-- Creation -->
     </groups>
-    <test started-at="2024-02-12T20:18:27 CST" name="Default test" finished-at="2024-02-12T20:25:26 CST" duration-ms="418472">
-      <class name="automation.AdminTest.AreaModuleTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:18:27 CST" name="launchApplication" finished-at="2024-02-12T20:18:34 CST" duration-ms="6361" status="PASS">
+    <test started-at="2024-02-12T21:43:36 CST" name="Default test" finished-at="2024-02-12T21:43:56 CST" duration-ms="19887">
+      <class name="automation.AdminTest.FilterAndSearchTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5bf0d49]" started-at="2024-02-12T21:43:36 CST" name="launchApplication" finished-at="2024-02-12T21:43:43 CST" duration-ms="6628" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="areaCodeDupValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:18:34 CST" name="areaCodeDupValidation" finished-at="2024-02-12T20:18:59 CST" duration-ms="25586" status="PASS">
+        <test-method signature="filterByEncoderRole()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5bf0d49]" started-at="2024-02-12T21:43:43 CST" name="filterByEncoderRole" finished-at="2024-02-12T21:43:55 CST" duration-ms="12023" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- areaCodeDupValidation -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:18:59 CST" name="launchApplication" finished-at="2024-02-12T20:19:06 CST" duration-ms="6254" status="PASS">
+        </test-method> <!-- filterByEncoderRole -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5bf0d49]" started-at="2024-02-12T21:43:55 CST" name="tearDown" finished-at="2024-02-12T21:43:56 CST" duration-ms="1188" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaCreation()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:19:06 CST" name="areaCreation" finished-at="2024-02-12T20:19:50 CST" duration-ms="44368" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaCreation -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:19:50 CST" name="launchApplication" finished-at="2024-02-12T20:19:57 CST" duration-ms="6230" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaNameDupValidation(java.util.HashMap)[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:19:57 CST" name="areaNameDupValidation" data-provider="getData" finished-at="2024-02-12T20:20:25 CST" duration-ms="27899" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Password1!, mobileNumber=987654321, username=renAdmin}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaNameDupValidation -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:20:25 CST" name="launchApplication" finished-at="2024-02-12T20:20:31 CST" duration-ms="6655" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaPagePagenation()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:20:31 CST" name="areaPagePagenation" finished-at="2024-02-12T20:20:55 CST" duration-ms="23282" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaPagePagenation -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:20:55 CST" name="launchApplication" finished-at="2024-02-12T20:21:02 CST" duration-ms="7548" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaPageSelectRow()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:21:02 CST" name="areaPageSelectRow" finished-at="2024-02-12T20:21:29 CST" duration-ms="26667" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaPageSelectRow -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:21:29 CST" name="launchApplication" finished-at="2024-02-12T20:21:35 CST" duration-ms="6188" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="carCapacityInputValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:21:35 CST" name="carCapacityInputValidation" finished-at="2024-02-12T20:21:52 CST" duration-ms="17326" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- carCapacityInputValidation -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:21:52 CST" name="launchApplication" finished-at="2024-02-12T20:21:59 CST" duration-ms="6247" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="exitCreationAlert()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:21:59 CST" name="exitCreationAlert" finished-at="2024-02-12T20:22:17 CST" duration-ms="18808" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exitCreationAlert -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:22:17 CST" name="launchApplication" finished-at="2024-02-12T20:22:24 CST" duration-ms="6188" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="fixedRateMaxLimit()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:22:24 CST" name="fixedRateMaxLimit" finished-at="2024-02-12T20:22:48 CST" duration-ms="24428" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fixedRateMaxLimit -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:22:48 CST" name="launchApplication" finished-at="2024-02-12T20:22:59 CST" duration-ms="10634" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="motorcycleCapacityInputValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:22:59 CST" name="motorcycleCapacityInputValidation" finished-at="2024-02-12T20:23:18 CST" duration-ms="18951" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- motorcycleCapacityInputValidation -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:23:18 CST" name="launchApplication" finished-at="2024-02-12T20:23:24 CST" duration-ms="6811" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setCMotorcycleCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:23:24 CST" name="setCMotorcycleCapacityPlusButtonToDisable" finished-at="2024-02-12T20:23:42 CST" duration-ms="17896" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setCMotorcycleCapacityPlusButtonToDisable -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:23:42 CST" name="launchApplication" finished-at="2024-02-12T20:23:49 CST" duration-ms="6271" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setCarCapacityMinusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:23:49 CST" name="setCarCapacityMinusButtonToDisable" finished-at="2024-02-12T20:24:11 CST" duration-ms="22515" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setCarCapacityMinusButtonToDisable -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:24:11 CST" name="launchApplication" finished-at="2024-02-12T20:24:17 CST" duration-ms="6303" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setCarCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:24:17 CST" name="setCarCapacityPlusButtonToDisable" finished-at="2024-02-12T20:24:35 CST" duration-ms="17222" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setCarCapacityPlusButtonToDisable -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:24:35 CST" name="launchApplication" finished-at="2024-02-12T20:24:41 CST" duration-ms="6428" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setMotorcycleCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:24:41 CST" name="setMotorcycleCapacityPlusButtonToDisable" finished-at="2024-02-12T20:24:58 CST" duration-ms="17284" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setMotorcycleCapacityPlusButtonToDisable -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:24:58 CST" name="launchApplication" finished-at="2024-02-12T20:25:05 CST" duration-ms="6240" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="validateUpdateParkingArea()[pri:0, instance:automation.AdminTest.AreaModuleTest@6150c3ec]" started-at="2024-02-12T20:25:05 CST" name="validateUpdateParkingArea" finished-at="2024-02-12T20:25:26 CST" duration-ms="21299" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateUpdateParkingArea -->
-      </class> <!-- automation.AdminTest.AreaModuleTest -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- automation.AdminTest.FilterAndSearchTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

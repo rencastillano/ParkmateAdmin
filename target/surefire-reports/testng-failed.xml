@@ -4,15 +4,15 @@
   <listeners>
     <listener class-name="automation.AdminTestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Permission Test(failed)" verbose="0">
+  <test thread-count="5" name="Filter And Search Test(failed)" verbose="0">
     <classes>
-      <class name="automation.AdminTest.PermissionTest">
+      <class name="automation.AdminTest.FilterAndSearchTest">
         <methods>
-          <include name="userWithActiveStatus"/>
+          <include name="filterByEncoderRole"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- automation.AdminTest.PermissionTest -->
+      </class> <!-- automation.AdminTest.FilterAndSearchTest -->
     </classes>
-  </test> <!-- Permission Test(failed) -->
+  </test> <!-- Filter And Search Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
