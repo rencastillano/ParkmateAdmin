@@ -36,25 +36,34 @@ public class Pagenation extends AbstractComponent {
 	List<WebElement> tablerow;
 
 	public boolean nextButton() throws InterruptedException {
-		// Thread.sleep(2000);
-		waitForWebElementToBeClickable(nextBtn);
-
-		while (nextBtn.isEnabled()) {
-			nextBtn.click();
-			Thread.sleep(2000);
+		waitForWebElementToAppear(smLogo);
+		 try {
+			 waitForWebElementToBeClickable(nextBtn);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		boolean isDisabled = !nextBtn.isEnabled();
-		return isDisabled;
+		
+		
+		if (nextBtn.isEnabled()) {
+	        while (nextBtn.isEnabled()) {
+	            nextBtn.click();
+	            Thread.sleep(2000);
+	        }
+	    }
+		boolean nextButton = !nextBtn.isEnabled();
+	    return nextButton;
 	}
 
 	public boolean previousButton() throws InterruptedException {
+		 Thread.sleep(2000);
+		if(backtBtn.isEnabled())
 		while (backtBtn.isEnabled()) {
 			// Click the button
 			backtBtn.click();
 			Thread.sleep(2000);
 		}
-		boolean isDisabled = !backtBtn.isEnabled();
-		return isDisabled;
+		boolean backButton = !backtBtn.isEnabled();
+		return backButton;
 	}
 
 	public boolean selectRowCount() throws InterruptedException {

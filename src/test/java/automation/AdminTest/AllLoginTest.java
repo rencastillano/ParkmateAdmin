@@ -21,7 +21,7 @@ public class AllLoginTest extends BaseTest {
 	@Test(groups= {"ErrorHandling"})
 	public void loginWithInvalidPassword() throws InterruptedException, IOException {
 
-		landingPage.loginApplication("riztest", "inval!Dp@ss1");
+		landingPage.loginApplication("renAdmin", "inval!Dp@ss1");
 		Assert.assertEquals(landingPage.getErrorMsg(), errMsg);
 
 	}
@@ -35,7 +35,7 @@ public class AllLoginTest extends BaseTest {
 	@Test
 	public void loginWithAccess() throws InterruptedException, IOException {
 
-		landingPage.loginApplication("riztest", "Password@1");
+		landingPage.loginApplication("renAdmin", "Password1!");
 		Assert.assertTrue(landingPage.successLogin());
 		
 		String confirmLogout = landingPage.logout();

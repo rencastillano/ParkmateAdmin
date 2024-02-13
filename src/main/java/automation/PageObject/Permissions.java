@@ -124,7 +124,8 @@ public class Permissions extends AbstractComponent {
 		try {
 
 			openNewTabAndSwitch();
-			driver.get("https://encoder.parking-stg.smop.asia/login/");
+			//driver.get("https://encoder.parking-stg.smop.asia/login/");
+			driver.get("https://encoder.uat.parkmate.ai/");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -137,7 +138,8 @@ public class Permissions extends AbstractComponent {
 
 			openNewTabAndSwitch();
 			mobileAppSettings();
-			driver.get("https://encoder.parking-stg.smop.asia/login/");
+//			driver.get("https://encoder.parking-stg.smop.asia/login/");
+			driver.get("https://encoder.uat.parkmate.ai/");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

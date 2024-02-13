@@ -2,24 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-12T21:43:36 CST" name="Default suite" finished-at="2024-02-12T21:43:56 CST" duration-ms="19887">
+  <suite started-at="2024-02-13T19:59:08 CST" name="Default suite" finished-at="2024-02-13T19:59:40 CST" duration-ms="32405">
     <groups>
     </groups>
-    <test started-at="2024-02-12T21:43:36 CST" name="Default test" finished-at="2024-02-12T21:43:56 CST" duration-ms="19887">
-      <class name="automation.AdminTest.FilterAndSearchTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5bf0d49]" started-at="2024-02-12T21:43:36 CST" name="launchApplication" finished-at="2024-02-12T21:43:43 CST" duration-ms="6628" status="PASS">
+    <test started-at="2024-02-13T19:59:08 CST" name="Default test" finished-at="2024-02-13T19:59:40 CST" duration-ms="32405">
+      <class name="automation.AdminTest.AreaModuleTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@6a78afa0]" started-at="2024-02-13T19:59:08 CST" name="launchApplication" finished-at="2024-02-13T19:59:14 CST" duration-ms="6215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="filterByEncoderRole()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5bf0d49]" started-at="2024-02-12T21:43:43 CST" name="filterByEncoderRole" finished-at="2024-02-12T21:43:55 CST" duration-ms="12023" status="PASS">
+        <test-method signature="areaPagePagenation()[pri:0, instance:automation.AdminTest.AreaModuleTest@6a78afa0]" started-at="2024-02-13T19:59:14 CST" name="areaPagePagenation" finished-at="2024-02-13T19:59:40 CST" duration-ms="26151" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- filterByEncoderRole -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@5bf0d49]" started-at="2024-02-12T21:43:55 CST" name="tearDown" finished-at="2024-02-12T21:43:56 CST" duration-ms="1188" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.FilterAndSearchTest -->
+        </test-method> <!-- areaPagePagenation -->
+      </class> <!-- automation.AdminTest.AreaModuleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -103,8 +103,7 @@ public class AreaModuleTest extends BaseTest {
 	public void areaPageSelectRow() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
 		Pagenation selectRow = new Pagenation(driver);
-		boolean tableCount = selectRow.selectRowCount();
-		Assert.assertTrue(tableCount);
+		Assert.assertTrue(selectRow.selectRowCount());
 
 	}
 
@@ -112,10 +111,8 @@ public class AreaModuleTest extends BaseTest {
 	public void areaPagePagenation() throws InterruptedException {
 		landingPage.loginApplication("renAdmin", "Password1!");
 		Pagenation page = new Pagenation(driver);
-		boolean nextBtnDisabled = page.nextButton();
-		Assert.assertTrue(nextBtnDisabled);
-		boolean PreviousBtnDisabled = page.previousButton();
-		Assert.assertTrue(PreviousBtnDisabled);
+		Assert.assertTrue(page.nextButton());
+		Assert.assertTrue(page.previousButton());
 	}
 
 	@Test

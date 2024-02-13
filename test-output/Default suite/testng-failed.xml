@@ -5,8 +5,8 @@
     <classes>
       <class name="automation.AdminTest.AreaModuleTest">
         <methods>
-          <include name="areaCreation"/>
           <include name="launchApplication"/>
+          <include name="areaPagePagenation"/>
         </methods>
       </class> <!-- automation.AdminTest.AreaModuleTest -->
     </classes>
