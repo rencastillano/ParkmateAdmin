@@ -124,8 +124,7 @@ public class Permissions extends AbstractComponent {
 		try {
 
 			openNewTabAndSwitch();
-			//driver.get("https://encoder.parking-stg.smop.asia/login/");
-			driver.get("https://encoder.uat.parkmate.ai/");
+			driver.get("https://encoder.parking-stg.smop.asia/login/");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -138,8 +137,7 @@ public class Permissions extends AbstractComponent {
 
 			openNewTabAndSwitch();
 			mobileAppSettings();
-//			driver.get("https://encoder.parking-stg.smop.asia/login/");
-			driver.get("https://encoder.uat.parkmate.ai/");
+			driver.get("https://encoder.parking-stg.smop.asia/login/");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -255,19 +253,19 @@ public class Permissions extends AbstractComponent {
 	}
 
 	public boolean allowExitValidation() throws InterruptedException {
-		return validateButtonIsDisplayed(markCompleteBtn, viewParkedVehiclesTab, ticketSearchResult, "SYNCH02");
+		return validateButtonIsDisplayed(markCompleteBtn, ticketSearchResult, "SYNCH02");
 	}
 
 	public boolean PaymentAcceptanceSetToTrueLoginValidation() throws InterruptedException {
-		return validateButtonIsDisplayed(receiveParkingPaymentBtn, null, null, "SYNCH03");
+		return validateButtonIsDisplayed(receiveParkingPaymentBtn, null, "SYNCH03");
 	}
 
-	private boolean validateButtonIsDisplayed(WebElement button, WebElement viewParkedVehicles, WebElement searchResult, String vehicleNumber) throws InterruptedException {
+	private boolean validateButtonIsDisplayed(WebElement button, WebElement searchResult, String vehicleNumber) throws InterruptedException {
 		Thread.sleep(3000);
-		if(viewParkedVehicles != null) {
-			viewParkedVehicles.click();
-			Thread.sleep(2000);
-		}
+//		if(viewParkedVehicles != null) {
+//			viewParkedVehicles.click();
+//			Thread.sleep(2000);
+//		}
 		encoderSearch.sendKeys(vehicleNumber, Keys.ENTER);
 		Thread.sleep(3000);
 		//waitForWebElementToAppear(encoderSearchResult);

@@ -10,7 +10,7 @@ import automation.PageObject.UserModule;
 
 public class PermissionTest extends BaseTest {
 
-	@Test
+	@Test(priority = 1, retryAnalyzer=Retry.class)
 	public void adminWithRestrictedStatus() throws InterruptedException {
 
 		Permissions permission = loginToApplication();

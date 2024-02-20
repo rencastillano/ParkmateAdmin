@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automation.AdminTestComponents.BaseTest;
+import automation.AdminTestComponents.Retry;
 import automation.PageObject.Pagenation;
 import automation.PageObject.UserModule;
 
@@ -16,7 +17,7 @@ public class UserModuleTest extends BaseTest {
 	String mobileNumber = "+6399"+generateRandomNumber(8);
 	String emailToSearch = "forAutomationEdit@parkmate.com";
 	
-	@Test(priority = 1, groups = { "Creation" })
+	@Test(priority = 1, retryAnalyzer=Retry.class, groups = { "Creation" })
 	public void adminEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException {
 
 		UserModule parkingUser = loginToApplication();

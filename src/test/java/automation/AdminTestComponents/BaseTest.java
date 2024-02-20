@@ -34,10 +34,12 @@ public class BaseTest {
 	
 	public WebDriver driver;
 	public LandingPage landingPage;
+	Properties prop;
+	
 
 	public WebDriver initializeDriver() throws IOException {
 		
-		Properties prop = new Properties();
+		prop = new Properties();
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\automation\\Resources\\GlobalData.properties");
 		prop.load(fis);
@@ -72,12 +74,12 @@ public class BaseTest {
 
 		driver = initializeDriver();
 		landingPage = new LandingPage(driver);
-		landingPage.goTo();
+		driver.get(prop.getProperty("url"));
 		return landingPage;
 
 	}
 
-	//@AfterMethod(alwaysRun = true)
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		driver.quit();
 	}

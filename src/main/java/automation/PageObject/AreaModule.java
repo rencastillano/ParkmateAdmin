@@ -45,9 +45,6 @@ public class AreaModule extends AbstractComponent {
 	@FindBy(css = "img[alt='Dropdown']")
 	WebElement selectBranch;
 
-//	@FindBy(xpath = "//li[@class='px-4 py-2 hover:border'][6]")
-//	WebElement selectSMFairview;
-
 	@FindBy(xpath = "//ul/li[@class='px-4 py-2 hover:border']")
 	List<WebElement> smList;
 

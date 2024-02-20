@@ -8,11 +8,23 @@
     <classes>
       <class name="automation.AdminTest.AreaModuleTest">
         <methods>
-          <include name="areaCreation"/>
+          <include name="setCarCapacityPlusButtonToDisable"/>
+          <include name="areaNameDupValidation" invocation-numbers="0"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- automation.AdminTest.AreaModuleTest -->
     </classes>
   </test> <!-- Parking Area Module Test(failed) -->
+  <test thread-count="5" name="User Module Test(failed)">
+    <classes>
+      <class name="automation.AdminTest.UserModuleTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="userEmailDupValidation"/>
+        </methods>
+      </class> <!-- automation.AdminTest.UserModuleTest -->
+    </classes>
+  </test> <!-- User Module Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -11,7 +11,7 @@ import automation.AdminTestComponents.Retry;
 public class AllLoginTest extends BaseTest {
 	String errMsg = "Either your username or password is incorrect, please check and try again!";
 
-	@Test(retryAnalyzer=Retry.class,groups= {"ErrorHandling"})
+	@Test(priority = 1, retryAnalyzer=Retry.class,groups= {"ErrorHandling"})
 	public void loginWithInvalidUserName() throws InterruptedException, IOException {
 
 		landingPage.loginApplication("invalid", "Password@1");

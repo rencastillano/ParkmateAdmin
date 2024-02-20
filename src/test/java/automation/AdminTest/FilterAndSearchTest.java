@@ -21,7 +21,7 @@ public class FilterAndSearchTest extends BaseTest {
 	String areaName = "Wack Wack";
 	String areaCode = "0846";
 
-	@Test
+	@Test(priority = 1, retryAnalyzer=Retry.class)
 	public void userEmailSearch() throws InterruptedException {
 
 		FilterAndSearch search = loginToApplicationForSearching();

@@ -9,6 +9,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import automation.AdminTestComponents.BaseTest;
+import automation.AdminTestComponents.Retry;
 import automation.PageObject.AreaModule;
 import automation.PageObject.Pagenation;
 
@@ -18,7 +19,7 @@ public class AreaModuleTest extends BaseTest {
 	String areaNameToSearch = "QA_Automation";
 	String areaCode = generateRandomNumber(4);
 
-	@Test(groups = { "Creation" })
+	@Test(priority = 1, retryAnalyzer=Retry.class, groups = { "Creation" })
 	public void areaCreation() throws InterruptedException {
 
 		AreaModule parkingArea = loginToApplication();

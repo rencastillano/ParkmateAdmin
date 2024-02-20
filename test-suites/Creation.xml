@@ -2,11 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <!--<suite parallel="tests" name="Suite">Suite -->
 <suite name="Suite">
-	<groups>
-		<run>
-			<include name="Creation" />
-		</run>
-	</groups>
+	
 	<test thread-count="5" name="All Login Test">
 		<classes>
 			<class name="automation.AdminTest.AllLoginTest" />
