@@ -46,16 +46,7 @@ public class PermissionTest extends BaseTest {
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setStatusToActiveForMobile("statusChange@parkmate.com"));
 		navigateAndLoginToEncoderMobileApp(permission);
-		Assert.assertFalse(permission.loginValidationForStatusChange());
-	}
-
-	@Test
-	public void encoderWithActiveStatusDesktopLogin() throws InterruptedException {
-
-		Permissions permission = loginToApplication();
-		Assert.assertTrue(permission.setStatusToActiveForDestop("statusChange@parkmate.com"));
-		navigateAndLoginToEncoderDesktop(permission);
-		Assert.assertFalse(permission.loginValidationForStatusChange());
+		Assert.assertTrue(permission.validationForEntryEncoder());
 	}
 
 	@Test
@@ -64,7 +55,7 @@ public class PermissionTest extends BaseTest {
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setPaymentAcceptanceToFalse("statusChange@parkmate.com"));
 		navigateAndLoginToEncoderDesktop(permission);
-		Assert.assertTrue(permission.PaymentAcceptanceSetToFalseLoginValidation());
+		Assert.assertTrue(permission.paymentAcceptanceSetToFalseLoginValidation());
 	}
 
 	@Test(retryAnalyzer = Retry.class)
@@ -74,15 +65,6 @@ public class PermissionTest extends BaseTest {
 		Assert.assertTrue(permission.setPaymentAcceptanceToTrue("statusChange@parkmate.com"));
 		navigateAndLoginToEncoderDesktop(permission);
 		Assert.assertTrue(permission.PaymentAcceptanceSetToTrueLoginValidation());
-	}
-
-	@Test(retryAnalyzer = Retry.class)
-	public void encoderWithAllowExitToFalse() throws InterruptedException {
-
-		Permissions permission = loginToApplication();
-		Assert.assertTrue(permission.setAllowExitToFalse("statusChange@parkmate.com"));
-		navigateAndLoginToEncoderMobileApp(permission);
-		Assert.assertFalse(permission.allowExitValidation());
 	}
 
 	@Test

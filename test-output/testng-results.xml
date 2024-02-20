@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-20T18:31:08 CST" name="Default suite" finished-at="2024-02-20T18:31:59 CST" duration-ms="50743">
+  <suite started-at="2024-02-20T21:51:55 CST" name="Default suite" finished-at="2024-02-20T21:52:53 CST" duration-ms="58105">
     <groups>
     </groups>
-    <test started-at="2024-02-20T18:31:08 CST" name="Default test" finished-at="2024-02-20T18:31:59 CST" duration-ms="50743">
+    <test started-at="2024-02-20T21:51:55 CST" name="Default test" finished-at="2024-02-20T21:52:53 CST" duration-ms="58105">
       <class name="automation.AdminTest.PermissionTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@2f48b3d2]" started-at="2024-02-20T18:31:08 CST" name="launchApplication" finished-at="2024-02-20T18:31:21 CST" duration-ms="13149" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@8692d67]" started-at="2024-02-20T21:51:55 CST" name="launchApplication" finished-at="2024-02-20T21:52:17 CST" duration-ms="22056" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="encoderWithAllowExitToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@2f48b3d2]" started-at="2024-02-20T18:31:21 CST" name="encoderWithAllowExitToTrue" finished-at="2024-02-20T18:31:58 CST" duration-ms="36230" status="PASS">
+        <test-method signature="encoderWithActiveStatusMobileAppLogin()[pri:0, instance:automation.AdminTest.PermissionTest@8692d67]" started-at="2024-02-20T21:52:17 CST" name="encoderWithActiveStatusMobileAppLogin" finished-at="2024-02-20T21:52:52 CST" duration-ms="34854" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- encoderWithAllowExitToTrue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@2f48b3d2]" started-at="2024-02-20T18:31:58 CST" name="tearDown" finished-at="2024-02-20T18:31:59 CST" duration-ms="1316" status="PASS">
+        </test-method> <!-- encoderWithActiveStatusMobileAppLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@8692d67]" started-at="2024-02-20T21:52:52 CST" name="tearDown" finished-at="2024-02-20T21:52:53 CST" duration-ms="1154" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -5,7 +5,7 @@
     <classes>
       <class name="automation.AdminTest.PermissionTest">
         <methods>
-          <include name="encoderWithAllowExitToTrue"/>
+          <include name="encoderWithActiveStatusMobileAppLogin"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>

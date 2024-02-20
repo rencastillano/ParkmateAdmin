@@ -84,10 +84,10 @@ public class UserModule extends AbstractComponent {
 	WebElement saveBtn;
 
 	@FindBy(css = "div:nth-child(2) > p.mt-1.font-henry-sans-light.text-xs.text-sm-error")
-	WebElement duplicateEmail;
+	WebElement duplicateEmailErrMsg;
 
 	@FindBy(css = "div:nth-child(1) > p.mt-1.font-henry-sans-light.text-xs.text-sm-error")
-	WebElement duplicateUserName;
+	WebElement duplicateUserNameErrMsg;
 
 	@FindBy(xpath = "//div[2]/div[3]/button")
 	WebElement backButton;
@@ -175,6 +175,7 @@ public class UserModule extends AbstractComponent {
 		
 		Thread.sleep(3000);
 		email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, emailAddress);
+		waitForWebElementToAppear(duplicateEmailErrMsg);
 
 	}
 
@@ -183,7 +184,7 @@ public class UserModule extends AbstractComponent {
 	    email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, emailAddress);
 
 	    try {
-	        if (duplicateEmail.isDisplayed()) {
+	        if (duplicateEmailErrMsg.isDisplayed()) {
 	            return emailDuplicateValidator();
 	        }
 	    } catch (Exception e) {
@@ -196,7 +197,7 @@ public class UserModule extends AbstractComponent {
 	private String emailDuplicateValidator() throws InterruptedException {
 	    String forDupEmail = "parkmatehub." + generateRandomNumber(5) + "@parkmate.com";
 	    try {
-	        while (duplicateEmail.isDisplayed()) {
+	        while (duplicateEmailErrMsg.isDisplayed()) {
 	            email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, forDupEmail);
 	            Thread.sleep(4000);
 	            System.out.println("dup email: " + forDupEmail);
@@ -285,11 +286,11 @@ public class UserModule extends AbstractComponent {
 	}
 
 	public boolean isDuplicateEmail() {
-	    return isDuplicateMessageShown(duplicateEmail, "Email already exists.");
+	    return isDuplicateMessageShown(duplicateEmailErrMsg, "Email already exists.");
 	}
 
 	public boolean isDuplicateUserName() {
-	    return isDuplicateMessageShown(duplicateUserName, "Username already exists.");
+	    return isDuplicateMessageShown(duplicateUserNameErrMsg, "Username already exists.");
 	}
 
 	private boolean isDuplicateMessageShown(WebElement element, String expectedMessage) {
