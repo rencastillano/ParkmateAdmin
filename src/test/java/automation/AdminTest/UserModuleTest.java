@@ -53,7 +53,7 @@ public class UserModuleTest extends BaseTest {
 
 	}
 
-	@Test(retryAnalyzer=Retry.class, groups = { "ErrorHandling" })
+	@Test(groups = { "ErrorHandling" })
 	public void userEmailDupValidation() throws InterruptedException {
 
 		UserModule parkingUser = loginToApplication();

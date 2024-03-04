@@ -175,8 +175,8 @@ public class UserModule extends AbstractComponent {
 		
 		Thread.sleep(3000);
 		email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, emailAddress);
-		waitForWebElementToAppear(duplicateEmailErrMsg);
-
+		//waitForWebElementToAppear(duplicateEmailErrMsg);
+		mobile.clear();
 	}
 
 	public String getEmailDetails(String emailAddress) throws InterruptedException {

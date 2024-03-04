@@ -247,47 +247,52 @@ public class AreaModule extends AbstractComponent {
 		return create.isDisplayed();
 	}
 
-	public String handlingAreaNameDup(String areaName) throws InterruptedException {
-		String initialAreaName = areaName;
+	public String handlingAreaNameDup(String initialAreaName) throws InterruptedException {
+		String areaName = initialAreaName;
 		String reTryAreaName = "Area_" + generateRandomString();
 		try {
 			while (areaNameDupMsg.isDisplayed()) {
-				parkingNameInput.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, reTryAreaName);
+				genInfoParkingName(reTryAreaName);
+				//parkingNameInput.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, reTryAreaName);
 				clickSave();
 				Thread.sleep(4000);
-				System.out.println("dup email: " + reTryAreaName);
+				System.out.println("regenerate AreaName: " + reTryAreaName);
+				areaName = reTryAreaName; // Update areaCode with the new value
+				reTryAreaName = "Area_" + generateRandomString(); // Generate a new random area code for next iteration
 			}
 		} catch (Exception e) {
 			e.printStackTrace(); // Log the exception or handle it appropriately
-			return initialAreaName;
+			
 		}
-		return reTryAreaName;
+		return areaName;
 	}
 
-	public String handlingAreaCodeDup(String areaCode) throws InterruptedException {
-		String initialAreaCode = areaCode;
-		String reTryAreaCode = generateRandomNumber(4);
-		try {
-
-			while (areaCodeDupMsg.isDisplayed()) {
-				getAreaCode(reTryAreaCode);
-				clickSave();
-				Thread.sleep(4000);
-				System.out.println("dup email: " + reTryAreaCode);
-			}
-
-		} catch (NoSuchElementException e) {
-			// Handle NoSuchElementException if duplicateErrMsgOnCreation is not displayed
-			e.printStackTrace();
-			return initialAreaCode;
-		} catch (Exception e) {
-			// Handle any other exceptions or log a message
-			e.printStackTrace();
-			return initialAreaCode;
-		}
-		return reTryAreaCode;
+	public String handlingAreaCodeDup(String initialAreaCode) throws InterruptedException {
+	    String areaCode = initialAreaCode;
+	    String reTryAreaCode = generateRandomNumber(4);
+	    try {
+	        while (areaCodeDupMsg.isDisplayed()) {
+	            getAreaCode(reTryAreaCode);
+	            clickSave();
+	            Thread.sleep(4000);
+	            System.out.println("Regenerated AreaCode: " + reTryAreaCode);
+	            areaCode = reTryAreaCode; // Update areaCode with the new value
+	            reTryAreaCode = generateRandomNumber(4); // Generate a new random area code for next iteration
+	        }
+//			} catch (NoSuchElementException e) {
+//			// Handle NoSuchElementException if duplicateErrMsgOnCreation is not displayed
+//			e.printStackTrace();
+//			System.out.println("NoSuchElementException: " + initialAreaCode);
+//			return initialAreaCode;
+//			}
+	    } catch (Exception e) {
+	        // Handle any other exceptions or log a message
+	        e.printStackTrace();
+	        System.out.println("Exception " + areaCode);
+	    }
+	    return areaCode;
 	}
-
+		
 	public boolean areaCreationValidation(String areaName, String areaCode) {
 		String nameResult = areaNameList.stream().map(WebElement::getText).filter(name -> name.contains(areaName))
 				.findFirst().orElse("");

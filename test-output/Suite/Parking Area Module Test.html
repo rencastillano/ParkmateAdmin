@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Parking Area Module Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>12/2/1</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 20 21:27:56 CST 2024</td>
+<td>Started on:</td><td>Fri Mar 01 11:03:05 CST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>457 seconds (457527 ms)</td>
+<tr><td>Total time:</td><td>583 seconds (583944 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,162 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='automation.AdminTest.AreaModuleTest.areaCreation()'><b>areaCreation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at automation.AdminTest.AreaModuleTest.areaCreation(AreaModuleTest.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1486521007", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1486521007'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at automation.AdminTest.AreaModuleTest.areaCreation(AreaModuleTest.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>78</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
+<tr>
+<td title='automation.AdminTest.AreaModuleTest.validateUpdateParkingArea()'><b>validateUpdateParkingArea</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[@class=&apos;flex-grow text-sm self-center w-3/4&apos;]&apos; (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:47)
+	at automation.PageObject.AreaModule.runValidation(AreaModule.java:360)
+	at automation.PageObject.AreaModule.parkingAreaUpdate(AreaModule.java:355)
+	at automation.AdminTest.AreaModuleTest.validateUpdateParkingArea(AreaModuleTest.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;flex-grow text-sm self-center w-3/4&apos;]&quot;}
+  (Session info: chrome=122.0.6261.95)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [13d55e5ef85d1a3a1214ac4ee0edafa0, findElement {using=xpath, value=//*[@class=&apos;flex-grow text-sm self-center w-3/4&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59050}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59050/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 13d55e5ef85d1a3a1214ac4ee0edafa0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 30 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1329489396", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1329489396'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[@class=&apos;flex-grow text-sm self-center w-3/4&apos;]&apos; (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:47)
+	at automation.PageObject.AreaModule.runValidation(AreaModule.java:360)
+	at automation.PageObject.AreaModule.parkingAreaUpdate(AreaModule.java:355)
+	at automation.AdminTest.AreaModuleTest.validateUpdateParkingArea(AreaModuleTest.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;flex-grow text-sm self-center w-3/4&apos;]&quot;}
+  (Session info: chrome=122.0.6261.95)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [13d55e5ef85d1a3a1214ac4ee0edafa0, findElement {using=xpath, value=//*[@class=&apos;flex-grow text-sm self-center w-3/4&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\REN~1.CAS\AppData\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59050}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59050/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 13d55e5ef85d1a3a1214ac4ee0edafa0
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 30 more
+</pre></div></td>
+<td>50</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,75 +232,115 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='automation.AdminTest.AreaModuleTest.areaPageSelectRow()'><b>areaPageSelectRow</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td title='automation.AdminTest.AreaModuleTest.setCarCapacityMinusButtonToDisable()'><b>setCarCapacityMinusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
-<td>26</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaModuleTest.carCapacityInputValidation()'><b>carCapacityInputValidation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
-<td></td>
-<td>28</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaModuleTest.validateUpdateParkingArea()'><b>validateUpdateParkingArea</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
-<td></td>
-<td>26</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaModuleTest.motorcycleCapacityInputValidation()'><b>motorcycleCapacityInputValidation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
-<td></td>
-<td>18</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaModuleTest.setMotorcycleCapacityPlusButtonToDisable()'><b>setMotorcycleCapacityPlusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
-<td></td>
-<td>18</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaModuleTest.setCMotorcycleCapacityPlusButtonToDisable()'><b>setCMotorcycleCapacityPlusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
-<td></td>
-<td>18</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaModuleTest.areaNameDupValidation()'><b>areaNameDupValidation</b><br>Test class: automation.AdminTest.AreaModuleTest<br>Parameters: {password=Password1!, mobileNumber=987654321, username=renAdmin}</td>
-<td></td>
-<td>26</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaModuleTest.setCarCapacityPlusButtonToDisable()'><b>setCarCapacityPlusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
-<td></td>
-<td>18</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
+<td>17</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
 <tr>
 <td title='automation.AdminTest.AreaModuleTest.exitCreationAlert()'><b>exitCreationAlert</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
 <td>21</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
 <tr>
-<td title='automation.AdminTest.AreaModuleTest.setCarCapacityMinusButtonToDisable()'><b>setCarCapacityMinusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td title='automation.AdminTest.AreaModuleTest.areaPageSelectRow()'><b>areaPageSelectRow</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
-<td>18</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
+<td>26</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
 <tr>
-<td title='automation.AdminTest.AreaModuleTest.areaCreation()'><b>areaCreation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td title='automation.AdminTest.AreaModuleTest.setCMotorcycleCapacityPlusButtonToDisable()'><b>setCMotorcycleCapacityPlusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
-<td>43</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
-<tr>
-<td title='automation.AdminTest.AreaModuleTest.areaPagePagenation()'><b>areaPagePagenation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
-<td></td>
-<td>27</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
+<td>28</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
 <tr>
 <td title='automation.AdminTest.AreaModuleTest.fixedRateMaxLimit()'><b>fixedRateMaxLimit</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
-<td>27</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
+<td>26</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
+<tr>
+<td title='automation.AdminTest.AreaModuleTest.areaPagePagenation()'><b>areaPagePagenation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td></td>
+<td>26</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
+<tr>
+<td title='automation.AdminTest.AreaModuleTest.areaNameDupValidation()'><b>areaNameDupValidation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td></td>
+<td>25</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
 <tr>
 <td title='automation.AdminTest.AreaModuleTest.areaCodeDupValidation()'><b>areaCodeDupValidation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
 <td></td>
 <td>22</td>
-<td>automation.AdminTest.AreaModuleTest@2c95ac9e</td></tr>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
+<tr>
+<td title='automation.AdminTest.AreaModuleTest.carCapacityInputValidation()'><b>carCapacityInputValidation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td></td>
+<td>17</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
+<tr>
+<td title='automation.AdminTest.AreaModuleTest.motorcycleCapacityInputValidation()'><b>motorcycleCapacityInputValidation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td></td>
+<td>15</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
+<tr>
+<td title='automation.AdminTest.AreaModuleTest.setMotorcycleCapacityPlusButtonToDisable()'><b>setMotorcycleCapacityPlusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td></td>
+<td>17</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
+<tr>
+<td title='automation.AdminTest.AreaModuleTest.setCarCapacityPlusButtonToDisable()'><b>setCarCapacityPlusButtonToDisable</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td></td>
+<td>18</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='automation.AdminTest.AreaModuleTest.areaCreation()'><b>areaCreation</b><br>Test class: automation.AdminTest.AreaModuleTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at automation.AdminTest.AreaModuleTest.areaCreation(AreaModuleTest.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace277861845", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace277861845'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at automation.AdminTest.AreaModuleTest.areaCreation(AreaModuleTest.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>63</td>
+<td>automation.AdminTest.AreaModuleTest@552518c3</td></tr>
 </table><p>
 </body>
 </html>

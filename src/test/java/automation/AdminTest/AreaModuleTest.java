@@ -1,11 +1,6 @@
 package automation.AdminTest;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import automation.AdminTestComponents.BaseTest;
@@ -19,12 +14,12 @@ public class AreaModuleTest extends BaseTest {
 	String areaNameToSearch = "QA_Automation";
 	String areaCode = generateRandomNumber(4);
 
-	@Test(priority = 1, retryAnalyzer=Retry.class, groups = { "Creation" })
+	@Test//(priority = 1, retryAnalyzer=Retry.class, groups = { "Creation" })
 	public void areaCreation() throws InterruptedException {
 
 		AreaModule parkingArea = loginToApplication();
 		parkingArea.clickCreate();
-		parkingArea.genInfoParkingName(areaName);
+		parkingArea.genInfoParkingName("Area_IURUF17");
 		parkingArea.genInfoSMList("SM City Fairview");
 		parkingArea.getCarCapacity("100");
 		parkingArea.getMotorcycleCapacity("100");
@@ -39,8 +34,8 @@ public class AreaModuleTest extends BaseTest {
 		Assert.assertTrue(parkingArea.areaCreationValidation(createdAreaName, createdAreaCode));
 	}
 
-	@Test(dataProvider = "getData", groups = { "ErrorHandling" })
-	public void areaNameDupValidation(HashMap<String, String> input) throws InterruptedException {
+	@Test( groups = { "ErrorHandling" })
+	public void areaNameDupValidation() throws InterruptedException {
 
 		AreaModule parkingArea = loginToApplication();
 		String dupAreaName = parkingArea.getRandomAreaName();
@@ -179,15 +174,6 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.goToAreaPage();
 
 		return parkingArea;
-	}
-
-	@DataProvider
-	public Object[] getData() throws IOException {
-
-		List<HashMap<String, String>> data = getJsonDataToMap(
-				System.getProperty("user.dir") + "\\src\\test\\java\\automation\\AdminData\\ParkingData.json");
-		return new Object[] { data.get(0) };
-
-	}
+	}	
 
 }

@@ -89,7 +89,7 @@ public class FilterAndSearchTest extends BaseTest {
 	public Object[] getData() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				System.getProperty("user.dir") + "\\src\\test\\java\\automation\\AdminData\\ParkingData.json");
+				System.getProperty("user.dir") + "\\src\\test\\java\\automation\\AdminData\\AdminData.json");
 		return new Object[] { data.get(0) };
 
 	}
