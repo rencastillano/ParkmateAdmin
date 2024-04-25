@@ -26,7 +26,7 @@ public class AbstractComponent {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(css = "img[alt='SM Logo']")
+	@FindBy(css = "div.flex.justify-between.mb-5.min-h-12 > svg")//"img[alt='SM Logo']")
 	protected WebElement smLogo;
 
 	@FindBy(xpath = "//li[@class='mb-3']")
@@ -43,7 +43,7 @@ public class AbstractComponent {
 
 	public void waitForWebElementToAppear(WebElement findBy) {
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
 

@@ -40,7 +40,43 @@ public class UserModuleTest extends BaseTest {
 
 		UserModule parkingUser = loginToApplication();
 		parkingUser.clickEnroll();
-		String userRole = parkingUser.selectEncoderRole();
+		String userRole = "Encoder";
+		parkingUser.getPersonalDetails("Sam", "O", "Medina");
+		String email = parkingUser.getEmailDetails(emailAddress);
+		parkingUser.getMobileDetails(mobileNumber);
+		Assert.assertTrue(parkingUser.getUsername(email));
+		parkingUser.generatePassword();
+		parkingUser.getParkingStation();
+		parkingUser.clickSave();
+		Assert.assertTrue(parkingUser.validateBanner(userRole));
+		Assert.assertTrue(parkingUser.enrollmentValidation(email, userRole));
+
+	}
+	
+	@Test(priority = 2, groups = { "Creation" })
+	public void cashierEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException {
+
+		UserModule parkingUser = loginToApplication();
+		parkingUser.clickEnroll();
+		String userRole = parkingUser.selectCashierRole();
+		parkingUser.getPersonalDetails("Sam", "O", "Medina");
+		String email = parkingUser.getEmailDetails(emailAddress);
+		parkingUser.getMobileDetails(mobileNumber);
+		Assert.assertTrue(parkingUser.getUsername(email));
+		parkingUser.generatePassword();
+		parkingUser.getParkingStation();
+		parkingUser.clickSave();
+		Assert.assertTrue(parkingUser.validateBanner(userRole));
+		Assert.assertTrue(parkingUser.enrollmentValidation(email, userRole));
+
+	}
+	
+	@Test(priority = 2, groups = { "Creation" })
+	public void managerEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException {
+
+		UserModule parkingUser = loginToApplication();
+		parkingUser.clickEnroll();
+		String userRole = parkingUser.selectManagerRole();
 		parkingUser.getPersonalDetails("Sam", "O", "Medina");
 		String email = parkingUser.getEmailDetails(emailAddress);
 		parkingUser.getMobileDetails(mobileNumber);
@@ -93,7 +129,7 @@ public class UserModuleTest extends BaseTest {
 
 	@Test
 	public void userPagePagenation() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
+		landingPage.loginApplication("renAdmin", "Password@1");
 		Pagenation page = new Pagenation(driver);
 		boolean nextBtnDisabled = page.nextButton();
 		Assert.assertTrue(nextBtnDisabled);

@@ -79,7 +79,7 @@ public class FilterAndSearchTest extends BaseTest {
 
 	// handle the login and navigation steps
 	private FilterAndSearch loginToApplicationForSearching() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
+		landingPage.loginApplication("renAdmin", "Password@1");
 		FilterAndSearch search = new FilterAndSearch(driver);
 		
 		return search;

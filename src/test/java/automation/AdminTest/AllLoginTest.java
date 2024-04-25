@@ -35,7 +35,7 @@ public class AllLoginTest extends BaseTest {
 	@Test
 	public void loginWithAccess() throws InterruptedException, IOException {
 
-		landingPage.loginApplication("renAdmin", "Password1!");
+		landingPage.loginApplication("renAdmin", "Password@1");
 		Assert.assertTrue(landingPage.successLogin());
 		
 		String confirmLogout = landingPage.logout();

@@ -60,17 +60,23 @@ public class Permissions extends AbstractComponent {
 
 	@FindBy(xpath = "//*[@class='text-base mb-6 text-sm-error']")
 	WebElement errorMessage;
-
-	@FindBy(xpath = "//tr/td[7]/div")
-	WebElement paymentAcceptanceToggleStatus;
-
-	@FindBy(xpath = "//tr/td[7]/div/label/div/div")
-	WebElement paymentAcceptanceToggleSwitch;
+	
+	@FindBy(xpath="//tr/td[7]/div")
+	WebElement captureVehicleToggleStatus;
+	
+	@FindBy(xpath="//td[7]/div/label/div")
+	WebElement captureVehicleToggleSwitch;
 
 	@FindBy(xpath = "//tr/td[8]/div")
+	WebElement paymentAcceptanceToggleStatus;
+
+	@FindBy(xpath = "//td[8]/div/label/div")
+	WebElement paymentAcceptanceToggleSwitch;
+
+	@FindBy(xpath = "//tr/td[9]/div")
 	WebElement allowExitToggleStatus;
 
-	@FindBy(xpath = "//tr/td[8]/div/label/div/div")
+	@FindBy(xpath = "//td[9]/div/label/div")
 	WebElement allowExitToggleSwitch;
 
 	@FindBy(name = "search")
@@ -103,7 +109,7 @@ public class Permissions extends AbstractComponent {
 	@FindBy(css = ".btn")
 	WebElement loginBtn;
 
-	@FindBy(xpath = "//div[3]/button/img")
+	@FindBy(xpath = "//button[@class='w-8']//*[name()='svg']")
 	WebElement logout;
 
 	public void loginToParkingAdmin(String userName, String password) throws InterruptedException {
@@ -178,27 +184,38 @@ public class Permissions extends AbstractComponent {
 
 	public boolean setStatusToActiveForMobile(String emailToSearch) throws InterruptedException {
 		boolean setAcountStatus = setUserStatus("Active", emailToSearch);
+		performToggleAction("true", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
 		performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
-		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);//null_proceedBtn
 		return setAcountStatus;
+	}
+	
+	public boolean setCaptureVehicleToTrue(String emailToSearch) throws InterruptedException {
+		setUserStatus("Active", emailToSearch);
+		performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
+		return performToggleAction("true", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
 	}
 
 	public boolean setPaymentAcceptanceToFalse(String emailToSearch) throws InterruptedException {
 		setUserStatus("Active", emailToSearch);
-		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
+		performToggleAction("false", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
 		return performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
 	}
 
 	public boolean setPaymentAcceptanceToTrue(String emailToSearch) throws InterruptedException {
 		setUserStatus("Active", emailToSearch);
-		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
+		performToggleAction("false", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
 		return performToggleAction("true", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
 	}
 
 	public boolean setAllowExitToTrue(String emailToSearch) throws InterruptedException {
 		setUserStatus("Active", emailToSearch);
+		performToggleAction("false", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
 		performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
-		return performToggleAction("true", allowExitToggleStatus, allowExitToggleSwitch, null);
+		return performToggleAction("true", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
 	}
 
 	public boolean setUserStatus(String desiredStatus, String emailToSearch) throws InterruptedException {
@@ -226,11 +243,13 @@ public class Permissions extends AbstractComponent {
 		if (!desiredStatus.equals(currentStatus)) {
 			toggleSwitch.click();
 			Thread.sleep(1000);
-			if (proceedButton != null) {
-				Thread.sleep(2000);
-				proceedButton.click();
-				Thread.sleep(2000);
-			}
+			proceedButton.click();
+			Thread.sleep(2000);
+//			if (proceedButton != null) {
+//				Thread.sleep(2000);
+//				proceedButton.click();
+//				Thread.sleep(2000);
+//			}
 
 		} else {
 			System.out.println(currentStatus);

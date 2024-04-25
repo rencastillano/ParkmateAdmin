@@ -48,6 +48,15 @@ public class PermissionTest extends BaseTest {
 		navigateAndLoginToEncoderMobileApp(permission);
 		Assert.assertTrue(permission.validationForEntryEncoder());
 	}
+	
+	@Test(retryAnalyzer = Retry.class)
+	public void encoderWithCaptureVehicleSetToTrue() throws InterruptedException {
+
+		Permissions permission = loginToApplication();
+		Assert.assertTrue(permission.setCaptureVehicleToTrue("statusChange@parkmate.com"));
+		navigateAndLoginToEncoderMobileApp(permission);
+		Assert.assertTrue(permission.validationForEntryEncoder());
+	}
 
 	@Test
 	public void encoderWithPaymentAcceptanceSetToFalse() throws InterruptedException {

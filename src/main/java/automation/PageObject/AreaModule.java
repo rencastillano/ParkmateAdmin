@@ -137,6 +137,9 @@ public class AreaModule extends AbstractComponent {
 	@FindBy(xpath = "//div[1]/div[4]/div/div[2]/div[2]/p")
 	WebElement motorcycleCapacityErrorMsg;
 
+	@FindBy(css=":nth-child(1) > .capitalize")
+	WebElement banner2;
+
 	public FilterAndSearch goToAreaPage() {
 		waitForWebElementToAppear(smLogo);
 		waitForWebElementToBeClickable(parkingAreasModule);
@@ -279,12 +282,6 @@ public class AreaModule extends AbstractComponent {
 	            areaCode = reTryAreaCode; // Update areaCode with the new value
 	            reTryAreaCode = generateRandomNumber(4); // Generate a new random area code for next iteration
 	        }
-//			} catch (NoSuchElementException e) {
-//			// Handle NoSuchElementException if duplicateErrMsgOnCreation is not displayed
-//			e.printStackTrace();
-//			System.out.println("NoSuchElementException: " + initialAreaCode);
-//			return initialAreaCode;
-//			}
 	    } catch (Exception e) {
 	        // Handle any other exceptions or log a message
 	        e.printStackTrace();
@@ -362,9 +359,9 @@ public class AreaModule extends AbstractComponent {
 
 	private boolean runValidation(String areaNameUpdated) {
 
-		waitForWebElementToAppear(banner);
-		String bannerText = banner.getText();
-		// System.out.println(bannerText);
+		waitForWebElementToAppear(banner2);
+		String bannerText = banner2.getText();
+		System.out.println(bannerText);
 		return bannerText.equalsIgnoreCase(areaNameUpdated + " is successfully updated!");
 
 	}
