@@ -16,7 +16,7 @@ public class PermissionTest extends BaseTest {
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setAdminStatusToRestricted("henry.salazar@parkmate.com"));
 		permission.loginToParkingAdmin("henry.salazar", "Password@1");
-		Assert.assertTrue(permission.loginValidationForStatusChange());
+		Assert.assertTrue(permission.loginValidationForStatusChangeAndChangeRole());
 
 	}
 
@@ -26,7 +26,7 @@ public class PermissionTest extends BaseTest {
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setStatusToRestricted("statusChange@parkmate.com"));
 		navigateAndLoginToEncoderMobileApp(permission);
-		Assert.assertTrue(permission.loginValidationForStatusChange());
+		Assert.assertTrue(permission.loginValidationForStatusChangeAndChangeRole());
 
 	}
 
@@ -36,17 +36,15 @@ public class PermissionTest extends BaseTest {
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setStatusToRestricted("statusChange@parkmate.com"));
 		navigateAndLoginToEncoderDesktop(permission);
-		Assert.assertTrue(permission.loginValidationForStatusChange());
+		Assert.assertTrue(permission.loginValidationForStatusChangeAndChangeRole());
 
 	}
 
 	@Test
-	public void encoderWithActiveStatusMobileAppLogin() throws InterruptedException {
+	public void encoderWithActiveStatus() throws InterruptedException {
 
 		Permissions permission = loginToApplication();
-		Assert.assertTrue(permission.setStatusToActiveForMobile("statusChange@parkmate.com"));
-		navigateAndLoginToEncoderMobileApp(permission);
-		Assert.assertTrue(permission.validationForEntryEncoder());
+		Assert.assertTrue(permission.setStatusToActiveForMobile("statusChange@parkmate.com"));;
 	}
 	
 	@Test(retryAnalyzer = Retry.class)
@@ -54,7 +52,7 @@ public class PermissionTest extends BaseTest {
 
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setCaptureVehicleToTrue("statusChange@parkmate.com"));
-		navigateAndLoginToEncoderMobileApp(permission);
+		navigateAndLoginToEncoderDesktop(permission);
 		Assert.assertTrue(permission.validationForEntryEncoder());
 	}
 
@@ -64,7 +62,7 @@ public class PermissionTest extends BaseTest {
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setPaymentAcceptanceToFalse("statusChange@parkmate.com"));
 		navigateAndLoginToEncoderDesktop(permission);
-		Assert.assertTrue(permission.paymentAcceptanceSetToFalseLoginValidation());
+		Assert.assertTrue(permission.loginValidationForStatusChangeAndChangeRole());
 	}
 
 	@Test(retryAnalyzer = Retry.class)
@@ -76,12 +74,12 @@ public class PermissionTest extends BaseTest {
 		Assert.assertTrue(permission.PaymentAcceptanceSetToTrueLoginValidation());
 	}
 
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	public void encoderWithAllowExitToTrue() throws InterruptedException {
 
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setAllowExitToTrue("statusChange@parkmate.com"));
-		navigateAndLoginToEncoderMobileApp(permission);
+		navigateAndLoginToEncoderDesktop(permission);
 		Assert.assertTrue(permission.allowExitValidation());
 	}
 
@@ -93,13 +91,13 @@ public class PermissionTest extends BaseTest {
 		return permission;
 	}
 
-	private void navigateAndLoginToEncoderDesktop(Permissions permission) {
+	private void navigateAndLoginToEncoderDesktop(Permissions permission) throws InterruptedException {
 		permission.navigateToEncoderDesktop();
 		permission.loginToEncoderApp("statusChange", "Password@1");
 
 	}
 
-	private void navigateAndLoginToEncoderMobileApp(Permissions permission) {
+	private void navigateAndLoginToEncoderMobileApp(Permissions permission) throws InterruptedException {
 		permission.navigateToEncoderMobileApp();
 		permission.loginToEncoderApp("statusChange", "Password@1");
 

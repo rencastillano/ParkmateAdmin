@@ -120,7 +120,7 @@ public class UserModuleTest extends BaseTest {
 
 	@Test
 	public void userPageSelectRow() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
+		landingPage.loginApplication("renAdmin", "Password@1");
 		Pagenation selectRow = new Pagenation(driver);
 		boolean tableCount = selectRow.selectRowCount();
 		Assert.assertTrue(tableCount);

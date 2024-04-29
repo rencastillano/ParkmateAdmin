@@ -43,7 +43,7 @@ public class Permissions extends AbstractComponent {
 	@FindBy(name = "password")
 	WebElement password;
 
-	@FindBy(css = ".btn")
+	@FindBy(css = "#loginForm > button")//.btn
 	WebElement login;
 
 	@FindBy(css = "[class*='text-base']")
@@ -79,7 +79,7 @@ public class Permissions extends AbstractComponent {
 	@FindBy(xpath = "//td[9]/div/label/div")
 	WebElement allowExitToggleSwitch;
 
-	@FindBy(name = "search")
+	@FindBy(css = "input[placeholder='Input Parking Details']")//(name = "search")
 	WebElement encoderSearch;
 
 	@FindBy(xpath = "//section/div[1]/button[2]")
@@ -88,13 +88,13 @@ public class Permissions extends AbstractComponent {
 	@FindBy(xpath = "//button[.='Search Vehicle']")
 	WebElement searchVehicleButton;
 
-	@FindBy(css = "div.bg-white.mb-2.text-center.rounded-t-2xl.py-5 > div")
+	@FindBy(xpath = "//*[@id=\"page-content\"]/section/div[1]/div")
 	WebElement ticketTagStatus;
 
 	@FindBy(css = "h1")
 	WebElement encoderSearchResult;
 
-	@FindBy(xpath = "//section/div[2]/div[2]/section/button")
+	@FindBy(xpath = "//*[@id=\"page-content\"]/section/div[7]/button")
 	WebElement markCompleteBtn;
 
 	@FindBy(xpath = "//*[text()='Receive Parking Payment']")
@@ -106,14 +106,14 @@ public class Permissions extends AbstractComponent {
 	@FindBy(name = "password")
 	WebElement pword;
 
-	@FindBy(css = ".btn")
+	@FindBy(css = "#loginForm > button > span")
 	WebElement loginBtn;
 
 	@FindBy(xpath = "//button[@class='w-8']//*[name()='svg']")
 	WebElement logout;
 
 	public void loginToParkingAdmin(String userName, String password) throws InterruptedException {
-		logout.click();
+		
 		waitForWebElementToAppear(loginBtn);
 		uname.clear();
 		uname.sendKeys(userName);
@@ -155,9 +155,10 @@ public class Permissions extends AbstractComponent {
 		driver.switchTo().window(driver.getWindowHandles().toArray()[1].toString());
 	}
 
-	public void loginToEncoderApp(String userName, String pword) {
-
+	public void loginToEncoderApp(String userName, String pword) throws InterruptedException {
+		Thread.sleep(3500);
 		username.sendKeys(userName);
+		Thread.sleep(500);
 		password.sendKeys(pword);
 		login.click();
 	}
@@ -172,7 +173,9 @@ public class Permissions extends AbstractComponent {
 	}
 
 	public boolean setAdminStatusToRestricted(String emailToSearch) throws InterruptedException {
-		return setUserStatus("Restricted", emailToSearch);
+		boolean restrictedStatus = setUserStatus("Restricted", emailToSearch);
+		logout.click();
+		return restrictedStatus;
 	}
 
 	public boolean setStatusToRestricted(String emailToSearch) throws InterruptedException {
@@ -208,6 +211,7 @@ public class Permissions extends AbstractComponent {
 		setUserStatus("Active", emailToSearch);
 		performToggleAction("false", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
 		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
+		Thread.sleep(3000);
 		return performToggleAction("true", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
 	}
 
@@ -269,14 +273,19 @@ public class Permissions extends AbstractComponent {
 	}
 
 	public boolean allowExitValidation() throws InterruptedException {
-		return validateButtonIsDisplayed(markCompleteBtn, ticketSearchResult, "SYNCH02");
+		return validateButtonIsDisplayed(markCompleteBtn, "SYNCH03");
 	}
-
+	
 	public boolean PaymentAcceptanceSetToTrueLoginValidation() throws InterruptedException {
-		return validateButtonIsDisplayed(receiveParkingPaymentBtn, null, "SYNCH03");
+		
+		boolean isDisplayed = receiveParkingPaymentBtn.isEnabled();
+		return isDisplayed;
 	}
 
-	private boolean validateButtonIsDisplayed(WebElement button, WebElement searchResult,
+	@FindBy(xpath = "//div[2]/div[2]/div[2]/div[1]/button")
+	WebElement searchResult;
+	
+	private boolean validateButtonIsDisplayed(WebElement button,
 			String vehicleNumber) throws InterruptedException {
 		Thread.sleep(3000);
 		encoderSearch.sendKeys(vehicleNumber, Keys.ENTER);
@@ -299,7 +308,7 @@ public class Permissions extends AbstractComponent {
 		}
 	}
 
-	public boolean loginValidationForStatusChange() {
+	public boolean loginValidationForStatusChangeAndChangeRole() {
 
 		return loginValidation(
 				"Oops! You are blocked from accessing this page. To gain access, contact your admin for support.");

@@ -181,14 +181,11 @@ public class AreaModule extends AbstractComponent {
 
 		if (!filteredElements.isEmpty()) {
 			WebElement elementToClick = filteredElements.get(0);
-			if (elementToClick.isDisplayed()) {
-				elementToClick.click();
-				System.out.println("Clicked on the element containing 'SM Fairview'.");
-			} else {
-				System.out.println("Element containing 'SM Fairview' is not visible.");
-			}
+			elementToClick.click();
+			System.out.println("'SM Southmall' is selected.");
+			
 		} else {
-			System.out.println("No element containing 'SM Fairview' found.");
+			System.out.println("No element containing 'SM Southmall' found.");
 		}
 
 		// selectSMFairview.click();
@@ -243,7 +240,7 @@ public class AreaModule extends AbstractComponent {
 		cancelBtn.click();
 		Thread.sleep(500);
 		cancelMondalButton.click();
-		genInfoSMList("SM City Fairview");
+		genInfoSMList("SM City Marikina");
 		cancelBtn.click();
 		Thread.sleep(500);
 		proceedModalButton.click();

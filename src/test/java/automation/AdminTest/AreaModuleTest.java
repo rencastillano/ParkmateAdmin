@@ -20,11 +20,11 @@ public class AreaModuleTest extends BaseTest {
 		AreaModule parkingArea = loginToApplication();
 		parkingArea.clickCreate();
 		parkingArea.genInfoParkingName(areaName);
-		parkingArea.genInfoSMList("SM City Fairview");
+		parkingArea.genInfoSMList("SM City Marikina");
 		parkingArea.getCarCapacity("100");
 		parkingArea.getMotorcycleCapacity("100");
 		parkingArea.fixRate("40");
-		boolean match = parkingArea.smMallCode("SMCF");
+		boolean match = parkingArea.smMallCode("SMMK");
 		Assert.assertTrue(match);
 		parkingArea.getAreaCode(areaCode);
 		parkingArea.parkingHours("10:30AM", "11:00PM");
@@ -72,8 +72,8 @@ public class AreaModuleTest extends BaseTest {
 
 		AreaModule parkingArea = loginToApplication();
 		parkingArea.clickCreate();
-		parkingArea.genInfoParkingName("Area_FixedRateTest");
-		parkingArea.genInfoSMList("SM City Fairview");
+		parkingArea.genInfoParkingName("Area2 SMAU");
+		parkingArea.genInfoSMList("SM City Marikina");
 		parkingArea.getCarCapacity("100");
 		parkingArea.getMotorcycleCapacity("100");
 		parkingArea.fixRate("1000");
@@ -90,9 +90,7 @@ public class AreaModuleTest extends BaseTest {
 		AreaModule parkingArea = loginToApplication();
 		parkingArea.clickCreate();
 		parkingArea.genInfoParkingName(areaName);
-		parkingArea.genInfoSMList("SM City Fairview");
-		parkingArea.getCarCapacity("100");
-		parkingArea.getMotorcycleCapacity("100");
+		//parkingArea.genInfoSMList("SM City Marikina");
 		Assert.assertTrue(parkingArea.exitCreationAlert());
 	}
 

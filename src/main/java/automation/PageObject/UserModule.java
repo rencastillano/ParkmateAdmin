@@ -65,7 +65,7 @@ public class UserModule extends AbstractComponent {
 	@FindBy(xpath = "(//*[name()='svg'][@class='w-6 h-auto'])[1]")
 	WebElement generate;
 
-	@FindBy(css = "img[alt='Copy']")
+	@FindBy(css = "button[class='text-sm-electric-blue font-henry-sans-semibold text-xs']")
 	WebElement copyPassword;
 	
 	@FindBy(xpath="//button[normalize-space()='COPY']")
