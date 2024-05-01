@@ -155,7 +155,7 @@ public class UserModuleTest extends BaseTest {
 	}
 	// handle the login and navigation steps
 	private UserModule loginToApplication() throws InterruptedException {
-		UserModule parkingUser = landingPage.loginApplication("riztest", "Password@1");
+		UserModule parkingUser = landingPage.loginApplication("superuser", "SuperUser123!?");
 		parkingUser.userPage();
 
 		return parkingUser;

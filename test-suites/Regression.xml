@@ -11,6 +11,11 @@
 			<class name="automation.AdminTest.AllLoginTest" />
 		</classes>
 	</test>
+	<test thread-count="5" name="Permission Test">
+		<classes>
+			<class name="automation.AdminTest.PermissionTest" />
+		</classes>
+	</test>
 	<test thread-count="5" name="Parking Area Module Test">
 		<classes>
 			<class name="automation.AdminTest.AreaModuleTest" />
@@ -24,11 +29,6 @@
 	<test thread-count="5" name="Filter And Search Test">
 		<classes>
 			<class name="automation.AdminTest.FilterAndSearchTest" />
-		</classes>
-	</test> 
-	<test thread-count="5" name="Permission Test">
-		<classes>
-			<class name="automation.AdminTest.PermissionTest" />
 		</classes>
 	</test><!--
 	Test -->

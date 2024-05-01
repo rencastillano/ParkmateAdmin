@@ -79,7 +79,7 @@ public class BaseTest {
 
 	}
 
-	@AfterMethod(alwaysRun = true)
+	//@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		driver.quit();
 	}
@@ -103,7 +103,7 @@ public class BaseTest {
 		return randomLetters + randomNumbers;
 	}
 
-	private String generateRandomChars(int length, String source) {
+	public String generateRandomChars(int length, String source) {
 		return ThreadLocalRandom.current().ints(length, 0, source.length()).mapToObj(source::charAt)
 				.map(Object::toString).collect(Collectors.joining());
 	}

@@ -48,21 +48,21 @@ public class PermissionTest extends BaseTest {
 	}
 	
 	@Test(retryAnalyzer = Retry.class)
+	public void encoderWithNoRole() throws InterruptedException {
+
+		Permissions permission = loginToApplication();
+		Assert.assertTrue(permission.setPaymentAcceptanceToFalse("statusChange@parkmate.com"));
+		navigateAndLoginToEncoderDesktop(permission);
+		Assert.assertTrue(permission.loginValidationForStatusChangeAndChangeRole());
+	}
+	
+	@Test(retryAnalyzer = Retry.class)
 	public void encoderWithCaptureVehicleSetToTrue() throws InterruptedException {
 
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setCaptureVehicleToTrue("statusChange@parkmate.com"));
 		navigateAndLoginToEncoderDesktop(permission);
 		Assert.assertTrue(permission.validationForEntryEncoder());
-	}
-
-	@Test
-	public void encoderWithPaymentAcceptanceSetToFalse() throws InterruptedException {
-
-		Permissions permission = loginToApplication();
-		Assert.assertTrue(permission.setPaymentAcceptanceToFalse("statusChange@parkmate.com"));
-		navigateAndLoginToEncoderDesktop(permission);
-		Assert.assertTrue(permission.loginValidationForStatusChangeAndChangeRole());
 	}
 
 	@Test(retryAnalyzer = Retry.class)
@@ -85,7 +85,7 @@ public class PermissionTest extends BaseTest {
 
 	// handle the login and navigation steps
 	private Permissions loginToApplication() throws InterruptedException {
-		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
+		UserModule userCreation = landingPage.loginApplication("superuser", "SuperUser123!?");
 		Permissions permission = userCreation.userPage();
 
 		return permission;
@@ -99,6 +99,7 @@ public class PermissionTest extends BaseTest {
 
 	private void navigateAndLoginToEncoderMobileApp(Permissions permission) throws InterruptedException {
 		permission.navigateToEncoderMobileApp();
+		Thread.sleep(3000);
 		permission.loginToEncoderApp("statusChange", "Password@1");
 
 	}

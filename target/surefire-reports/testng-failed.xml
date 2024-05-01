@@ -4,14 +4,24 @@
   <listeners>
     <listener class-name="automation.AdminTestComponents.Listeners"/>
   </listeners>
+  <test thread-count="5" name="Parking Area Module Test(failed)" verbose="0">
+    <classes>
+      <class name="automation.AdminTest.AreaModuleTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="areaPageSelectRow"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- automation.AdminTest.AreaModuleTest -->
+    </classes>
+  </test> <!-- Parking Area Module Test(failed) -->
   <test thread-count="5" name="User Module Test(failed)" verbose="0">
     <classes>
       <class name="automation.AdminTest.UserModuleTest">
         <methods>
-          <include name="encoderEnrollment"/>
+          <include name="userPageSelectRow"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="userEmailDupValidation"/>
         </methods>
       </class> <!-- automation.AdminTest.UserModuleTest -->
     </classes>
@@ -20,9 +30,11 @@
     <classes>
       <class name="automation.AdminTest.PermissionTest">
         <methods>
+          <include name="encoderWithCaptureVehicleSetToTrue"/>
+          <include name="encoderWithAllowExitToTrue"/>
+          <include name="encoderWithPaymentAcceptanceSetToTrue"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="encoderWithAllowExitToFalse"/>
         </methods>
       </class> <!-- automation.AdminTest.PermissionTest -->
     </classes>

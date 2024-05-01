@@ -182,10 +182,10 @@ public class AreaModule extends AbstractComponent {
 		if (!filteredElements.isEmpty()) {
 			WebElement elementToClick = filteredElements.get(0);
 			elementToClick.click();
-			System.out.println("'SM Southmall' is selected.");
+			System.out.println(name+" is selected.");
 			
 		} else {
-			System.out.println("No element containing 'SM Southmall' found.");
+			System.out.println("No element containing "+name+" found.");
 		}
 
 		// selectSMFairview.click();

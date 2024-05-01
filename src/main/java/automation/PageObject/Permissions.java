@@ -129,7 +129,7 @@ public class Permissions extends AbstractComponent {
 		try {
 
 			openNewTabAndSwitch();
-			driver.get("https://encoder.parking-stg.smop.asia/login/");
+			driver.get("https://encoder.uat.parkmate.ai/login/");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -142,7 +142,7 @@ public class Permissions extends AbstractComponent {
 
 			openNewTabAndSwitch();
 			mobileAppSettings();
-			driver.get("https://encoder.parking-stg.smop.asia/login/");
+			driver.get("https://encoder.uat.parkmate.ai/login/");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -197,29 +197,36 @@ public class Permissions extends AbstractComponent {
 		setUserStatus("Active", emailToSearch);
 		performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
 		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
-		return performToggleAction("true", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
+		boolean status = performToggleAction("true", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
+		Thread.sleep(2000);
+		return status;
 	}
 
 	public boolean setPaymentAcceptanceToFalse(String emailToSearch) throws InterruptedException {
 		setUserStatus("Active", emailToSearch);
 		performToggleAction("false", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
 		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
-		return performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+		boolean status = performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+		Thread.sleep(2000);
+		return status;
 	}
 
 	public boolean setPaymentAcceptanceToTrue(String emailToSearch) throws InterruptedException {
 		setUserStatus("Active", emailToSearch);
 		performToggleAction("false", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
 		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
+		boolean status = performToggleAction("true", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
 		Thread.sleep(3000);
-		return performToggleAction("true", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+		return status;
 	}
 
 	public boolean setAllowExitToTrue(String emailToSearch) throws InterruptedException {
 		setUserStatus("Active", emailToSearch);
 		performToggleAction("false", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
 		performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
-		return performToggleAction("true", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
+		boolean status = performToggleAction("true", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
+		Thread.sleep(2000);
+		return status;
 	}
 
 	public boolean setUserStatus(String desiredStatus, String emailToSearch) throws InterruptedException {
@@ -273,7 +280,7 @@ public class Permissions extends AbstractComponent {
 	}
 
 	public boolean allowExitValidation() throws InterruptedException {
-		return validateButtonIsDisplayed(markCompleteBtn, "SYNCH03");
+		return validateButtonIsDisplayed(markCompleteBtn, "SYNCH04");
 	}
 	
 	public boolean PaymentAcceptanceSetToTrueLoginValidation() throws InterruptedException {

@@ -90,7 +90,6 @@ public class AreaModuleTest extends BaseTest {
 		AreaModule parkingArea = loginToApplication();
 		parkingArea.clickCreate();
 		parkingArea.genInfoParkingName(areaName);
-		//parkingArea.genInfoSMList("SM City Marikina");
 		Assert.assertTrue(parkingArea.exitCreationAlert());
 	}
 
