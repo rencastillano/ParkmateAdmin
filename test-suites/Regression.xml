@@ -30,6 +30,11 @@
 		<classes>
 			<class name="automation.AdminTest.FilterAndSearchTest" />
 		</classes>
+	</test>
+	<test thread-count="5" name="Filter And Search Test">
+		<classes>
+			<class name="automation.AdminTest.ConfigurationModuleTest" />
+		</classes>
 	</test><!--
 	Test -->
 </suite> <!--

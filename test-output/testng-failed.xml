@@ -5,9 +5,9 @@
     <classes>
       <class name="automation.AdminTest.ConfigurationModuleTest">
         <methods>
-          <include name="duplicateParketTypeCode"/>
-          <include name="updatePricingFeePackage"/>
+          <include name="deleteParkerTypeWithPricingPackage"/>
           <include name="launchApplication"/>
+          <include name="deleteParkerType"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- automation.AdminTest.ConfigurationModuleTest -->

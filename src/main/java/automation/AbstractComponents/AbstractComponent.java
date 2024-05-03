@@ -65,7 +65,7 @@ public class AbstractComponent {
 		return randomLetters + randomNumbers;
 	}
 
-	private String generateRandomChars(int length, String source) {
+	protected String generateRandomChars(int length, String source) {
 		return ThreadLocalRandom.current().ints(length, 0, source.length()).mapToObj(source::charAt)
 				.map(Object::toString).collect(Collectors.joining());
 	}

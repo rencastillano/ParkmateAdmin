@@ -26,11 +26,11 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.fixRate("40");
 		boolean match = parkingArea.smMallCode("SMMK");
 		Assert.assertTrue(match);
-		parkingArea.getAreaCode(areaCode);
+		parkingArea.getAreaCode("0127");
 		parkingArea.parkingHours("10:30AM", "11:00PM");
 		parkingArea.clickSave();
-		String createdAreaCode = parkingArea.handlingAreaCodeDup(areaCode);
 		String createdAreaName = parkingArea.handlingAreaNameDup(areaName);
+		String createdAreaCode = parkingArea.handlingAreaCodeDup(areaCode);
 		Assert.assertTrue(parkingArea.areaCreationValidation(createdAreaName, createdAreaCode));
 	}
 
@@ -42,7 +42,7 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.selectAreaToBeEdited();
 		parkingArea.genInfoParkingName(dupAreaName);
 		parkingArea.clickSave();
-		Assert.assertEquals(parkingArea.areaNameErrorMessage(),
+		Assert.assertEquals(parkingArea.parkingErrorMessage(),
 				"Updated Parking name already exists. Kindly use a different name.");
 
 	}
@@ -54,7 +54,7 @@ public class AreaModuleTest extends BaseTest {
 		parkingArea.selectAreaToBeEdited();
 		parkingArea.getAreaCode("0127");
 		parkingArea.clickSave();
-		Assert.assertEquals(parkingArea.areaCodeErrorMessage(),
+		Assert.assertEquals(parkingArea.parkingErrorMessage(),
 				"Updated area code already exists. Kindly use a different area code.");
 
 	}

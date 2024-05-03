@@ -1,6 +1,7 @@
 package automation.PageObject;
 
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 import org.openqa.selenium.By;
@@ -47,6 +48,12 @@ public class ConfigurationModule extends AbstractComponent {
 
 	@FindBy(xpath = "//button[normalize-space()='Create']")
 	WebElement createBtn;
+	
+	@FindBy(xpath="//div/div/div[1]/div[2]/div[1]/div[2]/div")
+	WebElement parkerNameDupMsg;
+	
+	@FindBy(xpath="//div/div/div[1]/div[2]/div[2]/div[2]/div")
+	WebElement parkerCodeDupMsg;
 
 	@FindBy(name = "parkerTypeId")
 	WebElement parkerTypeIdDropdown;
@@ -64,7 +71,7 @@ public class ConfigurationModule extends AbstractComponent {
 	@FindBy(xpath = ("(//button[@class='bg-sm-accent-light-blue p-1 rounded-full'])[1]"))
 	WebElement parkerEditBtn;
 
-	@FindBy(xpath = "//button[normalize-space()='Delete']")
+	@FindBy(xpath = "//button[text()='Delete']")
 	WebElement deleteParkerBtn;
 
 	@FindBy(xpath = "//div[@class='text-base']")
@@ -136,6 +143,9 @@ public class ConfigurationModule extends AbstractComponent {
 	By feeParkingName = By.cssSelector(".text-sm-electric-blue.text-lg.font-henry-sans-semibold");
 	By assignPricing = By.cssSelector(".px-6.py-2.text-sm.rounded.border.w-auto.border-sm-electric-blue.text-sm-electric-blue.undefined");
 	
+	@FindBy(css=".text-sm.font-henry-sans.text-sm-default-text")
+	List<WebElement> pNameList;
+	
 	// Method to press the Backspace key multiple times
     private static void pressBackspaceMultipleTimes(WebElement element, int numberOfBackspaces) {
         for (int i = 0; i < numberOfBackspaces; i++) {
@@ -186,18 +196,6 @@ public class ConfigurationModule extends AbstractComponent {
 	private List<WebElement> getParkingAreaForPricing() {
 	    return getElementsAfterAction(pricingAndFee::click, pricingSetup, () -> pricingSetupToParkingArea);
 	}
-//	private List<WebElement> getParkingAreaForPricing() {
-//		pricingAndFee.click();
-//		waitForElementToAppear(pricingSetup);
-//		return pricingSetupToParkingArea;
-//	}
-
-//	private WebElement getParkingByName(String parkerName) {
-//		WebElement name = getParkingAreaForPricing().stream()
-//				.filter(parker -> parker.findElement(feeParkingName).getText().equalsIgnoreCase(parkerName)).findFirst()
-//				.orElse(null);
-//		return name;
-//	}
 	
 	private WebElement getParkingByName(String parkerName) {
 	    return getElementByName(getParkingAreaForPricing(), parkerName, feeParkingName);
@@ -213,17 +211,28 @@ public class ConfigurationModule extends AbstractComponent {
 		}
 
 	}
-		
-	public void parkerEnrollment(String parkerType, String parkerCode) throws InterruptedException {
+	
+	public void goToParkerEnrollment() {
 
 		parkerEnrollement.click();
 		createParkerTypeBtn.click();
 		addParkerBtn.click();
+		
+	}
+	
+	public void getParkerTypeName(String parkerType) {
+		parkerTypeLabel.clear();
 		parkerTypeLabel.sendKeys(parkerType);
+	}
+	
+	public void getParkerTypeCode(String parkerCode) {
+		parkerTypeCode.clear();
 		parkerTypeCode.sendKeys(parkerCode);
+	}
+	
+	public void clickCreateButton() throws InterruptedException {
 		createBtn.click();
 		Thread.sleep(2000);
-
 	}
 
 	public void selectParkerTypeToEdit(String mall) {
@@ -246,18 +255,6 @@ public class ConfigurationModule extends AbstractComponent {
 	    return getElementsAfterAction(() -> {}, parkerTypes, () -> createdParkerTypesList);
 	}
 	
-//	private List<WebElement> getCreatedParkerTypes() {
-//		waitForElementToAppear(parkerTypes);
-//		return createdParkerTypesList;
-//	}
-
-//	private WebElement getParkerTypeByName(String parkerName) {
-//		WebElement name = getCreatedParkerTypes().stream()
-//				.filter(parker -> parker.findElement(pTypeName).getText().equalsIgnoreCase(parkerName)).findFirst()
-//				.orElse(null);
-//		return name;
-//	}
-	
 	private WebElement getParkerTypeByName(String parkerName) {
 	    return getElementByName(getCreatedParkerTypes(), parkerName, pTypeName);
 	}
@@ -272,35 +269,27 @@ public class ConfigurationModule extends AbstractComponent {
 		}
 
 	}
+	
+	public boolean ParkerCreationValidation(String parkerName) {
+		String parkerNameSearch = pNameList.stream().map(WebElement::getText).filter(name -> name.contains(parkerName))
+				.findFirst().orElse("");
+		return parkerNameSearch.equalsIgnoreCase(parkerName);
+	}
 
 	public void deleteParkerType() {
 		deleteParkerBtnIcon.click();
 		deleteParkerBtn.click();
 	}
 
-	public boolean deleteParkerTypeWithFeePackageValidation() {
+	public String errorSpielValidation() {
 		waitForWebElementToAppear(errorMsg);
-		return errorMsg.getText().equalsIgnoreCase("Unable to delete parker type.");
+		return errorMsg.getText();
 
 	}
 	
 	private List<WebElement> getParkingAreas() {
 	    return getElementsAfterAction(backArrowIconBtn::click, parkingAreas, () -> parkingAreaList);
 	}
-
-//	private List<WebElement> getParkingAreas() {
-//	    backArrowIconBtn.click();
-//	    waitForElementToAppear(parkingAreas);
-//	    return parkingAreaList;
-//	}
-
-//	private WebElement getParkingAreaByName(String parkingName) {
-//		WebElement name = getParkingAreas().stream()
-//	            .filter(parking -> parking.findElement(parkingAreaNames).getText().equals(parkingName))
-//	            .findFirst().orElse(null);
-//	    return name;
-//
-//	}
 	
 	private WebElement getParkingAreaByName(String parkingName) {
 	    return getElementByName(getParkingAreas(), parkingName, parkingAreaNames);
@@ -347,7 +336,75 @@ public class ConfigurationModule extends AbstractComponent {
 	            .findFirst()
 	            .orElse(null);
 	}
-
 	
+//	public String handlingParkerNameDup(String initialParkerName) throws InterruptedException {
+//		String parkerName = initialParkerName;
+//		String getNewValue = "SampleParker_" + generateRandomNumber(4);
+//		try {
+//			while (parkerNameDupMsg.isDisplayed()) {
+//				getParkerTypeName(getNewValue);
+//				clickCreateButton();
+//				Thread.sleep(4000);
+//				System.out.println("New value generated: " + getNewValue);
+//				parkerName = getNewValue; // Update areaCode with the new value
+//				getNewValue = "Area_" + generateRandomString(); // Generate a new random area code for next iteration
+//			}
+//		} catch (Exception e) {
+//			e.printStackTrace(); // Log the exception or handle it appropriately
+//			System.out.println("Exception " + parkerName);
+//		}
+//		return parkerName;
+//	}
+	
+//	public String handlingParkerCodeDup(String initialParkerCode) throws InterruptedException {
+//	    String parkerCode = initialParkerCode;
+//	    String getNewValue = generateRandomChars(2, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+//	    try {
+//	        while (parkerCodeDupMsg.isDisplayed()) {
+//	        	getParkerTypeCode(getNewValue);
+//	        	clickCreateButton();
+//	            Thread.sleep(4000);
+//	            System.out.println("New value generated: " + getNewValue);
+//	            parkerCode = getNewValue; // Update areaCode with the new value
+//	            getNewValue = generateRandomNumber(4); // Generate a new random area code for next iteration
+//	        }
+//	    } catch (Exception e) {
+//	        // Handle any other exceptions or log a message
+//	        e.printStackTrace();
+//	        System.out.println("Exception " + parkerCode);
+//	    }
+//	    return parkerCode;
+//	}
+//	
+//	
+	public String handleDuplicate(String initialValue, Supplier<String> valueGenerator, Consumer<String> valueUpdater, Supplier<Boolean> condition) throws InterruptedException {
+	    String value = initialValue;
+	    try {
+	        while (condition.get()) {
+	            valueUpdater.accept(value = valueGenerator.get());
+	            clickCreateButton();
+	            Thread.sleep(4000);
+	            System.out.println("New value generated: " + value);
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        System.out.println("Exception " + value);
+	    }
+	    return value;
+	}
+
+	public String handlingParkerNameDup(String initialParkerName) throws InterruptedException {
+	    return handleDuplicate(initialParkerName,
+	            () -> "SampleParker_" + generateRandomNumber(4),
+	            this::getParkerTypeName,
+	            () -> parkerNameDupMsg.isDisplayed());
+	}
+
+	public String handlingParkerCodeDup(String initialAreaCode) throws InterruptedException {
+	    return handleDuplicate(initialAreaCode,
+	            () -> generateRandomChars(2, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"),
+	            this::getParkerTypeCode,
+	            () -> parkerCodeDupMsg.isDisplayed());
+	}
 	
 }
