@@ -35,7 +35,7 @@ public class UserModule extends AbstractComponent {
 	@FindBy(css = "h2[class*='pt-1']")
 	WebElement usersTab;
 
-	@FindBy(css = "#roleDropdownButton")
+	@FindBy(css = ".flex.capitalize")
 	WebElement roleDropdown;
 
 	@FindBy(xpath = "//div[1]/button[2]/div")
@@ -56,19 +56,19 @@ public class UserModule extends AbstractComponent {
 	@FindBy(name = "mobileNo")
 	WebElement mobile;
 
-	@FindBy(name = "username")
+	@FindBy(css = "input[name='username']")
 	WebElement userName;
 
 	@FindBy(name = "password")
 	WebElement pword;
 
-	@FindBy(css = "img[alt='Generate']")
+	@FindBy(xpath = "(//*[name()='svg'][@class='w-6 h-auto'])[1]")
 	WebElement generate;
 
-	@FindBy(css = "img[alt='Copy']")
+	@FindBy(css = "button[class='text-sm-electric-blue font-henry-sans-semibold text-xs']")
 	WebElement copyPassword;
 	
-	@FindBy(xpath="//div[3]/div/div/div[1]/div/div/button")
+	@FindBy(xpath="//button[normalize-space()='COPY']")
 	WebElement copyUserNameBtn;
 
 	@FindBy(css = "div:nth-child(4) > div > div > button")
@@ -80,14 +80,14 @@ public class UserModule extends AbstractComponent {
 	@FindBy(css = "ul[role='menu'] li")
 	List<WebElement> areaStation;
 
-	@FindBy(xpath = "//div/div/button[.='SAVE']")
+	@FindBy(xpath = "//button[normalize-space()='SAVE']")
 	WebElement saveBtn;
 
 	@FindBy(css = "div:nth-child(2) > p.mt-1.font-henry-sans-light.text-xs.text-sm-error")
-	WebElement duplicateEmail;
+	WebElement duplicateEmailErrMsg;
 
 	@FindBy(css = "div:nth-child(1) > p.mt-1.font-henry-sans-light.text-xs.text-sm-error")
-	WebElement duplicateUserName;
+	WebElement duplicateUserNameErrMsg;
 
 	@FindBy(xpath = "//div[2]/div[3]/button")
 	WebElement backButton;
@@ -110,7 +110,8 @@ public class UserModule extends AbstractComponent {
 	@FindBy(css = "tbody tr:nth-child(1)")
 	WebElement firstDataRow;
 
-	@FindBy(xpath = "//*[@class='flex-grow text-sm self-center w-3/4']")
+	//@FindBy(xpath = "//*[@class='flex-grow text-sm self-center w-3/4']")
+	@FindBy(css=".flex-grow.col-span-3.text-sm.self-center.pr-5")
 	WebElement banner;
 
 	By firstUserEmail = By.xpath("(//tr/td[3])[1]");
@@ -147,8 +148,16 @@ public class UserModule extends AbstractComponent {
 		return selectRole("admin");
 	}
 
-	public String selectEncoderRole() {
-		return selectRole("encoder");
+//	public String selectEncoderRole() {
+//		return selectRole("encoder");
+//	}
+	
+	public String selectCashierRole() {
+		return selectRole("cashier");
+	}
+	
+	public String selectManagerRole() {
+		return selectRole("manager");
 	}
 
 	private String selectRole(String role) {
@@ -175,7 +184,8 @@ public class UserModule extends AbstractComponent {
 		
 		Thread.sleep(3000);
 		email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, emailAddress);
-
+		//waitForWebElementToAppear(duplicateEmailErrMsg);
+		mobile.clear();
 	}
 
 	public String getEmailDetails(String emailAddress) throws InterruptedException {
@@ -183,7 +193,7 @@ public class UserModule extends AbstractComponent {
 	    email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, emailAddress);
 
 	    try {
-	        if (duplicateEmail.isDisplayed()) {
+	        if (duplicateEmailErrMsg.isDisplayed()) {
 	            return emailDuplicateValidator();
 	        }
 	    } catch (Exception e) {
@@ -196,7 +206,7 @@ public class UserModule extends AbstractComponent {
 	private String emailDuplicateValidator() throws InterruptedException {
 	    String forDupEmail = "parkmatehub." + generateRandomNumber(5) + "@parkmate.com";
 	    try {
-	        while (duplicateEmail.isDisplayed()) {
+	        while (duplicateEmailErrMsg.isDisplayed()) {
 	            email.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE, forDupEmail);
 	            Thread.sleep(4000);
 	            System.out.println("dup email: " + forDupEmail);
@@ -227,7 +237,7 @@ public class UserModule extends AbstractComponent {
 	}
 	
 	public boolean getCopyUserName() throws UnsupportedFlavorException, IOException, InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 	    return getCopyValueAndCompare(userName, copyUserNameBtn);
 	}
 
@@ -285,11 +295,11 @@ public class UserModule extends AbstractComponent {
 	}
 
 	public boolean isDuplicateEmail() {
-	    return isDuplicateMessageShown(duplicateEmail, "Email already exists.");
+	    return isDuplicateMessageShown(duplicateEmailErrMsg, "Email already exists.");
 	}
 
 	public boolean isDuplicateUserName() {
-	    return isDuplicateMessageShown(duplicateUserName, "Username already exists.");
+	    return isDuplicateMessageShown(duplicateUserNameErrMsg, "Username already exists.");
 	}
 
 	private boolean isDuplicateMessageShown(WebElement element, String expectedMessage) {
@@ -331,6 +341,7 @@ public class UserModule extends AbstractComponent {
 	        Thread.sleep(1000);
 	    } while (!email.getAttribute("value").equalsIgnoreCase(emailToSearch));
 		getMobileDetails("+6399"+generateRandomNumber(8));
+		Thread.sleep(3000);
 		saveBtn.click();
 		waitForWebElementToAppear(banner);
 		return banner.getText().equalsIgnoreCase(emailToSearch+ " is successfully updated!");

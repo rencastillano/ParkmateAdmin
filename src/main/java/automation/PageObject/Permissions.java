@@ -43,7 +43,7 @@ public class Permissions extends AbstractComponent {
 	@FindBy(name = "password")
 	WebElement password;
 
-	@FindBy(css = ".btn")
+	@FindBy(css = "#loginForm > button")//.btn
 	WebElement login;
 
 	@FindBy(css = "[class*='text-base']")
@@ -54,61 +54,66 @@ public class Permissions extends AbstractComponent {
 
 	@FindBy(xpath = "(//tr/td)[3]")
 	WebElement accountSearchResult;
-	
-	@FindBy(xpath="//div[1]/button/div[2]/div[2]")
+
+	@FindBy(xpath = "//div[1]/button/div[2]/div[2]")
 	WebElement ticketSearchResult;
 
 	@FindBy(xpath = "//*[@class='text-base mb-6 text-sm-error']")
 	WebElement errorMessage;
-
-	@FindBy(xpath = "//tr/td[7]/div")
-	WebElement paymentAcceptanceToggleStatus;
-
-	@FindBy(xpath = "//tr/td[7]/div/label/div/div")
-	WebElement paymentAcceptanceToggleSwitch;
+	
+	@FindBy(xpath="//tr/td[7]/div")
+	WebElement captureVehicleToggleStatus;
+	
+	@FindBy(xpath="//td[7]/div/label/div")
+	WebElement captureVehicleToggleSwitch;
 
 	@FindBy(xpath = "//tr/td[8]/div")
+	WebElement paymentAcceptanceToggleStatus;
+
+	@FindBy(xpath = "//td[8]/div/label/div")
+	WebElement paymentAcceptanceToggleSwitch;
+
+	@FindBy(xpath = "//tr/td[9]/div")
 	WebElement allowExitToggleStatus;
 
-	@FindBy(xpath = "//tr/td[8]/div/label/div/div")
+	@FindBy(xpath = "//td[9]/div/label/div")
 	WebElement allowExitToggleSwitch;
 
-	@FindBy(name = "search")
+	@FindBy(css = "input[placeholder='Input Parking Details']")//(name = "search")
 	WebElement encoderSearch;
-	
-	@FindBy(xpath="//section/div[1]/button[2]")
+
+	@FindBy(xpath = "//section/div[1]/button[2]")
 	WebElement viewParkedVehiclesTab;
 
 	@FindBy(xpath = "//button[.='Search Vehicle']")
 	WebElement searchVehicleButton;
-	
-	@FindBy(css="div.bg-white.mb-2.text-center.rounded-t-2xl.py-5 > div")
+
+	@FindBy(xpath = "//*[@id=\"page-content\"]/section/div[1]/div")
 	WebElement ticketTagStatus;
 
 	@FindBy(css = "h1")
 	WebElement encoderSearchResult;
 
-	@FindBy(xpath = "//section/div[2]/div[2]/section/button")
+	@FindBy(xpath = "//*[@id=\"page-content\"]/section/div[7]/button")
 	WebElement markCompleteBtn;
 
 	@FindBy(xpath = "//*[text()='Receive Parking Payment']")
 	WebElement receiveParkingPaymentBtn;
-	
-	@FindBy(name="username")
+
+	@FindBy(name = "username")
 	WebElement uname;
-	
-	@FindBy(name="password")
+
+	@FindBy(name = "password")
 	WebElement pword;
-	
-	@FindBy(css=".btn")
+
+	@FindBy(css = "#loginForm > button > span")
 	WebElement loginBtn;
-	
-	@FindBy(xpath="//div[3]/button/img")
+
+	@FindBy(xpath = "//button[@class='w-8']//*[name()='svg']")
 	WebElement logout;
-	
-	
+
 	public void loginToParkingAdmin(String userName, String password) throws InterruptedException {
-		logout.click();
+		
 		waitForWebElementToAppear(loginBtn);
 		uname.clear();
 		uname.sendKeys(userName);
@@ -116,7 +121,7 @@ public class Permissions extends AbstractComponent {
 		pword.clear();
 		pword.sendKeys(password);
 		loginBtn.click();
-		
+
 	}
 
 	public void navigateToEncoderDesktop() {
@@ -124,7 +129,7 @@ public class Permissions extends AbstractComponent {
 		try {
 
 			openNewTabAndSwitch();
-			driver.get("https://encoder.parking-stg.smop.asia/login/");
+			driver.get("https://encoder.uat.parkmate.ai/login/");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -137,7 +142,7 @@ public class Permissions extends AbstractComponent {
 
 			openNewTabAndSwitch();
 			mobileAppSettings();
-			driver.get("https://encoder.parking-stg.smop.asia/login/");
+			driver.get("https://encoder.uat.parkmate.ai/login/");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -150,9 +155,10 @@ public class Permissions extends AbstractComponent {
 		driver.switchTo().window(driver.getWindowHandles().toArray()[1].toString());
 	}
 
-	public void loginToEncoderApp(String userName, String pword) {
-
+	public void loginToEncoderApp(String userName, String pword) throws InterruptedException {
+		Thread.sleep(3500);
 		username.sendKeys(userName);
+		Thread.sleep(500);
 		password.sendKeys(pword);
 		login.click();
 	}
@@ -165,9 +171,11 @@ public class Permissions extends AbstractComponent {
 			result = accountSearchResult.getText();
 		} while (!result.equalsIgnoreCase(emailAddress));
 	}
-	
+
 	public boolean setAdminStatusToRestricted(String emailToSearch) throws InterruptedException {
-		return setUserStatus("Restricted", emailToSearch);
+		boolean restrictedStatus = setUserStatus("Restricted", emailToSearch);
+		logout.click();
+		return restrictedStatus;
 	}
 
 	public boolean setStatusToRestricted(String emailToSearch) throws InterruptedException {
@@ -179,40 +187,46 @@ public class Permissions extends AbstractComponent {
 
 	public boolean setStatusToActiveForMobile(String emailToSearch) throws InterruptedException {
 		boolean setAcountStatus = setUserStatus("Active", emailToSearch);
+		performToggleAction("true", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
 		performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
-		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);//null_proceedBtn
 		return setAcountStatus;
 	}
-
-	public boolean setStatusToActiveForDestop(String emailToSearch) throws InterruptedException {
-		boolean setAcountStatus = setUserStatus("Active", emailToSearch);
-		performToggleAction("true", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
-		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
-		return setAcountStatus;
+	
+	public boolean setCaptureVehicleToTrue(String emailToSearch) throws InterruptedException {
+		setUserStatus("Active", emailToSearch);
+		performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
+		boolean status = performToggleAction("true", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
+		Thread.sleep(2000);
+		return status;
 	}
 
 	public boolean setPaymentAcceptanceToFalse(String emailToSearch) throws InterruptedException {
 		setUserStatus("Active", emailToSearch);
-		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
-		return performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+		performToggleAction("false", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
+		boolean status = performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+		Thread.sleep(2000);
+		return status;
 	}
 
 	public boolean setPaymentAcceptanceToTrue(String emailToSearch) throws InterruptedException {
 		setUserStatus("Active", emailToSearch);
-		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
-		return performToggleAction("true", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
-	}
-
-	public boolean setAllowExitToFalse(String emailToSearch) throws InterruptedException {
-		setUserStatus("Active", emailToSearch);
-		performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
-		return performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, null);
+		performToggleAction("false", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
+		performToggleAction("false", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
+		boolean status = performToggleAction("true", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
+		Thread.sleep(3000);
+		return status;
 	}
 
 	public boolean setAllowExitToTrue(String emailToSearch) throws InterruptedException {
 		setUserStatus("Active", emailToSearch);
+		performToggleAction("false", captureVehicleToggleStatus, captureVehicleToggleSwitch, proceedBtn);
 		performToggleAction("false", paymentAcceptanceToggleStatus, paymentAcceptanceToggleSwitch, proceedBtn);
-		return performToggleAction("true", allowExitToggleStatus, allowExitToggleSwitch, null);
+		boolean status = performToggleAction("true", allowExitToggleStatus, allowExitToggleSwitch, proceedBtn);
+		Thread.sleep(2000);
+		return status;
 	}
 
 	public boolean setUserStatus(String desiredStatus, String emailToSearch) throws InterruptedException {
@@ -240,41 +254,56 @@ public class Permissions extends AbstractComponent {
 		if (!desiredStatus.equals(currentStatus)) {
 			toggleSwitch.click();
 			Thread.sleep(1000);
-			if (proceedButton != null) {
-				Thread.sleep(2000);
-				proceedButton.click();
-				Thread.sleep(2000);
-			}
+			proceedButton.click();
+			Thread.sleep(2000);
+//			if (proceedButton != null) {
+//				Thread.sleep(2000);
+//				proceedButton.click();
+//				Thread.sleep(2000);
+//			}
 
 		} else {
 			System.out.println(currentStatus);
 		}
 		return toggleStatus.getAttribute("aria-checked").equalsIgnoreCase(desiredStatus);
 	}
+	
+	public boolean validationForEntryEncoder() throws InterruptedException {
+		waitForWebElementToAppear(viewParkedVehiclesTab);
+		viewParkedVehiclesTab.click();
+		Thread.sleep(2000);
+		encoderSearch.sendKeys("SYNCH02", Keys.ENTER);
+		waitForWebElementToAppear(ticketSearchResult);
+		ticketSearchResult.click();
+		waitForWebElementToAppear(ticketTagStatus);
+		return encoderSearchResult.isDisplayed();
+	}
 
 	public boolean allowExitValidation() throws InterruptedException {
-		return validateButtonIsDisplayed(markCompleteBtn, viewParkedVehiclesTab, ticketSearchResult, "SYNCH02");
+		return validateButtonIsDisplayed(markCompleteBtn, "SYNCH04");
 	}
-
+	
 	public boolean PaymentAcceptanceSetToTrueLoginValidation() throws InterruptedException {
-		return validateButtonIsDisplayed(receiveParkingPaymentBtn, null, null, "SYNCH03");
+		
+		boolean isDisplayed = receiveParkingPaymentBtn.isEnabled();
+		return isDisplayed;
 	}
 
-	private boolean validateButtonIsDisplayed(WebElement button, WebElement viewParkedVehicles, WebElement searchResult, String vehicleNumber) throws InterruptedException {
+	@FindBy(xpath = "//div[2]/div[2]/div[2]/div[1]/button")
+	WebElement searchResult;
+	
+	private boolean validateButtonIsDisplayed(WebElement button,
+			String vehicleNumber) throws InterruptedException {
 		Thread.sleep(3000);
-		if(viewParkedVehicles != null) {
-			viewParkedVehicles.click();
-			Thread.sleep(2000);
-		}
 		encoderSearch.sendKeys(vehicleNumber, Keys.ENTER);
 		Thread.sleep(3000);
-		//waitForWebElementToAppear(encoderSearchResult);
-		
-		if(searchResult != null) {
+		// waitForWebElementToAppear(encoderSearchResult);
+
+		if (searchResult != null) {
 			searchResult.click();
-			
+
 		}
-		
+
 		try {
 			waitForWebElementToAppear(ticketTagStatus);
 			boolean isDisplayed = button.isDisplayed();
@@ -286,14 +315,14 @@ public class Permissions extends AbstractComponent {
 		}
 	}
 
-	public boolean loginValidationForStatusChange() {
+	public boolean loginValidationForStatusChangeAndChangeRole() {
 
 		return loginValidation(
 				"Oops! You are blocked from accessing this page. To gain access, contact your admin for support.");
 
 	}
 
-	public boolean PaymentAcceptanceSetToFalseLoginValidation() {
+	public boolean paymentAcceptanceSetToFalseLoginValidation() {
 
 		return loginValidation("Your account has been restricted. Please contact our support team for assistance.");
 	}

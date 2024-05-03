@@ -4,15 +4,39 @@
   <listeners>
     <listener class-name="automation.AdminTestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Filter And Search Test(failed)" verbose="0">
+  <test thread-count="5" name="Parking Area Module Test(failed)" verbose="0">
     <classes>
-      <class name="automation.AdminTest.FilterAndSearchTest">
+      <class name="automation.AdminTest.AreaModuleTest">
         <methods>
-          <include name="filterByEncoderRole"/>
+          <include name="launchApplication"/>
+          <include name="areaPageSelectRow"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- automation.AdminTest.AreaModuleTest -->
+    </classes>
+  </test> <!-- Parking Area Module Test(failed) -->
+  <test thread-count="5" name="User Module Test(failed)" verbose="0">
+    <classes>
+      <class name="automation.AdminTest.UserModuleTest">
+        <methods>
+          <include name="userPageSelectRow"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- automation.AdminTest.FilterAndSearchTest -->
+      </class> <!-- automation.AdminTest.UserModuleTest -->
     </classes>
-  </test> <!-- Filter And Search Test(failed) -->
+  </test> <!-- User Module Test(failed) -->
+  <test thread-count="5" name="Permission Test(failed)" verbose="0">
+    <classes>
+      <class name="automation.AdminTest.PermissionTest">
+        <methods>
+          <include name="encoderWithCaptureVehicleSetToTrue"/>
+          <include name="encoderWithAllowExitToTrue"/>
+          <include name="encoderWithPaymentAcceptanceSetToTrue"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- automation.AdminTest.PermissionTest -->
+    </classes>
+  </test> <!-- Permission Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

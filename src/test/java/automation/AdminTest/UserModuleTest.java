@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automation.AdminTestComponents.BaseTest;
+import automation.AdminTestComponents.Retry;
 import automation.PageObject.Pagenation;
 import automation.PageObject.UserModule;
 
@@ -16,7 +17,7 @@ public class UserModuleTest extends BaseTest {
 	String mobileNumber = "+6399"+generateRandomNumber(8);
 	String emailToSearch = "forAutomationEdit@parkmate.com";
 	
-	@Test(priority = 1, groups = { "Creation" })
+	@Test(priority = 1, retryAnalyzer=Retry.class, groups = { "Creation" })
 	public void adminEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException {
 
 		UserModule parkingUser = loginToApplication();
@@ -39,7 +40,43 @@ public class UserModuleTest extends BaseTest {
 
 		UserModule parkingUser = loginToApplication();
 		parkingUser.clickEnroll();
-		String userRole = parkingUser.selectEncoderRole();
+		String userRole = "Encoder";
+		parkingUser.getPersonalDetails("Sam", "O", "Medina");
+		String email = parkingUser.getEmailDetails(emailAddress);
+		parkingUser.getMobileDetails(mobileNumber);
+		Assert.assertTrue(parkingUser.getUsername(email));
+		parkingUser.generatePassword();
+		parkingUser.getParkingStation();
+		parkingUser.clickSave();
+		Assert.assertTrue(parkingUser.validateBanner(userRole));
+		Assert.assertTrue(parkingUser.enrollmentValidation(email, userRole));
+
+	}
+	
+	@Test(priority = 2, groups = { "Creation" })
+	public void cashierEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException {
+
+		UserModule parkingUser = loginToApplication();
+		parkingUser.clickEnroll();
+		String userRole = parkingUser.selectCashierRole();
+		parkingUser.getPersonalDetails("Sam", "O", "Medina");
+		String email = parkingUser.getEmailDetails(emailAddress);
+		parkingUser.getMobileDetails(mobileNumber);
+		Assert.assertTrue(parkingUser.getUsername(email));
+		parkingUser.generatePassword();
+		parkingUser.getParkingStation();
+		parkingUser.clickSave();
+		Assert.assertTrue(parkingUser.validateBanner(userRole));
+		Assert.assertTrue(parkingUser.enrollmentValidation(email, userRole));
+
+	}
+	
+	@Test(priority = 2, groups = { "Creation" })
+	public void managerEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException {
+
+		UserModule parkingUser = loginToApplication();
+		parkingUser.clickEnroll();
+		String userRole = parkingUser.selectManagerRole();
 		parkingUser.getPersonalDetails("Sam", "O", "Medina");
 		String email = parkingUser.getEmailDetails(emailAddress);
 		parkingUser.getMobileDetails(mobileNumber);
@@ -52,7 +89,7 @@ public class UserModuleTest extends BaseTest {
 
 	}
 
-	@Test( groups = { "ErrorHandling" })
+	@Test(groups = { "ErrorHandling" })
 	public void userEmailDupValidation() throws InterruptedException {
 
 		UserModule parkingUser = loginToApplication();
@@ -83,7 +120,7 @@ public class UserModuleTest extends BaseTest {
 
 	@Test
 	public void userPageSelectRow() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
+		landingPage.loginApplication("renAdmin", "Password@1");
 		Pagenation selectRow = new Pagenation(driver);
 		boolean tableCount = selectRow.selectRowCount();
 		Assert.assertTrue(tableCount);
@@ -92,7 +129,7 @@ public class UserModuleTest extends BaseTest {
 
 	@Test
 	public void userPagePagenation() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
+		landingPage.loginApplication("renAdmin", "Password@1");
 		Pagenation page = new Pagenation(driver);
 		boolean nextBtnDisabled = page.nextButton();
 		Assert.assertTrue(nextBtnDisabled);
@@ -118,7 +155,7 @@ public class UserModuleTest extends BaseTest {
 	}
 	// handle the login and navigation steps
 	private UserModule loginToApplication() throws InterruptedException {
-		UserModule parkingUser = landingPage.loginApplication("riztest", "Password@1");
+		UserModule parkingUser = landingPage.loginApplication("superuser", "SuperUser123!?");
 		parkingUser.userPage();
 
 		return parkingUser;

@@ -3,7 +3,6 @@ package automation.AbstractComponents;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
@@ -13,7 +12,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v120.emulation.Emulation;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,7 +26,7 @@ public class AbstractComponent {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(css = "img[alt='SM Logo']")
+	@FindBy(css = "div.flex.justify-between.mb-5.min-h-12 > svg")//"img[alt='SM Logo']")
 	protected WebElement smLogo;
 
 	@FindBy(xpath = "//li[@class='mb-3']")
@@ -45,13 +43,13 @@ public class AbstractComponent {
 
 	public void waitForWebElementToAppear(WebElement findBy) {
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
 
 	public void waitForWebElementToBeClickable(WebElement findBy) {
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(7));
 		wait.until(ExpectedConditions.elementToBeClickable(findBy));
 	}
 
@@ -67,7 +65,7 @@ public class AbstractComponent {
 		return randomLetters + randomNumbers;
 	}
 
-	private String generateRandomChars(int length, String source) {
+	protected String generateRandomChars(int length, String source) {
 		return ThreadLocalRandom.current().ints(length, 0, source.length()).mapToObj(source::charAt)
 				.map(Object::toString).collect(Collectors.joining());
 	}

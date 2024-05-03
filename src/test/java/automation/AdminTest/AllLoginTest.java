@@ -11,7 +11,7 @@ import automation.AdminTestComponents.Retry;
 public class AllLoginTest extends BaseTest {
 	String errMsg = "Either your username or password is incorrect, please check and try again!";
 
-	@Test(retryAnalyzer=Retry.class,groups= {"ErrorHandling"})
+	@Test(priority = 1, retryAnalyzer=Retry.class,groups= {"ErrorHandling"})
 	public void loginWithInvalidUserName() throws InterruptedException, IOException {
 
 		landingPage.loginApplication("invalid", "Password@1");
@@ -21,7 +21,7 @@ public class AllLoginTest extends BaseTest {
 	@Test(groups= {"ErrorHandling"})
 	public void loginWithInvalidPassword() throws InterruptedException, IOException {
 
-		landingPage.loginApplication("riztest", "inval!Dp@ss1");
+		landingPage.loginApplication("renAdmin", "inval!Dp@ss1");
 		Assert.assertEquals(landingPage.getErrorMsg(), errMsg);
 
 	}
@@ -35,7 +35,7 @@ public class AllLoginTest extends BaseTest {
 	@Test
 	public void loginWithAccess() throws InterruptedException, IOException {
 
-		landingPage.loginApplication("riztest", "Password@1");
+		landingPage.loginApplication("renAdmin", "Password@1");
 		Assert.assertTrue(landingPage.successLogin());
 		
 		String confirmLogout = landingPage.logout();

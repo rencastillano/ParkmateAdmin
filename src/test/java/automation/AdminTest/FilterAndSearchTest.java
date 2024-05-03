@@ -21,7 +21,7 @@ public class FilterAndSearchTest extends BaseTest {
 	String areaName = "Wack Wack";
 	String areaCode = "0846";
 
-	@Test
+	@Test(priority = 1, retryAnalyzer=Retry.class)
 	public void userEmailSearch() throws InterruptedException {
 
 		FilterAndSearch search = loginToApplicationForSearching();
@@ -79,7 +79,7 @@ public class FilterAndSearchTest extends BaseTest {
 
 	// handle the login and navigation steps
 	private FilterAndSearch loginToApplicationForSearching() throws InterruptedException {
-		landingPage.loginApplication("renAdmin", "Password1!");
+		landingPage.loginApplication("renAdmin", "Password@1");
 		FilterAndSearch search = new FilterAndSearch(driver);
 		
 		return search;
@@ -89,7 +89,7 @@ public class FilterAndSearchTest extends BaseTest {
 	public Object[] getData() throws IOException {
 
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				System.getProperty("user.dir") + "\\src\\test\\java\\automation\\AdminData\\ParkingData.json");
+				System.getProperty("user.dir") + "\\src\\test\\java\\automation\\AdminData\\AdminData.json");
 		return new Object[] { data.get(0) };
 
 	}

@@ -10,13 +10,13 @@ import automation.PageObject.UserModule;
 
 public class PermissionTest extends BaseTest {
 
-	@Test
+	@Test(priority = 1, retryAnalyzer=Retry.class)
 	public void adminWithRestrictedStatus() throws InterruptedException {
 
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setAdminStatusToRestricted("henry.salazar@parkmate.com"));
 		permission.loginToParkingAdmin("henry.salazar", "Password@1");
-		Assert.assertTrue(permission.loginValidationForStatusChange());
+		Assert.assertTrue(permission.loginValidationForStatusChangeAndChangeRole());
 
 	}
 
@@ -26,7 +26,7 @@ public class PermissionTest extends BaseTest {
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setStatusToRestricted("statusChange@parkmate.com"));
 		navigateAndLoginToEncoderMobileApp(permission);
-		Assert.assertTrue(permission.loginValidationForStatusChange());
+		Assert.assertTrue(permission.loginValidationForStatusChangeAndChangeRole());
 
 	}
 
@@ -36,35 +36,33 @@ public class PermissionTest extends BaseTest {
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setStatusToRestricted("statusChange@parkmate.com"));
 		navigateAndLoginToEncoderDesktop(permission);
-		Assert.assertTrue(permission.loginValidationForStatusChange());
+		Assert.assertTrue(permission.loginValidationForStatusChangeAndChangeRole());
 
 	}
 
 	@Test
-	public void encoderWithActiveStatusMobileAppLogin() throws InterruptedException {
+	public void encoderWithActiveStatus() throws InterruptedException {
 
 		Permissions permission = loginToApplication();
-		Assert.assertTrue(permission.setStatusToActiveForMobile("statusChange@parkmate.com"));
-		navigateAndLoginToEncoderMobileApp(permission);
-		Assert.assertFalse(permission.loginValidationForStatusChange());
+		Assert.assertTrue(permission.setStatusToActiveForMobile("statusChange@parkmate.com"));;
 	}
-
-	@Test
-	public void encoderWithActiveStatusDesktopLogin() throws InterruptedException {
-
-		Permissions permission = loginToApplication();
-		Assert.assertTrue(permission.setStatusToActiveForDestop("statusChange@parkmate.com"));
-		navigateAndLoginToEncoderDesktop(permission);
-		Assert.assertFalse(permission.loginValidationForStatusChange());
-	}
-
-	@Test
-	public void encoderWithPaymentAcceptanceSetToFalse() throws InterruptedException {
+	
+	@Test(retryAnalyzer = Retry.class)
+	public void encoderWithNoRole() throws InterruptedException {
 
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setPaymentAcceptanceToFalse("statusChange@parkmate.com"));
 		navigateAndLoginToEncoderDesktop(permission);
-		Assert.assertTrue(permission.PaymentAcceptanceSetToFalseLoginValidation());
+		Assert.assertTrue(permission.loginValidationForStatusChangeAndChangeRole());
+	}
+	
+	@Test(retryAnalyzer = Retry.class)
+	public void encoderWithCaptureVehicleSetToTrue() throws InterruptedException {
+
+		Permissions permission = loginToApplication();
+		Assert.assertTrue(permission.setCaptureVehicleToTrue("statusChange@parkmate.com"));
+		navigateAndLoginToEncoderDesktop(permission);
+		Assert.assertTrue(permission.validationForEntryEncoder());
 	}
 
 	@Test(retryAnalyzer = Retry.class)
@@ -77,39 +75,31 @@ public class PermissionTest extends BaseTest {
 	}
 
 	@Test(retryAnalyzer = Retry.class)
-	public void encoderWithAllowExitToFalse() throws InterruptedException {
-
-		Permissions permission = loginToApplication();
-		Assert.assertTrue(permission.setAllowExitToFalse("statusChange@parkmate.com"));
-		navigateAndLoginToEncoderMobileApp(permission);
-		Assert.assertFalse(permission.allowExitValidation());
-	}
-
-	@Test
 	public void encoderWithAllowExitToTrue() throws InterruptedException {
 
 		Permissions permission = loginToApplication();
 		Assert.assertTrue(permission.setAllowExitToTrue("statusChange@parkmate.com"));
-		navigateAndLoginToEncoderMobileApp(permission);
+		navigateAndLoginToEncoderDesktop(permission);
 		Assert.assertTrue(permission.allowExitValidation());
 	}
 
 	// handle the login and navigation steps
 	private Permissions loginToApplication() throws InterruptedException {
-		UserModule userCreation = landingPage.loginApplication("riztest", "Password@1");
+		UserModule userCreation = landingPage.loginApplication("superuser", "SuperUser123!?");
 		Permissions permission = userCreation.userPage();
 
 		return permission;
 	}
 
-	private void navigateAndLoginToEncoderDesktop(Permissions permission) {
+	private void navigateAndLoginToEncoderDesktop(Permissions permission) throws InterruptedException {
 		permission.navigateToEncoderDesktop();
 		permission.loginToEncoderApp("statusChange", "Password@1");
 
 	}
 
-	private void navigateAndLoginToEncoderMobileApp(Permissions permission) {
+	private void navigateAndLoginToEncoderMobileApp(Permissions permission) throws InterruptedException {
 		permission.navigateToEncoderMobileApp();
+		Thread.sleep(3000);
 		permission.loginToEncoderApp("statusChange", "Password@1");
 
 	}

@@ -41,6 +41,7 @@ public class LandingPage extends AbstractComponent {
 	
 	
 	public UserModule loginApplication(String userName, String pword) throws InterruptedException {
+		
 		Thread.sleep(1000);
 		username.sendKeys(userName);
 		Thread.sleep(1000);
@@ -49,10 +50,6 @@ public class LandingPage extends AbstractComponent {
 		UserModule userCreationPage = new UserModule(driver);
 		return userCreationPage;
 		
-	}
-	
-	public void goTo() {
-		driver.get("https://hub.parking-stg.smop.asia/");
 	}
 	
 	public boolean successLogin() {
