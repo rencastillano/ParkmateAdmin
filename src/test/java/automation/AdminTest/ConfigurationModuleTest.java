@@ -11,7 +11,7 @@ public class ConfigurationModuleTest extends BaseTest {
 	// Parker Test cases
 
 	String parkerName = "SampleParker_" + generateRandomNumber(4);
-	String parkerCode = "PW";//generateRandomChars(2, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+	String parkerCode = generateRandomChars(2, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 	String baseFee = generateRandomChars(4, "0123456789");
 	String parkingAreaName = "MSI";
 
