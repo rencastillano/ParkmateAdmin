@@ -61,19 +61,18 @@ public class ConfigurationModule extends AbstractComponent {
 	@FindBy(xpath = "//div[@class='text-sm font-henry-sans text-sm-default-text']")
 	List<WebElement> parkerTypesCreated;
 
-	@FindBy(css = "div:nth-child(4) > div:nth-child(2) > div")
+	@FindBy(css = ".border")
 	List<WebElement> createdParkerTypesList;
 
 	By parkerTypes = By.cssSelector(".border.rounded-lg.p-5.flex.justify-between.items-center");
-	By pTypeName = By.cssSelector(
-			"div[class='rounded-xl bg-sm-white p-4 drop-shadow-md mt-3'] div[class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-3 gap-2'] div div:nth-child(1)");
-	By deleteParker = By.xpath("//div[@class='flex gap-2']/button[last()]");
-
-	@FindBy(xpath = ("(//button[@class='bg-sm-accent-light-blue p-1 rounded-full'])[1]"))
-	WebElement parkerEditBtn;
+	By pTypeName = By.cssSelector(".border>div.text-sm");
+	By deleteParker = By.cssSelector(".border>div.flex>button.bg-sm-accent-pink-light");
 
 	@FindBy(xpath = "//button[text()='Delete']")
 	WebElement deleteParkerBtn;
+	
+	@FindBy(xpath = ("(//button[@class='bg-sm-accent-light-blue p-1 rounded-full'])[1]"))
+	WebElement parkerEditBtn;
 
 	@FindBy(xpath = "//div[@class='text-base']")
 	WebElement errorMsg;
@@ -202,6 +201,7 @@ public class ConfigurationModule extends AbstractComponent {
 
 	private WebElement getParkingByName(String parkerName) {
 		return getElementByName(getParkingAreaForPricing(), feeParkingName, parkerName);
+
 	}
 
 	public void assigningPricing(String parkerName) {
@@ -261,8 +261,7 @@ public class ConfigurationModule extends AbstractComponent {
 
 	private WebElement getParkerTypeByName(String parkerName) {
 
-		return getElementByName(getCreatedParkerTypes(), pTypeName, parkerName);
-		
+	    return getElementByName(getCreatedParkerTypes(), pTypeName, parkerName);
 	}
 
 	public void clickDeleteParkerType(String parkerName) {
@@ -298,7 +297,9 @@ public class ConfigurationModule extends AbstractComponent {
 	}
 
 	private WebElement getParkingAreaByName(String parkingName) {
+
 		return getElementByName(getParkingAreas(), parkingAreaNames, parkingName);
+
 	}
 
 	public void parkerTypeAssigning(String parkingName) throws InterruptedException {
@@ -337,6 +338,7 @@ public class ConfigurationModule extends AbstractComponent {
 		return listSupplier.get();
 	}
 
+
 	private WebElement getElementByName(List<WebElement> elements, By locator, String name) {
 		return elements.stream().filter(element -> element.findElement(locator).getText().equals(name))
 				.findFirst().orElse(null);
@@ -357,6 +359,7 @@ public class ConfigurationModule extends AbstractComponent {
 			System.out.println("Exception " + value);
 		}
 		return value;
+
 	}
 
 	public String handlingParkerNameDup(String initialParkerName) throws InterruptedException {

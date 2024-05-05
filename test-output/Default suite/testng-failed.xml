@@ -7,6 +7,10 @@
         <methods>
           <include name="deleteParkerTypeWithPricingPackage"/>
           <include name="launchApplication"/>
+<<<<<<< HEAD
+=======
+          <include name="tearDown"/>
+>>>>>>> develop
         </methods>
       </class> <!-- automation.AdminTest.ConfigurationModuleTest -->
     </classes>

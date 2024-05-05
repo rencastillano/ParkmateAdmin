@@ -1,108 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-04T15:58:05 CST" name="Default suite" finished-at="2024-05-04T16:01:15 CST" duration-ms="189975">
+  <suite started-at="2024-05-05T13:06:38 CST" name="Default suite" finished-at="2024-05-05T13:07:16 CST" duration-ms="37653">
     <groups>
     </groups>
-    <test started-at="2024-05-04T15:58:05 CST" name="Default test" finished-at="2024-05-04T16:01:15 CST" duration-ms="189975">
+    <test started-at="2024-05-05T13:06:38 CST" name="Default test" finished-at="2024-05-05T13:07:16 CST" duration-ms="37653">
       <class name="automation.AdminTest.ConfigurationModuleTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:58:05 CST" name="launchApplication" finished-at="2024-05-04T15:58:10 CST" duration-ms="4836" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@8c11eee]" started-at="2024-05-05T13:06:39 CST" name="launchApplication" finished-at="2024-05-05T13:06:53 CST" duration-ms="14599" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="parkerTypeEnrollment()[pri:1, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:58:10 CST" name="parkerTypeEnrollment" finished-at="2024-05-04T15:58:39 CST" duration-ms="29295" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- parkerTypeEnrollment -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:58:39 CST" name="launchApplication" finished-at="2024-05-04T15:58:43 CST" duration-ms="3426" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="editParkerType()[pri:2, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:58:43 CST" name="editParkerType" finished-at="2024-05-04T15:58:50 CST" duration-ms="7401" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editParkerType -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:58:50 CST" name="launchApplication" finished-at="2024-05-04T15:58:54 CST" duration-ms="3785" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="deleteParkerType()[pri:3, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:58:54 CST" name="deleteParkerType" finished-at="2024-05-04T15:59:01 CST" duration-ms="7277" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteParkerType -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:59:01 CST" name="launchApplication" finished-at="2024-05-04T15:59:05 CST" duration-ms="4046" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="deleteParkerTypeWithPricingPackage()[pri:4, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:59:05 CST" name="deleteParkerTypeWithPricingPackage" finished-at="2024-05-04T15:59:13 CST" duration-ms="7459" status="PASS">
+        <test-method signature="deleteParkerTypeWithPricingPackage()[pri:4, instance:automation.AdminTest.ConfigurationModuleTest@8c11eee]" started-at="2024-05-05T13:06:53 CST" name="deleteParkerTypeWithPricingPackage" finished-at="2024-05-05T13:07:16 CST" duration-ms="22991" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteParkerTypeWithPricingPackage -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:59:13 CST" name="launchApplication" finished-at="2024-05-04T15:59:16 CST" duration-ms="3346" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="assignParkerToParkingArea()[pri:5, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:59:16 CST" name="assignParkerToParkingArea" finished-at="2024-05-04T15:59:29 CST" duration-ms="12639" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- assignParkerToParkingArea -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:59:29 CST" name="launchApplication" finished-at="2024-05-04T15:59:33 CST" duration-ms="4138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="duplicateParkerTypeName()[pri:6, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:59:33 CST" name="duplicateParkerTypeName" finished-at="2024-05-04T15:59:43 CST" duration-ms="10534" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- duplicateParkerTypeName -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:59:43 CST" name="launchApplication" finished-at="2024-05-04T15:59:47 CST" duration-ms="3419" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="duplicateParketTypeCode()[pri:7, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:59:47 CST" name="duplicateParketTypeCode" finished-at="2024-05-04T15:59:57 CST" duration-ms="9897" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- duplicateParketTypeCode -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T15:59:57 CST" name="launchApplication" finished-at="2024-05-04T16:00:00 CST" duration-ms="3347" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="createPricingPackage()[pri:8, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T16:00:00 CST" name="createPricingPackage" finished-at="2024-05-04T16:00:14 CST" duration-ms="14322" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createPricingPackage -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T16:00:14 CST" name="launchApplication" finished-at="2024-05-04T16:00:19 CST" duration-ms="4504" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="updatePricingPackageWithoutChange()[pri:9, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T16:00:19 CST" name="updatePricingPackageWithoutChange" finished-at="2024-05-04T16:00:31 CST" duration-ms="12187" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatePricingPackageWithoutChange -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T16:00:31 CST" name="launchApplication" finished-at="2024-05-04T16:00:34 CST" duration-ms="3259" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="updatePricingFeePackage()[pri:10, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T16:00:34 CST" name="updatePricingFeePackage" finished-at="2024-05-04T16:00:47 CST" duration-ms="13004" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatePricingFeePackage -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T16:00:47 CST" name="launchApplication" finished-at="2024-05-04T16:00:52 CST" duration-ms="4428" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="assignPricingToParkingArea()[pri:11, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T16:00:52 CST" name="assignPricingToParkingArea" finished-at="2024-05-04T16:01:01 CST" duration-ms="8762" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- assignPricingToParkingArea -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T16:01:01 CST" name="launchApplication" finished-at="2024-05-04T16:01:05 CST" duration-ms="4531" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="deletePricingPackage()[pri:12, instance:automation.AdminTest.ConfigurationModuleTest@366c4480]" started-at="2024-05-04T16:01:05 CST" name="deletePricingPackage" finished-at="2024-05-04T16:01:15 CST" duration-ms="9953" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deletePricingPackage -->
       </class> <!-- automation.AdminTest.ConfigurationModuleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
