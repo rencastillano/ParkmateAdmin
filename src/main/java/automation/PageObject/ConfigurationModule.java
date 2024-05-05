@@ -61,18 +61,18 @@ public class ConfigurationModule extends AbstractComponent {
 	@FindBy(xpath = "//div[@class='text-sm font-henry-sans text-sm-default-text']")
 	List<WebElement> parkerTypesCreated;
 
-	@FindBy(css = ".border.rounded-lg.p-5.flex.justify-between.items-center")
+	@FindBy(css = ".border")//.border.rounded-lg.p-5.flex.justify-between.items-center")
 	List<WebElement> createdParkerTypesList;
 
 	By parkerTypes = By.cssSelector(".border.rounded-lg.p-5.flex.justify-between.items-center");
-	By pTypeName = By.cssSelector(".text-sm.font-henry-sans.text-sm-default-text");
-	By deleteParker = By.xpath("//div[@class='flex gap-2']/button[last()]");
-
-	@FindBy(xpath = ("(//button[@class='bg-sm-accent-light-blue p-1 rounded-full'])[1]"))
-	WebElement parkerEditBtn;
+	By pTypeName = By.cssSelector(".border>div.text-sm");//".text-sm.font-henry-sans.text-sm-default-text");
+	By deleteParker = By.cssSelector(".border>div.flex>button.bg-sm-accent-pink-light");//("//div[@class='flex gap-2']/button[last()]");
 
 	@FindBy(xpath = "//button[text()='Delete']")
 	WebElement deleteParkerBtn;
+	
+	@FindBy(xpath = ("(//button[@class='bg-sm-accent-light-blue p-1 rounded-full'])[1]"))
+	WebElement parkerEditBtn;
 
 	@FindBy(xpath = "//div[@class='text-base']")
 	WebElement errorMsg;
@@ -198,7 +198,7 @@ public class ConfigurationModule extends AbstractComponent {
 	}
 	
 	private WebElement getParkingByName(String parkerName) {
-	    return getElementByName(getParkingAreaForPricing(), parkerName, feeParkingName);
+	    return getElementByName(getParkingAreaForPricing(), feeParkingName, parkerName);
 	}
 
 	public void assigningPricing(String parkerName) {
@@ -256,7 +256,7 @@ public class ConfigurationModule extends AbstractComponent {
 	}
 	
 	private WebElement getParkerTypeByName(String parkerName) {
-	    return getElementByName(getCreatedParkerTypes(), parkerName, pTypeName);
+	    return getElementByName(getCreatedParkerTypes(), pTypeName, parkerName);
 	}
 
 	public void clickDeleteParkerType(String parkerName) {
@@ -292,7 +292,7 @@ public class ConfigurationModule extends AbstractComponent {
 	}
 	
 	private WebElement getParkingAreaByName(String parkingName) {
-	    return getElementByName(getParkingAreas(), parkingName, parkingAreaNames);
+	    return getElementByName(getParkingAreas(), parkingAreaNames,  parkingName);
 	}
 
 	public void parkerTypeAssigning(String parkingName) throws InterruptedException {
@@ -330,53 +330,13 @@ public class ConfigurationModule extends AbstractComponent {
 	    return listSupplier.get();
 	}
 	
-	private WebElement getElementByName(List<WebElement> elements, String name, By locator) {
+	private WebElement getElementByName(List<WebElement> elements, By locator, String name) {
 	    return elements.stream()
 	            .filter(element -> element.findElement(locator).getText().equalsIgnoreCase(name))
 	            .findFirst()
 	            .orElse(null);
 	}
-	
-//	public String handlingParkerNameDup(String initialParkerName) throws InterruptedException {
-//		String parkerName = initialParkerName;
-//		String getNewValue = "SampleParker_" + generateRandomNumber(4);
-//		try {
-//			while (parkerNameDupMsg.isDisplayed()) {
-//				getParkerTypeName(getNewValue);
-//				clickCreateButton();
-//				Thread.sleep(4000);
-//				System.out.println("New value generated: " + getNewValue);
-//				parkerName = getNewValue; // Update areaCode with the new value
-//				getNewValue = "Area_" + generateRandomString(); // Generate a new random area code for next iteration
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace(); // Log the exception or handle it appropriately
-//			System.out.println("Exception " + parkerName);
-//		}
-//		return parkerName;
-//	}
-	
-//	public String handlingParkerCodeDup(String initialParkerCode) throws InterruptedException {
-//	    String parkerCode = initialParkerCode;
-//	    String getNewValue = generateRandomChars(2, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-//	    try {
-//	        while (parkerCodeDupMsg.isDisplayed()) {
-//	        	getParkerTypeCode(getNewValue);
-//	        	clickCreateButton();
-//	            Thread.sleep(4000);
-//	            System.out.println("New value generated: " + getNewValue);
-//	            parkerCode = getNewValue; // Update areaCode with the new value
-//	            getNewValue = generateRandomNumber(4); // Generate a new random area code for next iteration
-//	        }
-//	    } catch (Exception e) {
-//	        // Handle any other exceptions or log a message
-//	        e.printStackTrace();
-//	        System.out.println("Exception " + parkerCode);
-//	    }
-//	    return parkerCode;
-//	}
-//	
-//	
+		
 	public String handleDuplicate(String initialValue, Supplier<String> valueGenerator, Consumer<String> valueUpdater, Supplier<Boolean> condition) throws InterruptedException {
 	    String value = initialValue;
 	    try {
