@@ -31,7 +31,7 @@
 			<class name="automation.AdminTest.FilterAndSearchTest" />
 		</classes>
 	</test>
-	<test thread-count="5" name="ConfigurationModuleTest">
+	<test thread-count="5" name="Configuration Module Test">
 		<classes>
 			<class name="automation.AdminTest.ConfigurationModuleTest" />
 		</classes>
