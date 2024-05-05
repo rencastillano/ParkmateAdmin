@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import automation.AbstractComponents.AbstractComponent;
 
@@ -190,6 +191,7 @@ public class ConfigurationModule extends AbstractComponent {
 		pressBackspaceMultipleTimes(inputBaseFee, numberOfBackspaces);
 		Thread.sleep(1500);
 		inputBaseFee.sendKeys(newPrice);
+		Thread.sleep(1500);
 		submitButton.click();
 	}
 		
@@ -307,6 +309,31 @@ public class ConfigurationModule extends AbstractComponent {
 	    } else {
 	        System.out.println("Parker type with name '" + parkingName + "' not found.");
 	    }
+	}
+	
+	public boolean parkerTypeAssigningWithMismatchParkingArea(String parkingName, String parkerName) throws InterruptedException {
+	    WebElement name = getParkingAreaByName(parkingName);
+	    if (name != null) {
+	    	name.findElement(plusButton).click();
+	        name.findElement(assignParkerBtn).click();
+	        //selectParkerType.click();
+	        
+	        Select select = new Select(selectParkerType);
+
+	        // Check if the "test" option is present
+	        boolean isTestPresent = select.getOptions().stream()
+	                                    .anyMatch(option -> option.getText().equals(parkerName));
+
+	        if (!isTestPresent) {
+	            System.out.println(parkerName+" is not available in the dropdown.");
+	            return false;
+	        } else {
+	            // Select option by visible text
+	            select.selectByVisibleText(parkerName);
+	            return true;
+	        }
+	    }
+		return false;
 	}
 	
 	public boolean validateBannerMessage(String expectedMessage) {

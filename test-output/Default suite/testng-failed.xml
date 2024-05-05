@@ -5,7 +5,7 @@
     <classes>
       <class name="automation.AdminTest.ConfigurationModuleTest">
         <methods>
-          <include name="deleteParkerTypeWithPricingPackage"/>
+          <include name="assignParkerToParkingAreaWithMisMatchParkingArea"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
