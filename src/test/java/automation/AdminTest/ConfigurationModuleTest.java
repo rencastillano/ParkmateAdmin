@@ -17,15 +17,12 @@ public class ConfigurationModuleTest extends BaseTest {
 
 	@Test(priority = 1)
 	public void parkerTypeEnrollment() throws InterruptedException {
-
-		landingPage.loginApplication("superuser", "SuperUser123!?");
-		ConfigurationModule config = new ConfigurationModule(driver);
-		config.gotoConfigurationMod();
+		ConfigurationModule config = loginToApplication();
 		config.goToParkerEnrollment();
 		config.getParkerTypeName(parkerName);
 		config.getParkerTypeCode(parkerCode);
 		config.clickCreateButton();
-		//add duplicate validation
+		// add duplicate validation
 		String createdParkerName = config.handlingParkerNameDup(parkerName);
 		config.handlingParkerCodeDup(parkerCode);
 		Assert.assertTrue(config.ParkerCreationValidation(createdParkerName));
@@ -34,19 +31,14 @@ public class ConfigurationModuleTest extends BaseTest {
 
 	@Test(priority = 2)
 	public void editParkerType() throws InterruptedException {
-
-		landingPage.loginApplication("superuser", "SuperUser123!?");
-		ConfigurationModule config = new ConfigurationModule(driver);
-		config.gotoConfigurationMod();
+		ConfigurationModule config = loginToApplication();
 		config.selectParkerTypeToEdit("SM Cherry Shaw");
 		Assert.assertTrue(config.validateBannerMessage("Parker type has been updated successfully!"));
 	}
 
 	@Test(priority = 3)
 	public void deleteParkerType() throws InterruptedException {
-		landingPage.loginApplication("superuser", "SuperUser123!?");
-		ConfigurationModule config = new ConfigurationModule(driver);
-		config.gotoConfigurationMod();
+		ConfigurationModule config = loginToApplication();
 		config.got0ListOfCreatedParkerTypes();
 		config.deleteParkerType();
 		Assert.assertTrue(config.validateBannerMessage("Parker type has been deleted successfully!"));
@@ -54,20 +46,15 @@ public class ConfigurationModuleTest extends BaseTest {
 
 	@Test(priority = 4)
 	public void deleteParkerTypeWithPricingPackage() throws InterruptedException {
-		landingPage.loginApplication("superuser", "SuperUser123!?");
-		ConfigurationModule config = new ConfigurationModule(driver);
-		config.gotoConfigurationMod();
+		ConfigurationModule config = loginToApplication();
 		config.got0ListOfCreatedParkerTypes();
 		config.clickDeleteParkerType("MSI Regular Parker");
-		Assert.assertEquals(config.errorSpielValidation(),"Unable to delete parker type.");
+		Assert.assertEquals(config.errorSpielValidation(), "Unable to delete parker type.");
 	}
 
 	@Test(priority = 5)
 	public void assignParkerToParkingArea() throws InterruptedException {
-
-		landingPage.loginApplication("superuser", "SuperUser123!?");
-		ConfigurationModule config = new ConfigurationModule(driver);
-		config.gotoConfigurationMod();
+		ConfigurationModule config = loginToApplication();
 		config.goToParkerEnrollment();
 		config.getParkerTypeName(parkerName);
 		config.getParkerTypeCode(parkerCode);
@@ -77,10 +64,16 @@ public class ConfigurationModuleTest extends BaseTest {
 	}
 
 	@Test(priority = 6)
+	public void assignParkerToParkingAreaWithMisMatchParkingArea() throws InterruptedException {
+		ConfigurationModule config = loginToApplication();
+		config.selectParkerTypeToEdit("SM Cherry Shaw");
+		boolean res = config.parkerTypeAssigningWithMismatchParkingArea("Acer", parkerName);
+		Assert.assertFalse(res);
+	}
+
+	@Test(priority = 7)
 	public void duplicateParkerTypeName() throws InterruptedException {
-		landingPage.loginApplication("superuser", "SuperUser123!?");
-		ConfigurationModule config = new ConfigurationModule(driver);
-		config.gotoConfigurationMod();
+		ConfigurationModule config = loginToApplication();
 		config.goToParkerEnrollment();
 		config.getParkerTypeName("MSI Regular Parker");
 		config.getParkerTypeCode(parkerCode);
@@ -88,65 +81,61 @@ public class ConfigurationModuleTest extends BaseTest {
 		Assert.assertEquals(config.duplicatedErrorMessage(), "This parker type name already exists");
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 8)
 	public void duplicateParketTypeCode() throws InterruptedException {
-		landingPage.loginApplication("superuser", "SuperUser123!?");
-		ConfigurationModule config = new ConfigurationModule(driver);
-		config.gotoConfigurationMod();
+		ConfigurationModule config = loginToApplication();
 		config.goToParkerEnrollment();
-		config.getParkerTypeName(parkerName+ "_U");
+		config.getParkerTypeName(parkerName + "_U");
 		config.getParkerTypeCode("RP");
 		config.clickCreateButton();
 		Assert.assertEquals(config.duplicatedErrorMessage(), "This parker type code already exists");
 	}
 
-	public void updateParketTypeCodeWithoutChanges() {
-	}
-
 	// Pricing and Fee Test cases
 
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void createPricingPackage() throws InterruptedException {
-		landingPage.loginApplication("superuser", "SuperUser123!?");
-		ConfigurationModule config = new ConfigurationModule(driver);
-		config.gotoConfigurationMod();
+		ConfigurationModule config = loginToApplication();
 		config.createFeePackage(baseFee);
 		Assert.assertTrue(config.validateBannerMessage("Pricing Package has been added successfully!"));
 	}
-	
-	@Test(priority = 9)
-	public void updatePricingPackageWithoutChange() throws InterruptedException {
-		landingPage.loginApplication("superuser", "SuperUser123!?");
-		ConfigurationModule config = new ConfigurationModule(driver);
-		config.gotoConfigurationMod();
-		config.updatePricing(baseFee);
-		Assert.assertEquals(config.errorSpielValidation(),"Could not edit pricing package since no values were changed.");
-	}
-	
+
 	@Test(priority = 10)
+	public void updatePricingPackageWithoutChange() throws InterruptedException {
+		ConfigurationModule config = loginToApplication();
+		config.updatePricing(baseFee);
+		Assert.assertEquals(config.errorSpielValidation(),
+				"Could not edit pricing package since no values were changed.");
+	}
+
+	@Test(priority = 11)
 	public void updatePricingFeePackage() throws InterruptedException {
-		landingPage.loginApplication("superuser", "SuperUser123!?");
-		ConfigurationModule config = new ConfigurationModule(driver);
-		config.gotoConfigurationMod();
+		ConfigurationModule config = loginToApplication();
 		config.updatePricing(baseFee + "5");
 		Assert.assertTrue(config.validateBannerMessage("Pricing Package has been edited successfully!"));
 	}
-	@Test(priority = 11)
-	public void assignPricingToParkingArea() throws InterruptedException {
-		landingPage.loginApplication("superuser", "SuperUser123!?");
-		ConfigurationModule config = new ConfigurationModule(driver);
-		config.gotoConfigurationMod();
+
+	@Test(priority = 12)
+	public void assignPricingFeeToParkingArea() throws InterruptedException {
+		ConfigurationModule config = loginToApplication();
 		config.assigningPricing(parkingAreaName);
 		Assert.assertTrue(config.validateBannerMessage("Pricing Package successfully assigned to " + parkingAreaName));
 	}
 
-	@Test(priority = 12)
+	@Test(priority = 13)
 	public void deletePricingPackage() throws InterruptedException {
+		ConfigurationModule config = loginToApplication();
+		config.deletePricing();
+		Assert.assertTrue(config.validateBannerMessage("Pricing Package successfully deleted."));
+	}
+
+	// handle the login and navigation steps
+	private ConfigurationModule loginToApplication() throws InterruptedException {
 		landingPage.loginApplication("superuser", "SuperUser123!?");
 		ConfigurationModule config = new ConfigurationModule(driver);
 		config.gotoConfigurationMod();
-		config.deletePricing();
-		Assert.assertTrue(config.validateBannerMessage("Pricing Package successfully deleted."));
+
+		return config;
 	}
 
 }
