@@ -6,14 +6,14 @@
 		<listener class-name="automation.AdminTestComponents.Listeners" />
 	</listeners>
 	
-	<test thread-count="5" name="Login Test">
-		<classes>
-			<class name="automation.AdminTest.AllLoginTest" />
-		</classes>
-	</test>
 	<test thread-count="5" name="Permission Test">
 		<classes>
 			<class name="automation.AdminTest.PermissionTest" />
+		</classes>
+	</test>
+	<test thread-count="5" name="Filter And Search Test">
+		<classes>
+			<class name="automation.AdminTest.FilterAndSearchTest" />
 		</classes>
 	</test>
 	<test thread-count="5" name="Parking Area Module Test">
@@ -26,14 +26,14 @@
 			<class name="automation.AdminTest.UserModuleTest" />
 		</classes>
 	</test>
-	<test thread-count="5" name="Filter And Search Test">
-		<classes>
-			<class name="automation.AdminTest.FilterAndSearchTest" />
-		</classes>
-	</test>
 	<test thread-count="5" name="Configuration Module Test">
 		<classes>
 			<class name="automation.AdminTest.ConfigurationModuleTest" />
+		</classes>
+	</test>
+	<test thread-count="5" name="Login Test">
+		<classes>
+			<class name="automation.AdminTest.AllLoginTest" />
 		</classes>
 	</test><!--
 	Test -->

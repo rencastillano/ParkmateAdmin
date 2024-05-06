@@ -63,6 +63,7 @@ public class ConfigurationModuleTest extends BaseTest {
 		config.getParkerTypeName(parkerName);
 		config.getParkerTypeCode(parkerCode);
 		config.clickCreateButton();
+		config.handlingParkerCodeDup(parkerCode);
 		config.parkerTypeAssigning(parkingAreaName);
 		Assert.assertTrue(config.validateBannerMessage("Parker Type successfully assigned to " + parkingAreaName));
 	}

@@ -23,14 +23,14 @@ public class FilterAndSearchTest extends BaseTest {
 		Assert.assertTrue(search.emailAddSearch(email));
 	}
 
-	@Test
+	@Test(priority = 2, retryAnalyzer=Retry.class)
 	public void userFirstNameSearch() throws InterruptedException {
 
 		FilterAndSearch search = loginToApplicationForSearching();
 		Assert.assertTrue(search.userSearch(name,  "firstname"));
 	}
 
-	@Test
+	@Test(priority = 3,retryAnalyzer=Retry.class)
 	public void userLastNameSearch() throws InterruptedException {
 
 		FilterAndSearch search = loginToApplicationForSearching();
@@ -65,7 +65,7 @@ public class FilterAndSearchTest extends BaseTest {
 		Assert.assertTrue(search.filterByEncoderRole());
 	}
 
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	public void filterByAdminRole() throws InterruptedException {
 		
 		FilterAndSearch search = loginToApplicationForSearching();

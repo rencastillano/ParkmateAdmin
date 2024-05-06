@@ -215,10 +215,11 @@ public class ConfigurationModule extends AbstractComponent {
 
 	}
 	
-	public void goToParkerEnrollment() {
+	public void goToParkerEnrollment() throws InterruptedException {
 
 		parkerEnrollement.click();
 		createParkerTypeBtn.click();
+		Thread.sleep(4000);
 		addParkerBtn.click();
 		
 	}
