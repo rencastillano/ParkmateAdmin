@@ -4,18 +4,6 @@
   <listeners>
     <listener class-name="automation.AdminTestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Permission Test(failed)" verbose="0">
-    <classes>
-      <class name="automation.AdminTest.PermissionTest">
-        <methods>
-          <include name="encoderWithRestrictedStatusMobileAppLogin"/>
-          <include name="encoderWithAllowExitToTrue"/>
-          <include name="launchApplication"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- automation.AdminTest.PermissionTest -->
-    </classes>
-  </test> <!-- Permission Test(failed) -->
   <test thread-count="5" name="Parking Area Module Test(failed)" verbose="0">
     <classes>
       <class name="automation.AdminTest.AreaModuleTest">
@@ -42,9 +30,7 @@
     <classes>
       <class name="automation.AdminTest.ConfigurationModuleTest">
         <methods>
-          <include name="assignParkerToParkingArea"/>
-          <include name="duplicateParkerTypeName"/>
-          <include name="deleteParkerTypeWithPricingPackage"/>
+          <include name="assignParkerToParkingArea" invocation-numbers="0"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>

@@ -234,6 +234,7 @@ public class Permissions extends AbstractComponent {
 
 		if (!desiredStatus.equalsIgnoreCase(userStatus.getText())) {
 			dropdownButton.click();
+			Thread.sleep(500);
 			statusChangeBtn.click();
 			if ("Restricted".equalsIgnoreCase(desiredStatus)) {
 				Thread.sleep(1000);

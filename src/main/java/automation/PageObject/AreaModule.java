@@ -108,9 +108,6 @@ public class AreaModule extends AbstractComponent {
 	@FindBy(css = "input[placeholder='Search']")
 	WebElement search;
 
-	@FindBy(xpath = "//*[@class='flex-grow text-sm self-center w-3/4']")
-	WebElement banner;
-
 	By tableRowBy = By.cssSelector("tbody tr:nth-child(1) td:nth-child(1)");
 
 	@FindBy(css = "tr td:first-child")
@@ -140,8 +137,8 @@ public class AreaModule extends AbstractComponent {
 	@FindBy(xpath = "//div[1]/div[4]/div/div[2]/div[2]/p")
 	WebElement motorcycleCapacityErrorMsg;
 
-	@FindBy(css=":nth-child(1) > .capitalize")
-	WebElement banner2;
+	@FindBy(css=".fixed.top-10")
+	WebElement banner;
 
 	public FilterAndSearch goToAreaPage() {
 		waitForWebElementToAppear(smLogo);
@@ -358,8 +355,8 @@ public class AreaModule extends AbstractComponent {
 
 	private boolean runValidation(String areaNameUpdated) {
 
-		waitForWebElementToAppear(banner2);
-		String bannerText = banner2.getText();
+		waitForWebElementToAppear(banner);
+		String bannerText = banner.getText();
 		System.out.println(bannerText);
 		return bannerText.equalsIgnoreCase(areaNameUpdated + " is successfully updated!");
 

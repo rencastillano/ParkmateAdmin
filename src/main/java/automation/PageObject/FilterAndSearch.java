@@ -57,6 +57,7 @@ public class FilterAndSearch extends AbstractComponent {
 	List<WebElement> roleColumn;
 
 	private void performSearch(WebElement element, String searchData) throws InterruptedException {
+		search.click();
 		search.sendKeys(searchData);
 		String result;
 		do {
@@ -67,13 +68,14 @@ public class FilterAndSearch extends AbstractComponent {
 
 	public boolean emailAddSearch(String email) throws InterruptedException {
 		waitForWebElementToAppear(smLogo);
-		performSearch(userEmailSearched, email);//, email
+		performSearch(userEmailSearched, email);
 		return userEmailSearched.getText().equalsIgnoreCase(email);
 
 	}
 
 	public boolean userSearch(String value, String expectedNamePart) throws InterruptedException {
-	    waitForWebElementToAppear(smLogo);
+	    //waitForWebElementToAppear(smLogo);
+		Thread.sleep(3000);
 	    performSearch(firstRowData, value);
 	    String name = firstRowData.getText();
 	    String[] splitName = name.split(" ");

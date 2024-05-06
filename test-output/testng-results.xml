@@ -1,182 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2024-05-05T13:06:38 CST" name="Default suite" finished-at="2024-05-05T13:07:16 CST" duration-ms="37653">
+  <suite started-at="2024-05-06T20:08:41 CST" name="Default suite" finished-at="2024-05-06T20:09:47 CST" duration-ms="65886">
     <groups>
+      <group name="ErrorHandling">
+        <method signature="AllLoginTest.loginWithInvalidPassword()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" name="loginWithInvalidPassword" class="automation.AdminTest.AllLoginTest"/>
+        <method signature="AllLoginTest.loginWithoutAccess()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" name="loginWithoutAccess" class="automation.AdminTest.AllLoginTest"/>
+        <method signature="AllLoginTest.loginWithInvalidUserName()[pri:1, instance:automation.AdminTest.AllLoginTest@3d97a632]" name="loginWithInvalidUserName" class="automation.AdminTest.AllLoginTest"/>
+      </group> <!-- ErrorHandling -->
     </groups>
-    <test started-at="2024-05-05T13:06:38 CST" name="Default test" finished-at="2024-05-05T13:07:16 CST" duration-ms="37653">
-      <class name="automation.AdminTest.ConfigurationModuleTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@8c11eee]" started-at="2024-05-05T13:06:39 CST" name="launchApplication" finished-at="2024-05-05T13:06:53 CST" duration-ms="14599" status="PASS">
+    <test started-at="2024-05-06T20:08:41 CST" name="Default test" finished-at="2024-05-06T20:09:47 CST" duration-ms="65886">
+      <class name="automation.AdminTest.AllLoginTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" started-at="2024-05-06T20:08:41 CST" name="launchApplication" finished-at="2024-05-06T20:09:01 CST" duration-ms="20279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="deleteParkerTypeWithPricingPackage()[pri:4, instance:automation.AdminTest.ConfigurationModuleTest@8c11eee]" started-at="2024-05-05T13:06:53 CST" name="deleteParkerTypeWithPricingPackage" finished-at="2024-05-05T13:07:16 CST" duration-ms="22991" status="PASS">
-=======
-  <suite started-at="2024-05-05T18:36:35 CST" name="Default suite" finished-at="2024-05-05T18:40:38 CST" duration-ms="243448">
-    <groups>
-    </groups>
-    <test started-at="2024-05-05T18:36:35 CST" name="Default test" finished-at="2024-05-05T18:40:38 CST" duration-ms="243448">
-      <class name="automation.AdminTest.ConfigurationModuleTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:36:35 CST" name="launchApplication" finished-at="2024-05-05T18:36:49 CST" duration-ms="14191" status="PASS">
+        <test-method signature="loginWithAccess()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" started-at="2024-05-06T20:09:01 CST" name="loginWithAccess" finished-at="2024-05-06T20:09:20 CST" duration-ms="18593" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="parkerTypeEnrollment()[pri:1, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:36:49 CST" name="parkerTypeEnrollment" finished-at="2024-05-05T18:37:34 CST" duration-ms="44688" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- parkerTypeEnrollment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:37:34 CST" name="tearDown" finished-at="2024-05-05T18:37:35 CST" duration-ms="1235" status="PASS">
+        </test-method> <!-- loginWithAccess -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" started-at="2024-05-06T20:09:20 CST" name="tearDown" finished-at="2024-05-06T20:09:21 CST" duration-ms="1178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:37:35 CST" name="launchApplication" finished-at="2024-05-05T18:37:39 CST" duration-ms="3817" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" started-at="2024-05-06T20:09:21 CST" name="launchApplication" finished-at="2024-05-06T20:09:25 CST" duration-ms="3639" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="editParkerType()[pri:2, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:37:39 CST" name="editParkerType" finished-at="2024-05-05T18:37:48 CST" duration-ms="9023" status="PASS">
+        <test-method signature="loginWithInvalidPassword()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" started-at="2024-05-06T20:09:25 CST" name="loginWithInvalidPassword" finished-at="2024-05-06T20:09:30 CST" duration-ms="5156" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editParkerType -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:37:48 CST" name="tearDown" finished-at="2024-05-05T18:37:49 CST" duration-ms="1142" status="PASS">
+        </test-method> <!-- loginWithInvalidPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" started-at="2024-05-06T20:09:30 CST" name="tearDown" finished-at="2024-05-06T20:09:31 CST" duration-ms="1115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:37:49 CST" name="launchApplication" finished-at="2024-05-05T18:37:53 CST" duration-ms="3706" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" started-at="2024-05-06T20:09:31 CST" name="launchApplication" finished-at="2024-05-06T20:09:35 CST" duration-ms="3654" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="deleteParkerType()[pri:3, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:37:53 CST" name="deleteParkerType" finished-at="2024-05-05T18:38:00 CST" duration-ms="7377" status="PASS">
+        <test-method signature="loginWithoutAccess()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" started-at="2024-05-06T20:09:35 CST" name="loginWithoutAccess" finished-at="2024-05-06T20:09:38 CST" duration-ms="3278" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteParkerType -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:00 CST" name="tearDown" finished-at="2024-05-05T18:38:01 CST" duration-ms="1192" status="PASS">
+        </test-method> <!-- loginWithoutAccess -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" started-at="2024-05-06T20:09:38 CST" name="tearDown" finished-at="2024-05-06T20:09:39 CST" duration-ms="1214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:01 CST" name="launchApplication" finished-at="2024-05-05T18:38:05 CST" duration-ms="3902" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" started-at="2024-05-06T20:09:39 CST" name="launchApplication" finished-at="2024-05-06T20:09:43 CST" duration-ms="3303" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="deleteParkerTypeWithPricingPackage()[pri:4, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:05 CST" name="deleteParkerTypeWithPricingPackage" finished-at="2024-05-05T18:38:12 CST" duration-ms="6749" status="PASS">
->>>>>>> develop
+        <test-method signature="loginWithInvalidUserName()[pri:1, instance:automation.AdminTest.AllLoginTest@3d97a632]" started-at="2024-05-06T20:09:43 CST" name="loginWithInvalidUserName" finished-at="2024-05-06T20:09:46 CST" duration-ms="3131" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteParkerTypeWithPricingPackage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:12 CST" name="tearDown" finished-at="2024-05-05T18:38:13 CST" duration-ms="1198" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:13 CST" name="launchApplication" finished-at="2024-05-05T18:38:17 CST" duration-ms="3620" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="assignParkerToParkingArea()[pri:5, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:17 CST" name="assignParkerToParkingArea" finished-at="2024-05-05T18:38:29 CST" duration-ms="12586" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- assignParkerToParkingArea -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:29 CST" name="tearDown" finished-at="2024-05-05T18:38:30 CST" duration-ms="1117" status="PASS">
+        </test-method> <!-- loginWithInvalidUserName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@3d97a632]" started-at="2024-05-06T20:09:46 CST" name="tearDown" finished-at="2024-05-06T20:09:47 CST" duration-ms="1253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:30 CST" name="launchApplication" finished-at="2024-05-05T18:38:34 CST" duration-ms="3945" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="assignParkerToParkingAreaWithMisMatchParkingArea()[pri:6, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:34 CST" name="assignParkerToParkingAreaWithMisMatchParkingArea" finished-at="2024-05-05T18:38:44 CST" duration-ms="9269" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- assignParkerToParkingAreaWithMisMatchParkingArea -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:44 CST" name="tearDown" finished-at="2024-05-05T18:38:45 CST" duration-ms="1242" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:45 CST" name="launchApplication" finished-at="2024-05-05T18:38:49 CST" duration-ms="3684" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="duplicateParkerTypeName()[pri:7, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:49 CST" name="duplicateParkerTypeName" finished-at="2024-05-05T18:38:58 CST" duration-ms="9729" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- duplicateParkerTypeName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:38:58 CST" name="tearDown" finished-at="2024-05-05T18:39:00 CST" duration-ms="1246" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:39:00 CST" name="launchApplication" finished-at="2024-05-05T18:39:03 CST" duration-ms="3674" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="duplicateParketTypeCode()[pri:8, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:39:03 CST" name="duplicateParketTypeCode" finished-at="2024-05-05T18:39:14 CST" duration-ms="10366" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- duplicateParketTypeCode -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:39:14 CST" name="tearDown" finished-at="2024-05-05T18:39:15 CST" duration-ms="1095" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:39:15 CST" name="launchApplication" finished-at="2024-05-05T18:39:18 CST" duration-ms="3596" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="createPricingPackage()[pri:9, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:39:18 CST" name="createPricingPackage" finished-at="2024-05-05T18:39:32 CST" duration-ms="13199" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createPricingPackage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:39:32 CST" name="tearDown" finished-at="2024-05-05T18:39:33 CST" duration-ms="1263" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:39:33 CST" name="launchApplication" finished-at="2024-05-05T18:39:36 CST" duration-ms="3674" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="updatePricingPackageWithoutChange()[pri:10, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:39:36 CST" name="updatePricingPackageWithoutChange" finished-at="2024-05-05T18:39:50 CST" duration-ms="13566" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatePricingPackageWithoutChange -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:39:50 CST" name="tearDown" finished-at="2024-05-05T18:39:51 CST" duration-ms="1113" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:39:51 CST" name="launchApplication" finished-at="2024-05-05T18:39:55 CST" duration-ms="3561" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="updatePricingFeePackage()[pri:11, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:39:55 CST" name="updatePricingFeePackage" finished-at="2024-05-05T18:40:08 CST" duration-ms="13189" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatePricingFeePackage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:40:08 CST" name="tearDown" finished-at="2024-05-05T18:40:09 CST" duration-ms="1266" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:40:09 CST" name="launchApplication" finished-at="2024-05-05T18:40:13 CST" duration-ms="3764" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="assignPricingFeeToParkingArea()[pri:12, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:40:13 CST" name="assignPricingFeeToParkingArea" finished-at="2024-05-05T18:40:22 CST" duration-ms="9541" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- assignPricingFeeToParkingArea -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:40:22 CST" name="tearDown" finished-at="2024-05-05T18:40:24 CST" duration-ms="1219" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:40:24 CST" name="launchApplication" finished-at="2024-05-05T18:40:27 CST" duration-ms="3695" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="deletePricingPackage()[pri:13, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:40:27 CST" name="deletePricingPackage" finished-at="2024-05-05T18:40:37 CST" duration-ms="9555" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deletePricingPackage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@302a07d]" started-at="2024-05-05T18:40:37 CST" name="tearDown" finished-at="2024-05-05T18:40:38 CST" duration-ms="1335" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.ConfigurationModuleTest -->
+      </class> <!-- automation.AdminTest.AllLoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

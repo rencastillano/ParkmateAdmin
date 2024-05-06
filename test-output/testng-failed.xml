@@ -3,16 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.AdminTest.ConfigurationModuleTest">
+      <class name="automation.AdminTest.FilterAndSearchTest">
         <methods>
-          <include name="assignParkerToParkingAreaWithMisMatchParkingArea"/>
           <include name="launchApplication"/>
-<<<<<<< HEAD
-=======
+          <include name="userFirstNameSearch"/>
           <include name="tearDown"/>
->>>>>>> develop
         </methods>
-      </class> <!-- automation.AdminTest.ConfigurationModuleTest -->
+      </class> <!-- automation.AdminTest.FilterAndSearchTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

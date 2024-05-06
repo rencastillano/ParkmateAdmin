@@ -42,7 +42,7 @@ public class LandingPage extends AbstractComponent {
 	
 	public UserModule loginApplication(String userName, String pword) throws InterruptedException {
 		
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		username.sendKeys(userName);
 		Thread.sleep(1000);
 		password.sendKeys(pword);

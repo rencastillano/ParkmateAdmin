@@ -1,11 +1,6 @@
 package automation.AdminTest;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import automation.AdminTestComponents.BaseTest;
@@ -28,24 +23,24 @@ public class FilterAndSearchTest extends BaseTest {
 		Assert.assertTrue(search.emailAddSearch(email));
 	}
 
-	@Test
+	@Test(priority = 2, retryAnalyzer=Retry.class)
 	public void userFirstNameSearch() throws InterruptedException {
 
 		FilterAndSearch search = loginToApplicationForSearching();
 		Assert.assertTrue(search.userSearch(name,  "firstname"));
 	}
 
-	@Test
+	@Test(priority = 3,retryAnalyzer=Retry.class)
 	public void userLastNameSearch() throws InterruptedException {
 
 		FilterAndSearch search = loginToApplicationForSearching();
 		Assert.assertTrue(search.userSearch(lastName,  "lastname"));
 	}
 
-	@Test(dataProvider = "getData")
-	public void parkingNameSearch(HashMap<String, String> input) throws InterruptedException {
+	@Test
+	public void parkingNameSearch() throws InterruptedException {
 		
-		landingPage.loginApplication(input.get("username"), input.get("password"));
+		landingPage.loginApplication("renAdmin", "Password@1");
 		AreaModule parkingCreation = new AreaModule(driver);
 		FilterAndSearch search = parkingCreation.goToAreaPage();
 		Assert.assertTrue(search.parkingAreaNameSearch(areaName));
@@ -53,10 +48,10 @@ public class FilterAndSearchTest extends BaseTest {
 
 	}
 
-	@Test(dataProvider = "getData")
-	public void parkingAreaCodeSearch(HashMap<String,String> input) throws InterruptedException {
+	@Test
+	public void parkingAreaCodeSearch() throws InterruptedException {
 		
-		landingPage.loginApplication(input.get("username"), input.get("password"));
+		landingPage.loginApplication("renAdmin", "Password@1");
 		AreaModule parkingCreation = new AreaModule(driver);
 		FilterAndSearch search = parkingCreation.goToAreaPage();
 		Assert.assertTrue(search.parkingAreaCodeSearch(areaCode));
@@ -70,7 +65,7 @@ public class FilterAndSearchTest extends BaseTest {
 		Assert.assertTrue(search.filterByEncoderRole());
 	}
 
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	public void filterByAdminRole() throws InterruptedException {
 		
 		FilterAndSearch search = loginToApplicationForSearching();
@@ -85,12 +80,4 @@ public class FilterAndSearchTest extends BaseTest {
 		return search;
 	}
 
-	@DataProvider
-	public Object[] getData() throws IOException {
-
-		List<HashMap<String, String>> data = getJsonDataToMap(
-				System.getProperty("user.dir") + "\\src\\test\\java\\automation\\AdminData\\AdminData.json");
-		return new Object[] { data.get(0) };
-
-	}
 }
