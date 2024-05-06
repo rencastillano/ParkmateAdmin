@@ -110,8 +110,8 @@ public class UserModule extends AbstractComponent {
 	@FindBy(css = "tbody tr:nth-child(1)")
 	WebElement firstDataRow;
 
-	//@FindBy(xpath = "//*[@class='flex-grow text-sm self-center w-3/4']")
-	@FindBy(css=".flex-grow.col-span-3.text-sm.self-center.pr-5")
+	//@FindBy(css=".flex-grow.col-span-3.text-sm.self-center.pr-5")
+	@FindBy(css=".fixed.top-10")
 	WebElement banner;
 
 	By firstUserEmail = By.xpath("(//tr/td[3])[1]");
@@ -147,10 +147,6 @@ public class UserModule extends AbstractComponent {
 	public String selectAdminRole() {
 		return selectRole("admin");
 	}
-
-//	public String selectEncoderRole() {
-//		return selectRole("encoder");
-//	}
 	
 	public String selectCashierRole() {
 		return selectRole("cashier");
@@ -290,6 +286,7 @@ public class UserModule extends AbstractComponent {
 	}
 
 	public void clickSave() {
+		waitForWebElementToBeClickable(saveBtn);
 		saveBtn.click();
 
 	}

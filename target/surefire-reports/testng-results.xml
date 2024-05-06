@@ -1,505 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="3" ignored="3" total="50" passed="39" failed="5" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-30T10:49:36 CST" name="Suite" finished-at="2024-04-30T11:08:22 CST" duration-ms="1125996">
+  <suite started-at="2024-05-06T15:53:32 CST" name="Suite" finished-at="2024-05-06T15:57:30 CST" duration-ms="238493">
     <groups>
-      <group name="ErrorHandling">
-        <method signature="AllLoginTest.loginWithInvalidPassword()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" name="loginWithInvalidPassword" class="automation.AdminTest.AllLoginTest"/>
-        <method signature="AllLoginTest.loginWithoutAccess()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" name="loginWithoutAccess" class="automation.AdminTest.AllLoginTest"/>
-        <method signature="AllLoginTest.loginWithInvalidUserName()[pri:1, instance:automation.AdminTest.AllLoginTest@32f0fba8]" name="loginWithInvalidUserName" class="automation.AdminTest.AllLoginTest"/>
-        <method signature="AreaModuleTest.areaCodeDupValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" name="areaCodeDupValidation" class="automation.AdminTest.AreaModuleTest"/>
-        <method signature="AreaModuleTest.areaNameDupValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" name="areaNameDupValidation" class="automation.AdminTest.AreaModuleTest"/>
-        <method signature="AreaModuleTest.fixedRateMaxLimit()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" name="fixedRateMaxLimit" class="automation.AdminTest.AreaModuleTest"/>
-        <method signature="UserModuleTest.userEmailDupValidation()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" name="userEmailDupValidation" class="automation.AdminTest.UserModuleTest"/>
-      </group> <!-- ErrorHandling -->
-      <group name="Creation">
-        <method signature="AreaModuleTest.areaCreation()[pri:1, instance:automation.AdminTest.AreaModuleTest@33352f32]" name="areaCreation" class="automation.AdminTest.AreaModuleTest"/>
-        <method signature="UserModuleTest.adminEnrollment()[pri:1, instance:automation.AdminTest.UserModuleTest@60bdf15d]" name="adminEnrollment" class="automation.AdminTest.UserModuleTest"/>
-        <method signature="UserModuleTest.cashierEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@60bdf15d]" name="cashierEnrollment" class="automation.AdminTest.UserModuleTest"/>
-        <method signature="UserModuleTest.encoderEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@60bdf15d]" name="encoderEnrollment" class="automation.AdminTest.UserModuleTest"/>
-        <method signature="UserModuleTest.managerEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@60bdf15d]" name="managerEnrollment" class="automation.AdminTest.UserModuleTest"/>
-      </group> <!-- Creation -->
     </groups>
-    <test started-at="2024-04-30T10:49:36 CST" name="Login Test" finished-at="2024-04-30T10:50:03 CST" duration-ms="26877">
-      <class name="automation.AdminTest.AllLoginTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" started-at="2024-04-30T10:49:36 CST" name="launchApplication" finished-at="2024-04-30T10:49:42 CST" duration-ms="5371" status="PASS">
+    <test started-at="2024-05-06T15:53:32 CST" name="Configuration Module Test" finished-at="2024-05-06T15:57:30 CST" duration-ms="238493">
+      <class name="automation.AdminTest.ConfigurationModuleTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:53:32 CST" name="launchApplication" finished-at="2024-05-06T15:53:47 CST" duration-ms="14981" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="loginWithAccess()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" started-at="2024-04-30T10:49:42 CST" name="loginWithAccess" finished-at="2024-04-30T10:49:47 CST" duration-ms="5066" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithAccess -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" started-at="2024-04-30T10:49:47 CST" name="tearDown" finished-at="2024-04-30T10:49:47 CST" duration-ms="396" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" started-at="2024-04-30T10:49:47 CST" name="launchApplication" finished-at="2024-04-30T10:49:49 CST" duration-ms="1951" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="loginWithInvalidPassword()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" started-at="2024-04-30T10:49:49 CST" name="loginWithInvalidPassword" finished-at="2024-04-30T10:49:53 CST" duration-ms="4334" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithInvalidPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" started-at="2024-04-30T10:49:53 CST" name="tearDown" finished-at="2024-04-30T10:49:54 CST" duration-ms="556" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" started-at="2024-04-30T10:49:54 CST" name="launchApplication" finished-at="2024-04-30T10:49:56 CST" duration-ms="1772" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="loginWithoutAccess()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" started-at="2024-04-30T10:49:56 CST" name="loginWithoutAccess" finished-at="2024-04-30T10:49:58 CST" duration-ms="2413" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithoutAccess -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" started-at="2024-04-30T10:49:58 CST" name="tearDown" finished-at="2024-04-30T10:49:59 CST" duration-ms="375" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" started-at="2024-04-30T10:49:59 CST" name="launchApplication" finished-at="2024-04-30T10:50:00 CST" duration-ms="1851" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="loginWithInvalidUserName()[pri:1, instance:automation.AdminTest.AllLoginTest@32f0fba8]" started-at="2024-04-30T10:50:00 CST" name="loginWithInvalidUserName" finished-at="2024-04-30T10:50:03 CST" duration-ms="2371" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithInvalidUserName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AllLoginTest@32f0fba8]" started-at="2024-04-30T10:50:03 CST" name="tearDown" finished-at="2024-04-30T10:50:03 CST" duration-ms="365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.AllLoginTest -->
-    </test> <!-- Login Test -->
-    <test started-at="2024-04-30T10:50:03 CST" name="Parking Area Module Test" finished-at="2024-04-30T10:55:45 CST" duration-ms="341780">
-      <class name="automation.AdminTest.AreaModuleTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:50:03 CST" name="launchApplication" finished-at="2024-04-30T10:50:05 CST" duration-ms="1803" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaCodeDupValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:50:05 CST" name="areaCodeDupValidation" finished-at="2024-04-30T10:50:25 CST" duration-ms="20222" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaCodeDupValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:50:25 CST" name="tearDown" finished-at="2024-04-30T10:50:26 CST" duration-ms="530" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:50:26 CST" name="launchApplication" finished-at="2024-04-30T10:50:27 CST" duration-ms="1778" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaNameDupValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:50:27 CST" name="areaNameDupValidation" finished-at="2024-04-30T10:50:51 CST" duration-ms="23485" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaNameDupValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:50:51 CST" name="tearDown" finished-at="2024-04-30T10:50:52 CST" duration-ms="850" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:50:52 CST" name="launchApplication" finished-at="2024-04-30T10:50:54 CST" duration-ms="2478" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaPagePagenation()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:50:54 CST" name="areaPagePagenation" finished-at="2024-04-30T10:51:11 CST" duration-ms="16312" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaPagePagenation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:51:11 CST" name="tearDown" finished-at="2024-04-30T10:51:11 CST" duration-ms="670" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:51:11 CST" name="launchApplication" finished-at="2024-04-30T10:51:13 CST" duration-ms="1735" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaPageSelectRow()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:51:13 CST" name="areaPageSelectRow" finished-at="2024-04-30T10:51:39 CST" duration-ms="25829" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at automation.AdminTest.AreaModuleTest.areaPageSelectRow(AreaModuleTest.java:100)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaPageSelectRow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:51:39 CST" name="tearDown" finished-at="2024-04-30T10:51:40 CST" duration-ms="808" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:51:40 CST" name="launchApplication" finished-at="2024-04-30T10:51:51 CST" duration-ms="10833" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="carCapacityInputValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:51:51 CST" name="carCapacityInputValidation" finished-at="2024-04-30T10:52:12 CST" duration-ms="21629" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- carCapacityInputValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:52:12 CST" name="tearDown" finished-at="2024-04-30T10:52:13 CST" duration-ms="439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:52:13 CST" name="launchApplication" finished-at="2024-04-30T10:52:16 CST" duration-ms="2871" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="exitCreationAlert()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:52:16 CST" name="exitCreationAlert" finished-at="2024-04-30T10:52:33 CST" duration-ms="17698" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exitCreationAlert -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:52:33 CST" name="tearDown" finished-at="2024-04-30T10:52:34 CST" duration-ms="802" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:52:34 CST" name="launchApplication" finished-at="2024-04-30T10:52:36 CST" duration-ms="2185" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="fixedRateMaxLimit()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:52:36 CST" name="fixedRateMaxLimit" finished-at="2024-04-30T10:53:00 CST" duration-ms="23750" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fixedRateMaxLimit -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:53:00 CST" name="tearDown" finished-at="2024-04-30T10:53:01 CST" duration-ms="567" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:53:01 CST" name="launchApplication" finished-at="2024-04-30T10:53:03 CST" duration-ms="1833" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="motorcycleCapacityInputValidation()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:53:03 CST" name="motorcycleCapacityInputValidation" finished-at="2024-04-30T10:53:17 CST" duration-ms="14326" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- motorcycleCapacityInputValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:53:17 CST" name="tearDown" finished-at="2024-04-30T10:53:18 CST" duration-ms="695" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:53:18 CST" name="launchApplication" finished-at="2024-04-30T10:53:19 CST" duration-ms="1954" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setCMotorcycleCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:53:19 CST" name="setCMotorcycleCapacityPlusButtonToDisable" finished-at="2024-04-30T10:53:35 CST" duration-ms="15854" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setCMotorcycleCapacityPlusButtonToDisable -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:53:35 CST" name="tearDown" finished-at="2024-04-30T10:53:36 CST" duration-ms="805" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:53:36 CST" name="launchApplication" finished-at="2024-04-30T10:53:38 CST" duration-ms="2059" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setCarCapacityMinusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:53:38 CST" name="setCarCapacityMinusButtonToDisable" finished-at="2024-04-30T10:53:54 CST" duration-ms="16270" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setCarCapacityMinusButtonToDisable -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:53:54 CST" name="tearDown" finished-at="2024-04-30T10:53:55 CST" duration-ms="663" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:53:55 CST" name="launchApplication" finished-at="2024-04-30T10:54:00 CST" duration-ms="5108" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setCarCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:54:00 CST" name="setCarCapacityPlusButtonToDisable" finished-at="2024-04-30T10:54:16 CST" duration-ms="15467" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setCarCapacityPlusButtonToDisable -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:54:16 CST" name="tearDown" finished-at="2024-04-30T10:54:16 CST" duration-ms="709" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:54:16 CST" name="launchApplication" finished-at="2024-04-30T10:54:21 CST" duration-ms="4478" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="setMotorcycleCapacityPlusButtonToDisable()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:54:21 CST" name="setMotorcycleCapacityPlusButtonToDisable" finished-at="2024-04-30T10:54:37 CST" duration-ms="16193" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setMotorcycleCapacityPlusButtonToDisable -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:54:37 CST" name="tearDown" finished-at="2024-04-30T10:54:38 CST" duration-ms="503" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:54:38 CST" name="launchApplication" finished-at="2024-04-30T10:54:41 CST" duration-ms="2906" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="validateUpdateParkingArea()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:54:41 CST" name="validateUpdateParkingArea" finished-at="2024-04-30T10:55:00 CST" duration-ms="19969" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateUpdateParkingArea -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:55:00 CST" name="tearDown" finished-at="2024-04-30T10:55:01 CST" duration-ms="639" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:55:01 CST" name="launchApplication" finished-at="2024-04-30T10:55:03 CST" duration-ms="1848" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="areaCreation()[pri:1, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:55:03 CST" name="areaCreation" finished-at="2024-04-30T10:55:44 CST" duration-ms="41232" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- areaCreation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.AreaModuleTest@33352f32]" started-at="2024-04-30T10:55:44 CST" name="tearDown" finished-at="2024-04-30T10:55:45 CST" duration-ms="725" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.AreaModuleTest -->
-    </test> <!-- Parking Area Module Test -->
-    <test started-at="2024-04-30T10:55:45 CST" name="User Module Test" finished-at="2024-04-30T11:00:32 CST" duration-ms="286989">
-      <class name="automation.AdminTest.UserModuleTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:55:45 CST" name="launchApplication" finished-at="2024-04-30T10:55:47 CST" duration-ms="2222" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="exitEnrollmentAlert()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:55:47 CST" name="exitEnrollmentAlert" finished-at="2024-04-30T10:56:01 CST" duration-ms="14236" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exitEnrollmentAlert -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:56:01 CST" name="tearDown" finished-at="2024-04-30T10:56:02 CST" duration-ms="579" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:56:02 CST" name="launchApplication" finished-at="2024-04-30T10:56:04 CST" duration-ms="1720" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="getCopyUserName()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:56:04 CST" name="getCopyUserName" finished-at="2024-04-30T10:56:20 CST" duration-ms="16379" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getCopyUserName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:56:20 CST" name="tearDown" finished-at="2024-04-30T10:56:21 CST" duration-ms="488" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:56:21 CST" name="launchApplication" finished-at="2024-04-30T10:56:23 CST" duration-ms="2104" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="getCopyUserPassword()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:56:23 CST" name="getCopyUserPassword" finished-at="2024-04-30T10:56:37 CST" duration-ms="14594" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getCopyUserPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:56:37 CST" name="tearDown" finished-at="2024-04-30T10:56:38 CST" duration-ms="718" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:56:38 CST" name="launchApplication" finished-at="2024-04-30T10:56:41 CST" duration-ms="2630" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="userEmailDupValidation()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:56:41 CST" name="userEmailDupValidation" finished-at="2024-04-30T10:56:57 CST" duration-ms="15826" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userEmailDupValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:56:57 CST" name="tearDown" finished-at="2024-04-30T10:56:58 CST" duration-ms="1051" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:56:58 CST" name="launchApplication" finished-at="2024-04-30T10:57:09 CST" duration-ms="11180" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="userPagePagenation()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:57:09 CST" name="userPagePagenation" finished-at="2024-04-30T10:57:30 CST" duration-ms="21460" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userPagePagenation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:57:30 CST" name="tearDown" finished-at="2024-04-30T10:57:31 CST" duration-ms="795" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:57:31 CST" name="launchApplication" finished-at="2024-04-30T10:57:33 CST" duration-ms="2070" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="userPageSelectRow()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:57:33 CST" name="userPageSelectRow" finished-at="2024-04-30T10:57:59 CST" duration-ms="25827" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at automation.AdminTest.UserModuleTest.userPageSelectRow(UserModuleTest.java:126)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userPageSelectRow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:57:59 CST" name="tearDown" finished-at="2024-04-30T10:58:00 CST" duration-ms="596" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:58:00 CST" name="launchApplication" finished-at="2024-04-30T10:58:02 CST" duration-ms="1819" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="adminEnrollment()[pri:1, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:58:02 CST" name="adminEnrollment" finished-at="2024-04-30T10:58:29 CST" duration-ms="27205" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adminEnrollment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:58:29 CST" name="tearDown" finished-at="2024-04-30T10:58:29 CST" duration-ms="618" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:58:29 CST" name="launchApplication" finished-at="2024-04-30T10:58:32 CST" duration-ms="2114" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="cashierEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:58:32 CST" name="cashierEnrollment" finished-at="2024-04-30T10:59:03 CST" duration-ms="31948" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cashierEnrollment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:59:03 CST" name="tearDown" finished-at="2024-04-30T10:59:04 CST" duration-ms="688" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:59:04 CST" name="launchApplication" finished-at="2024-04-30T10:59:07 CST" duration-ms="2385" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="encoderEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:59:07 CST" name="encoderEnrollment" finished-at="2024-04-30T10:59:38 CST" duration-ms="31258" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- encoderEnrollment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:59:38 CST" name="tearDown" finished-at="2024-04-30T10:59:38 CST" duration-ms="630" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:59:38 CST" name="launchApplication" finished-at="2024-04-30T10:59:42 CST" duration-ms="3720" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="managerEnrollment()[pri:2, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T10:59:42 CST" name="managerEnrollment" finished-at="2024-04-30T11:00:13 CST" duration-ms="31288" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- managerEnrollment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T11:00:13 CST" name="tearDown" finished-at="2024-04-30T11:00:14 CST" duration-ms="632" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T11:00:14 CST" name="launchApplication" finished-at="2024-04-30T11:00:16 CST" duration-ms="1864" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="editUserAccount()[pri:3, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T11:00:16 CST" name="editUserAccount" finished-at="2024-04-30T11:00:31 CST" duration-ms="15554" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editUserAccount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.UserModuleTest@60bdf15d]" started-at="2024-04-30T11:00:31 CST" name="tearDown" finished-at="2024-04-30T11:00:32 CST" duration-ms="522" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.UserModuleTest -->
-    </test> <!-- User Module Test -->
-    <test started-at="2024-04-30T11:00:32 CST" name="Filter And Search Test" finished-at="2024-04-30T11:01:58 CST" duration-ms="86396">
-      <class name="automation.AdminTest.FilterAndSearchTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:00:32 CST" name="launchApplication" finished-at="2024-04-30T11:00:34 CST" duration-ms="1840" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="filterByAdminRole()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:00:34 CST" name="filterByAdminRole" finished-at="2024-04-30T11:00:45 CST" duration-ms="10697" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- filterByAdminRole -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:00:45 CST" name="tearDown" finished-at="2024-04-30T11:00:45 CST" duration-ms="524" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:00:45 CST" name="launchApplication" finished-at="2024-04-30T11:00:47 CST" duration-ms="1862" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="filterByEncoderRole()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:00:47 CST" name="filterByEncoderRole" finished-at="2024-04-30T11:00:58 CST" duration-ms="10723" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- filterByEncoderRole -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:00:58 CST" name="tearDown" finished-at="2024-04-30T11:00:58 CST" duration-ms="450" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:00:58 CST" name="launchApplication" finished-at="2024-04-30T11:01:00 CST" duration-ms="1948" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="parkingAreaCodeSearch(java.util.HashMap)[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:00 CST" name="parkingAreaCodeSearch" data-provider="getData" finished-at="2024-04-30T11:01:15 CST" duration-ms="15031" status="PASS">
+        <test-method signature="parkerTypeEnrollment(java.util.HashMap)[pri:1, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:53:47 CST" name="parkerTypeEnrollment" data-provider="getData" finished-at="2024-05-06T15:54:26 CST" duration-ms="39405" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -509,16 +21,16 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- parkingAreaCodeSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:15 CST" name="tearDown" finished-at="2024-04-30T11:01:16 CST" duration-ms="416" status="PASS">
+        </test-method> <!-- parkerTypeEnrollment -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:54:26 CST" name="tearDown" finished-at="2024-05-06T15:54:28 CST" duration-ms="1326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:16 CST" name="launchApplication" finished-at="2024-04-30T11:01:18 CST" duration-ms="1880" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:54:28 CST" name="launchApplication" finished-at="2024-05-06T15:54:31 CST" duration-ms="3370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="parkingNameSearch(java.util.HashMap)[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:18 CST" name="parkingNameSearch" data-provider="getData" finished-at="2024-04-30T11:01:31 CST" duration-ms="13003" status="PASS">
+        <test-method signature="editParkerType(java.util.HashMap)[pri:2, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:54:31 CST" name="editParkerType" data-provider="getData" finished-at="2024-05-06T15:54:39 CST" duration-ms="7821" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -528,632 +40,221 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- parkingNameSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:31 CST" name="tearDown" finished-at="2024-04-30T11:01:31 CST" duration-ms="418" status="PASS">
+        </test-method> <!-- editParkerType -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:54:39 CST" name="tearDown" finished-at="2024-05-06T15:54:40 CST" duration-ms="1261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:31 CST" name="launchApplication" finished-at="2024-04-30T11:01:33 CST" duration-ms="1633" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:54:40 CST" name="launchApplication" finished-at="2024-05-06T15:54:44 CST" duration-ms="3446" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="userFirstNameSearch()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:33 CST" name="userFirstNameSearch" finished-at="2024-04-30T11:01:40 CST" duration-ms="6964" status="PASS">
+        <test-method signature="deleteParkerType(java.util.HashMap)[pri:3, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:54:44 CST" name="deleteParkerType" data-provider="getData" finished-at="2024-05-06T15:54:51 CST" duration-ms="7468" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SuperUser123!?, username=superuser}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userFirstNameSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:40 CST" name="tearDown" finished-at="2024-04-30T11:01:40 CST" duration-ms="395" status="PASS">
+        </test-method> <!-- deleteParkerType -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:54:51 CST" name="tearDown" finished-at="2024-05-06T15:54:52 CST" duration-ms="1294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:40 CST" name="launchApplication" finished-at="2024-04-30T11:01:42 CST" duration-ms="1564" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:54:52 CST" name="launchApplication" finished-at="2024-05-06T15:54:55 CST" duration-ms="3217" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="userLastNameSearch()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:42 CST" name="userLastNameSearch" finished-at="2024-04-30T11:01:49 CST" duration-ms="6957" status="PASS">
+        <test-method signature="deleteParkerTypeWithPricingPackage(java.util.HashMap)[pri:4, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:54:55 CST" name="deleteParkerTypeWithPricingPackage" data-provider="getData" finished-at="2024-05-06T15:55:03 CST" duration-ms="7221" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SuperUser123!?, username=superuser}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userLastNameSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:49 CST" name="tearDown" finished-at="2024-04-30T11:01:49 CST" duration-ms="114" status="PASS">
+        </test-method> <!-- deleteParkerTypeWithPricingPackage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:55:03 CST" name="tearDown" finished-at="2024-05-06T15:55:04 CST" duration-ms="1252" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:49 CST" name="launchApplication" finished-at="2024-04-30T11:01:51 CST" duration-ms="1830" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:55:04 CST" name="launchApplication" finished-at="2024-05-06T15:55:08 CST" duration-ms="4437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="userEmailSearch()[pri:1, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:51 CST" name="userEmailSearch" finished-at="2024-04-30T11:01:58 CST" duration-ms="7392" status="PASS">
+        <test-method signature="assignParkerToParkingArea(java.util.HashMap)[pri:5, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:55:08 CST" name="assignParkerToParkingArea" data-provider="getData" finished-at="2024-05-06T15:55:22 CST" duration-ms="13309" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SuperUser123!?, username=superuser}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userEmailSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.FilterAndSearchTest@10c8f62]" started-at="2024-04-30T11:01:58 CST" name="tearDown" finished-at="2024-04-30T11:01:58 CST" duration-ms="455" status="PASS">
+        </test-method> <!-- assignParkerToParkingArea -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:55:22 CST" name="tearDown" finished-at="2024-05-06T15:55:23 CST" duration-ms="1326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.FilterAndSearchTest -->
-    </test> <!-- Filter And Search Test -->
-    <test started-at="2024-04-30T11:01:58 CST" name="Permission Test" finished-at="2024-04-30T11:08:22 CST" duration-ms="383775">
-      <class name="automation.AdminTest.PermissionTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:01:58 CST" name="launchApplication" finished-at="2024-04-30T11:02:00 CST" duration-ms="1810" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:55:23 CST" name="launchApplication" finished-at="2024-05-06T15:55:26 CST" duration-ms="3428" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="encoderWithActiveStatus()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:02:00 CST" name="encoderWithActiveStatus" finished-at="2024-04-30T11:02:10 CST" duration-ms="10119" status="PASS">
+        <test-method signature="assignParkerToParkingAreaWithMisMatchParkingArea(java.util.HashMap)[pri:6, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:55:26 CST" name="assignParkerToParkingAreaWithMisMatchParkingArea" data-provider="getData" finished-at="2024-05-06T15:55:36 CST" duration-ms="9534" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SuperUser123!?, username=superuser}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- encoderWithActiveStatus -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:02:10 CST" name="tearDown" finished-at="2024-04-30T11:02:11 CST" duration-ms="461" status="PASS">
+        </test-method> <!-- assignParkerToParkingAreaWithMisMatchParkingArea -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:55:36 CST" name="tearDown" finished-at="2024-05-06T15:55:37 CST" duration-ms="1286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:02:11 CST" name="launchApplication" finished-at="2024-04-30T11:02:22 CST" duration-ms="10817" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:55:37 CST" name="launchApplication" finished-at="2024-05-06T15:55:41 CST" duration-ms="3248" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method retried="true" signature="encoderWithAllowExitToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:02:22 CST" name="encoderWithAllowExitToTrue" finished-at="2024-04-30T11:03:12 CST" duration-ms="49866" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"input[placeholder='Input Parking Details']"}
-  (Session info: chrome-headless-shell=124.0.6367.92)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5d6dd7e9de70d0874754cce7428c9f43, findElement {value=input[placeholder='Input Parking Details'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\LOCAL_~1.CAS\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61166}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61166/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5d6dd7e9de70d0874754cce7428c9f43]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[placeholder='Input Parking Details']"}
-  (Session info: chrome-headless-shell=124.0.6367.92)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5d6dd7e9de70d0874754cce7428c9f43, findElement {value=input[placeholder='Input Parking Details'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\LOCAL_~1.CAS\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61166}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61166/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5d6dd7e9de70d0874754cce7428c9f43
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
-at automation.PageObject.Permissions.validateButtonIsDisplayed(Permissions.java:291)
-at automation.PageObject.Permissions.allowExitValidation(Permissions.java:276)
-at automation.AdminTest.PermissionTest.encoderWithAllowExitToTrue(PermissionTest.java:83)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="duplicateParkerTypeName(java.util.HashMap)[pri:7, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:55:41 CST" name="duplicateParkerTypeName" data-provider="getData" finished-at="2024-05-06T15:55:50 CST" duration-ms="9880" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SuperUser123!?, username=superuser}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- encoderWithAllowExitToTrue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:03:12 CST" name="tearDown" finished-at="2024-04-30T11:03:13 CST" duration-ms="1074" status="PASS">
+        </test-method> <!-- duplicateParkerTypeName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:55:50 CST" name="tearDown" finished-at="2024-05-06T15:55:52 CST" duration-ms="1224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:03:13 CST" name="launchApplication" finished-at="2024-04-30T11:03:15 CST" duration-ms="2163" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:55:52 CST" name="launchApplication" finished-at="2024-05-06T15:55:55 CST" duration-ms="3625" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="encoderWithAllowExitToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:03:15 CST" name="encoderWithAllowExitToTrue" finished-at="2024-04-30T11:03:42 CST" duration-ms="27333" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"input[placeholder='Input Parking Details']"}
-  (Session info: chrome-headless-shell=124.0.6367.92)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [177a6f000a65d84dd679ba079dde954d, findElement {value=input[placeholder='Input Parking Details'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\LOCAL_~1.CAS\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61568}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61568/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 177a6f000a65d84dd679ba079dde954d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[placeholder='Input Parking Details']"}
-  (Session info: chrome-headless-shell=124.0.6367.92)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [177a6f000a65d84dd679ba079dde954d, findElement {value=input[placeholder='Input Parking Details'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\LOCAL_~1.CAS\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61568}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61568/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 177a6f000a65d84dd679ba079dde954d
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
-at automation.PageObject.Permissions.validateButtonIsDisplayed(Permissions.java:291)
-at automation.PageObject.Permissions.allowExitValidation(Permissions.java:276)
-at automation.AdminTest.PermissionTest.encoderWithAllowExitToTrue(PermissionTest.java:83)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="duplicateParketTypeCode(java.util.HashMap)[pri:8, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:55:55 CST" name="duplicateParketTypeCode" data-provider="getData" finished-at="2024-05-06T15:56:05 CST" duration-ms="10061" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SuperUser123!?, username=superuser}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- encoderWithAllowExitToTrue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:03:42 CST" name="tearDown" finished-at="2024-04-30T11:03:43 CST" duration-ms="1067" status="PASS">
+        </test-method> <!-- duplicateParketTypeCode -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:56:05 CST" name="tearDown" finished-at="2024-05-06T15:56:07 CST" duration-ms="1269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:03:43 CST" name="launchApplication" finished-at="2024-04-30T11:03:45 CST" duration-ms="2061" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:56:07 CST" name="launchApplication" finished-at="2024-05-06T15:56:10 CST" duration-ms="3239" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method retried="true" signature="encoderWithCaptureVehicleSetToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:03:45 CST" name="encoderWithCaptureVehicleSetToTrue" finished-at="2024-04-30T11:04:37 CST" duration-ms="51096" status="SKIP">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //section/div[1]/button[2]' (tried for 15 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //section/div[1]/button[2]' (tried for 15 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:47)
-at automation.PageObject.Permissions.validationForEntryEncoder(Permissions.java:265)
-at automation.AdminTest.PermissionTest.encoderWithCaptureVehicleSetToTrue(PermissionTest.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//section/div[1]/button[2]"}
-  (Session info: chrome-headless-shell=124.0.6367.92)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b7c43d3b3cf8dc7e05f5aed3dadc2072, findElement {value=//section/div[1]/button[2], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\LOCAL_~1.CAS\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61621}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61621/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b7c43d3b3cf8dc7e05f5aed3dadc2072
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 33 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="createPricingPackage(java.util.HashMap)[pri:9, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:56:10 CST" name="createPricingPackage" data-provider="getData" finished-at="2024-05-06T15:56:23 CST" duration-ms="13339" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SuperUser123!?, username=superuser}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- encoderWithCaptureVehicleSetToTrue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:04:37 CST" name="tearDown" finished-at="2024-04-30T11:04:38 CST" duration-ms="1103" status="PASS">
+        </test-method> <!-- createPricingPackage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:56:23 CST" name="tearDown" finished-at="2024-05-06T15:56:24 CST" duration-ms="1213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:04:38 CST" name="launchApplication" finished-at="2024-04-30T11:04:40 CST" duration-ms="2274" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:56:24 CST" name="launchApplication" finished-at="2024-05-06T15:56:28 CST" duration-ms="3220" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="encoderWithCaptureVehicleSetToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:04:40 CST" name="encoderWithCaptureVehicleSetToTrue" finished-at="2024-04-30T11:05:25 CST" duration-ms="45124" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //section/div[1]/button[2]' (tried for 15 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //section/div[1]/button[2]' (tried for 15 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at automation.AbstractComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:47)
-at automation.PageObject.Permissions.validationForEntryEncoder(Permissions.java:265)
-at automation.AdminTest.PermissionTest.encoderWithCaptureVehicleSetToTrue(PermissionTest.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//section/div[1]/button[2]"}
-  (Session info: chrome-headless-shell=124.0.6367.92)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6432bd590ae73751797db4268d11ee5c, findElement {value=//section/div[1]/button[2], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\LOCAL_~1.CAS\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61725}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61725/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6432bd590ae73751797db4268d11ee5c
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 33 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="updatePricingPackageWithoutChange(java.util.HashMap)[pri:10, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:56:28 CST" name="updatePricingPackageWithoutChange" data-provider="getData" finished-at="2024-05-06T15:56:41 CST" duration-ms="13660" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SuperUser123!?, username=superuser}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- encoderWithCaptureVehicleSetToTrue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:05:25 CST" name="tearDown" finished-at="2024-04-30T11:05:26 CST" duration-ms="1096" status="PASS">
+        </test-method> <!-- updatePricingPackageWithoutChange -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:56:41 CST" name="tearDown" finished-at="2024-05-06T15:56:42 CST" duration-ms="1100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:05:26 CST" name="launchApplication" finished-at="2024-04-30T11:05:31 CST" duration-ms="4649" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:56:42 CST" name="launchApplication" finished-at="2024-05-06T15:56:46 CST" duration-ms="3221" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="encoderWithPaymentAcceptanceSetToFalse()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:05:31 CST" name="encoderWithPaymentAcceptanceSetToFalse" finished-at="2024-04-30T11:05:49 CST" duration-ms="17848" status="PASS">
+        <test-method signature="updatePricingFeePackage(java.util.HashMap)[pri:11, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:56:46 CST" name="updatePricingFeePackage" data-provider="getData" finished-at="2024-05-06T15:57:00 CST" duration-ms="13945" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SuperUser123!?, username=superuser}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- encoderWithPaymentAcceptanceSetToFalse -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:05:49 CST" name="tearDown" finished-at="2024-04-30T11:05:50 CST" duration-ms="1079" status="PASS">
+        </test-method> <!-- updatePricingFeePackage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:57:00 CST" name="tearDown" finished-at="2024-05-06T15:57:01 CST" duration-ms="1230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:05:50 CST" name="launchApplication" finished-at="2024-04-30T11:05:52 CST" duration-ms="2453" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:57:01 CST" name="launchApplication" finished-at="2024-05-06T15:57:04 CST" duration-ms="3318" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method retried="true" signature="encoderWithPaymentAcceptanceSetToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:05:52 CST" name="encoderWithPaymentAcceptanceSetToTrue" finished-at="2024-04-30T11:06:23 CST" duration-ms="30785" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='Receive Parking Payment']"}
-  (Session info: chrome-headless-shell=124.0.6367.92)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4892a101e968adbba2843c776c86ea10, findElement {value=//*[text()='Receive Parking Payment'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\LOCAL_~1.CAS\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61832}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61832/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4892a101e968adbba2843c776c86ea10]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='Receive Parking Payment']"}
-  (Session info: chrome-headless-shell=124.0.6367.92)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4892a101e968adbba2843c776c86ea10, findElement {value=//*[text()='Receive Parking Payment'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\LOCAL_~1.CAS\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61832}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61832/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4892a101e968adbba2843c776c86ea10
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.isEnabled(Unknown Source)
-at automation.PageObject.Permissions.PaymentAcceptanceSetToTrueLoginValidation(Permissions.java:281)
-at automation.AdminTest.PermissionTest.encoderWithPaymentAcceptanceSetToTrue(PermissionTest.java:74)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="assignPricingFeeToParkingArea(java.util.HashMap)[pri:12, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:57:04 CST" name="assignPricingFeeToParkingArea" data-provider="getData" finished-at="2024-05-06T15:57:14 CST" duration-ms="9975" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SuperUser123!?, username=superuser}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- encoderWithPaymentAcceptanceSetToTrue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:06:23 CST" name="tearDown" finished-at="2024-04-30T11:06:24 CST" duration-ms="1063" status="PASS">
+        </test-method> <!-- assignPricingFeeToParkingArea -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:57:14 CST" name="tearDown" finished-at="2024-05-06T15:57:15 CST" duration-ms="1364" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:06:24 CST" name="launchApplication" finished-at="2024-04-30T11:06:27 CST" duration-ms="2421" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:57:15 CST" name="launchApplication" finished-at="2024-05-06T15:57:19 CST" duration-ms="3230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="encoderWithPaymentAcceptanceSetToTrue()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:06:27 CST" name="encoderWithPaymentAcceptanceSetToTrue" finished-at="2024-04-30T11:06:54 CST" duration-ms="27708" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='Receive Parking Payment']"}
-  (Session info: chrome-headless-shell=124.0.6367.92)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f97da85876c956e1c516295fd4e1755c, findElement {value=//*[text()='Receive Parking Payment'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\LOCAL_~1.CAS\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61889}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61889/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f97da85876c956e1c516295fd4e1755c]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='Receive Parking Payment']"}
-  (Session info: chrome-headless-shell=124.0.6367.92)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f97da85876c956e1c516295fd4e1755c, findElement {value=//*[text()='Receive Parking Payment'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\LOCAL_~1.CAS\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61889}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61889/devtoo..., se:cdpVersion: 124.0.6367.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f97da85876c956e1c516295fd4e1755c
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.isEnabled(Unknown Source)
-at automation.PageObject.Permissions.PaymentAcceptanceSetToTrueLoginValidation(Permissions.java:281)
-at automation.AdminTest.PermissionTest.encoderWithPaymentAcceptanceSetToTrue(PermissionTest.java:74)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:249)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="deletePricingPackage(java.util.HashMap)[pri:13, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:57:19 CST" name="deletePricingPackage" data-provider="getData" finished-at="2024-05-06T15:57:29 CST" duration-ms="10183" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=SuperUser123!?, username=superuser}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- encoderWithPaymentAcceptanceSetToTrue -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:06:55 CST" name="tearDown" finished-at="2024-04-30T11:06:56 CST" duration-ms="1078" status="PASS">
+        </test-method> <!-- deletePricingPackage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.ConfigurationModuleTest@2cf92cc7]" started-at="2024-05-06T15:57:29 CST" name="tearDown" finished-at="2024-05-06T15:57:30 CST" duration-ms="1308" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:06:56 CST" name="launchApplication" finished-at="2024-04-30T11:06:58 CST" duration-ms="2423" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="encoderWithRestrictedStatusDesktopLogin()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:06:58 CST" name="encoderWithRestrictedStatusDesktopLogin" finished-at="2024-04-30T11:07:19 CST" duration-ms="20842" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- encoderWithRestrictedStatusDesktopLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:07:19 CST" name="tearDown" finished-at="2024-04-30T11:07:20 CST" duration-ms="1066" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:07:20 CST" name="launchApplication" finished-at="2024-04-30T11:07:31 CST" duration-ms="10961" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="encoderWithRestrictedStatusMobileAppLogin()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:07:31 CST" name="encoderWithRestrictedStatusMobileAppLogin" finished-at="2024-04-30T11:08:07 CST" duration-ms="35793" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- encoderWithRestrictedStatusMobileAppLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:08:07 CST" name="tearDown" finished-at="2024-04-30T11:08:08 CST" duration-ms="1075" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:08:08 CST" name="launchApplication" finished-at="2024-04-30T11:08:10 CST" duration-ms="2030" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="adminWithRestrictedStatus()[pri:1, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:08:10 CST" name="adminWithRestrictedStatus" finished-at="2024-04-30T11:08:21 CST" duration-ms="11382" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- adminWithRestrictedStatus -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.AdminTest.PermissionTest@40dd3977]" started-at="2024-04-30T11:08:21 CST" name="tearDown" finished-at="2024-04-30T11:08:22 CST" duration-ms="1019" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- automation.AdminTest.PermissionTest -->
-    </test> <!-- Permission Test -->
+      </class> <!-- automation.AdminTest.ConfigurationModuleTest -->
+    </test> <!-- Configuration Module Test -->
   </suite> <!-- Suite -->
 </testng-results>

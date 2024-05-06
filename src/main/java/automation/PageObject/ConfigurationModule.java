@@ -62,14 +62,15 @@ public class ConfigurationModule extends AbstractComponent {
 	@FindBy(xpath = "//div[@class='text-sm font-henry-sans text-sm-default-text']")
 	List<WebElement> parkerTypesCreated;
 
-	@FindBy(css = ".border")//.border.rounded-lg.p-5.flex.justify-between.items-center")
+	@FindBy(css = ".border")
 	List<WebElement> createdParkerTypesList;
 
 	By parkerTypes = By.cssSelector(".border.rounded-lg.p-5.flex.justify-between.items-center");
-	By pTypeName = By.cssSelector(".border>div.text-sm");//".text-sm.font-henry-sans.text-sm-default-text");
-	By deleteParker = By.cssSelector(".border>div.flex>button.bg-sm-accent-pink-light");//("//div[@class='flex gap-2']/button[last()]");
+	By pTypeName = By.cssSelector(".border>div.text-sm");
+	By deleteParker = By.cssSelector(".border>div.flex>button.bg-sm-accent-pink-light");
 
-	@FindBy(xpath = "//button[text()='Delete']")
+	//@FindBy(xpath = "//button[text()='Delete']")
+	@FindBy(css = "button.px-6")
 	WebElement deleteParkerBtn;
 	
 	@FindBy(xpath = ("(//button[@class='bg-sm-accent-light-blue p-1 rounded-full'])[1]"))
@@ -280,6 +281,7 @@ public class ConfigurationModule extends AbstractComponent {
 
 	public void deleteParkerType() {
 		deleteParkerBtnIcon.click();
+		waitForWebElementToBeClickable(deleteParkerBtn);
 		deleteParkerBtn.click();
 	}
 
@@ -387,8 +389,8 @@ public class ConfigurationModule extends AbstractComponent {
 	            () -> parkerNameDupMsg.isDisplayed());
 	}
 
-	public String handlingParkerCodeDup(String initialAreaCode) throws InterruptedException {
-	    return handleDuplicate(initialAreaCode,
+	public void handlingParkerCodeDup(String initialAreaCode) throws InterruptedException {
+	     handleDuplicate(initialAreaCode,
 	            () -> generateRandomChars(2, "ABCDEFGHIJKLMNOPQRSTUVWXYZ"),
 	            this::getParkerTypeCode,
 	            () -> parkerCodeDupMsg.isDisplayed());

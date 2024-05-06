@@ -2,8 +2,11 @@ package automation.AdminTest;
 
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import automation.AdminTestComponents.BaseTest;
@@ -17,10 +20,10 @@ public class UserModuleTest extends BaseTest {
 	String mobileNumber = "+6399"+generateRandomNumber(8);
 	String emailToSearch = "forAutomationEdit@parkmate.com";
 	
-	@Test(priority = 1, retryAnalyzer=Retry.class, groups = { "Creation" })
-	public void adminEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException {
+	@Test(priority = 1, retryAnalyzer=Retry.class, groups = { "Creation" },dataProvider = "getData")
+	public void adminEnrollment(HashMap<String,String> input) throws InterruptedException, UnsupportedFlavorException, IOException {
 
-		UserModule parkingUser = loginToApplication();
+		UserModule parkingUser = loginToApplication(input.get("username"), input.get("password"));
 		parkingUser.clickEnroll();
 		String userRole = parkingUser.selectAdminRole();
 		parkingUser.getPersonalDetails("Sam", "O", "Medina");
@@ -35,10 +38,10 @@ public class UserModuleTest extends BaseTest {
 
 	}
 
-	@Test(priority = 2, groups = { "Creation" })
-	public void encoderEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException {
+	@Test(priority = 2, groups = { "Creation" },dataProvider = "getData")
+	public void encoderEnrollment(HashMap<String,String> input) throws InterruptedException, UnsupportedFlavorException, IOException {
 
-		UserModule parkingUser = loginToApplication();
+		UserModule parkingUser = loginToApplication(input.get("username"), input.get("password"));
 		parkingUser.clickEnroll();
 		String userRole = "Encoder";
 		parkingUser.getPersonalDetails("Sam", "O", "Medina");
@@ -53,10 +56,10 @@ public class UserModuleTest extends BaseTest {
 
 	}
 	
-	@Test(priority = 2, groups = { "Creation" })
-	public void cashierEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException {
+	@Test(priority = 2, groups = { "Creation" },dataProvider = "getData")
+	public void cashierEnrollment(HashMap<String,String> input) throws InterruptedException, UnsupportedFlavorException, IOException {
 
-		UserModule parkingUser = loginToApplication();
+		UserModule parkingUser = loginToApplication(input.get("username"), input.get("password"));
 		parkingUser.clickEnroll();
 		String userRole = parkingUser.selectCashierRole();
 		parkingUser.getPersonalDetails("Sam", "O", "Medina");
@@ -71,10 +74,10 @@ public class UserModuleTest extends BaseTest {
 
 	}
 	
-	@Test(priority = 2, groups = { "Creation" })
-	public void managerEnrollment() throws InterruptedException, UnsupportedFlavorException, IOException {
+	@Test(priority = 2, groups = { "Creation" },dataProvider = "getData")
+	public void managerEnrollment(HashMap<String,String> input) throws InterruptedException, UnsupportedFlavorException, IOException {
 
-		UserModule parkingUser = loginToApplication();
+		UserModule parkingUser = loginToApplication(input.get("username"), input.get("password"));
 		parkingUser.clickEnroll();
 		String userRole = parkingUser.selectManagerRole();
 		parkingUser.getPersonalDetails("Sam", "O", "Medina");
@@ -89,10 +92,10 @@ public class UserModuleTest extends BaseTest {
 
 	}
 
-	@Test(groups = { "ErrorHandling" })
-	public void userEmailDupValidation() throws InterruptedException {
+	@Test(groups = { "ErrorHandling" },dataProvider = "getData")
+	public void userEmailDupValidation(HashMap<String,String> input) throws InterruptedException {
 
-		UserModule parkingUser = loginToApplication();
+		UserModule parkingUser = loginToApplication(input.get("username"), input.get("password"));
 		String existingEmail = parkingUser.getRandomEmail();
 		parkingUser.clickEnroll();
 		parkingUser.getEmailDuplicate(existingEmail);
@@ -100,20 +103,20 @@ public class UserModuleTest extends BaseTest {
 		Assert.assertTrue(parkingUser.isDuplicateUserName());
 	}
 
-	@Test
-	public void exitEnrollmentAlert() throws InterruptedException {
+	@Test(dataProvider = "getData")
+	public void exitEnrollmentAlert(HashMap<String,String> input) throws InterruptedException {
 
-		UserModule parkingUser = loginToApplication();
+		UserModule parkingUser = loginToApplication(input.get("username"), input.get("password"));
 		parkingUser.clickEnroll();
 		parkingUser.getPersonalDetails("Sam", "O", "Medina");
 		Assert.assertTrue(parkingUser.exitEnrollmentAlert());
 
 	}
 
-	@Test(priority = 3)//, retryAnalyzer = Retry.class)
-	public void editUserAccount() throws InterruptedException {
+	@Test(priority = 3, dataProvider = "getData")//, retryAnalyzer = Retry.class)
+	public void editUserAccount(HashMap<String,String> input) throws InterruptedException {
 		
-		UserModule parkingUser = loginToApplication();
+		UserModule parkingUser = loginToApplication(input.get("username"), input.get("password"));
 		Assert.assertTrue(parkingUser.updateUserAccount(emailToSearch));
 		
 	}
@@ -136,29 +139,38 @@ public class UserModuleTest extends BaseTest {
 		boolean PreviousBtnDisabled = page.previousButton();
 		Assert.assertTrue(PreviousBtnDisabled);
 	}
-	@Test
-	public void getCopyUserName() throws InterruptedException, UnsupportedFlavorException, IOException {
+	@Test(dataProvider = "getData")
+	public void getCopyUserName(HashMap<String,String> input) throws InterruptedException, UnsupportedFlavorException, IOException {
 		
-		UserModule parkingUser = loginToApplication();
-		parkingUser.performSearch("forAutomationEdit@parkmate.com");
+		UserModule parkingUser = loginToApplication(input.get("username"), input.get("password"));
+		parkingUser.performSearch(emailToSearch);
 		Assert.assertTrue(parkingUser.getCopyUserName());
 
 	}
-	@Test
-	public void getCopyUserPassword() throws InterruptedException, UnsupportedFlavorException, IOException {
+	@Test(dataProvider = "getData")
+	public void getCopyUserPassword(HashMap<String,String> input) throws InterruptedException, UnsupportedFlavorException, IOException {
 		
-		UserModule parkingUser = loginToApplication();
-		parkingUser.performSearch("forAutomationEdit@parkmate.com");
+		UserModule parkingUser = loginToApplication(input.get("username"), input.get("password"));
+		parkingUser.performSearch(emailToSearch);
 		parkingUser.generatePassword();
 		Assert.assertTrue(parkingUser.getCopyPassword());
 
 	}
 	// handle the login and navigation steps
-	private UserModule loginToApplication() throws InterruptedException {
-		UserModule parkingUser = landingPage.loginApplication("superuser", "SuperUser123!?");
+	private UserModule loginToApplication(String username, String password) throws InterruptedException {
+		UserModule parkingUser = landingPage.loginApplication(username, password);
 		parkingUser.userPage();
 
 		return parkingUser;
+	}
+	
+	@DataProvider
+	private Object[] getData() throws IOException {
+
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				System.getProperty("user.dir") + "\\src\\test\\java\\automation\\AdminData\\AdminData.json");
+		return new Object[] { data.get(0) };
+
 	}
 
 	
