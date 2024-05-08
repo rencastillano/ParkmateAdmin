@@ -97,22 +97,22 @@ public class Listeners extends BaseTest implements ITestListener, ISuiteListener
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		// extentTest.get().log(Status.SKIP, "Test Skipped");
-		extentTest.get().skip(result.getThrowable());
-		
-		try {
-			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
-		} catch (Exception e1) {
-			e1.printStackTrace();
-		}
-
-		String filePath = null;
-		try {
-			filePath = takeScreenshot(result.getMethod().getMethodName(), driver);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		extentTest.get().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
-		
+		//extentTest.get().skip(result.getThrowable());
+		extentTest.get().skip("Test Skipped");
+//		try {
+//			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
+//		} catch (Exception e1) {
+//			e1.printStackTrace();
+//		}
+//
+//		String filePath = null;
+//		try {
+//			filePath = takeScreenshot(result.getMethod().getMethodName(), driver);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		extentTest.get().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
+//		
 	}
 
 	@Override
